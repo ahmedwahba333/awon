@@ -40,8 +40,8 @@ ul {
   padding: 0;
 }
 .container {
-  padding-left: 40px;
-  padding-right: px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -133,5 +133,18 @@ ul {
     }
   }
 }
-
+@media (max-width: 375px) {
+  .header {
+    .mainNav {
+      margin: auto;
+      > li {
+        > a {
+          padding: 15px;
+          font-size: 10px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
 </style>
