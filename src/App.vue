@@ -1,11 +1,21 @@
-<template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
-</template>
 
+<template>
+  <!-- <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link> -->
+  <NavBarPages/>
+  <LandingPage/>
+  <router-view />
+</template>
+<script>
+import NavBarPages from "@/components/NavBarPages.vue";
+import LandingPage from "@/views/LandingPage.vue";
+export default {
+  components: {
+    NavBarPages,
+    LandingPage
+  },
+};
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
