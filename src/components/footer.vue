@@ -120,7 +120,7 @@ footer{
 
 
 
-@media (min-width: 768px) and (max-width:990.9999px) {
+@media (min-width: 767px) and (max-width:990.9999px) {
     .st{
     margin-left:60px;
     text-align:start
@@ -128,7 +128,7 @@ footer{
    
 }
 
-@media (min-width: 567px )and (max-width:767.9999px ) {
+@media (min-width: 568px )and (max-width:766.9999px ) {
     .st{
     margin-left: 14px;
     
