@@ -4,7 +4,7 @@
             <div class="container grid pt-4 text-center">
                 <div class="row d-flex justify-content-center">
 
-            <div class="col-md-4 col-sm-4 mb-3">
+            <div class="col-md-4 col-sm-12 mb-3">
                 <p class="fw-bold mb-2">Office location:</p>
                 <p class="mb-0 st">bla street, bla street, cairo</p>
                 <p>+20 100 00 00</p>
@@ -12,7 +12,7 @@
 
 
 
-            <div class="col-md-4 col-sm-4 mb-3">
+            <div class="col-md-4 col-sm-6 mb-3">
                 <p class="fw-bold">You can follow us here</p>
                 <div class="row">
                    <ul class="list-unstyled list-inline">
@@ -47,7 +47,7 @@
     </div>
 
 
-            <div class="col-md-4 col-sm-4 mb-3">
+            <div class="col-md-4 col-sm-6 mb-3">
                 <p class="fw-bold mb-2 me-3">Contcat us via:</p>
 
                 <div class="me-5">
