@@ -58,12 +58,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../scss/global/colors";
-
-$blueColor: #193655 ; 
-$orangeColor : #F97B22 ; 
-$darkOrange: #C15000 ; 
-$backgroudColor : #EBEBD3  ;
-$whiteColor : #FFFFFF;
 a {
 	text-decoration: none;
 }
