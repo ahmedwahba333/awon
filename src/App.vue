@@ -1,6 +1,7 @@
 <template>
   
     
+  <WorkerPageDashboard/>
   <FooterComponent/>
   
 </template>
@@ -8,11 +9,12 @@
 
 
 <script>
-import FooterComponent from './components/footer.vue';
-
+import WorkerPageDashboard from './views/workerPageDashboard.vue'
+import FooterComponent from './components/footer.vue'
 export default{
 
 components:{
+  WorkerPageDashboard,
   FooterComponent
 }
 }
@@ -20,13 +22,10 @@ components:{
 </script>
 
 <style lang="scss">
-// #app {
-//   font-family: Avenir, Helvetica, Arial, sans-serif;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-//   text-align: center;
-//   color: #2c3e50;
-// }
+#app {
+  color: #2c3e50;
+  background-color: #EBEBD3;
+}
 
 // nav {
 //   padding: 30px;
