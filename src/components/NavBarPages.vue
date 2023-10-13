@@ -46,6 +46,7 @@
           <router-link to="#Contact Us"><a>Contact Us</a></router-link>
         </li>
       </ul>
+
     </div>
   </div>
 </template>
@@ -84,6 +85,7 @@ ul {
 		position: relative;
 	}
   .logo {
+		
 		color: $whiteColor;
 		font-size: 26px;
 		font-weight: bold;
