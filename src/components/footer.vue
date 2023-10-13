@@ -90,7 +90,7 @@
 
 <style lang="scss" scoped>
 
-@import "../scss/colors";
+@import "../scss/global/colors";
 
 
 
