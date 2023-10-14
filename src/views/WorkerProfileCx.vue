@@ -22,16 +22,17 @@
 </svg> Available for work in these areas: Giza, Sheikh Zayed, Haram
         </div>
 <div class="box">
-    <div class="title">Worker Reviews</div>
-    <div class="row">
-        <div class="col-lg-6">
-            <span class="col-lg-6">
+<div class="title">Worker Reviews</div>
+    <div class="row justify-content-center align-items-start">
+        <div class="col col-lg-6">
+            <div class="row align-items-start">
+            <div class="col-1">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#193655" class="bi bi-person-circle" viewBox="0 0 16 16">
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
             <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/></svg>
-            </span>
-            <span class='cx name'>Nada M.</span>
-            <span class='cx rate'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
+            </div>
+            <div class='cx name col-2'>Nada M.</div>
+            <div class='cx rate col-3'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
                 </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
@@ -42,81 +43,110 @@
                 </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
                 </svg>
-            </span>
-        </div>
+            </div>
+            </div>
+            <div class="row"><div class="cx comment col-sm-12 col-md-12 col-lg-12">Abdul Rahman is very neat and fast. I willl recommend him to my friends</div>
     </div>
-        <div class="row">
-            <div class="cx comment">Abdul Rahman is very neat and fast. I willl recommend him to my friends</div>
         </div>
-        </div>
-                </div>
-        <!-- </div>
-            <div>
-            <div class="cxImg"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#193655" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <div class="col col-lg-6">
+            <div class="row align-items-start">
+            <div class="col-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#193655" class="bi bi-person-circle" viewBox="0 0 16 16">
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
             <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/></svg>
             </div>
-            </div> -->
-            <!-- <div class='cx name'>Mohammed A.</div>
-            <div class='cx rate'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
-            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
-            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
-            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
-            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
-            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-            </svg>
+            <div class='cx name col-2'>Mohammed A.</div>
+            <div class='cx rate col-3'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
             </div>
-            <div class="cx comment">I am very pleased with my first time getting Abdul Rahman's help</div>
-            </div>     -->
-        
-
-<!-- 
-            <div class="row">
-            <div class="cxImg"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#193655" class="bi bi-person-circle" viewBox="0 0 16 16">
-            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/></svg>
             </div>
-            <div class='cx name'>Salma H.</div>
-            <div class='cx rate'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
-            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
-            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
-            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
-            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
-            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-            </svg>
-            </div>
-            <div class="cx comment">amazing service 👍</div>
-
-            <div>
-            <div class="cxImg"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#193655" class="bi bi-person-circle" viewBox="0 0 16 16">
-            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/></svg>
-            </div>
-            <div class='cx name'>Sara N.</div>
-            <div class='cx rate'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
-            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
-            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
-            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
-            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-            </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
-            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-            </svg>
-            </div>
-            <div class="cx comment">he did a great job as usual! </div>
-        </div>
-        </div> -->
+            <div class="row"><div class="cx comment col-sm-12 col-md-12 col-lg-12">I am very pleased with my first time getting Abdul Rahman's help</div>
     </div>
+    </div>
+    </div>
+ <div class="row justify-content-center align-items-start">
+        <div class="col col-lg-6">
+            <div class="row align-items-start">
+            <div class="col-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#193655" class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/></svg>
+            </div>
+            <div class='cx name col-2'>Salma H.</div>
+            <div class='cx rate col-3'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+            </div>
+            </div>
+            <div class="row"><div class="cx comment col-sm-12 col-md-12 col-lg-12">amazing service 👍</div>
+    </div>
+        </div>
+                <div class="col col-lg-6">
+            <div class="row align-items-start">
+            <div class="col-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#193655" class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/></svg>
+            </div>
+            <div class='cx name col-2'>Sara N.</div>
+            <div class='cx rate col-3'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+            </div>
+            </div>
+            <div class="row"><div class="cx comment col-sm-12 col-md-12 col-lg-12">he did a great job as usual!</div>
+    </div>
+    </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    </div>
+    </div>   
+
+  
+
     <FooterComponent />
     </template>
 
@@ -153,14 +183,7 @@
     align-items: center;
     }
     .box{
-        color: $blueColor;
-        background-color: $whiteColor;
-        border-radius: $border-radius-big;
-        margin:40px;
-        padding: 30px;
-        justify-content: center;
-        line-height: 1.5;
-        font-size: $small;
+        @include box;
     }
     .btn{
         @include button;
