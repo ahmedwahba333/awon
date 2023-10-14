@@ -243,6 +243,7 @@ ul {
     }
   }
 }
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -290,4 +291,5 @@ ul {
     }
   }
 }
+
 </style>
