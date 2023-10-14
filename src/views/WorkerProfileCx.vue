@@ -1,7 +1,18 @@
     <template>
     <div class="bg">
         <NavBarPages />
-        <h1>worker</h1>
+        <div class="img">
+            <img src="../assets/images/1.jpg">
+        </div>
+        <div class="box">
+            Worker Availability
+        </div>
+        <div class="box">
+            House Cleaning, Bathroom Cleaning, Kitchen Cleaning
+        </div>
+        <div class="box">
+            
+        </div>
         <FooterComponent />
     </div>
     </template>
@@ -21,8 +32,13 @@
 
     <style lang="scss" scoped>
     @import "../scss/global/colors";
+    $blueColor: #193655 ; 
+    $orangeColor : #F97B22 ; 
+    $darkOrange: #C15000 ; 
+    $backgroudColor : #EBEBD3  ;
+    $whiteColor : #FFFFFF;
 
     .bg{
-    background-color: red;
+    background-color: $backgroudColor;
     }
     </style>
