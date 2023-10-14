@@ -61,7 +61,7 @@ export default {
 
 .login-main {
     background-image: url('../../../assets/images/background.png');
-    background-color: $backgroudColor;
+    background-color: $backgroundColor;
 
     .title-heading {
         font-size: $title;
