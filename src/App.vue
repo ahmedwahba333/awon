@@ -1,52 +1,22 @@
 <template>
-  <!-- <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> -->
-  <!-- <NavBarPages/>
-   <LandingPage/>
-  <NavBarDash/>
- 
-  <router-view/>
-  
-    
-  <WorkerPageDashboard/>
-  <FooterComponent/> -->
-
-  
-  <div>
-    <!-- <NavBarDash/> -->
-  <workerPageDashboard/>
-  </div>
+  <router-view />
 </template>
 
 
 
 <script>
-// import NavBarPages from "@/components/NavBarPages.vue";
-// import NavBarDash from "@/components/NavBarDash.vue";
-// import LandingPage from "@/views/LandingPage.vue";
-// import WorkerPageDashboard from './views/workerPageDashboard.vue'
-// import FooterComponent from './components/footer.vue'export default {
-//   components: {
-//     NavBarPages,
-//     LandingPage,
-//     NavBarDash,
-//     WorkerPageDashboard,
-//   FooterComponent
-//   },
-// };
-
-// import NavBarDash from './components/NavBarDash.vue'
-import WorkerPageDashboard from './views/workerPageDashboard.vue';
-
+import NavBarPages from "@/components/NavBarPages.vue";
+import NavBarDash from "@/components/NavBarDash.vue";
+import LandingPage from "@/views/LandingPage.vue";
+import FooterComponent from './components/footer.vue';
 export default {
-  name: 'App',
   components: {
-    // NavBarDash,
-    WorkerPageDashboard
-  }
-}
-
-
+    NavBarPages,
+    LandingPage,
+    NavBarDash,
+    FooterComponent
+  },
+};
 
 
 
@@ -54,12 +24,7 @@ export default {
 
 <style lang="scss">
 #app {
-  // font-family: Avenir, Helvetica, Arial, sans-serif;
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
-  // text-align: center;
-  color: #2c3e50;
-  background-color: #EBEBD3;
+  font-family: 'Raleway', sans-serif;
 }
 
 // nav {
