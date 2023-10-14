@@ -1,10 +1,13 @@
     <template>
     <div class="bg">
         <NavBarPages />
-        <div class="container grid">
-        <div class="row">
-            <div class="img"><img src="../assets/images/1.jpg"></div>
-            <div class="btn">Book now</div>
+        <div class="container">
+            <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="row">
+                <div class="img col-lg-6"><img src="../assets/images/1.jpg"></div>
+                <div class="col-lg-4"><h2>name of worker</h2></div>
+                <div class="btn col-lg-6">Book now</div>
+                </div>
         </div>
         <div class="box">
             <div class="title">Worker Availability</div>
