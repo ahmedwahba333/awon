@@ -63,23 +63,19 @@
 <style lang="scss" scoped>
 @import "../scss/global/colors";
 
-$blueColor: #193655 ; 
-$orangeColor : #F97B22 ; 
-$darkOrange: #C15000 ; 
-$backgroudColor : #EBEBD3  ;
-$whiteColor : #FFFFFF;
+
 .nav-pills li a:hover{
-    background-color: #EBEBD3;
+    background-color: $backgroudColor;
 }
 .nav-pills li a:focus{
-    background-color: #EBEBD3;
+    background-color: $backgroudColor;
 }
 .nav-pills li {
-    color: #193655;
+    color: $blueColor;
     font-size: small;
 }
 svg {
-    color: #F97B22;
+    color: $orangeColor;
 }
 
 
