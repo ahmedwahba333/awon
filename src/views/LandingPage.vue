@@ -1,4 +1,5 @@
 <template>
+<NavBarPages/>
  <div id="myCarousel" class="carouselSlide" data-bs-ride="carousel" data-bs-interval="2000" >
   <div class="carousel-inner">
     
@@ -34,13 +35,17 @@
     </div>
   </div>
 </div>
-
+<FooterComponent />
 </template>
 
 <script>
-
+import NavBarPages from "@/components/NavBarPages.vue";
+import FooterComponent from '@/components/footer.vue';
 export default {
   name: 'LandingPage',
+   components: { FooterComponent,
+   NavBarPages ,
+   },
 
 }
 
