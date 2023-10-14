@@ -1,8 +1,9 @@
     <template>
     <div class="bg">
         <NavBarPages />
-        <div class="img">
-            <img src="../assets/images/1.jpg">
+        <div class="row">
+            <div class="img"><img src="../assets/images/1.jpg"></div>
+            <div class="btn">Book now</div>
         </div>
         <div class="box">
             <div class="title">Worker Availability</div>
@@ -30,7 +31,6 @@
     <script>
     import NavBarPages from "@/components/NavBarPages.vue";
     import FooterComponent from "@/components/footer.vue";
-
     export default {
     name: "WorkerProfile",
     components: {
@@ -53,17 +53,25 @@
     .bg{
     background-color: $backgroudColor;
     }
-
+    .img {
+    clip-path: circle();
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
     .box{
         color: $blueColor;
         background-color: $whiteColor;
         border-radius: $border-radius-big;
         margin:40px;
         padding: 30px;
-        align-content: center;
+        justify-content: center;
         line-height: 1.5;
         font-size: $small;
-
+    }
+    .btn{
+        @include button;
     }
     .title{
         font-weight: bold;

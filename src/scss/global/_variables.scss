@@ -4,3 +4,18 @@ $subTitle: 24px;
 $title: 28px;
 $border-radius-big: 15px;
 $border-radius-small: 10px;
+@mixin button {
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    margin:20px;
+    border-radius: $border-radius-small;
+    background-color: $orangeColor;
+    border: 0px;
+    color: $whiteColor;
+    font-weight: 600;
+    &:hover {
+        background-color: $darkOrange;
+        border: 0px;
+        color: $whiteColor;
+    }}
