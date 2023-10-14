@@ -4,18 +4,17 @@
             <div class="container grid pt-4 text-center">
                 <div class="row d-flex justify-content-center">
 
-            <div class="col-md-4 col-sm-12 mb-3">
+            <div class="col-md-4 col-sm-4 mb-3">
                 <p class="fw-bold mb-2">Office location:</p>
                 <p class="mb-0 st">bla street, bla street, cairo</p>
                 <p>+20 100 00 00</p>
             </div>
 
 
-
-            <div class="col-md-4 col-sm-6 mb-3">
+            <div class="col-md-4 col-sm-4 mb-3">
                 <p class="fw-bold">You can follow us here</p>
                 <div class="row">
-                   <ul class="list-unstyled list-inline">
+                   <ul class="list-inline">
 
                     <li class="list-inline-item"> 
                         <a href="#" class="text-light"> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -47,7 +46,7 @@
     </div>
 
 
-            <div class="col-md-4 col-sm-6 mb-3">
+            <div class="col-md-4 col-sm-4 mb-3">
                 <p class="fw-bold mb-2 me-3">Contcat us via:</p>
 
                 <div class="me-5">
@@ -105,7 +104,7 @@ body {
 
 footer{
     background-color:$blueColor;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     border-top-left-radius: 60px ;
@@ -113,14 +112,28 @@ footer{
 }
 
 
-.st{
-    margin-left: 90px;
+ @media (min-width: 991px) {
+    .st{
+    margin-left:80px
+}
 }
 
+
+
+@media (min-width: 768px) and (max-width:990.9999px) {
+    .st{
+    margin-left:60px;
+    text-align:start
+}
    
+}
 
-
-
+@media (min-width: 567px )and (max-width:767.9999px ) {
+    .st{
+    margin-left: 14px;
+    
+}
+}
 
 
 </style>
