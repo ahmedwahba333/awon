@@ -71,6 +71,9 @@ $whiteColor : #FFFFFF;
 .nav-pills li a:hover{
     background-color: #EBEBD3;
 }
+.nav-pills li a:active{
+    background-color: #EBEBD3;
+}
 .nav-pills li {
     color: #193655;
     font-size: small;
