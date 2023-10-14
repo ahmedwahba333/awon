@@ -1,9 +1,20 @@
 <template>
+    <NavBarDash/>
     <div class="container grid">
 
-        <div class="row pt-3"> 
-            <p class="title fw-bold">Dashboard > Worker Page</p>
+        <div class="row pt-3 breadCrumb"> 
+            <!-- <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb"> -->
+                
+                 <ol class="breadcrumb">
+                   <li class="breadcrumb-item active me-2">Dashboard</li>
+                   <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" fill="#F97B22" class="mt-2 me-2">
+             <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+                   <li class="breadcrumb-item active" aria-current="page">Worker Page</li>
+                 </ol>
+            <!-- </nav> -->
         </div>
+
+        
 
       <!-- Worker Personal Details -->
         <div class="row mt-3 mb-3">
@@ -221,8 +232,15 @@
 </template>
 
 <script>
+
+import NavBarDash from '../components/NavBarDash.vue'
+
     export default {
         name:'WorkerPageDashboard',
+
+        components:{
+            NavBarDash
+        }
 
     }
 </script>
@@ -237,9 +255,10 @@ body{
     color:$blueColor;
 }
 
-.title{
+.breadCrumb{
     font-size:24px;
-    color:$blueColor;
+    color:$blueColor !important;
+    font-weight: bold !important;
     
 }
 

@@ -121,7 +121,7 @@ footer{
 
 @media (min-width: 767px) and (max-width:990.9999px) {
     .st{
-    margin-left:60px;
+    margin-left:65px;
     text-align:start
 }
    
@@ -129,7 +129,7 @@ footer{
 
 @media (min-width: 568px )and (max-width:766.9999px ) {
     .st{
-    margin-left: 14px;
+    margin-left: 20px;
     
 }
 }

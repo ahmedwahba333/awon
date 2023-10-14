@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 // import HomeView from "../views/HomeView.vue";
 import LoginView from "../views/LoginView.vue";
 import LandingPage from "../views/LandingPage.vue" ;
+import WorkerPageDashboard from '../views/workerPageDashboard.vue';
 
 const routes = [
   {
@@ -27,6 +28,12 @@ const routes = [
     name: "login",
     component: LoginView,
   },
+
+  {
+    path:"/workerpageDash",
+    name:"WorkerPageDashboard",
+    component:WorkerPageDashboard,
+  }
 ];
 
 const router = createRouter({
