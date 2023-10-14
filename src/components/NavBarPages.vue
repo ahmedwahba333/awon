@@ -139,12 +139,12 @@ ul {
     align-items: center;
   }
   .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
       clip-path: circle();
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      height: 50px;
     }
   }
   .mainNav {
@@ -250,66 +250,101 @@ ul {
     }
   }
 }
-@media (min-width: 375px) {
-  .container {
-    width: 360px;
-  }
-}
-@media (min-width: 576px) {
-  .container {
-    width: 570px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    width: 720px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 960px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1140px;
-  }
-}
-@media (min-width: 1400px) {
-  .container {
-    width: 1320px;
-  }
-}
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .header {
     .logo {
       width: 100%;
       height: 50px;
     }
-    .main-nav {
+
+    .mainNav {
       margin: auto;
+
       > li {
+        height: 50px;
         > a {
+          width: 100%;
           padding: 10px;
           font-size: 14px;
-          height: 40px;
+          height: 50px;
         }
       }
     }
     .mega-menu {
-      flex-direction: column;
-      gap: 0;
-      padding: 5px;
+      width: 30%;
       .links {
-        &:first-of-type {
-          li {
-            &:last-child {
-              border-bottom: 1px solid $backgroundColor;
-            }
+        span {
+          padding: 1px;
+          font-size: 14px;
+        }
+        li {
+          a {
+            font-size: 8px;
           }
         }
       }
     }
   }
 }
+@media (max-width: 576px) {
+  .header {
+    .logo {
+      width: 100%;
+      height: 50px;
+    }
+
+    .mainNav {
+      margin: auto;
+
+      > li {
+        height: 50px;
+        > a {
+          width: 100%;
+          padding: 10px;
+          font-size: 12px;
+          height: 50px;
+        }
+      }
+    }
+    .mega-menu {
+      width: 30%;
+      .links {
+        span {
+          padding: 1px;
+          font-size: 10px;
+        }
+        li {
+          a {
+            font-size: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 375px) {
+    .mainNav {
+      > li {
+        > a {
+          font-size: 8mm;
+        }
+      }
+    }
+    .mega-menu {
+      width: 50%;
+      .links {
+        span {
+          padding: 1px;
+          font-size: 12px;
+        }
+        li {
+          a {
+            font-size: 8px;
+          }
+        }
+      }
+    }
+  }
+
+
 </style>
