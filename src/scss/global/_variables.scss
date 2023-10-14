@@ -19,3 +19,14 @@ $border-radius-small: 10px;
         border: 0px;
         color: $whiteColor;
     }}
+
+    @mixin box{
+        color: $blueColor;
+        background-color: $whiteColor;
+        border-radius: $border-radius-big;
+        margin:40px;
+        padding: 30px;
+        justify-content: center;
+        line-height: 1.5;
+        font-size: $small;
+    }
