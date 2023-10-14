@@ -3,7 +3,7 @@
     <router-link to="/about">About</router-link> -->
   <NavBarPages/>
    <LandingPage/>
-  <NavBarDash/>
+  <!-- <NavBarDash/> -->
  
   <router-view/>
   
@@ -16,14 +16,14 @@
 
 <script>
 import NavBarPages from "@/components/NavBarPages.vue";
-import NavBarDash from "@/components/NavBarDash.vue";
+// import NavBarDash from "@/components/NavBarDash.vue";
 import LandingPage from "@/views/LandingPage.vue";
 import FooterComponent from './components/footer.vue';
 export default {
   components: {
     NavBarPages,
     LandingPage,
-    NavBarDash,
+    // NavBarDash,
     FooterComponent
   },
 };
