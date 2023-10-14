@@ -87,8 +87,10 @@
         <li>
           <router-link to="#Contact Us"><a>Contact Us</a></router-link>
         </li>
+        <div class="image">
+          <img src="../assets/images/2.jpg" alt="Cx" />
+        </div>
       </ul>
-      <img src="../assets/images/2.jpg" alt="Cx" />
     </div>
   </div>
 </template>
@@ -119,6 +121,7 @@ ul {
 .header {
   background-color: $blueColor;
   position: relative;
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -135,15 +138,18 @@ ul {
     justify-content: center;
     align-items: center;
   }
-  img {
-	clip-path: circle();
-    height: 60px;
+  .image {
     display: flex;
     justify-content: center;
     align-items: center;
+    img {
+      clip-path: circle();
+      height: 50px;
+    }
   }
   .mainNav {
     display: flex;
+
     > li {
       &:hover {
         .mega-menu {
@@ -153,6 +159,7 @@ ul {
         }
       }
       > a {
+        align-items: center;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -175,7 +182,7 @@ ul {
         }
         &:hover {
           color: $blueColor;
-          background-color: $backgroudColor;
+          background-color: $backgroundColor;
           &::before {
             left: 0;
           }
@@ -188,7 +195,7 @@ ul {
     width: 20%;
     left: 50;
     padding: 15px;
-    background-color: $backgroudColor;
+    background-color: $backgroundColor;
     border-bottom: 3px solid $blueColor;
     z-index: -1;
     display: flex;
@@ -243,53 +250,101 @@ ul {
     }
   }
 }
-
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .header {
     .logo {
       width: 100%;
       height: 50px;
     }
-    .main-nav {
+
+    .mainNav {
       margin: auto;
+
       > li {
+        height: 50px;
         > a {
+          width: 100%;
           padding: 10px;
           font-size: 14px;
-          height: 40px;
+          height: 50px;
         }
       }
     }
     .mega-menu {
-      flex-direction: column;
-      gap: 0;
-      padding: 5px;
+      width: 30%;
       .links {
-        &:first-of-type {
-          li {
-            &:last-child {
-              border-bottom: 1px solid $backgroudColor;
-            }
+        span {
+          padding: 1px;
+          font-size: 14px;
+        }
+        li {
+          a {
+            font-size: 8px;
           }
         }
       }
     }
   }
 }
+@media (max-width: 576px) {
+  .header {
+    .logo {
+      width: 100%;
+      height: 50px;
+    }
+
+    .mainNav {
+      margin: auto;
+
+      > li {
+        height: 50px;
+        > a {
+          width: 100%;
+          padding: 10px;
+          font-size: 12px;
+          height: 50px;
+        }
+      }
+    }
+    .mega-menu {
+      width: 30%;
+      .links {
+        span {
+          padding: 1px;
+          font-size: 10px;
+        }
+        li {
+          a {
+            font-size: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 375px) {
+    .mainNav {
+      > li {
+        > a {
+          font-size: 8mm;
+        }
+      }
+    }
+    .mega-menu {
+      width: 50%;
+      .links {
+        span {
+          padding: 1px;
+          font-size: 12px;
+        }
+        li {
+          a {
+            font-size: 8px;
+          }
+        }
+      }
+    }
+  }
+
 
 </style>

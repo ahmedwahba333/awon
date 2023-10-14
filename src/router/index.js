@@ -5,12 +5,12 @@ import LandingPage from "../views/LandingPage.vue" ;
 import WorkerPageDashboard from '../views/workerPageDashboard.vue';
 import ServiceHistorySA from '../views/ServivesHistorySA.vue';
 
+import WorkerProfile from "../views/WorkerProfileCx.vue";
 const routes = [
   {
     path: "/",
-    name : "LandingPage",
-     component: LandingPage,
-  
+    name: "LandingPage",
+    component: LandingPage,
 
     // name: "home",
     // component: HomeView,
@@ -41,6 +41,11 @@ const routes = [
     name:"ServiceHistorySA",
     component:ServiceHistorySA,
   }
+  {
+    path: "/workerProfile",
+    name: "WorkerProfile",
+    component: WorkerProfile,
+  },
 ];
 
 const router = createRouter({
