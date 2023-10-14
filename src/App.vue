@@ -1,31 +1,62 @@
 <template>
+  <!-- <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link> -->
+  <!-- <NavBarPages/>
+   <LandingPage/>
+  <NavBarDash/>
+ 
+  <router-view/>
   
     
   <WorkerPageDashboard/>
-  <FooterComponent/>
+  <FooterComponent/> -->
+
   
+  <div>
+    <NavBarDash/>
+  </div>
 </template>
 
 
 
 <script>
-import WorkerPageDashboard from './views/workerPageDashboard.vue'
-import FooterComponent from './components/footer.vue'
-export default{
+// import NavBarPages from "@/components/NavBarPages.vue";
+// import NavBarDash from "@/components/NavBarDash.vue";
+// import LandingPage from "@/views/LandingPage.vue";
+// import WorkerPageDashboard from './views/workerPageDashboard.vue'
+// import FooterComponent from './components/footer.vue'export default {
+//   components: {
+//     NavBarPages,
+//     LandingPage,
+//     NavBarDash,
+//     WorkerPageDashboard,
+//   FooterComponent
+//   },
+// };
 
-components:{
-  WorkerPageDashboard,
-  FooterComponent
+import NavBarDash from './components/pages/NavBarDashboard.vue'
+
+export default {
+  name: 'App',
+  components: {
+    NavBarDash
+  }
 }
-}
+
+
+
+
 
 </script>
 
 <style lang="scss">
-#app {
-  color: #2c3e50;
-  background-color: #EBEBD3;
-}
+// #app {
+//   font-family: Avenir, Helvetica, Arial, sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   text-align: center;
+//   color: #2c3e50;
+// }
 
 // nav {
 //   padding: 30px;
