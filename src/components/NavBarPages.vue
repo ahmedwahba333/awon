@@ -109,12 +109,12 @@ ul {
   margin: 0;
   padding: 0;
 }
-.container {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
+// .container {
+//   padding-left: 15px;
+//   padding-right: 15px;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
 
 .header {
   background-color: $blueColor;
@@ -161,7 +161,7 @@ ul {
         color: $whiteColor;
         padding: 0 30px;
         overflow: hidden;
-        font-size: 24px;
+        font-size: 20px;
         transition: var(--main-transition);
         &::before {
           content: "";
@@ -243,6 +243,7 @@ ul {
     }
   }
 }
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -290,4 +291,5 @@ ul {
     }
   }
 }
+
 </style>
