@@ -87,8 +87,10 @@
         <li>
           <router-link to="#Contact Us"><a>Contact Us</a></router-link>
         </li>
+        <div class="image">
+          <img src="../assets/images/2.jpg" alt="Cx" />
+        </div>
       </ul>
-      <img src="../assets/images/2.jpg" alt="Cx" />
     </div>
   </div>
 </template>
@@ -119,6 +121,7 @@ ul {
 .header {
   background-color: $blueColor;
   position: relative;
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -135,15 +138,18 @@ ul {
     justify-content: center;
     align-items: center;
   }
-  img {
-	clip-path: circle();
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .image {
+    img {
+      clip-path: circle();
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
   .mainNav {
     display: flex;
+
     > li {
       &:hover {
         .mega-menu {
@@ -153,6 +159,7 @@ ul {
         }
       }
       > a {
+        align-items: center;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -175,7 +182,7 @@ ul {
         }
         &:hover {
           color: $blueColor;
-          background-color: $backgroudColor;
+          background-color: $backgroundColor;
           &::before {
             left: 0;
           }
@@ -188,7 +195,7 @@ ul {
     width: 20%;
     left: 50;
     padding: 15px;
-    background-color: $backgroudColor;
+    background-color: $backgroundColor;
     border-bottom: 3px solid $blueColor;
     z-index: -1;
     display: flex;
@@ -243,20 +250,34 @@ ul {
     }
   }
 }
-
+@media (min-width: 375px) {
+  .container {
+    width: 360px;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    width: 570px;
+  }
+}
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 720px;
   }
 }
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 960px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
   }
 }
 @media (max-width: 767px) {
@@ -283,7 +304,7 @@ ul {
         &:first-of-type {
           li {
             &:last-child {
-              border-bottom: 1px solid $backgroudColor;
+              border-bottom: 1px solid $backgroundColor;
             }
           }
         }
@@ -291,5 +312,4 @@ ul {
     }
   }
 }
-
 </style>
