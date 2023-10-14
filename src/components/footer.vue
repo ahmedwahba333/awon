@@ -90,7 +90,7 @@
 
 <style lang="scss" scoped>
 
-@import "../scss/colors";
+@import "../scss/global/colors";
 
 
 
@@ -112,28 +112,14 @@ footer{
 }
 
 
- @media (min-width: 990px) {
-    .st{
-    margin-left:80px
-}
+.st{
+    margin-left: 90px;
 }
 
 
 
-@media (min-width: 767px) and (max-width:989.9999px) {
-    .st{
-    margin-left:60px;
-    text-align:start
-}
-   
-}
 
-@media (min-width: 567px )and (max-width:766.9999px ) {
-    .st{
-    margin-left: 14px;
-    
-}
-}
+
 
 
 </style>
