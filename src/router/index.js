@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import LoginView from "../views/LoginView.vue";
 import LandingPage from "../views/LandingPage.vue" ;
 import WorkerPageDashboard from '../views/workerPageDashboard.vue';
+import ServiceHistorySA from '../views/ServivesHistorySA.vue';
 
 const routes = [
   {
@@ -33,6 +34,12 @@ const routes = [
     path:"/workerpageDash",
     name:"WorkerPageDashboard",
     component:WorkerPageDashboard,
+  },
+
+  {
+    path:"/ServiceHistorySA",
+    name:"ServiceHistorySA",
+    component:ServiceHistorySA,
   }
 ];
 

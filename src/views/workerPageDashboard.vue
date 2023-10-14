@@ -3,15 +3,12 @@
     <div class="container grid">
 
         <div class="row pt-3 breadCrumb"> 
-            <!-- <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb"> -->
-                
                  <ol class="breadcrumb">
                    <li class="breadcrumb-item active me-2">Dashboard</li>
                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" fill="#F97B22" class="mt-2 me-2">
              <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
                    <li class="breadcrumb-item active" aria-current="page">Worker Page</li>
-                 </ol>
-            <!-- </nav> -->
+                 </ol>  
         </div>
 
         
@@ -186,7 +183,7 @@
                             <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
                          </svg>
                      </div>
-                    <div class="review"> I had hight hopes for this, i wansn't disappointed.</div>
+                    <div class="review"> I had high hopes for this, i wansn't disappointed.</div>
                   </div>
             </div>
 
@@ -421,7 +418,6 @@ table{
     }
 
     .reviewBox{
-
     margin-left: 70px;
         display: flex;
         align-items: center;
@@ -448,6 +444,7 @@ table{
 
     .innerReview{
         margin-left: 10px;
+    
     } 
    } 
 }
