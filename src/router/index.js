@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import LoginView from "../views/LoginView.vue";
 import LandingPage from "../views/LandingPage.vue" ;
 import WorkerProfile from "../views/WorkerProfileCx.vue";
+import paymentDetails from "../views/payment.vue";
 const routes = [
   {
     path: "/",
@@ -30,6 +31,11 @@ const routes = [
     path: "/workerProfile",
     name: "WorkerProfile",
     component: WorkerProfile,
+  },
+  {
+    path: "/payment",
+    name: "paymentDetails",
+    component: paymentDetails,
   },
 ];
 
