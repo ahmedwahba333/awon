@@ -4,9 +4,9 @@
   <!-- <NavBarPages/>
    <LandingPage/> -->
   <!-- <NavBarDash/> -->
-<SideBarPage/>
+<!-- <SideBarPage/> -->
  
-  <!-- <router-view/> -->
+  <router-view/>
   
     
   <!-- <FooterComponent/> -->
@@ -20,14 +20,14 @@
 // import NavBarDash from "@/components/NavBarDash.vue";
 // import LandingPage from "@/views/LandingPage.vue";
 // import FooterComponent from './components/footer.vue';
-import SideBarPage from './components/SideBarPage.vue';
+// import SideBarPage from './components/SideBarPage.vue';
 export default {
   components: {
     // NavBarPages,
     // LandingPage,
     // NavBarDash,
     // FooterComponent,
-    SideBarPage
+    // SideBarPage
   },
 };
 
