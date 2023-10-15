@@ -224,7 +224,7 @@
 
 </div>
 
-    </div>
+</div>
 </div>
 </template>
 
@@ -244,6 +244,12 @@ import NavBarDash from '../components/NavBarDash.vue'
 <style lang="scss" scoped>
 @import '../scss/global/colors';
 @import '../scss/global/variables';
+
+@mixin Box{
+    box-shadow: 2px 4px 4px 2px rgba(117, 113, 113, 0.25);
+    background-color: $whiteColor;
+    border-radius: $border-radius-big;
+ }
 
 .all{
 background-color: $backgroundColor;
@@ -280,8 +286,7 @@ svg{
 }
 
 .workerDet{
-    border-radius: 20px;
-    background-color: white;
+    @include Box;
 
     p{
         display: inline;
@@ -299,8 +304,7 @@ svg{
 
 .ServiceDet{
     margin-top: 30px;
-    background-color: white;
-    border-radius: 20px;
+    @include Box;
 
     .tableTitle{
         font-size:$title;
@@ -321,18 +325,10 @@ tbody{
     font-size: $paragraph!important;
 }
 
-// tr{
-//     border-top: none 0px !important;
-    
-// }
-// table{
-//     color: $blueColor;
-// }
 
 .reviewsCard{
     color: $blueColor;
-    background-color: white;
-    border-radius: 20px;
+    @include Box;
 
     :nth-child(1){
         font-size: $title;
