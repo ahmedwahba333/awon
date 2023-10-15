@@ -1,6 +1,7 @@
 <template>
-    <div>
+    <div class="bg">
         <NavBarPages/>
+
         <FooterComponent/>
     </div>
 </template>
@@ -18,6 +19,11 @@
 
 </script>
 
-<style>
+<style lang="scss" scoped>
+    @import "../scss/global/colors";
+    @import "../scss/global/variables";
 
+    .bg {
+    background-color: $backgroundColor;
+    }
 </style>

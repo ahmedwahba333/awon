@@ -199,14 +199,8 @@
     @import "../scss/global/colors";
     @import "../scss/global/variables";
 
-    $blueColor: #193655;
-    $orangeColor: #f97b22;
-    $darkOrange: #c15000;
-    $backgroudColor: #ebebd3;
-    $whiteColor: #ffffff;
-
     .bg {
-    background-color: $backgroudColor;
+    background-color: $backgroundColor;
     }
     .img {
     clip-path: circle();
