@@ -6,6 +6,7 @@ import WorkerPageDashboard from '../views/workerPageDashboard.vue';
 import ServiceHistorySA from '../views/ServivesHistorySA.vue';
 
 import WorkerProfile from "../views/WorkerProfileCx.vue";
+import ServicesView from "../views/ServicesView.vue"
 const routes = [
   {
     path: "/",
@@ -46,6 +47,11 @@ const routes = [
     name: "WorkerProfile",
     component: WorkerProfile,
   },
+  {
+    path: "/ServicesView",
+    name: "ServicesView",
+    component: ServicesView
+  }
 ];
 
 const router = createRouter({

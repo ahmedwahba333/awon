@@ -264,8 +264,8 @@ ul {
         height: 50px;
         > a {
           width: 100%;
-          padding: 10px;
-          font-size: 14px;
+          padding: 12px;
+          font-size: 8px;
           height: 50px;
         }
       }
@@ -301,7 +301,7 @@ ul {
         > a {
           width: 100%;
           padding: 10px;
-          font-size: 12px;
+          font-size: 8px;
           height: 50px;
         }
       }
@@ -326,7 +326,7 @@ ul {
     .mainNav {
       > li {
         > a {
-          font-size: 8mm;
+          font-size: 8px;
         }
       }
     }
@@ -335,7 +335,7 @@ ul {
       .links {
         span {
           padding: 1px;
-          font-size: 12px;
+          font-size: 10px;
         }
         li {
           a {
