@@ -40,7 +40,7 @@ const routes = [
     path:"/ServiceHistorySA",
     name:"ServiceHistorySA",
     component:ServiceHistorySA,
-  }
+  },
   {
     path: "/workerProfile",
     name: "WorkerProfile",

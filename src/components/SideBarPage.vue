@@ -64,12 +64,12 @@
 @import "../scss/global/colors";
 
 
-.nav-pills li a:hover{
-    background-color: $backgroudColor;
-}
-.nav-pills li a:focus{
-    background-color: $backgroudColor;
-}
+// .nav-pills li a:hover{
+//     background-color: $backgroudColor;
+// }
+// .nav-pills li a:focus{
+//     background-color: $backgroundColor ;
+// }
 .nav-pills li {
     color: $blueColor;
     font-size: small;
@@ -77,6 +77,7 @@
 svg {
     color: $orangeColor;
 }
+
 
 
 </style>
