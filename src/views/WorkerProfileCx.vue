@@ -2,61 +2,32 @@
     <div class="bg">
         <NavBarPages />
         <div class="container">
-        <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
-            <div class="row">
-            <div class="img col-lg-6"><img src="../assets/images/1.jpg" /></div>
-            <div class="col-lg-4"><h2>name of worker</h2></div>
-            <div class="btn col-lg-6">Book now</div>
+        <div class="row align-items-center">
+            <div class="col col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="img"><img src="../assets/images/1.jpg" /></div>
+            </div>
+            <div class="col col-lg-6 col-md-6 col-sm-12 col-12 ">
+                <div class="w-name">name of worker</div>
+                <div class="btn">Book now</div>
             </div>
         </div>
+
+
         <div class="box">
             <div class="title">Worker Availability</div>
-            <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-check-circle"
-            viewBox="0 0 16 16"
-            >
-            <path
-                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-            />
-            <path
-                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"
-            />
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" >
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
             </svg>
             House Cleaning, Bathroom Cleaning, Kitchen Cleaning<br />
-            <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-check-circle"
-            viewBox="0 0 16 16"
-            >
-            <path
-                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-            />
-            <path
-                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"
-            />
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" >
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
             </svg>
             Available for work<br />
-            <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-check-circle"
-            viewBox="0 0 16 16"
-            >
-            <path
-                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-            />
-            <path
-                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"
-            />
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" >
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
             </svg>
             Available for work in these areas: Giza, Sheikh Zayed, Haram
         </div>
@@ -239,16 +210,18 @@
     }
     .img {
     clip-path: circle();
-    height: 250px;
+    width: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
     }
     .box {
     @include box;
     }
     .btn {
     @include button;
+    align-items: center;
     }
     .title {
     font-weight: bold;
@@ -256,6 +229,8 @@
     }
     .content {
     margin: 1%;
+    vertical-align: middle;
+    font-weight: 600;
     }
     .cx-comment {
     margin: 2%;
@@ -279,4 +254,10 @@
   align-items: center;
 }
 
+.w-name{
+    color: $blueColor;
+    text-align: center;
+    font-size: $title;
+    font-weight: 600;
+}
     </style>
