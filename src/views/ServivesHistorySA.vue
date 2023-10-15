@@ -1,7 +1,8 @@
 <template>
     <NavBarDash/>
-    <!-- <SideBarPage/> -->
-<div class="all">
+    <div class="row grid d-flex">
+    <SideBarPage class="col-2"/>
+<div class="all col-10">
     <div class="container grid">
 
           <!-- BreadCrumb -->
@@ -122,18 +123,19 @@
 
     </div>
 
-</div>  
+</div>
+</div>   
 </template>
 
 <script>
 import NavBarDash from '../components/NavBarDash.vue';
-// import SideBarPage from '../components/SideBarPage.vue'
+import SideBarPage from '../components/SideBarPage.vue'
     export default {
         name:'ServiceHistorySA',
 
         components:{
             NavBarDash,
-            // SideBarPage
+            SideBarPage
         }
     }
 </script>
@@ -142,6 +144,8 @@ import NavBarDash from '../components/NavBarDash.vue';
  
  @import '../scss/global/colors';
  @import  '../scss/global/variables';
+
+
 
 p{
     color: $blueColor;
