@@ -65,12 +65,12 @@
     </div>
 
     <div class="container">
-      <div class="row text-center my-5 ">
+      <div class="row text-center my-5">
         <h2>We offer +200 workers to do everything you need</h2>
       </div>
       <div class="row justify-content-center my-5 gap-5">
-        <div class="col-12 col-lg-5 ">
-          <div class="card  mb-2 gap-2">
+        <div class="col-12 col-lg-5">
+          <div class="card mb-2 gap-2">
             <img
               src="../assets/images/cardphotos/cleaning.jpg"
               class="card-img-top object-fit-cover"
@@ -82,7 +82,7 @@
           </div>
         </div>
         <div class="col-12 col-lg-5">
-          <div class="card  mb-2 gap-2">
+          <div class="card mb-2 gap-2">
             <img
               src="../assets/images/cardphotos/foodServices.jpeg"
               class="card-img-top object-fit-cover"
@@ -94,9 +94,9 @@
           </div>
         </div>
       </div>
-      <div class="row justify-content-center gap-5" >
-        <div class="col-12 col-lg-5" >
-          <div class="card  mb-2 gap-2">
+      <div class="row justify-content-center gap-5">
+        <div class="col-12 col-lg-5">
+          <div class="card mb-2 gap-2">
             <img
               src="../assets/images/cardphotos/elderly-care.jpg"
               class="card-img-top object-fit-cover"
@@ -108,7 +108,7 @@
           </div>
         </div>
         <div class="col-12 col-lg-5">
-          <div class="card  mb-2 gap-2">
+          <div class="card mb-2 gap-2">
             <img
               src="../assets/images/cardphotos/carpentry.jpg"
               class="card-img-top object-fit-cover"
@@ -177,17 +177,16 @@ export default {
 }
 
 .carouselSlide {
-  .carousel-inner{
- height: 550px;
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-height: 500px;
-    opacity: 0.5;
+  .carousel-inner {
+    height: 550px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 500px;
+      opacity: 0.5;
+    }
   }
-  }
- 
 }
 .bg {
   background-color: $backgroundColor;
@@ -207,7 +206,7 @@ export default {
   .card-title {
     font-size: $subTitle;
     font-weight: bold;
-    color: $blueColor ;
+    color: $blueColor;
     text-align: center;
   }
 }
