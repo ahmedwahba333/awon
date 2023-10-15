@@ -1,6 +1,16 @@
 <template>
     <div class="bg">
         <NavBarPages/>
+        <div class="container">
+        <div class="row  align-items-center">
+            <div class="col col-lg-8 col-md-6 col-sm-12 col-12">
+                <div class="box"> content </div>
+            </div>
+            <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
+                <div class="box"> content </div>
+            </div>
+        </div>
+        </div>
 
         <FooterComponent/>
     </div>
@@ -25,5 +35,9 @@
 
     .bg {
     background-color: $backgroundColor;
+    }
+    .box {
+    @include box;
+    margin: 2%;
     }
 </style>
