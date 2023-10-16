@@ -8,6 +8,7 @@ import ServicesView from "../views/ServicesView.vue";
 import WorkerPageDashboard from '../views/workerPageDashboard.vue'
 import dashReviews from "../views/dashReviews.vue";
 import aboutus from "../views/About.vue";
+import Allworker from "../views/AllWorker.vue"
 
 const routes = [
   {
@@ -62,6 +63,11 @@ const routes = [
     name: "aboutUs",
     component: aboutus,
   },
+  {
+    path:"/AllWorker",
+    name:"AllWorker",
+    component:Allworker
+  }
 ];
 
 const router = createRouter({
