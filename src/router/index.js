@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 // import HomeView from "../views/HomeView.vue";
 import LoginView from "../views/LoginView.vue";
+import SignupView from "../views/SignupView.vue";
 import LandingPage from "../views/LandingPage.vue" ;
 import WorkerProfile from "../views/WorkerProfileCx.vue";
 import paymentDetails from "../views/payment.vue";
@@ -29,6 +30,11 @@ const routes = [
     path: "/login",
     name: "login",
     component: LoginView,
+  },
+  {
+    path: "/signup",
+    name: "signup",
+    component: SignupView,
   },
   {
     path: "/workerProfile",
