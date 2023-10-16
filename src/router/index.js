@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import LoginView from "../views/LoginView.vue";
 import LandingPage from "../views/LandingPage.vue" ;
 import WorkerProfile from "../views/WorkerProfileCx.vue";
+import AllWorker from "../views/AllWorker.vue"
 const routes = [
   {
     path: "/",
@@ -31,6 +32,11 @@ const routes = [
     name: "WorkerProfile",
     component: WorkerProfile,
   },
+  {
+    path:"/AllWorker",
+    name:"AllWorker",
+    component: AllWorker,
+  }
 ];
 
 const router = createRouter({

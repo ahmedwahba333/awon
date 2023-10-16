@@ -65,10 +65,10 @@
 
 
 .nav-pills li a:hover{
-    background-color: $backgroudColor;
+    background-color: $backgroundColor;
 }
 .nav-pills li a:focus{
-    background-color: $backgroudColor;
+    background-color: $backgroundColor;
 }
 .nav-pills li {
     color: $blueColor;
