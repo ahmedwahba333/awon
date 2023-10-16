@@ -92,7 +92,7 @@
 
 
         <!-- Worker Services Details (table) -->
-        <div class="row grid ServiceDet mb-5 ">
+        <div class="row grid ServiceDet text-md-center mb-5 ">
             <div class=" tableTitle mt-4 ">
                 <span class="col-10">Worker Services Details </span>
                 <span class="price col-2">2450$</span>

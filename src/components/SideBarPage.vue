@@ -79,10 +79,14 @@ svg {
 }
 
 .container-fluid{
-    position:fixed;
-    float: left;
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
 }
-
+ 
 
 
 </style>

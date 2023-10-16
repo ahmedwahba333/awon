@@ -1,8 +1,44 @@
 <template>
     <NavBarDash/>
-    <div class="row grid d-flex">
-    <SideBarPage class="col-2"/>
-<div class="all col-10">
+    <sideCom/>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <SideBarPage/> -->
+<div class="all">
     <div class="container grid">
 
           <!-- BreadCrumb -->
@@ -124,18 +160,19 @@
     </div>
 
 </div>
-</div>   
 </template>
 
 <script>
 import NavBarDash from '../components/NavBarDash.vue';
-import SideBarPage from '../components/SideBarPage.vue'
+// import SideBarPage from '../components/SideBarPage.vue';
+import sideCom from '../components/side.vue'
     export default {
         name:'ServiceHistorySA',
 
         components:{
             NavBarDash,
-            SideBarPage
+            // SideBarPage
+            sideCom
         }
     }
 </script>
@@ -245,6 +282,9 @@ input.search {
     background-color: $backgroundColor;
     // font-family: 'Raleway';
     // margin-left: 300px;
+    margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
 }
 
 thead tr tbody{
@@ -314,6 +354,9 @@ tbody{
     // }
 }
 
+
+
+ 
 
 </style>
 

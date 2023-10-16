@@ -4,11 +4,10 @@ import LoginView from "../views/LoginView.vue";
 import LandingPage from "../views/LandingPage.vue" ;
 import WorkerPageDashboard from '../views/workerPageDashboard.vue';
 import ServiceHistorySA from '../views/ServivesHistorySA.vue';
-
+import BookingPage from '../views/BookingPage.vue'
 import WorkerProfile from "../views/WorkerProfileCx.vue";
 import paymentDetails from "../views/payment.vue";
 import ServicesView from "../views/ServicesView.vue";
-import WorkerPageDashboard from '../views/workerPageDashboard.vue'
 
 const routes = [
   {
@@ -33,13 +32,6 @@ const routes = [
     name: "login",
     component: LoginView,
   },
-
-  {
-    path:"/workerpageDash",
-    name:"WorkerPageDashboard",
-    component:WorkerPageDashboard,
-  },
-
   {
     path:"/ServiceHistorySA",
     name:"ServiceHistorySA",
@@ -56,7 +48,7 @@ const routes = [
     component: ServicesView
   },
   {
-    path:"/workerpageDash",
+    path:"/workerprofileDash",
     name:"WorkerPageDashboard",
     component:WorkerPageDashboard,
   },
@@ -64,6 +56,11 @@ const routes = [
     path: "/payment",
     name: "paymentDetails",
     component: paymentDetails,
+  },
+  {
+    path: '/bookingService',
+    name:'BookingPage',
+    component: BookingPage
   },
 ];
 
