@@ -11,8 +11,6 @@
                 <div class="btn">Book now</div>
             </div>
         </div>
-
-
         <div class="box">
             <div class="title">Worker Availability</div>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" >
@@ -36,7 +34,7 @@
             <div class="row justify-content-center align-items-start">
             <div class="col col-lg-6 col-md-6 col-sm-12 col-12">
                 <div class="content row align-items-start">
-                <div class="col-lg-1 col-md-2 col-2">
+                <div class="col-lg-2 col-md-2 col-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#193655" class="bi bi-person-circle" viewBox="0 0 16 16" >
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                     <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
@@ -44,17 +42,15 @@
                 </div>
                 <div class="cx name col-lg-5 col-md-5 col-5">Nada M.</div>
                 <div class="cx rate col-lg-5 col-md-5 col-5">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16" >
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16" >
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16" >
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16" >
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16" >
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
+                    <div class="rating">
+                    <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+                    <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+                    <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+                    <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+                    <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                    </div>
                 </div>
+
                 </div>
                 <div class="row">
                 <div class="cx-comment col-sm-12 col-md-12 col-lg-12">
@@ -66,7 +62,7 @@
 
             <div class="col col-lg-6 col-md-6 col-sm-12 col-12">
                 <div class="content row align-items-start">
-                <div class="col-lg-1 col-md-2 col-2">
+                <div class="col-lg-2 col-md-2 col-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#193655" class="bi bi-person-circle" viewBox="0 0 16 16" >
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                     <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
@@ -74,16 +70,13 @@
                 </div>
                 <div class="cx name col-lg-5 col-md-5 col-5">Mohammed A.</div>
                 <div class="cx rate col-lg-5 col-md-5 col-5">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16" >
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16" >
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16" >
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16" >
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16" >
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
+                    <div class="rating">
+                    <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+                    <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+                    <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+                    <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+                    <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                    </div>
                 </div>
                 </div>
                 <div class="row">
@@ -96,7 +89,7 @@
             <div class="row justify-content-center align-items-start">
             <div class="col col-lg-6 col-md-6 col-sm-12 col-12">
                 <div class="content row align-items-start">
-                <div class="col-lg-1 col-md-2 col-2">
+                <div class="col-lg-2 col-md-2 col-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#193655" class="bi bi-person-circle" viewBox="0 0 16 16" >
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                     <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
@@ -104,16 +97,13 @@
                 </div>
                 <div class="cx name col-lg-5 col-md-5 col-5">Salma H.</div>
                 <div class="cx rate col-lg-5 col-md-5 col-5">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16" >
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16" >
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16" >
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16" >
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16" >
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
+                    <div class="rating">
+                    <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+                    <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+                    <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+                    <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+                    <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                    </div>
                 </div>
                 </div>
                 <div class="row">
@@ -124,7 +114,7 @@
             </div>
             <div class="col col-lg-6 col-md-6 col-sm-12 col-12">
                 <div class="content row align-items-start">
-                <div class="col-lg-1 col-md-2 col-2">
+                <div class="col-lg-2 col-md-2 col-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#193655" class="bi bi-person-circle" viewBox="0 0 16 16" >
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                     <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
@@ -132,16 +122,13 @@
                 </div>
                 <div class="cx name col-lg-5 col-md-5 col-5">Sara N.</div>
                 <div class="cx rate col-lg-5 col-md-5 col-5">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16" >
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16" >
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16" >
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16" >
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F97B22" class="bi bi-star-fill" viewBox="0 0 16 16" >
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
+                    <div class="rating">
+                    <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+                    <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+                    <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+                    <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+                    <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                    </div>                
                 </div>
                 </div>
                 <div class="row">
@@ -215,7 +202,7 @@
     }
     .btn {
     @include button;
-    align-items: center;
+    margin: center;
     }
     .title {
     font-weight: bold;
@@ -254,4 +241,41 @@
     font-size: $title;
     font-weight: 600;
 }
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center
+}
+
+.rating>input {
+    display: none
+}
+
+.rating>label {
+    position: relative;
+    font-size: 20px;
+    font-weight: 300;
+    color: $orangeColor;
+    cursor: pointer
+}
+
+.rating>label::before {
+    content: "\2605";
+    position: absolute;
+    opacity: 0
+}
+
+.rating>label:hover:before,
+.rating>label:hover~label:before {
+    opacity: 1 !important
+}
+
+.rating>input:checked~label:before {
+    opacity: 1
+}
+
+.rating:hover>input:checked~label:before {
+    opacity: 0.4
+}
+
     </style>
