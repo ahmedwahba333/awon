@@ -2,6 +2,7 @@
 
 <div class="header" id="header">
     <div class="container">
+      <sideBarPage class=""/>
     <router-link to="#" class="logo"><a>Awon</a></router-link>
    
     
@@ -14,8 +15,12 @@
 </template>
 
 <script>
+import SideBarPage from './SideBarPage.vue';
 export default {
   name: "NavBarDash",
+  components:{
+    SideBarPage
+  }
 };
 </script>
 

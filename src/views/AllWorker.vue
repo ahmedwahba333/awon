@@ -2,9 +2,10 @@
   <div>
     <NavBarDashVue />
     <div class="page">
-    <SideBarPage class="fixed" />
-    <div class="d-inlien">
-      <p>
+      <div class="container-fluid ">
+      <!-- <SideBarPage class="d"/> -->
+      <!-- <AllWorker/> -->
+      <p class="mt-4 d-inline-flex">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
         perferendis officiis eligendi? Provident tenetur asperiores, aliquid
         mollitia nemo quo labore eos, praesentium, debitis eveniet consequuntur
@@ -17,16 +18,17 @@
 
 <script>
 import NavBarDashVue from "@/components/NavBarDash.vue";
-import SideBarPage from "@/components/SideBarPage.vue";
+// import SideBarPage from "@/components/SideBarPage.vue";
 export default {
   name: "AllWorker",
   components: {
-    SideBarPage,
+    // SideBarPage,
     NavBarDashVue,
   },
 };
 </script>
 
-<style lang="sass" scoped>
-  
+<style lang="scss" scoped>
+
+    
 </style>
