@@ -6,7 +6,10 @@ import WorkerPageDashboard from '../views/workerPageDashboard.vue';
 import ServiceHistorySA from '../views/ServivesHistorySA.vue';
 
 import WorkerProfile from "../views/WorkerProfileCx.vue";
-import ServicesView from "../views/ServicesView.vue"
+import paymentDetails from "../views/payment.vue";
+import ServicesView from "../views/ServicesView.vue";
+import WorkerPageDashboard from '../views/workerPageDashboard.vue'
+
 const routes = [
   {
     path: "/",
@@ -51,7 +54,17 @@ const routes = [
     path: "/ServicesView",
     name: "ServicesView",
     component: ServicesView
-  }
+  },
+  {
+    path:"/workerpageDash",
+    name:"WorkerPageDashboard",
+    component:WorkerPageDashboard,
+  },
+  {
+    path: "/payment",
+    name: "paymentDetails",
+    component: paymentDetails,
+  },
 ];
 
 const router = createRouter({
