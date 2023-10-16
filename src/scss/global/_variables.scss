@@ -4,6 +4,10 @@ $subTitle: 24px;
 $title: 28px;
 $border-radius-big: 15px;
 $border-radius-small: 10px;
+$bold :700;
+$semiBold:600;
+$regular: 400 ;
+
 @mixin button {
     width: 150px;
     height: 40px;

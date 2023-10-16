@@ -3,7 +3,12 @@ import { createRouter, createWebHistory } from "vue-router";
 import LoginView from "../views/LoginView.vue";
 import LandingPage from "../views/LandingPage.vue" ;
 import WorkerProfile from "../views/WorkerProfileCx.vue";
-import AllWorker from "../views/AllWorker.vue"
+import paymentDetails from "../views/payment.vue";
+import ServicesView from "../views/ServicesView.vue";
+import WorkerPageDashboard from '../views/workerPageDashboard.vue'
+import dashReviews from "../views/dashReviews.vue";
+import aboutus from "../views/About.vue";
+
 const routes = [
   {
     path: "/",
@@ -33,10 +38,30 @@ const routes = [
     component: WorkerProfile,
   },
   {
-    path:"/AllWorker",
-    name:"AllWorker",
-    component: AllWorker,
-  }
+    path: "/ServicesView",
+    name: "ServicesView",
+    component: ServicesView,
+  },
+  {
+    path: "/workerpageDash",
+    name: "WorkerPageDashboard",
+    component: WorkerPageDashboard,
+  },
+  {
+    path: "/payment",
+    name: "paymentDetails",
+    component: paymentDetails,
+  },
+  {
+    path: "/dashReviews",
+    name: "dashReviews",
+    component: dashReviews,
+  },
+  {
+    path: "/aboutus",
+    name: "aboutUs",
+    component: aboutus,
+  },
 ];
 
 const router = createRouter({
