@@ -250,7 +250,8 @@ export default {
     }
 
     .cx-icon {
-        display: flex;
+    display: flex;
+    vertical-align: middle;
     justify-content: center;
     align-items: center;
     }

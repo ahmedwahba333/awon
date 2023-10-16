@@ -7,6 +7,7 @@ import paymentDetails from "../views/payment.vue";
 import ServicesView from "../views/ServicesView.vue";
 import WorkerPageDashboard from '../views/workerPageDashboard.vue'
 import dashReviews from "../views/dashReviews.vue";
+import aboutus from "../views/About.vue";
 
 const routes = [
   {
@@ -55,6 +56,11 @@ const routes = [
     path: "/dashReviews",
     name: "dashReviews",
     component: dashReviews,
+  },
+  {
+    path: "/aboutus",
+    name: "aboutUs",
+    component: aboutus,
   },
 ];
 
