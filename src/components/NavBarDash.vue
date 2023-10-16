@@ -2,7 +2,7 @@
 
 <div class="header" id="header">
     <div class="container">
-      <sideBarPage class=""/>
+      <sideBarPage/>
     <router-link to="#" class="logo"><a>Awon</a></router-link>
    
     
