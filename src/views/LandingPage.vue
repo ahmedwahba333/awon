@@ -139,9 +139,7 @@
         <h2>Our Happy Customer</h2>
       </div>
       <div class="row">
-        <div
-          class="col-12 d-flex flex-wrap flex-md-nowrap justify-content-around"
-        >
+        <div class="d-flex flex-wrap flex-md-nowrap justify-content-around">
           <div class="box">
             <div class="d-flex flex-row justify-content-between">
               <div class="p-2">
@@ -277,9 +275,7 @@
         </div>
       </div>
       <div class="row">
-        <div
-          class="col-12 d-flex flex-wrap flex-md-nowrap justify-content-around"
-        >
+        <div class="d-flex flex-wrap flex-md-nowrap justify-content-around">
           <div class="box">
             <div class="d-flex flex-row justify-content-between">
               <div class="p-2">
@@ -410,38 +406,92 @@
           </div>
         </div>
       </div>
+
       <div class="row text-center my-5">
         <h2>Contact us</h2>
       </div>
       <div class="d-flex justify-content-center">
-        <form >
-                <div class="mb-3 col-lg-6 col-md-4">
-                    <div>
-                        <input type="text" class="input" id="inputName" placeholder="name">
-                    </div>
-                </div>
-                <div class="mb-3 col-lg-6 col-md-4">
-                    <div>
-                        <input type="email" class="input" id="inputEmail" placeholder="e-mail">
-                    </div>
-                </div>
-                <div class="mb-3 col-lg-6 col-md-4">
-                    <div>
-                        <input type="text" class="input" id="inputPhone" placeholder="phone number">
-                    </div>
-                </div>
-                <div class="mb-3 col-lg-6 col-md-4">
-                    <div>
-                        <textarea class="input" placeholder="write you message here" id="inputMessage"></textarea>
-                    </div>
-                </div>
-                <button class="btn d-block m-auto mb-3">send</button> 
+        <form>
+          <div class="mb-3 col-lg-6 col-md-4">
+            <div>
+              <input
+                type="text"
+                class="input"
+                id="inputName"
+                placeholder="name"
+              />
+            </div>
+          </div>
+          <div class="mb-3 col-lg-6 col-md-4">
+            <div>
+              <input
+                type="email"
+                class="input"
+                id="inputEmail"
+                placeholder="e-mail"
+              />
+            </div>
+          </div>
+          <div class="mb-3 col-lg-6 col-md-4">
+            <div>
+              <input
+                type="text"
+                class="input"
+                id="inputPhone"
+                placeholder="phone number"
+              />
+            </div>
+          </div>
+          <div class="mb-3 col-lg-6 col-md-4">
+            <div>
+              <textarea
+                class="input"
+                placeholder="write you message here"
+                id="inputMessage"
+              ></textarea>
+            </div>
+          </div>
+          <button class="btn d-block m-auto mb-3">send</button>
         </form>
-      
       </div>
+
+      <div class="row text-center my-5">
+        <h2>FAQs</h2>
+      </div>
+      <div class="d-flex justify-content-center">
     
 
-    
+        <nav class="accordion arrows">
+          <input type="radio" name="accordion" id="cb1" />
+          <section class="box">
+            <label class="box-title" for="cb1"> How do i book a service?</label>
+            <label class="box-close" for="acc-close"></label>
+            <div class="box-content">
+                  it’s so easy. all you have to do is choose 
+                  the service you need and book a worker that you deem suitable with the time slots available.  
+            </div>
+          </section>
+          <input type="radio" name="accordion" id="cb2" />
+          <section class="box">
+            <label class="box-title" for="cb2">How can i pay?</label>
+            <label class="box-close" for="acc-close"></label>
+            <div class="box-content">
+            we accept cash on delivery of service and you can also pay online using your debit card.
+            </div>
+          </section>
+          <input type="radio" name="accordion" id="cb3" />
+          <section class="box mb-5">
+            <label class="box-title" for="cb3">What happen if the worker is late?</label>
+            <label class="box-close" for="acc-close"></label>
+            <div class="box-content">
+                    we  track our workers to make sure they arrive on time, 
+                    we also send you a confirmation text upon going to your house.
+            </div>
+          </section>
+
+          <input type="radio" name="accordion" id="acc-close" />
+        </nav>
+      </div>
     </div>
     <FooterComponent />
   </div>
@@ -507,6 +557,9 @@ export default {
   }
   .card {
     height: 20rem;
+    &:hover{
+      box-shadow:0 0 15px $orangeColor ;
+    }
     img {
       height: 15rem;
     }
@@ -519,10 +572,10 @@ export default {
   }
   .box {
     @include box;
-    width: 370px;
+    width: 350px;
     padding: 15px;
     height: 190px;
-    margin: 20px;
+    margin: 10px;
 
     img {
       clip-path: circle();
@@ -534,8 +587,7 @@ export default {
   }
 
   form {
-
-    .input{
+    .input {
       border: 3px solid $blueColor;
       border-radius: 33px;
       width: 716px;
@@ -550,19 +602,97 @@ export default {
         border-color: $orangeColor;
         outline: none;
       }
-      &#inputMessage{
+      &#inputMessage {
         height: 262px;
       }
-   
     }
-    .input[placeholder]{
-        font-size: $paragraph;
-        font-weight: $semiBold;
+    .input[placeholder] {
+      font-size: $paragraph;
+      font-weight: $semiBold;
     }
     .btn {
       @include button;
     }
   }
-  
+
+  .accordion {
+    margin: auto;
+    // width: 50%;
+  }
+  .accordion input {
+    display: none;
+  }
+  .accordion {
+    .box {
+      position: relative;
+      background: white;
+      height: 64px;
+      transition: all 1s linear ;
+      border: 3px solid $blueColor;
+      border-radius: 33px;
+      width: 716px;
+      height: 69px;
+      padding: 9px 4px 9px 40px;
+      background: white;
+      @media (max-width: 767px) {
+        width: 350px;
+        height: 55px;
+      }
+    }
+
+    .box-title {
+       
+      font-weight: $semiBold;
+      font-size: $small;
+      color: $blueColor;
+      width: calc(100% - 30px);
+      height: 64px;
+      text-align: center;
+      line-height: 36px;
+      display: inline-block;
+      cursor: pointer;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+       @media(min-width: 767px) {
+        font-size: 20px;
+      }
+    }
+    .box-content {
+      width: calc(100% - 40px);
+      padding: 30px 20px;
+      font-size: $small;
+      font-weight: $semiBold;
+      color: black;
+      display: none;
+       @media(min-width: 767px) {
+        font-size: 20px;
+       }
+    }
+    .box-close {
+      position: absolute;
+      height: 64px;
+      width: 100%;
+      top: 0;
+      left: 0;
+      cursor: pointer;
+      display: none;
+    }
+    input:checked + .box {
+      height: auto;
+      margin-top: 20px ;
+    }
+    input:checked + .box .box-title {
+      border-bottom: 1px solid $blueColor;
+    }
+    input:checked + .box .box-content,
+    input:checked + .box .box-close {
+      display: inline-block;
+    }
+  }
 }
 </style>
