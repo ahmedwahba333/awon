@@ -8,6 +8,7 @@ import ServicesView from "../views/ServicesView.vue";
 import WorkerPageDashboard from '../views/workerPageDashboard.vue'
 import dashReviews from "../views/dashReviews.vue";
 import aboutus from "../views/About.vue";
+import allAgencies from "../views/allAgencySDash.vue";
 
 const routes = [
   {
@@ -61,6 +62,11 @@ const routes = [
     path: "/aboutus",
     name: "aboutUs",
     component: aboutus,
+  },
+  {
+    path: "/Agencies",
+    name: "allAgencies",
+    component: allAgencies,
   },
 ];
 
