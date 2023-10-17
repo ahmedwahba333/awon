@@ -2,11 +2,10 @@
     
   <div class="all">
       <NavBarPages/>
-  
          <div class="container grid mb-5">
-                    <div clas="row">
-                        <p class="title mt-5 mx-5">Booking Details</p>
-                    </div>
+              <div clas="row">
+                <p class="title mt-5 mx-5">Booking Details</p>
+              </div>
                     
                <!-- Personal Info -->
       <div class=" personalInfo">
@@ -38,10 +37,8 @@
             <input type="text" class="form-control" id="inputAddress">
           </div>
           <div class="form-group">
-            <label for="inputAddress2">Governate</label>
-            <select id="inputGovernate" class="form-control">
-                <option></option>
-              </select>
+            <label for="inputGovernate">Governate</label>
+            <input type="text" class="form-control" id="inputGovernate">
           </div>
           <div class="form-group">
             <label for="inputCity">City</label>
@@ -85,10 +82,11 @@
 
 <div class="form-group row">
 <p class="mb-0 mt-1">choose services</p>
+
 <div class="containe col-lg-4 col-md-6">
 <ul>
   <li>
-    <label for="option"> Food Services</label>
+    <label for="option" class="mainService"> Food Services</label>
     <ul class="list-unstyled">
       <li><label><input type="checkbox" class="subOption"> Food catering</label></li>
       <li><label><input type="checkbox" class="subOption"> Chefs</label></li>
@@ -101,7 +99,7 @@
 <div class="containe col-lg-4 col-md-6">
 <ul>
   <li>
-    <label for="option"> Giving</label>
+    <label for="option" class="mainService"> Giving</label>
     <ul class="list-unstyled">
       <li><label><input type="checkbox" class="subOption"> Baby sitting</label></li>
       <li><label><input type="checkbox" class="subOption"> Elserly care</label></li>
@@ -111,7 +109,7 @@
 </ul>
 </div>
 
-<div class="containe col-lg-4 col-md-6">
+<!-- <div class="containe col-lg-4 col-md-6">
 <ul>
   <li>
     <label for="option"> House Maintenance</label>
@@ -147,7 +145,7 @@
     </ul>
   </li>
 </ul>
-</div>
+</div> -->
 </div>
 
 <div class="row">
@@ -158,7 +156,7 @@
 
 <div class="form-row row">
             <div class="form-group col-md-6 mb-2">
-              <label for="dateFrom" class="mx-2">choose date</label>
+              <label for="dateFrom" class="mx-2 fw-light dateLable">choose date</label>
               <input type="Date" class="form-control" >
             </div>
             <div class="form-group col-md-6 tS1">
@@ -178,11 +176,11 @@
 
       <div class="form-row row">
             <div class="form-group col-md-6">
-              <label for="dateFrom" class="mx-2">from</label>
+              <label for="dateFrom" class="mx-2 fw-light dateLable">from</label>
               <input type="Date" class="form-control" id="dateFrom"  >
             </div>
             <div class="form-group col-md-6 mb-sm-3 mb-md-0">
-              <label for="dateTo" class="mx-2">to</label>
+              <label for="dateTo" class="mx-2 fw-light dateLable">to</label>
               <input type="Date" class="form-control" id="dateTo" >
             </div>
       </div>
@@ -213,23 +211,25 @@
 </div>
 </div>    
 </div>
+<FooterComponent/>
 </div>
-  <FooterComponent/>
 </template>
 
 <script>
 import NavBarPages from '@/components/NavBarPages.vue';
-import FooterComponent from '../components/footer.vue'
+import FooterComponent from '../components/footer.vue';
+
+// import MultiSelect from 'primevue/multiselect';
+
 
   export default {
   name: 'BookingPage',
   components: { 
       NavBarPages ,
       FooterComponent
-  }
-  
-}
+  },
 
+}
 
 </script>
 
@@ -248,6 +248,9 @@ import FooterComponent from '../components/footer.vue'
   font-weight: $bold;
 }
 
+.mainService{
+  font-size: $paragraph !important;
+}
 .personalInfo{
   @include box;
 }
@@ -278,6 +281,8 @@ form{
 font-weight:$semiBold;
 font-size: $paragraph;
 }
+// padding-bottom: 0px !important;
+// margin-top: none !important;
 }
 
 .worckerNm{
@@ -286,8 +291,20 @@ font-size: $paragraph;
  
 }
 
+li{
+  label{
+    font-size:$small!important;
+}
+  }
+
+  
+
 .tS1{
 margin-top: 30px;
+}
+
+.dateLable{
+  font-size:18px !important;
 }
 
 button{
