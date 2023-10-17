@@ -1,0 +1,38 @@
+$small: 14px;
+$paragraph: 20px;
+$subTitle: 24px;
+$title: 28px;
+$border-radius-big: 15px;
+$border-radius-small: 10px;
+$bold :700;
+$semiBold:600;
+$regular: 400 ;
+
+@mixin button {
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    margin:20px;
+    border-radius: $border-radius-small;
+    background-color: $orangeColor;
+    border: 0px;
+    color: $whiteColor;
+    font-weight: 600;
+    &:hover {
+        background-color: $darkOrange;
+        border: 0px;
+        color: $whiteColor;
+    }}
+
+    @mixin box{
+        color: $blueColor;
+        background-color: $whiteColor;
+        border-radius: $border-radius-big;
+        margin:40px;
+        padding: 30px;
+        justify-content: center;
+        line-height: 1.5;
+        font-size: $small;
+        box-shadow: 2px 4px 4px 2px rgba(117, 113, 113, 0.25);
+    }
+
