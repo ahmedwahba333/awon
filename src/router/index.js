@@ -160,7 +160,7 @@ const routes = [
     component:BookingPage
   },
   {
-    path: "/ServiceHistoryAgency",
+    path: "/serviceHistoryAgency",
     name: "ServiceHistoryAgency",
     component:ServiceHistoryAgency
   },
