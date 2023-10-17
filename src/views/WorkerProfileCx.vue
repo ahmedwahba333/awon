@@ -207,6 +207,7 @@
     .title {
     font-weight: bold;
     font-size: $subTitle;
+    color: $blueColor
     }
     .content {
     margin: 1%;
