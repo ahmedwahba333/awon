@@ -1,5 +1,5 @@
 <template>
-  <div class="bg">
+  <div class="bg container-fluid">
     <NavBarPages />
     <div class="child">
       <h2 class="serv">House Keeping: Your home, your haven.</h2>
@@ -209,7 +209,7 @@ export default {
   padding: 15px;
   background-color: $whiteColor;
   width: 70%;
-  height: 200px;
+  height: auto;
   border-radius: $border-radius-big;
 }
 .serv {
