@@ -2,13 +2,13 @@
 
    <NavBarDash/>
     <div class="bg">
-        <div class="container grid">
+        <div class="container grid ">
           <div class="header p-5 mx-5">
             <h1>Welcome To Dashboard Home</h1>
             <h5>All Information of Your About Agency</h5>
           </div>
-           <div class="row mb-5">
-              <div class="box box-sectionOne col-6 col-md-4 ">
+           <div class="row mb-5 mx-2 gap-2">
+              <div class="box box-sectionOne col-12 col-lg-3">
                 <div class="d-flex justify-content-between mb-2">
                   <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                     <path d="M20.5703 14.6694H29.6579" stroke="#F97B22" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -30,7 +30,7 @@
                    </div>
                 </div>
               </div>
-              <div class="box box-sectionOne col-6 col-md-4 ">
+              <div class="box box-sectionOne col-12 col-lg-3 ">
                 <div class="d-flex justify-content-between mb-2">
                   <svg xmlns="http://www.w3.org/2000/svg" width="42" height="43" viewBox="0 0 42 43" fill="none">
                     <path d="M14.623 0.804199C9.18048 0.804199 4.75586 5.22882 4.75586 10.6713C4.75586 16.0099 8.93121 20.3307 14.3737 20.5177C14.5399 20.4969 14.7061 20.4969 14.8307 20.5177H14.9346H14.9761C20.294 20.3307 24.4693 16.0099 24.4901 10.6713C24.4901 5.22882 20.0655 0.804199 14.623 0.804199Z" fill="#F97B22"/>
@@ -51,7 +51,7 @@
                    </div>
                 </div>
               </div>
-               <div class="box box-sectionOne col-6 col-md-4 ">
+               <div class="box box-sectionOne col-12 col-lg-3 ">
                 <div class="d-flex justify-content-between mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="43" height="49" viewBox="0 0 43 49" fill="none">
                   <path d="M11.5684 14.7441V12.5607C11.5684 7.49612 15.6426 2.52156 20.7072 2.04886C26.7397 1.46362 31.8268 6.21309 31.8268 12.133V15.2393" stroke="#F97B22" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -74,12 +74,17 @@
               </div>
             </div>
 
-              <div class="row">
-                <div class="box box-sectionTwo col-md-8">.col-md-8</div>
-                <div class="box box-sectionTwo col-6 col-md-4">.col-6 .col-md-4</div>
+              <div class="row mx-2 gap-2">
+                <div class="box box-sectionTwo col-lg-6 col-sm-12">.col-md-8</div>
+                <div class="box box-sectionTwo col-lg-4 col-sm-12">.col-6 .col-md-4</div>
               </div>
-          
+        
+
+        
+        
         </div>
+
+        
 </div>
 </template>
 
@@ -119,14 +124,15 @@ export default {
       width: 60px;
       height: 30px;
       background-color: $backgroundColor;
+    
     }
 }
 .box {
    @include box;
   
- &-sectionOne{
+  // width: 0;
   margin: auto;
-  width: 30%;
+ &-sectionOne{
   height: 125px;
   h4 {
     font-weight: $bold;
@@ -136,11 +142,9 @@ export default {
     font-weight: $bold;
   }
 }
-
 &-sectionTwo{
-  margin: auto;
-  // width: 30%;
-  height: 390px;
+height: 300px ;
 }
+
 }
 </style>
