@@ -11,7 +11,9 @@ import AgancyDash from '../views/AgancyDash.vue'
 import WorkerPageDashboard from '../views/workerPageDashboard.vue'
 import dashReviews from "../views/dashReviews.vue";
 import aboutus from "../views/About.vue";
-import Allworker from "../views/AllWorker.vue"
+import Allworker from "../views/AllWorker.vue";
+import ServiceHistoryAgency from '../views/ServiceHistoryAgency.vue';
+
 // start of auth
 // user auth
 import LoginView from "../views/auth/user_auth/LoginView.vue";
@@ -156,7 +158,12 @@ const routes = [
     path: "/booking",
     name: "BookingPage",
     component:BookingPage
-},
+  },
+  {
+    path: "/ServiceHistoryAgency",
+    name: "ServiceHistoryAgency",
+    component:ServiceHistoryAgency
+  },
 ];
 
 const router = createRouter({
