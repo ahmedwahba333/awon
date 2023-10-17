@@ -6,7 +6,10 @@ import WorkerProfile from "../views/WorkerProfileCx.vue";
 import WriteReview from "../views/WriteReview.vue";
 import paymentDetails from "../views/payment.vue";
 import ServicesView from "../views/ServicesView.vue";
-import WorkerPageDashboard from '../views/workerPageDashboard.vue'
+import WorkerPageDashboard from '../views/workerPageDashboard.vue';
+import AgancyDash from '../views/AgancyDash.vue'
+
+
 
 const routes = [
   {
@@ -55,6 +58,11 @@ const routes = [
     path: "/writereview",
     name: "WriteReview",
     component: WriteReview,
+  },
+  {
+    path: "/agancydash",
+    name: "AgancyDash",
+    component: AgancyDash,
   },
 ];
 
