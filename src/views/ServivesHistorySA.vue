@@ -1,6 +1,6 @@
 <template>
     <NavBarDash/>
-    <sideCom/>
+    <!-- <sideCom/> -->
 
 
     
@@ -165,14 +165,14 @@
 <script>
 import NavBarDash from '../components/NavBarDash.vue';
 // import SideBarPage from '../components/SideBarPage.vue';
-import sideCom from '../components/side.vue'
+// import sideCom from '../components/side.vue'
     export default {
         name:'ServiceHistorySA',
 
         components:{
             NavBarDash,
             // SideBarPage
-            sideCom
+            // sideCom
         }
     }
 </script>
