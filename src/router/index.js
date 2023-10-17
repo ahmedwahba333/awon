@@ -1,12 +1,25 @@
 import { createRouter, createWebHistory } from "vue-router";
 // import HomeView from "../views/HomeView.vue";
-import LoginView from "../views/LoginView.vue";
-import SignupView from "../views/SignupView.vue";
-import LandingPage from "../views/LandingPage.vue" ;
+import LandingPage from "../views/LandingPage.vue";
 import WorkerProfile from "../views/WorkerProfileCx.vue";
 import paymentDetails from "../views/payment.vue";
 import ServicesView from "../views/ServicesView.vue";
-import WorkerPageDashboard from '../views/workerPageDashboard.vue'
+import WorkerPageDashboard from "../views/workerPageDashboard.vue";
+
+// start of auth
+// user auth
+import LoginView from "../views/auth/user_auth/LoginView.vue";
+import SignupView from "../views/auth/user_auth/SignupView.vue";
+import AuthResetView from "../views/auth/user_auth/AuthResetView.vue";
+import AuthConfirmView from "../views/auth/user_auth/AuthConfirmView.vue";
+import AuthSetupPassView from "../views/auth/user_auth/AuthSetupPassView.vue";
+// admin auth
+import CpanelLoginView from "../views/auth/admin_auth/CpanelLoginView.vue";
+import CpanelSignupView from "../views/auth/admin_auth/CpanelSignupView.vue";
+import CpanelAuthResetView from "../views/auth/admin_auth/CpanelAuthResetView.vue";
+import CpanelAuthConfirmView from "../views/auth/admin_auth/CpanelAuthConfirmView.vue";
+import CpanelAuthSetupPassView from "../views/auth/admin_auth/CpanelAuthSetupPassView.vue";
+// end of auth
 
 const routes = [
   {
@@ -26,6 +39,9 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
+
+  // start of auth
+  // user auth
   {
     path: "/login",
     name: "login",
@@ -37,6 +53,50 @@ const routes = [
     component: SignupView,
   },
   {
+    path: "/reset-password",
+    name: "reset-password",
+    component: AuthResetView,
+  },
+  {
+    path: "/reset-password-confirm",
+    name: "reset-password-confirm",
+    component: AuthConfirmView,
+  },
+  {
+    path: "/setup-password",
+    name: "setup-password",
+    component: AuthSetupPassView,
+  },
+
+  // admin auth
+  {
+    path: "/cpanel-login",
+    name: "cpanel-login",
+    component: CpanelLoginView,
+  },
+  {
+    path: "/cpanel-signup",
+    name: "cpanel-signup",
+    component: CpanelSignupView,
+  },
+  {
+    path: "/cpanel-reset-password",
+    name: "cpanel-reset-password",
+    component: CpanelAuthResetView,
+  },
+  {
+    path: "/cpanel-reset-password-confirm",
+    name: "cpanel-reset-password-confirm",
+    component: CpanelAuthConfirmView,
+  },
+  {
+    path: "/cpanel-setup-password",
+    name: "cpanel-setup-password",
+    component: CpanelAuthSetupPassView,
+  },
+  // end of auth
+
+  {
     path: "/workerProfile",
     name: "WorkerProfile",
     component: WorkerProfile,
@@ -44,12 +104,12 @@ const routes = [
   {
     path: "/ServicesView",
     name: "ServicesView",
-    component: ServicesView
+    component: ServicesView,
   },
   {
-    path:"/workerpageDash",
-    name:"WorkerPageDashboard",
-    component:WorkerPageDashboard,
+    path: "/workerpageDash",
+    name: "WorkerPageDashboard",
+    component: WorkerPageDashboard,
   },
   {
     path: "/payment",
