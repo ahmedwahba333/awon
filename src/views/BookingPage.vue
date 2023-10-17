@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     
     <div class="all">
         <NavBarPages/>
@@ -214,6 +215,27 @@
 </div>    
 </div>
 </div>
+=======
+    <NavBarPages/>
+    
+    <div class="all">
+        <div class="container grid mb-5">
+            <div clas="row"><p class="title">Booking Details</p></div>
+
+            <div clas="row personlaInfo">
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+    </div>
+>>>>>>> master
     <FooterComponent/>
 </template>
 
@@ -227,10 +249,15 @@ import FooterComponent from '../components/footer.vue'
         NavBarPages ,
         FooterComponent
     }
+<<<<<<< HEAD
     
 }
 
 
+=======
+
+}
+>>>>>>> master
 </script>
 
 <style lang="scss" scoped>
@@ -244,6 +271,7 @@ import FooterComponent from '../components/footer.vue'
 }
 
 .title{
+<<<<<<< HEAD
     font-size: $subTitle;
     font-weight: $bold;
 }
@@ -318,3 +346,10 @@ select {
 
 
 </style>
+=======
+    font-size: $title;
+    font-weight: $bold;
+}
+
+</style>
+>>>>>>> master
