@@ -31,8 +31,14 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <div class="btn">
-                            <span class="">Pay</span>
+                        <div class="">
+                        <div class=""> <label class="radio"> <input type="radio" value="terms">
+                        accept terms and conditions <span></span> </label> </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="btn ">
+                            <div class="pay">Pay</div>
                             <span class="fas fa-arrow-right"></span>
                         </div>
                     </div>
@@ -94,7 +100,11 @@
     }
     .btn {
     @include button;
-    align-items: center;
-    height: auto;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
     }
+    
+
 </style>
