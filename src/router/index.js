@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import LandingPage from "../views/LandingPage.vue";
-import LoginView from "../views/LoginView.vue";
+// import LoginView from "../views/user_auth/LoginView.vue";
 import AddAgencyVue from "@/views/AddAgency.vue";
 
 const routes = [
@@ -24,11 +24,11 @@ const routes = [
 
   // start of auth
   // user auth
-  {
-    path: "/login",
-    name: "login",
-    component: LoginView,
-  },
+  // {
+  //   path: "/login",
+  //   name: "login",
+  //   component: LoginView,
+  // },
   {
     path:"/AddAgecy",
     name:"AddAgency",
