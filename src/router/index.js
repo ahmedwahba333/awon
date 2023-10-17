@@ -1,15 +1,16 @@
 import { createRouter, createWebHistory } from "vue-router";
 // import HomeView from "../views/HomeView.vue";
 import LoginView from "../views/LoginView.vue";
-import LandingPage from "../views/LandingPage.vue" ;
+import LandingPage from "../views/LandingPage.vue";
 import WorkerProfile from "../views/WorkerProfileCx.vue";
 import WriteReview from "../views/WriteReview.vue";
 import paymentDetails from "../views/payment.vue";
 import ServicesView from "../views/ServicesView.vue";
-import WorkerPageDashboard from '../views/workerPageDashboard.vue';
 import AgancyDash from '../views/AgancyDash.vue'
-
-
+import WorkerPageDashboard from '../views/workerPageDashboard.vue'
+import dashReviews from "../views/dashReviews.vue";
+import aboutus from "../views/About.vue";
+import Allworker from "../views/AllWorker.vue"
 
 const routes = [
   {
@@ -42,12 +43,12 @@ const routes = [
   {
     path: "/ServicesView",
     name: "ServicesView",
-    component: ServicesView
+    component: ServicesView,
   },
   {
-    path:"/workerpageDash",
-    name:"WorkerPageDashboard",
-    component:WorkerPageDashboard,
+    path: "/workerpageDash",
+    name: "WorkerPageDashboard",
+    component: WorkerPageDashboard,
   },
   {
     path: "/payment",
@@ -64,6 +65,21 @@ const routes = [
     name: "AgancyDash",
     component: AgancyDash,
   },
+  {
+    path: "/dashReviews",
+    name: "dashReviews",
+    component: dashReviews,
+  },
+  {
+    path: "/aboutus",
+    name: "aboutUs",
+    component: aboutus,
+  },
+  {
+    path: "/AllWorker",
+    name: "AllWorker",
+    component: Allworker
+  }
 ];
 
 const router = createRouter({
