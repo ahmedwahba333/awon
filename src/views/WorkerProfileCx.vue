@@ -1,16 +1,18 @@
 <template>
   <div class="bg">
-    <NavBarPages />
+    <NavBarPages/>
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col col-lg-6 col-md-6 col-sm-12 col-12">
-          <div class="img"><img src="../assets/images/1.jpg" /></div>
+      <div class="d-flex justify-content-start">
+      <div class="top d-flex justify-content-around align-items-center">
+        <div class="">
+          <div class="img"><img src="../assets/images/1.jpg"/></div>
         </div>
-        <div class="col col-lg-6 col-md-6 col-sm-12 col-12">
+        <div class="">
           <div class="w-name">name of worker</div>
-          <div class="btn">Book now</div>
+          <div class="btn m-0 mt-2">Book now</div>
         </div>
       </div>
+    </div>
       <div class="box">
         <div class="title">Worker Availability</div>
         <svg
@@ -67,7 +69,7 @@
         <div class="row justify-content-center align-items-start">
           <div class="col col-lg-6 col-md-6 col-sm-12 col-12">
             <div class="content row align-items-start">
-              <div class="col-lg-2 col-md-2 col-2">
+              <div class="col-sm-7 col-7 d-flex align-items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="30"
@@ -82,8 +84,8 @@
                     d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
                   />
                 </svg>
+              <div class="cx name ms-2">Nada M.</div>
               </div>
-              <div class="cx name col-lg-5 col-md-5 col-5">Nada M.</div>
               <div class="cx rate col-lg-5 col-md-5 col-5">
                 <div class="rating">
                   <input type="radio" name="rating" value="5" id="5" /><label
@@ -162,7 +164,8 @@
               </div>
             </div>
             <div class="row">
-              <div class="cx-comment col-sm-12 col-md-12 col-lg-12">
+              <div class="cx-comment col-sm-12 col-md-12 col-lg-9">
+                <!-- give margin left -->
                 I am very pleased with my first time getting Abdul Rahman's help
               </div>
             </div>
@@ -345,9 +348,9 @@
         </div>
       </div>
     </div>
+    <FooterComponent />
   </div>
 
-  <FooterComponent />
 </template>
 
 <script>
@@ -375,7 +378,11 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  margin-top: 20px;
+}.img img{
+  width: 250px;
+}
+.top{
 }
 .box {
   @include box;
@@ -388,6 +395,7 @@ export default {
   font-weight: bold;
   font-size: $subTitle;
   color: $blueColor;
+  margin: 1%;
 }
 .content {
   margin: 1%;
@@ -403,10 +411,21 @@ export default {
   vertical-align: middle;
   justify-content: center;
 }
+.badge-icon svg{
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 570px){
+  .badge-icon svg{
+    width: 50px;
+    height: 50px;
+}
+}
 .badge-name {
   display: inline-block;
   vertical-align: middle;
   font-weight: 600;
+  margin-left: 10px;
 }
 
 .b-box {
@@ -417,7 +436,6 @@ export default {
 
 .w-name {
   color: $blueColor;
-  text-align: center;
   font-size: $title;
   font-weight: 600;
 }
