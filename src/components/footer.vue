@@ -1,17 +1,17 @@
 <template>
     <div>
         <footer class=" text-white">
-            <div class="container grid pt-4 text-center">
+            <div class="container grid pt-3 text-center">
                 <div class="row d-flex justify-content-center">
 
-            <div class="col-md-4 col-sm-4 mb-3">
-                <p class="fw-bold mb-2">Office location:</p>
+            <div class="col-md-4 col-sm-4">
+                <p class="fw-bold mb-1">Office location:</p>
                 <p class="mb-0 st">bla street, bla street, cairo</p>
                 <p>+20 100 00 00</p>
             </div>
 
 
-            <div class="col-md-4 col-sm-4 mb-3">
+            <div class="col-md-4 col-sm-4 mb-1">
                 <p class="fw-bold">You can follow us here</p>
                 <div class="row">
                    <ul class="list-inline">
@@ -46,8 +46,8 @@
     </div>
 
 
-            <div class="col-md-4 col-sm-4 mb-3">
-                <p class="fw-bold mb-2 me-3">Contcat us via:</p>
+            <div class="col-md-4 col-sm-4 ">
+                <p class="fw-bold mb-1 me-3">Contcat us via:</p>
 
                 <div class="me-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone mx-1" viewBox="0 0 16 16">
@@ -97,7 +97,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-size: 20px;
+  
 
  
 }
@@ -109,6 +109,7 @@ footer{
     width: 100%;
     border-top-left-radius: 60px ;
     border-top-right-radius: 60px ;
+    font-size: 14px !important;
 }
 
 
@@ -120,17 +121,17 @@ footer{
 
 
 
-@media (min-width: 768px) and (max-width:990.9999px) {
+@media (min-width: 767px) and (max-width:990.9999px) {
     .st{
-    margin-left:60px;
+    margin-left:65px;
     text-align:start
 }
    
 }
 
-@media (min-width: 567px )and (max-width:767.9999px ) {
+@media (min-width: 568px )and (max-width:766.9999px ) {
     .st{
-    margin-left: 14px;
+    margin-left: 20px;
     
 }
 }

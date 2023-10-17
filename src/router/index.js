@@ -1,13 +1,16 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import LandingPage from "../views/LandingPage.vue";
 import LoginView from "../views/LoginView.vue";
 import AddAgencyVue from "@/views/AddAgency.vue";
 
 const routes = [
   {
     path: "/",
-    name: "home",
-    component: HomeView,
+    name: "LandingPage",
+    component: LandingPage,
+
+    // name: "home",
+    // component: HomeView,
   },
   {
     path: "/about",
@@ -18,6 +21,9 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
+
+  // start of auth
+  // user auth
   {
     path: "/login",
     name: "login",
