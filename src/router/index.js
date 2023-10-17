@@ -9,7 +9,9 @@ import AgancyDash from '../views/AgancyDash.vue'
 import WorkerPageDashboard from '../views/workerPageDashboard.vue'
 import dashReviews from "../views/dashReviews.vue";
 import aboutus from "../views/About.vue";
-import Allworker from "../views/AllWorker.vue"
+import Allworker from "../views/AllWorker.vue";
+import CleaningView from "../views/CleaningView.vue";
+import GardeningView from "../views/GardeningView.vue";
 // start of auth
 // user auth
 import LoginView from "../views/auth/user_auth/LoginView.vue";
@@ -144,7 +146,17 @@ const routes = [
     path: "/AllWorker",
     name: "AllWorker",
     component: Allworker
-  }
+  },
+  {
+    path: "/CleaningView",
+    name: "CleaningView",
+    component: CleaningView,
+  },
+  {
+    path: "/GardeningView",
+    name: "GardeningView",
+    component: GardeningView,
+  },
 ];
 
 const router = createRouter({
