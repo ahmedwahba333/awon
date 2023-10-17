@@ -281,8 +281,6 @@ form{
 font-weight:$semiBold;
 font-size: $paragraph;
 }
-// padding-bottom: 0px !important;
-// margin-top: none !important;
 }
 
 .worckerNm{
@@ -296,8 +294,6 @@ li{
     font-size:$small!important;
 }
   }
-
-  
 
 .tS1{
 margin-top: 30px;
