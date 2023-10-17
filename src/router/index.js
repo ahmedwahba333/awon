@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 // import HomeView from "../views/HomeView.vue";
-import LandingPage from "../views/LandingPage.vue" ;
+import LandingPage from "../views/LandingPage.vue";
+import ServiceHistorySA from '../views/ServiceHistorySA.vue';
+import BookingPage from '../views/BookingPage.vue'
 import WorkerProfile from "../views/WorkerProfileCx.vue";
 import WriteReview from "../views/WriteReview.vue";
 import paymentDetails from "../views/payment.vue";
@@ -111,9 +113,9 @@ const routes = [
     component: ServicesView,
   },
   {
-    path: "/workerpageDash",
-    name: "WorkerPageDashboard",
-    component: WorkerPageDashboard,
+    path:"/workerprofileDash",
+    name:"WorkerPageDashboard",
+    component:WorkerPageDashboard,
   },
   {
     path: "/payment",
@@ -144,7 +146,17 @@ const routes = [
     path: "/AllWorker",
     name: "AllWorker",
     component: Allworker
-  }
+  },
+  {
+      path: "/serviceHistorySA",
+      name: "ServiceHistorySA",
+      component:ServiceHistorySA
+  },
+  {
+    path: "/booking",
+    name: "BookingPage",
+    component:BookingPage
+},
 ];
 
 const router = createRouter({
