@@ -159,18 +159,16 @@ h5 {
   }
 }
 .offcanvas {
-    
-    @media (max-width: 1200px) {
-        margin-top: 100px;
-    }
-    @media (max-width: 767px){
-        margin-top: 150px;
+  @media (max-width: 1200px) {
+    margin-top: 100px;
   }
-    @media (max-width: 463px){
-        margin-top: 200px;
-        width: 20%;
+  @media (max-width: 767px) {
+    margin-top: 150px;
   }
-  
+  @media (max-width: 463px) {
+    margin-top: 200px;
+    width: 20%;
+  }
 }
 
 .nav-pills li a:hover {
