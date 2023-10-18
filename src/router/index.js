@@ -1,18 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
 // import HomeView from "../views/HomeView.vue";
 import LandingPage from "../views/LandingPage.vue";
-<<<<<<< HEAD
 import ServiceHistorySA from "../views/ServiceHistorySA.vue";
 import BookingPage from "../views/BookingPage.vue";
-=======
-import ServiceHistorySA from '../views/ServiceHistorySA.vue';
-import BookingPage from '../views/BookingPage.vue'
->>>>>>> 2999239ceeac042317057a81b78477fd55151032
 import WorkerProfile from "../views/WorkerProfileCx.vue";
 import WriteReview from "../views/WriteReview.vue";
 import paymentDetails from "../views/payment.vue";
 import ServicesView from "../views/ServicesView.vue";
-<<<<<<< HEAD
 import AgancyDash from "../views/AgancyDash.vue";
 import WorkerPageDashboard from "../views/workerPageDashboard.vue";
 import dashReviews from "../views/dashReviews.vue";
@@ -20,15 +14,6 @@ import aboutus from "../views/About.vue";
 import allAgencies from "../views/allAgencySDash.vue";
 import Allworker from "../views/AllWorker.vue";
 import AddAgency from "../views/AddAgency.vue";
-=======
-import AgancyDash from '../views/AgancyDash.vue'
-import WorkerPageDashboard from '../views/workerPageDashboard.vue'
-import dashReviews from "../views/dashReviews.vue";
-import aboutus from "../views/About.vue";
-import allAgencies from "../views/allAgencySDash.vue";
-import Allworker from "../views/AllWorker.vue"
-
->>>>>>> 2999239ceeac042317057a81b78477fd55151032
 
 // start of auth
 // user auth
@@ -131,15 +116,9 @@ const routes = [
     component: ServicesView,
   },
   {
-<<<<<<< HEAD
     path: "/workerprofileDash",
     name: "WorkerPageDashboard",
     component: WorkerPageDashboard,
-=======
-    path:"/workerprofileDash",
-    name:"WorkerPageDashboard",
-    component:WorkerPageDashboard,
->>>>>>> 2999239ceeac042317057a81b78477fd55151032
   },
   {
     path: "/payment",
@@ -177,20 +156,13 @@ const routes = [
     component: Allworker,
   },
   {
-<<<<<<< HEAD
-    path: "/serviceHistorySA",
-    name: "ServiceHistorySA",
-    component: ServiceHistorySA,
-=======
       path: "/serviceHistorySA",
       name: "ServiceHistorySA",
       component:ServiceHistorySA
->>>>>>> 2999239ceeac042317057a81b78477fd55151032
   },
   {
     path: "/booking",
     name: "BookingPage",
-<<<<<<< HEAD
     component: BookingPage,
   },
   {
@@ -198,10 +170,6 @@ const routes = [
     name: "AddAgency",
     component: AddAgency,
   },
-=======
-    component:BookingPage
-},
->>>>>>> 2999239ceeac042317057a81b78477fd55151032
 ];
 
 const router = createRouter({
