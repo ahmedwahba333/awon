@@ -30,7 +30,7 @@
             d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"
           />
         </svg>
-        House Cleaning, Bathroom Cleaning, Kitchen Cleaning<br />
+        <span class="wk-box">House Cleaning, Bathroom Cleaning, Kitchen Cleaning</span><br />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
@@ -46,7 +46,7 @@
             d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"
           />
         </svg>
-        Available for work<br />
+        <span class="wk-box">Available for work</span><br />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
@@ -62,7 +62,7 @@
             d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"
           />
         </svg>
-        Available for work in these areas: Giza, Sheikh Zayed, Haram
+        <span class="wk-box">Available for work in these areas: Giza, Sheikh Zayed, Haram</span>
       </div>
       <div class="box">
         <div class="title">Worker Reviews</div>
@@ -119,9 +119,9 @@
             </div>
           </div>
 
-          <div class="col col-lg-6 col-md-6 col-sm-12 col-12">
+<div class="col col-lg-6 col-md-6 col-sm-12 col-12">
             <div class="content row align-items-start">
-              <div class="col-lg-2 col-md-2 col-2">
+              <div class="col-sm-7 col-7 d-flex align-items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="30"
@@ -136,61 +136,8 @@
                     d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
                   />
                 </svg>
+              <div class="cx name ms-2">Mohammed A.</div>
               </div>
-              <div class="cx name col-lg-5 col-md-5 col-5">Mohammed A.</div>
-              <div class="cx rate col-lg-5 col-md-5 col-5">
-                <div class="rating">
-                  <input type="radio" name="rating" value="5" id="5" /><label
-                    for="5"
-                    >☆</label
-                  >
-                  <input type="radio" name="rating" value="4" id="4" /><label
-                    for="4"
-                    >☆</label
-                  >
-                  <input type="radio" name="rating" value="3" id="3" /><label
-                    for="3"
-                    >☆</label
-                  >
-                  <input type="radio" name="rating" value="2" id="2" /><label
-                    for="2"
-                    >☆</label
-                  >
-                  <input type="radio" name="rating" value="1" id="1" /><label
-                    for="1"
-                    >☆</label
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="cx-comment col-sm-12 col-md-12 col-lg-9">
-                <!-- give margin left -->
-                I am very pleased with my first time getting Abdul Rahman's help
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-center align-items-start">
-          <div class="col col-lg-6 col-md-6 col-sm-12 col-12">
-            <div class="content row align-items-start">
-              <div class="col-lg-2 col-md-2 col-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="30"
-                  fill="#193655"
-                  class="bi bi-person-circle"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                  <path
-                    fill-rule="evenodd"
-                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
-                  />
-                </svg>
-              </div>
-              <div class="cx name col-lg-5 col-md-5 col-5">Salma H.</div>
               <div class="cx rate col-lg-5 col-md-5 col-5">
                 <div class="rating">
                   <input type="radio" name="rating" value="5" id="5" /><label
@@ -218,13 +165,15 @@
             </div>
             <div class="row">
               <div class="cx-comment col-sm-12 col-md-12 col-lg-12">
-                amazing service 👍
+              I am very pleased with my first time getting Abdul Rahman's help
               </div>
             </div>
           </div>
+        </div>
+        <div class="row justify-content-center align-items-start">
           <div class="col col-lg-6 col-md-6 col-sm-12 col-12">
             <div class="content row align-items-start">
-              <div class="col-lg-2 col-md-2 col-2">
+              <div class="col-sm-7 col-7 d-flex align-items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="30"
@@ -239,8 +188,8 @@
                     d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
                   />
                 </svg>
+              <div class="cx name ms-2">Sara N.</div>
               </div>
-              <div class="cx name col-lg-5 col-md-5 col-5">Sara N.</div>
               <div class="cx rate col-lg-5 col-md-5 col-5">
                 <div class="rating">
                   <input type="radio" name="rating" value="5" id="5" /><label
@@ -267,7 +216,61 @@
               </div>
             </div>
             <div class="row">
-              <div class="cx-comment">he did a great job as usual!</div>
+              <div class="cx-comment col-sm-12 col-md-12 col-lg-12">
+                he did a great job as usual!
+              </div>
+            </div>
+          </div>
+
+<div class="col col-lg-6 col-md-6 col-sm-12 col-12">
+            <div class="content row align-items-start">
+              <div class="col-sm-7 col-7 d-flex align-items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="#193655"
+                  class="bi bi-person-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                  <path
+                    fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                  />
+                </svg>
+              <div class="cx name ms-2">Salma H.</div>
+              </div>
+              <div class="cx rate col-lg-5 col-md-5 col-5">
+                <div class="rating">
+                  <input type="radio" name="rating" value="5" id="5" /><label
+                    for="5"
+                    >☆</label
+                  >
+                  <input type="radio" name="rating" value="4" id="4" /><label
+                    for="4"
+                    >☆</label
+                  >
+                  <input type="radio" name="rating" value="3" id="3" /><label
+                    for="3"
+                    >☆</label
+                  >
+                  <input type="radio" name="rating" value="2" id="2" /><label
+                    for="2"
+                    >☆</label
+                  >
+                  <input type="radio" name="rating" value="1" id="1" /><label
+                    for="1"
+                    >☆</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="cx-comment col-sm-12 col-md-12 col-lg-12">
+              amazing service 👍
+
+              </div>
             </div>
           </div>
         </div>
@@ -396,6 +399,9 @@ export default {
   font-size: $subTitle;
   color: $blueColor;
   margin: 1%;
+}
+.wk-box{
+  padding: 20px;
 }
 .content {
   margin: 1%;
