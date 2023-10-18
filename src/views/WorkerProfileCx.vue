@@ -385,8 +385,6 @@ export default {
 }.img img{
   width: 250px;
 }
-.top{
-}
 .box {
   @include box;
 }
