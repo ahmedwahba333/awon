@@ -126,9 +126,9 @@ const routes = [
     component: ServicesView,
   },
   {
-    path: "/workerprofileDash",
-    name: "WorkerPageDashboard",
-    component: WorkerPageDashboard,
+    path:  "/workerprofileDash",
+    name:  "WorkerPageDashboard",
+    component:  WorkerPageDashboard,
   },
   {
     path: "/payment",
@@ -163,9 +163,49 @@ const routes = [
   {
     path: "/AllWorker",
     name: "AllWorker",
-// <<<<<<< HEAD
     component: Allworker
   },
+  {
+    path: "/ServiceHistorySA",
+    name: "ServiceHistorySA",
+    component: ServiceHistorySA,
+  },
+  {
+    path: "/CleaningView",
+    name: "CleaningView",
+    component: CleaningView,
+  },
+  {
+    path: "/GardeningView",
+    name: "GardeningView",
+    component: GardeningView,
+  },
+  {
+    path: "/BabysittingView",
+    name: "BabysittingView",
+    component: BabysittingView,
+  },
+  {
+    path: "/ElderlycareView",
+    name: "ElderlycareView",
+    component: ElderlycareView,
+  },
+  {
+    path: "/HousenursingView",
+    name: "HousenursingView",
+    component: HousenursingView,
+  },
+  {
+    path: "/ChefsView",
+    name: "ChefsView",
+    component: ChefsView,
+  },
+  {
+    path: "/FoodcateringView",
+    name: "FoodcateringView",
+    component: FoodcateringView,
+  },
+// =======
   {
     path: "/ServiceHistorySA",
     name: "ServiceHistorySA",
@@ -216,6 +256,11 @@ const routes = [
     path: "/booking",
     name: "BookingPage",
     component: BookingPage,
+  },
+  {
+    path: "/AddAgency",
+    name: "AddAgency",
+    component: AddAgency,
   },
   {
     path: "/AddAgency",
