@@ -3,7 +3,7 @@
    <NavBarSADash/>
     <div class="bg">
         <div class="container">
-          <div class="header p-5 mx-5">
+          <div class="row header p-3 col-12">
             <h1>Welcome To Dashboard Home</h1>
             <h5>All Information of Your About Agency</h5>
           </div>
@@ -358,23 +358,25 @@ export default {
 }
 .container{
     h1{
-      font-size: $title;
+      font-size: $paragraph;
       font-weight: $bold;
       color: $blueColor;
     }
     h5{
-      font-size: $paragraph;
+      font-size: $small;
       color: $blueColor;
       font-weight: $regular;
     }
-    .up{
-      width: 60px;
-      height: 30px;
-      background-color: $backgroundColor;
-    
+    @media(min-width: 767px) {
+         h1{
+        font-size: $title;
+      }
+      h5{
+        font-size: $paragraph;
+      }
+       }
+
     }
-    
-}
 .box {
 @include box;
    
@@ -387,9 +389,8 @@ export default {
     }
 
     &.sectionTwoA,&.sectionThreeB{
-      width: 730px;
+      width: 350px;
        height: 400px;
-   
     }
     &.sectionTwoB,&.sectionThreeA{
       width: 350px;
@@ -397,6 +398,21 @@ export default {
 
     }
 
+    // @media(max-width: 767px) {
+    //    &.sectionTwoA,&.sectionTwoB{
+    //  margin-left: 5px;
+    //  margin-right: 5px;
+    //    }
+    // }
+  &.sectionThreeB{
+   @media(min-width: 375px) {
+         p{
+        font-size: $small;
+      }
+     
+       }
+
+    }
   h4 {
     font-weight: $bold;
   }
