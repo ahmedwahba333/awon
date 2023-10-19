@@ -23,8 +23,10 @@ import HousenursingView from "../views/HousenursingView.vue";
 import ChefsView from "../views/ChefsView.vue";
 import FoodcateringView from "../views/FoodcateringView.vue";
 import SADashHome from "../views/SADashHome.vue"
-
+import AllWorkerFromCX from "../views/AllWorkerFromCX.vue"
 // >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
+import AddAgency from "../views/AddAgency.vue";
+
 // start of auth
 // user auth
 import LoginView from "../views/auth/user_auth/LoginView.vue";
@@ -129,6 +131,9 @@ const routes = [
     path:  "/workerprofileDash",
     name:  "WorkerPageDashboard",
     component:  WorkerPageDashboard,
+    path: "/workerprofileDash",
+    name: "WorkerPageDashboard",
+    component: WorkerPageDashboard,
   },
   {
     path: "/payment",
@@ -273,6 +278,12 @@ const routes = [
     name: "SADashHome",
     component: SADashHome,
   },
+  {
+    path: "/allworkerfromcx",
+    name: "AllWorkerFromCX",
+    component: AllWorkerFromCX,
+  },
+
 ];
 
 const router = createRouter({
