@@ -23,7 +23,7 @@ import HousenursingView from "../views/HousenursingView.vue";
 import ChefsView from "../views/ChefsView.vue";
 import FoodcateringView from "../views/FoodcateringView.vue";
 import SADashHome from "../views/SADashHome.vue"
-
+import AllWorkerFromCX from "../views/AllWorkerFromCX.vue"
 // >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
 // start of auth
 // user auth
@@ -273,6 +273,12 @@ const routes = [
     name: "SADashHome",
     component: SADashHome,
   },
+  {
+    path: "/allworkerfromcx",
+    name: "AllWorkerFromCX",
+    component: AllWorkerFromCX,
+  },
+
 ];
 
 const router = createRouter({
