@@ -216,11 +216,13 @@ export default {
   font-size: $title;
   font-family: "raleway";
   font-weight: bold;
+  color: $blueColor;
 }
 
 .servpara {
   font-size: $paragraph;
   font-family: "raleway";
+  color: $blueColor;
 }
 
 .card {
@@ -234,5 +236,6 @@ export default {
   font-weight: bold;
   color: $blueColor;
   text-align: center;
+  color: $blueColor;
 }
 </style>
