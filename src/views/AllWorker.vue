@@ -5,10 +5,10 @@
       <div class="container">
           <div class="bread row col col-sm-12 col-12"> 
               <ol class="breadcrumb">
-                  <li class="breadcrumb-item active me-2">Dashboard</li>
-                  <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" fill="#F97B22" class="mt-2 me-2">
+                  <li class="breadcrumb-item active mt-2">Dashboard</li>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" fill="#F97B22" class="m-2 ">
           <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
-                  <li class="breadcrumb-item active" aria-current="page">All Agencies</li>
+                  <li class="breadcrumb-item active mt-2" aria-current="page">All Agencies</li>
               </ol>  
       </div>
       <div class="top row col col-sm-12 col-12" >
@@ -234,11 +234,9 @@
 
 <script>
 import NavBarDash from "@/components/NavBarDash.vue";
-// import SideBarPage from "@/components/SideBarPage.vue";
 export default {
   name: "AllWorker",
   components: {
-    // SideBarPage,
     NavBarDash,
   },
 };
