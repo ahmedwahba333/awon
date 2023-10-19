@@ -45,7 +45,7 @@
             <input type="text" class="form-control" id="inputCity" placeholder="">
           </div>
           <div class="form-group">
-            <label for="inputCity">Adress</label>
+            <label for="inputCity">Address</label>
             <input type="text" class="form-control" id="inputAdress" placeholder="">
           </div>
           <div class="form-row row">
@@ -81,71 +81,64 @@
       <form>
 
 <div class="form-group row">
-<p class="mb-0 mt-1">choose services</p>
+<div class="dropdown">
+  <button class="servicesDrop dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+   Select Services
+  </button>
+  <ul class="dropdown-menu">
+    <li>
+      <div class="dropdown-item">
+        <h5>House Keeping</h5>
+        <div class="d-flex align-items-center gap-3" >
+          <div>
+          <input type="checkbox" class="form-check-input" >
+          <label for="" class="form-check-label mt-1 ms-1">Cleaning</label>
+        </div>
+        <div>
+          <input type="checkbox" class="form-check-input" >
+          <label for="" class="form-check-label mt-1 ms-1">Gardening</label>
+        </div>
+      </div>
+      </div>
+    </li> <hr/>
 
-<div class="containe col-lg-4 col-md-6">
-<ul>
-  <li>
-    <label for="option" class="mainService"> Food Services</label>
-    <ul class="list-unstyled">
-      <li><label><input type="checkbox" class="subOption"> Food catering</label></li>
-      <li><label><input type="checkbox" class="subOption"> Chefs</label></li>
-      <li><label><input type="checkbox" class="subOption"> Microphones</label></li>
-    </ul>
-  </li>
-</ul>
+    <li>
+      <div class="dropdown-item">
+        <h5>Facilities</h5>
+        <div class="d-flex align-items-center gap-3" >
+          <div>
+          <input type="checkbox" class="form-check-input" >
+          <label for="" class="form-check-label mt-1 ms-1">House Gaurd</label>
+        </div>
+        <div>
+          <input type="checkbox" class="form-check-input" >
+          <label for="" class="form-check-label mt-1 ms-1">Driver</label>
+        </div>
+        </div>
+      </div>
+    </li> <hr/>
+
+    <li>
+      <div class="dropdown-item">
+        <h5>service</h5>
+        <div class="d-flex align-items-center gap-3" >
+          <div>
+          <input type="checkbox" class="form-check-input" >
+          <label for="" class="form-check-label mt-1 ms-1">Plumbing</label>
+        </div>
+        <div>
+          <input type="checkbox" class="form-check-input" >
+          <label for="" class="form-check-label mt-1 ms-1">Carpentry</label>
+        </div>
+        <div>
+          <input type="checkbox" class="form-check-input" >
+          <label for="" class="form-check-label mt-1 ms-1">Moving Furniture</label>
+        </div>
+        </div>
+      </div>
+    </li><hr/>
+  </ul>
 </div>
-
-<div class="containe col-lg-4 col-md-6">
-<ul>
-  <li>
-    <label for="option" class="mainService"> Giving</label>
-    <ul class="list-unstyled">
-      <li><label><input type="checkbox" class="subOption"> Baby sitting</label></li>
-      <li><label><input type="checkbox" class="subOption"> Elserly care</label></li>
-      <li><label><input type="checkbox" class="subOption"> Home nursing</label></li>
-    </ul>
-  </li>
-</ul>
-</div>
-
-<!-- <div class="containe col-lg-4 col-md-6">
-<ul>
-  <li>
-    <label for="option"> House Maintenance</label>
-    <ul class="list-unstyled">
-      <li><label><input type="checkbox" class="subOption"> Plumbing</label></li>
-      <li><label><input type="checkbox" class="subOption"> Carpentry</label></li>
-      <li><label><input type="checkbox" class="subOption"> Moving Furniture</label></li>
-    </ul>
-  </li>
-</ul>
-</div>
-
-
-<div class="containe col-lg-4 col-md-6">
-<ul>
-  <li>
-    <label for="option"> House Keeping</label>
-    <ul class="list-unstyled">
-      <li><label><input type="checkbox" class="subOption"> Cleaning</label></li>
-      <li><label><input type="checkbox" class="subOption"> Gardening</label></li>
-    </ul>
-  </li>
-</ul>
-</div>
-
-<div class="containe col-lg-4 col-md-6">
-<ul>
-  <li>
-    <label for="option"> Facilities</label>
-    <ul class="list-unstyled">
-      <li><label><input type="checkbox" class="subOption">House Gaurd</label></li>
-      <li><label><input type="checkbox" class="subOption"> Driver</label></li>
-    </ul>
-  </li>
-</ul>
-</div> -->
 </div>
 
 <div class="row">
@@ -204,7 +197,7 @@
       </div>
 
       <div class="row d-flex justify-content-center mt-2">
-          <button>Next</button>
+          <button class="next">Next</button>
       </div>
 </div> 
 </form>
@@ -218,9 +211,6 @@
 <script>
 import NavBarPages from '@/components/NavBarPages.vue';
 import FooterComponent from '../components/footer.vue';
-
-// import MultiSelect from 'primevue/multiselect';
-
 
   export default {
   name: 'BookingPage',
@@ -281,8 +271,6 @@ form{
 font-weight:$semiBold;
 font-size: $paragraph;
 }
-// padding-bottom: 0px !important;
-// margin-top: none !important;
 }
 
 .worckerNm{
@@ -297,8 +285,6 @@ li{
 }
   }
 
-  
-
 .tS1{
 margin-top: 30px;
 }
@@ -307,7 +293,7 @@ margin-top: 30px;
   font-size:18px !important;
 }
 
-button{
+.next{
 @include button
 }
 
@@ -330,8 +316,30 @@ background-color: $backgroundColor;
 color:$blueColor;
 }
 
+.servicesDrop{
+  background-color: $backgroundColor;
+  width:fit-content;
+  padding: 5px 15px;
+  color:$blueColor;
+  border:solid 1px $backgroundColor;
+  border-radius: 10px;
+  
+}
 
+.dropdown-menu{
+  width:fit-content;
+  padding: 20px;
+  
+}
 
-
+li{
+  label , h5{
+    color: $blueColor !important;
+  }
+}
 
 </style>
+
+
+
+
