@@ -11,9 +11,7 @@ import AgancyDash from '../views/AgancyDash.vue'
 import WorkerPageDashboard from '../views/workerPageDashboard.vue'
 import dashReviews from "../views/dashReviews.vue";
 import aboutus from "../views/About.vue";
-<<<<<<< HEAD
 import allAgencies from "../views/allAgencySDash.vue";
-=======
 import Allworker from "../views/AllWorker.vue"
 // start of auth
 // user auth
@@ -29,7 +27,6 @@ import CpanelAuthResetView from "../views/auth/admin_auth/CpanelAuthResetView.vu
 import CpanelAuthConfirmView from "../views/auth/admin_auth/CpanelAuthConfirmView.vue";
 import CpanelAuthSetupPassView from "../views/auth/admin_auth/CpanelAuthSetupPassView.vue";
 // end of auth
->>>>>>> f392207d76e6588ab7b786998930217e0c9e42a4
 
 const routes = [
   {
@@ -147,12 +144,11 @@ const routes = [
     component: aboutus,
   },
   {
-<<<<<<< HEAD
     path: "/Agencies",
     name: "allAgencies",
     component: allAgencies,
   },
-=======
+  {
     path: "/AllWorker",
     name: "AllWorker",
     component: Allworker
@@ -167,7 +163,6 @@ const routes = [
     name: "BookingPage",
     component:BookingPage
 },
->>>>>>> f392207d76e6588ab7b786998930217e0c9e42a4
 ];
 
 const router = createRouter({
