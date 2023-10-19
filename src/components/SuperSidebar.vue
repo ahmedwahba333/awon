@@ -54,7 +54,8 @@
               >
                 <path
                   d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"
-                /></svg><span class="fs-7 ms-3 d-none d-sm-inline">Home</span>
+                /></svg
+              ><span class="fs-7 ms-3 d-none d-sm-inline">Home</span>
             </router-link>
           </li>
           <li class="nav-item py-2 py-sm-0">
@@ -69,7 +70,8 @@
               >
                 <path
                   d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"
-                /></svg><span class="fs-7 ms-3 d-none d-sm-inline">Worckers</span>
+                /></svg
+              ><span class="fs-7 ms-3 d-none d-sm-inline">Worckers</span>
             </router-link>
           </li>
           <li class="nav-item py-2 py-sm-0">
@@ -90,7 +92,8 @@
                 />
                 <path
                   d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"
-                /></svg><span class="fs-7 ms-3 d-none d-sm-inline"
+                /></svg
+              ><span class="fs-7 ms-3 d-none d-sm-inline"
                 >Services History</span
               >
             </router-link>
@@ -140,7 +143,7 @@
 
 <script>
 export default {
-  name:"SideBarPage"
+  name: "SuperSidebar",
 };
 </script>
 
@@ -167,16 +170,21 @@ h5 {
   @media (max-width: 767px) {
     margin-top: 150px;
   }
+  @media (min-width: 463px) {
+    margin-top: 200px;
+    width: 50%;
+  }
   @media (max-width: 463px) {
-    margin-top: 200px ;
+    margin-top: 200px;
+    width: 50%;
   }
 }
 
 .nav-pills li a:hover {
   background-color: $backgroundColor;
 }
-.nav-pills li a:focus{
-    background-color: $backgroundColor;
+.nav-pills li a:focus {
+  background-color: $backgroundColor;
 }
 .nav-pills li {
   color: $blueColor;
@@ -185,6 +193,4 @@ h5 {
 svg {
   color: $orangeColor;
 }
-
-
 </style>

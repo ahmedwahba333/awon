@@ -1,7 +1,7 @@
 <template>
   <div class="header" id="header">
     <div class="container">
-      <sideBarPage />
+      <SuperSidebar />
       <router-link to="#" class="logo"><a>Awon</a></router-link>
 
       <form class="search">
@@ -13,11 +13,11 @@
 </template>
 
 <script>
-import SideBarPage from "./SideBarPage.vue";
+import SuperSidebar from "./SuperSidebar.vue";
 export default {
-  name: "NavBarDash",
+  name: "NavBarSADash",
   components: {
-    SideBarPage,
+    SuperSidebar,
   },
 };
 </script>

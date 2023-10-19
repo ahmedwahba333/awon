@@ -1,19 +1,18 @@
 import { createRouter, createWebHistory } from "vue-router";
 // import HomeView from "../views/HomeView.vue";
 import LandingPage from "../views/LandingPage.vue";
-import ServiceHistorySA from '../views/ServiceHistorySA.vue';
-import BookingPage from '../views/BookingPage.vue'
+import ServiceHistorySA from "../views/ServiceHistorySA.vue";
+import BookingPage from "../views/BookingPage.vue";
 import WorkerProfile from "../views/WorkerProfileCx.vue";
 import WriteReview from "../views/WriteReview.vue";
 import paymentDetails from "../views/payment.vue";
 import ServicesView from "../views/ServicesView.vue";
-import AgancyDash from '../views/AgancyDash.vue'
-import WorkerPageDashboard from '../views/workerPageDashboard.vue'
+import AddAgency from "../views/AddAgency.vue";
+import AgancyDash from "../views/AgancyDash.vue";
+import WorkerPageDashboard from "../views/workerPageDashboard.vue";
 import dashReviews from "../views/dashReviews.vue";
 import aboutus from "../views/About.vue";
-import Allworker from "../views/AllWorker.vue";
-import ServiceHistoryAgency from '../views/ServiceHistoryAgency.vue';
-
+import Allworker from "../views/AllWorker.vue"
 // start of auth
 // user auth
 import LoginView from "../views/auth/user_auth/LoginView.vue";
@@ -115,9 +114,9 @@ const routes = [
     component: ServicesView,
   },
   {
-    path:"/workerprofileDash",
-    name:"WorkerPageDashboard",
-    component:WorkerPageDashboard,
+    path: "/workerpageDash",
+    name: "WorkerPageDashboard",
+    component: WorkerPageDashboard,
   },
   {
     path: "/payment",
@@ -145,25 +144,15 @@ const routes = [
     component: aboutus,
   },
   {
+    path: "/Agencies",
+    name: "allAgencies",
+    component: allAgencies,
+  },
+  {
     path: "/AllWorker",
     name: "AllWorker",
     component: Allworker
-  },
-  {
-      path: "/serviceHistorySA",
-      name: "ServiceHistorySA",
-      component:ServiceHistorySA
-  },
-  {
-    path: "/booking",
-    name: "BookingPage",
-    component:BookingPage
-  },
-  {
-    path: "/serviceHistoryAgency",
-    name: "ServiceHistoryAgency",
-    component:ServiceHistoryAgency
-  },
+  }
 ];
 
 const router = createRouter({
