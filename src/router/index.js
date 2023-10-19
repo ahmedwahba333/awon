@@ -24,6 +24,15 @@ import FoodcateringView from "../views/FoodcateringView.vue";
 import allAgencies from "../views/allAgencySDash.vue";
 
 
+import CleaningView from "../views/CleaningView.vue";
+import GardeningView from "../views/GardeningView.vue";
+import BabysittingView from "../views/BabysittingView.vue";
+import ElderlycareView from "../views/ElderlycareView.vue";
+import HousenursingView from "../views/HousenursingView.vue";
+import ChefsView from "../views/ChefsView.vue";
+import FoodcateringView from "../views/FoodcateringView.vue";
+import SADashHome from "../views/SADashHome.vue"
+
 // >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
 // start of auth
 // user auth
@@ -126,14 +135,9 @@ const routes = [
     component: ServicesView,
   },
   {
-    path: "/workerprofileDash",
-    name: "WorkerPageDashboard",
-    component: WorkerPageDashboard,
-    },
-    {
-    path:"/workerprofileDash",
-    name:"WorkerPageDashboard",
-    component:WorkerPageDashboard,
+    path:  "/workerprofileDash",
+    name:  "WorkerPageDashboard",
+    component:  WorkerPageDashboard,
   },
   {
     path: "/payment",
@@ -168,9 +172,49 @@ const routes = [
   {
     path: "/AllWorker",
     name: "AllWorker",
-// <<<<<<< HEAD
     component: Allworker
   },
+  {
+    path: "/ServiceHistorySA",
+    name: "ServiceHistorySA",
+    component: ServiceHistorySA,
+  },
+  {
+    path: "/CleaningView",
+    name: "CleaningView",
+    component: CleaningView,
+  },
+  {
+    path: "/GardeningView",
+    name: "GardeningView",
+    component: GardeningView,
+  },
+  {
+    path: "/BabysittingView",
+    name: "BabysittingView",
+    component: BabysittingView,
+  },
+  {
+    path: "/ElderlycareView",
+    name: "ElderlycareView",
+    component: ElderlycareView,
+  },
+  {
+    path: "/HousenursingView",
+    name: "HousenursingView",
+    component: HousenursingView,
+  },
+  {
+    path: "/ChefsView",
+    name: "ChefsView",
+    component: ChefsView,
+  },
+  {
+    path: "/FoodcateringView",
+    name: "FoodcateringView",
+    component: FoodcateringView,
+  },
+// =======
   {
     path: "/ServiceHistorySA",
     name: "ServiceHistorySA",
@@ -232,7 +276,12 @@ const routes = [
     name: "AddAgency",
     component: AddAgency,
   },
-// >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
+
+  {
+    path: "/SAdashhome",
+    name: "SADashHome",
+    component: SADashHome,
+  },
 ];
 
 const router = createRouter({
