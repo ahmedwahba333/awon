@@ -22,7 +22,7 @@ import ElderlycareView from "../views/ElderlycareView.vue";
 import HousenursingView from "../views/HousenursingView.vue";
 import ChefsView from "../views/ChefsView.vue";
 import FoodcateringView from "../views/FoodcateringView.vue";
-
+import SADashHome from "../views/SADashHome.vue"
 
 // >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
 // start of auth
@@ -266,6 +266,12 @@ const routes = [
     path: "/AddAgency",
     name: "AddAgency",
     component: AddAgency,
+  },
+
+  {
+    path: "/SAdashhome",
+    name: "SADashHome",
+    component: SADashHome,
   },
 ];
 
