@@ -143,7 +143,7 @@
 
 <script>
 export default {
-  name:"SideBarPage"
+  name: "SuperSidebar",
 };
 </script>
 
@@ -170,8 +170,13 @@ h5 {
   @media (max-width: 767px) {
     margin-top: 150px;
   }
+  @media (min-width: 463px) {
+    margin-top: 200px;
+    width: 50%;
+  }
   @media (max-width: 463px) {
-    margin-top: 200px ;
+    margin-top: 200px;
+    width: 50%;
   }
 }
 
