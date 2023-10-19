@@ -77,7 +77,7 @@
 
 
           <div class="box sectionTwoA m-0 col-md-4 col-12 ">
-             <canvas id="myChart"  height="40vh" width="100vw"></canvas>
+             <canvas id="myChart"  height="40vh" width="100vw" border-bottom="5"></canvas>
           </div>
           <div class="box sectionTwoB m-0 col-md-4 col-12 ">
             <div class="p-2">
@@ -144,98 +144,78 @@
               </div>
             </div>
           </div>
-          <div class="box m-0 col-md-4 col-sm-6 col-12 ">
-            <div class="d-flex flex-row justify-content-between">
-              <div class="p-2">
-                <h4>Haidy M.</h4>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="125"
-                  height="22"
-                  viewBox="0 0 125 22"
-                  fill="none"
-                >
-                  <path
-                    d="M10.8425 0.0842438L13.2768 7.57622L21.1543 7.57622L14.7813 12.2065L17.2155 19.6985L10.8425 15.0682L4.46943 19.6985L6.90373 12.2065L0.530669 7.57622L8.4082 7.57622L10.8425 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M36.5935 0.0842438L39.0278 7.57622L46.9053 7.57622L40.5322 12.2065L42.9665 19.6985L36.5935 15.0682L30.2204 19.6985L32.6547 12.2065L26.2816 7.57622L34.1592 7.57622L36.5935 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M62.3444 0.0842438L64.7787 7.57622L72.6563 7.57622L66.2832 12.2065L68.7175 19.6985L62.3444 15.0682L55.9714 19.6985L58.4057 12.2065L52.0326 7.57622L59.9102 7.57622L62.3444 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M88.0954 0.0842438L90.5297 7.57622L98.4072 7.57622L92.0342 12.2065L94.4685 19.6985L88.0954 15.0682L81.7224 19.6985L84.1567 12.2065L77.7836 7.57622L85.6611 7.57622L88.0954 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M113.846 0.0842438L116.281 7.57622L124.158 7.57622L117.785 12.2065L120.219 19.6985L113.846 15.0682L107.473 19.6985L109.908 12.2065L103.535 7.57622L111.412 7.57622L113.846 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                </svg>
+          <div class="box sectionThreeA m-0  col-md-4 col-sm-6 col-12 ">
+            <div class="p-2">
+                <h4>Services Status</h4>
               </div>
-              <div>
-                <img src="../assets/images/reviews/6.jpg" alt="Cx" />
-              </div>
-            </div>
-            <div>
-              <p class="p-2">very quick service.Love it!</p>
-            </div>
+              <canvas id="myChart2"  height="40vh" width="100vw" border-bottom="5"></canvas>
           </div>
-          <div class="box m-0 col-md-4 col-sm-6 col-12 ">
-            <div class="d-flex flex-row justify-content-between">
-              <div class="p-2">
-                <h4>Haidy M.</h4>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="125"
-                  height="22"
-                  viewBox="0 0 125 22"
-                  fill="none"
-                >
-                  <path
-                    d="M10.8425 0.0842438L13.2768 7.57622L21.1543 7.57622L14.7813 12.2065L17.2155 19.6985L10.8425 15.0682L4.46943 19.6985L6.90373 12.2065L0.530669 7.57622L8.4082 7.57622L10.8425 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M36.5935 0.0842438L39.0278 7.57622L46.9053 7.57622L40.5322 12.2065L42.9665 19.6985L36.5935 15.0682L30.2204 19.6985L32.6547 12.2065L26.2816 7.57622L34.1592 7.57622L36.5935 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M62.3444 0.0842438L64.7787 7.57622L72.6563 7.57622L66.2832 12.2065L68.7175 19.6985L62.3444 15.0682L55.9714 19.6985L58.4057 12.2065L52.0326 7.57622L59.9102 7.57622L62.3444 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M88.0954 0.0842438L90.5297 7.57622L98.4072 7.57622L92.0342 12.2065L94.4685 19.6985L88.0954 15.0682L81.7224 19.6985L84.1567 12.2065L77.7836 7.57622L85.6611 7.57622L88.0954 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M113.846 0.0842438L116.281 7.57622L124.158 7.57622L117.785 12.2065L120.219 19.6985L113.846 15.0682L107.473 19.6985L109.908 12.2065L103.535 7.57622L111.412 7.57622L113.846 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                </svg>
-              </div>
+          <div class="box sectionThreeB m-0 col-md-4 col-sm-6 col-12 ">
+            <div class="d-flex flex-row my-3">
               <div>
-                <img src="../assets/images/reviews/6.jpg" alt="Cx" />
+                <img  src="../assets/images/dashhome/2.jpg" alt="Cx" />
+              </div>
+              <div class="ms-4">
+                <h4>Suzy Nabil</h4>
+                <svg xmlns="http://www.w3.org/2000/svg" width="102" height="18" viewBox="0 0 102 18" fill="none">
+                <path d="M8.84249 0L10.8278 6.11001H17.2522L12.0547 9.88621L14.04 15.9962L8.84249 12.22L3.64501 15.9962L5.63027 9.88621L0.432782 6.11001H6.85723L8.84249 0Z" fill="#F97B22"/>
+                <path d="M29.8425 0L31.8278 6.11001H38.2522L33.0547 9.88621L35.04 15.9962L29.8425 12.22L24.645 15.9962L26.6303 9.88621L21.4328 6.11001H27.8572L29.8425 0Z" fill="#F97B22"/>
+                <path d="M50.8444 0L52.8297 6.11001H59.2542L54.0567 9.88621L56.0419 15.9962L50.8444 12.22L45.647 15.9962L47.6322 9.88621L42.4347 6.11001H48.8592L50.8444 0Z" fill="#F97B22"/>
+                <path d="M71.8444 0L73.8297 6.11001H80.2542L75.0567 9.88621L77.0419 15.9962L71.8444 12.22L66.647 15.9962L68.6322 9.88621L63.4347 6.11001H69.8592L71.8444 0Z" fill="#F97B22"/>
+                <path d="M92.8464 0L94.8317 6.11001H101.256L96.0586 9.88621L98.0439 15.9962L92.8464 12.22L87.6489 15.9962L89.6342 9.88621L84.4367 6.11001H90.8611L92.8464 0Z" fill="#C3C3C3"/>
+                </svg>
+                
+                <p>I had high hopes for this service, and I wasn't disappointed.</p>
+              </div>
+              
+    
+      
+              </div>
+               <div class="d-flex flex-row ">
+              <div>
+                <img  src="../assets/images/dashhome/3.jpg" alt="Cx" />
+              </div>
+              <div class="ms-4">
+                <h4>Suzy Nabil</h4>
+                <svg xmlns="http://www.w3.org/2000/svg" width="102" height="18" viewBox="0 0 102 18" fill="none">
+                <path d="M8.84249 0L10.8278 6.11001H17.2522L12.0547 9.88621L14.04 15.9962L8.84249 12.22L3.64501 15.9962L5.63027 9.88621L0.432782 6.11001H6.85723L8.84249 0Z" fill="#F97B22"/>
+                <path d="M29.8425 0L31.8278 6.11001H38.2522L33.0547 9.88621L35.04 15.9962L29.8425 12.22L24.645 15.9962L26.6303 9.88621L21.4328 6.11001H27.8572L29.8425 0Z" fill="#F97B22"/>
+                <path d="M50.8444 0L52.8297 6.11001H59.2542L54.0567 9.88621L56.0419 15.9962L50.8444 12.22L45.647 15.9962L47.6322 9.88621L42.4347 6.11001H48.8592L50.8444 0Z" fill="#F97B22"/>
+                <path d="M71.8444 0L73.8297 6.11001H80.2542L75.0567 9.88621L77.0419 15.9962L71.8444 12.22L66.647 15.9962L68.6322 9.88621L63.4347 6.11001H69.8592L71.8444 0Z" fill="#F97B22"/>
+                <path d="M92.8464 0L94.8317 6.11001H101.256L96.0586 9.88621L98.0439 15.9962L92.8464 12.22L87.6489 15.9962L89.6342 9.88621L84.4367 6.11001H90.8611L92.8464 0Z" fill="#C3C3C3"/>
+                </svg>
+                
+                <p>The quality of the service is exceptional.very quick service.Love it!</p>
+              </div>
+              
+    
+      
+              </div>
+               <div class="d-flex flex-row ">
+              <div>
+                <img  src="../assets/images/dashhome/4.jpg" alt="Cx" />
+              </div>
+              <div class="ms-4">
+                <h4>Suzy Nabil</h4>
+                <svg xmlns="http://www.w3.org/2000/svg" width="102" height="18" viewBox="0 0 102 18" fill="none">
+                <path d="M8.84249 0L10.8278 6.11001H17.2522L12.0547 9.88621L14.04 15.9962L8.84249 12.22L3.64501 15.9962L5.63027 9.88621L0.432782 6.11001H6.85723L8.84249 0Z" fill="#F97B22"/>
+                <path d="M29.8425 0L31.8278 6.11001H38.2522L33.0547 9.88621L35.04 15.9962L29.8425 12.22L24.645 15.9962L26.6303 9.88621L21.4328 6.11001H27.8572L29.8425 0Z" fill="#F97B22"/>
+                <path d="M50.8444 0L52.8297 6.11001H59.2542L54.0567 9.88621L56.0419 15.9962L50.8444 12.22L45.647 15.9962L47.6322 9.88621L42.4347 6.11001H48.8592L50.8444 0Z" fill="#F97B22"/>
+                <path d="M71.8444 0L73.8297 6.11001H80.2542L75.0567 9.88621L77.0419 15.9962L71.8444 12.22L66.647 15.9962L68.6322 9.88621L63.4347 6.11001H69.8592L71.8444 0Z" fill="#F97B22"/>
+                <path d="M92.8464 0L94.8317 6.11001H101.256L96.0586 9.88621L98.0439 15.9962L92.8464 12.22L87.6489 15.9962L89.6342 9.88621L84.4367 6.11001H90.8611L92.8464 0Z" fill="#C3C3C3"/>
+                </svg>
+                
+                <p>In my opinion, this service is good, I was impressed by the attention to detail.</p>
+              </div>
+              
+    
+      
               </div>
             </div>
-            <div>
-              <p class="p-2">very quick service.Love it!</p>
-            </div>
-          </div>
-      </div>
-
-
-
-        
-
-        
-        
+    
+         
+</div>
         </div>
-
         
 </div>
 </template>
@@ -248,13 +228,14 @@ export default {
   components: { NavBarDash },
 
     mounted() {
+      
     const ctx = document.getElementById("myChart");
-
+    const ctx2 = document.getElementById("myChart2");
     new Chart(ctx, {
       type: "line",
       data: {
         labels: ["4 Oct.", "5 Oct.", "6 Oct.", "7 Oct.", "8 Oct.", "9 Oct." , "10 Oct." , "11 Oct." , "12 Oct."],
-        // borderColor : "#F97B22",
+      
         datasets: [
           {
             label: "Recruitment Report",
@@ -297,7 +278,67 @@ export default {
         },
       },
     });
-  },
+     const data = {
+      labels: ["Canceled", "Pending", "Delivered"],
+      datasets: [
+        {
+          label: "My First Dataset",
+          data: [50, 100, 300],
+          backgroundColor: [
+            '#193655',
+           '#EBEBD3',
+           '#F97B22'
+            ,
+          ],
+          hoverOffset: 4,
+        },
+      ],
+    };
+    new Chart(ctx2, {
+      type: "doughnut",
+      data: data,
+      options: {
+          theme: "light2",
+          animationEnabled: true,
+          exportEnabled: true,
+          title: {
+            text: "Annual Consumption of Electricity"
+          },
+          axisY: {
+            title: "Consumption (KilowattHour)",
+            labelFormatter: function(e) {
+              return (e.value / 1000000000000) + "T"
+            }
+          },
+          toolTip: {
+            shared: true,
+            // contentFormatter: function(e) {
+            //   return "<span style='color:" + e.entries[0].dataSeries.color + ";'>" + e.entries[0].dataPoint.label + "</span>: " + canvas.formatNumber(e.entries[0].dataPoint.y / 1000000000000, "#.#0") + "T KilowattHour";
+            // }
+          },
+          data: [{
+            type: "splineArea",
+            color: "#7986CB",
+            dataPoints: [
+              { label: "2009", y: 3644702000000 },
+              { label: "2010", y: 3788321000000 },
+              { label: "2011", y: 3779423000000 },
+              { label: "2012", y: 3726774000000 },
+              { label: "2013", y: 3767564000000 },
+              { label: "2014", y: 3788954000000 },
+              { label: "2015", y: 3780836000000 },
+              { label: "2016", y: 3807711000000 },
+            ]
+          }]
+        },
+        styleOptions: {
+          width: "100%",
+          height: "360px"
+        }
+      
+    });
+
+    }
 };
 </script>
 
@@ -313,6 +354,7 @@ export default {
 // }
 .bg{
   background-color: $backgroundColor;
+  padding-bottom: 20px;
 }
 .container{
     h1{
@@ -344,22 +386,15 @@ export default {
        height: 120px;
     }
 
-    &.sectionTwoA{
+    &.sectionTwoA,&.sectionThreeB{
       width: 730px;
        height: 400px;
-      //  #myChart{
-      //   position: relative;
-      //   width: 100% ;
-      //  }
+   
     }
-    &.sectionTwoB{
+    &.sectionTwoB,&.sectionThreeA{
       width: 350px;
        height: 400px;
-    //     img {
-    //   clip-path: circle();
-    //   // height: 70px;
-    //   width:70%
-    // }
+
     }
 
   h4 {
@@ -370,9 +405,5 @@ export default {
     font-weight: $bold;
   }
 }
-// &-sectionTwo{
-// height: 300px ;
-// }
 
-// }
 </style>

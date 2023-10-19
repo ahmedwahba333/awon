@@ -1,18 +1,30 @@
 import { createRouter, createWebHistory } from "vue-router";
 // import HomeView from "../views/HomeView.vue";
 import LandingPage from "../views/LandingPage.vue";
-import ServiceHistorySA from '../views/ServiceHistorySA.vue';
-import BookingPage from '../views/BookingPage.vue'
+import ServiceHistorySA from "../views/ServiceHistorySA.vue";
+import BookingPage from "../views/BookingPage.vue";
 import WorkerProfile from "../views/WorkerProfileCx.vue";
 import WriteReview from "../views/WriteReview.vue";
 import paymentDetails from "../views/payment.vue";
 import ServicesView from "../views/ServicesView.vue";
-import AgancyDash from '../views/AgancyDash.vue'
-import WorkerPageDashboard from '../views/workerPageDashboard.vue'
+import AddAgency from "../views/AddAgency.vue";
+import AgancyDash from "../views/AgancyDash.vue";
+import WorkerPageDashboard from "../views/workerPageDashboard.vue";
 import dashReviews from "../views/dashReviews.vue";
 import aboutus from "../views/About.vue";
 import allAgencies from "../views/allAgencySDash.vue";
-import Allworker from "../views/AllWorker.vue"
+import Allworker from "../views/AllWorker.vue";
+
+import CleaningView from "../views/CleaningView.vue";
+import GardeningView from "../views/GardeningView.vue";
+import BabysittingView from "../views/BabysittingView.vue";
+import ElderlycareView from "../views/ElderlycareView.vue";
+import HousenursingView from "../views/HousenursingView.vue";
+import ChefsView from "../views/ChefsView.vue";
+import FoodcateringView from "../views/FoodcateringView.vue";
+
+
+// >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
 // start of auth
 // user auth
 import LoginView from "../views/auth/user_auth/LoginView.vue";
@@ -114,9 +126,9 @@ const routes = [
     component: ServicesView,
   },
   {
-    path:"/workerprofileDash",
-    name:"WorkerPageDashboard",
-    component:WorkerPageDashboard,
+    path: "/workerprofileDash",
+    name: "WorkerPageDashboard",
+    component: WorkerPageDashboard,
   },
   {
     path: "/payment",
@@ -151,18 +163,65 @@ const routes = [
   {
     path: "/AllWorker",
     name: "AllWorker",
+// <<<<<<< HEAD
     component: Allworker
   },
   {
-      path: "/serviceHistorySA",
-      name: "ServiceHistorySA",
-      component:ServiceHistorySA
+    path: "/ServiceHistorySA",
+    name: "ServiceHistorySA",
+    component: ServiceHistorySA,
+  },
+  {
+    path: "/CleaningView",
+    name: "CleaningView",
+    component: CleaningView,
+  },
+  {
+    path: "/GardeningView",
+    name: "GardeningView",
+    component: GardeningView,
+  },
+  {
+    path: "/BabysittingView",
+    name: "BabysittingView",
+    component: BabysittingView,
+  },
+  {
+    path: "/ElderlycareView",
+    name: "ElderlycareView",
+    component: ElderlycareView,
+  },
+  {
+    path: "/HousenursingView",
+    name: "HousenursingView",
+    component: HousenursingView,
+  },
+  {
+    path: "/ChefsView",
+    name: "ChefsView",
+    component: ChefsView,
+  },
+  {
+    path: "/FoodcateringView",
+    name: "FoodcateringView",
+    component: FoodcateringView,
+  },
+// =======
+  {
+    path: "/serviceHistorySA",
+    name: "ServiceHistorySA",
+    component: ServiceHistorySA,
   },
   {
     path: "/booking",
     name: "BookingPage",
-    component:BookingPage
-},
+    component: BookingPage,
+  },
+  {
+    path: "/AddAgency",
+    name: "AddAgency",
+    component: AddAgency,
+  },
 ];
 
 const router = createRouter({
