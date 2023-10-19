@@ -24,6 +24,7 @@ import FoodcateringView from "../views/FoodcateringView.vue";
 import allAgencies from "../views/allAgencySDash.vue";
 import SADashHome from "../views/SADashHome.vue";
 import AgencyProfile from "../views/AgencyProfile.vue";
+import SAAllWorker from "../views/SAAllWorker.vue";
 
 // >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
 // start of auth
@@ -278,6 +279,11 @@ const routes = [
     path: "/AgencyProfile",
     name: "AgencyProfile",
     component: AgencyProfile,
+  },
+  {
+    path: "/SAAllWorker",
+    name: "SAAllWorker",
+    component: SAAllWorker,
   },
 ];
 
