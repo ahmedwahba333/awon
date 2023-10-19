@@ -223,6 +223,7 @@
     
     .all{
         background-color: $backgroundColor;
+        padding-bottom: 30px;
     }
     
     thead tr tbody{
