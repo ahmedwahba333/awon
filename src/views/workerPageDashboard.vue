@@ -295,6 +295,7 @@ import NavBarDash from '../components/NavBarDash.vue';
 .all{
 background-color: $backgroundColor;
 color:$blueColor;
+padding-bottom: 30px;
 }
 
 
@@ -577,6 +578,7 @@ input{
         border:none !important;
         height:35px;
         width:300px;
+        font-size: $small !important;
     }
 
     h1{
