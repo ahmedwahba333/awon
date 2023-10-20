@@ -25,7 +25,6 @@ import FoodcateringView from "../views/FoodcateringView.vue";
 import SADashHome from "../views/SADashHome.vue"
 import AllWorkerFromCX from "../views/AllWorkerFromCX.vue"
 // >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
-import AddAgency from "../views/AddAgency.vue";
 
 // start of auth
 // user auth
@@ -131,9 +130,6 @@ const routes = [
     path:  "/workerprofileDash",
     name:  "WorkerPageDashboard",
     component:  WorkerPageDashboard,
-    path: "/workerprofileDash",
-    name: "WorkerPageDashboard",
-    component: WorkerPageDashboard,
   },
   {
     path: "/payment",

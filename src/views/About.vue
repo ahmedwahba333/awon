@@ -13,7 +13,7 @@
 				We can clean your house, take care of your children and more. Our concern is your comfort and satisfaction.
 				Sign up and enjoy our services now.
 				</div>
-				<div class="col-sm-12 btn">Discover</div>
+				<div class="btn">Discover</div>
 			</div>				
 		</div>
 			<div class="row">
@@ -68,8 +68,10 @@
 	
     .btn {
     @include button;
-		text-align: center;
-		
+		margin-left: 150px;
+		@media (min-width:"575px") {
+			margin-left: 200px;
+		}
     }
 
 	.title {
