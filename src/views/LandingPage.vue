@@ -459,8 +459,6 @@
         <h2>FAQs</h2>
       </div>
       <div class="d-flex justify-content-center">
-    
-
         <nav class="accordion arrows">
           <input type="radio" name="accordion" id="cb1" />
           <section class="box">

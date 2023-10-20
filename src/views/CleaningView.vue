@@ -1,40 +1,61 @@
 <template>
   <div class="bg container-fluid">
     <NavBarPages />
-    <div class="child d-flex justify-content-center">
-      <form>
-        <div class="mb-3 col-lg-6 col-md-4">
-          <div>
-            <input
-              type="text"
-              class="input"
-              id="inputName"
-              placeholder="Bedroom, Living room"
-            />
-          </div>
-        </div>
-        <div class="mb-3 col-lg-6 col-md-4">
-          <div>
-            <input
-              type="email"
-              class="input"
-              id="inputEmail"
-              placeholder="Bathroom"
-            />
-          </div>
-        </div>
-        <div class="mb-3 col-lg-6 col-md-4">
-          <div>
-            <input
-              type="text"
-              class="input"
-              id="inputPhone"
-              placeholder="Kitchen"
-            />
-          </div>
-        </div>
-        <div class="mb-3 col-lg-6 col-md-4"></div>
+    <div class="bar d-flex justify-content-center">
+      <form class="search">
+        <input class="search" type="search" />
       </form>
+    </div>
+    <div class="d-flex justify-content-center">
+      <nav class="accordion arrows">
+        <input type="radio" name="accordion" id="cb1" />
+        <section class="box">
+          <label class="box-title" for="cb1">Bedroom , Living room</label>
+          <label class="box-close" for="acc-close"></label>
+          <div class="box-content">
+            <ul>
+              <li>Dust all accessible surfaces</li>
+              <li>Wipe down all mirrors and glass fixtures</li>
+              <li>Clean all floor surfaces</li>
+              <li>Take out garbage and recycling</li>
+              <li>Take out trash</li>
+              <li>Wipe down windows and mirrors</li>
+            </ul>
+          </div>
+        </section>
+        <input type="radio" name="accordion" id="cb2" />
+        <section class="box">
+          <label class="box-title" for="cb2">Bathroom</label>
+          <label class="box-close" for="acc-close"></label>
+          <div class="box-content">
+            <ul>
+              <li>Wash and sanitize the toilet, shower, tub and sink</li>
+              <li>Dust all accessible surfaces</li>
+              <li>Wipe down all mirrors and glass fixtures</li>
+              <li>Clean all floor surfaces</li>
+              <li>Take out garbage and recycling</li>
+            </ul>
+          </div>
+        </section>
+        <input type="radio" name="accordion" id="cb3" />
+        <section class="box mb-5">
+          <label class="box-title" for="cb3"
+            >Kitchen</label
+          >
+          <label class="box-close" for="acc-close"></label>
+          <div class="box-content">
+            <ul>
+              <li>Dust all accessible surfaces</li>
+              <li>Empty sink and load up dishwasher with dirty dishes</li>
+              <li>Wipe down exterior of stove, oven and fridge</li>
+              <li>Clean all floor surfaces</li>
+              <li>Take out garbage and recycling </li>
+            </ul>
+          </div>
+        </section>
+
+        <input type="radio" name="accordion" id="acc-close" />
+      </nav>
     </div>
     <div class="row justify-content-center my-5 gap-5">
       <div class="card mb-4" style="width: 18rem">
@@ -434,40 +455,62 @@ export default {
 .bg {
   background-color: $backgroundColor;
 }
+.bar {
+  justify-content: center;
+  width: auto;
+  height: 200px;
+
+}
+input.search {
+  border: 2px solid $orangeColor;
+  border-radius: 28px;
+  width: 350px;
+  padding: 9px 4px 9px 40px;
+  // margin-left: 550px;
+  margin-top: 75px;
+  margin-bottom: 50px;
+  background: $backgroundColor
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='orange' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat 13px center;
+  &:focus {
+    border-color: $orangeColor;
+    outline: none;
+  }
+}
 form {
-    .input {
-      border: 3px solid $blueColor;
-      border-radius: 33px;
-      width: 716px;
-      height: 69px;
-      padding: 9px 4px 9px 40px;
-      background: white;
-      @media (max-width: 767px) {
-        width: 350px;
-        height: 55px;
-      }
-      &:focus {
-        border-color: $orangeColor;
-        outline: none;
-      }
-      &#inputMessage {
-        height: 262px;
-      }
+  .input {
+    border: 3px solid $blueColor;
+    border-radius: 33px;
+    width: 716px;
+    height: 69px;
+    padding: 9px 4px 9px 40px;
+    background: white;
+    @media (max-width: 767px) {
+      width: 350px;
+      height: 55px;
     }
-    .input[placeholder] {
-      font-size: $paragraph;
-      font-weight: $semiBold;
+    &:focus {
+      border-color: $orangeColor;
+      outline: none;
     }
+    &#inputMessage {
+      height: 262px;
+    }
+  }
+  .input[placeholder] {
+    font-size: $paragraph;
+    font-weight: $semiBold;
+  }
 }
 .child {
   margin: auto;
   margin-top: 50px;
   margin-bottom: 25px;
-//   padding: 15px;
-//   background-color: $whiteColor;
+  //   padding: 15px;
+  //   background-color: $whiteColor;
   width: 70%;
   height: auto;
-//   border-radius: $border-radius-big;
+  //   border-radius: $border-radius-big;
 }
 .serv {
   font-size: $title;
@@ -503,5 +546,85 @@ img {
 }
 .btn {
   @include button;
+}
+
+.accordion {
+  margin: auto;
+  // width: 50%;
+}
+.accordion input {
+  display: none;
+}
+.accordion {
+  .box {
+    position: relative;
+    background: white;
+    height: 64px;
+    transition: all 1s linear;
+    border: 3px solid $blueColor;
+    border-radius: 33px;
+    width: 716px;
+    height: 69px;
+    padding: 9px 4px 9px 40px;
+    margin-bottom: 10px;
+    background: white;
+    @media (max-width: 767px) {
+      width: 350px;
+      height: 55px;
+    }
+  }
+
+  .box-title {
+    font-weight: $semiBold;
+    font-size: $small;
+    color: $blueColor;
+    width: calc(100% - 30px);
+    height: 64px;
+    text-align: center;
+    line-height: 36px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    @media (min-width: 767px) {
+      font-size: 20px;
+    }
+  }
+  .box-content {
+    width: calc(100% - 40px);
+    padding: 30px 20px;
+    font-size: $small;
+    font-weight: $semiBold;
+    color: black;
+    display: none;
+    @media (min-width: 767px) {
+      font-size: 20px;
+    }
+  }
+  .box-close {
+    position: absolute;
+    height: 64px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: none;
+  }
+  input:checked + .box {
+    height: auto;
+    margin-top: 20px;
+  }
+  input:checked + .box .box-title {
+    border-bottom: 1px solid $blueColor;
+  }
+  input:checked + .box .box-content,
+  input:checked + .box .box-close {
+    display: inline-block;
+  }
 }
 </style>
