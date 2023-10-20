@@ -26,7 +26,10 @@ import SADashHome from "../views/SADashHome.vue";
 import AgencyProfile from "../views/AgencyProfile.vue";
 import SAAllWorker from "../views/SAAllWorker.vue";
 
+import AllWorkerFromCX from "../views/AllWorkerFromCX.vue"
 // >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
+
+import ServiceHistoryAgency from "../views/ServiceHistoryAgency.vue";
 // start of auth
 // user auth
 import LoginView from "../views/auth/user_auth/LoginView.vue";
@@ -262,18 +265,62 @@ const routes = [
   {
     path: "/booking",
     name: "BookingPage",
-    component: BookingPage,
+    component: BookingPage
+  },
+  {
+    path: "/ServiceHistoryAgency",
+    name: "ServiceHistoryAgency",
+    component: ServiceHistoryAgency
+  },
+  {
+    path: "/CleaningView",
+    name: "CleaningView",
+    component: CleaningView
+  },
+  {
+    path: "/GardeningView",
+    name: "GardeningView",
+    component: GardeningView
+  },
+  {
+    path: "/BabysittingView",
+    name: "BabysittingView",
+    component: BabysittingView
+  },
+  {
+    path: "/ElderlycareView",
+    name: "ElderlycareView",
+    component: ElderlycareView
+  },
+  {
+    path: "/HousenursingView",
+    name: "HousenursingView",
+    component: HousenursingView
+  },
+  {
+    path: "/ChefsView",
+    name: "ChefsView",
+    component: ChefsView
+  },
+  {
+    path: "/FoodcateringView",
+    name: "FoodcateringView",
+    component: FoodcateringView
+  },
+  {
+    path: "/SADashHome",
+    name: "SADashHome",
+    component: SADashHome
+  },
+  {
+    path: "/AllWorkerFromCX",
+    name: "AllWorkerFromCX",
+    component: AllWorkerFromCX
   },
   {
     path: "/AddAgency",
     name: "AddAgency",
-    component: AddAgency,
-  },
-
-  {
-    path: "/SAdashhome",
-    name: "SADashHome",
-    component: SADashHome,
+    component: AddAgency
   },
   {
     path: "/AgencyProfile",
