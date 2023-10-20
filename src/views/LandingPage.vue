@@ -138,9 +138,9 @@
       <div class="row text-center my-5">
         <h2>Our Happy Customer</h2>
       </div>
-      <div class="row">
-        <div class="d-flex flex-wrap flex-md-nowrap justify-content-around">
-          <div class="box">
+      <div class="row justify-content-center gap-4">
+        <!-- <div class="d-flex flex-wrap justify-content-around"> -->
+          <div class="box m-0 col-md-4 col-sm-6 col-12 ">
             <div class="d-flex flex-row justify-content-between">
               <div class="p-2">
                 <h4>Fatma O.</h4>
@@ -184,7 +184,7 @@
               </p>
             </div>
           </div>
-          <div class="box">
+          <div class="box m-0 col-md-4 col-sm-6 col-12 ">
             <div class="d-flex flex-row justify-content-between">
               <div class="p-2">
                 <h4>Ahmed E.</h4>
@@ -228,7 +228,7 @@
               </p>
             </div>
           </div>
-          <div class="box">
+          <div class="box m-0 col-md-4 col-sm-6 col-12 ">
             <div class="d-flex flex-row justify-content-between">
               <div class="p-2">
                 <h4>Eyad K.</h4>
@@ -272,11 +272,11 @@
               </p>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="d-flex flex-wrap flex-md-nowrap justify-content-around">
-          <div class="box">
+        <!-- </div> -->
+      <!-- </div>
+      <div class="row gy-4"> -->
+        <!-- <div class="d-flex flex-wrap justify-content-around"> -->
+          <div class="box m-0 col-md-4 col-sm-6 col-12 ">
             <div class="d-flex flex-row justify-content-between">
               <div class="p-2">
                 <h4>Sarah M.</h4>
@@ -319,7 +319,7 @@
               </p>
             </div>
           </div>
-          <div class="box">
+          <div class="box m-0 col-md-4 col-sm-6 col-12 ">
             <div class="d-flex flex-row justify-content-between">
               <div class="p-2">
                 <h4>Nada A.</h4>
@@ -363,7 +363,7 @@
               </p>
             </div>
           </div>
-          <div class="box">
+          <div class="box m-0 col-md-4 col-sm-6 col-12 ">
             <div class="d-flex flex-row justify-content-between">
               <div class="p-2">
                 <h4>Haidy M.</h4>
@@ -404,7 +404,7 @@
               <p class="p-2">very quick service.Love it!</p>
             </div>
           </div>
-        </div>
+        <!-- </div> -->
       </div>
 
       <div class="row text-center my-5">
@@ -625,7 +625,7 @@ export default {
       position: relative;
       background: white;
       height: 64px;
-      transition: all 1s linear ;
+      transition: all 1ms linear ;
       border: 3px solid $blueColor;
       border-radius: 33px;
       width: 716px;
@@ -665,7 +665,7 @@ export default {
       padding: 30px 20px;
       font-size: $small;
       font-weight: $semiBold;
-      color: black;
+      color: $blueColor;
       display: none;
        @media(min-width: 767px) {
         font-size: 20px;

@@ -7,15 +7,14 @@ import WorkerProfile from "../views/WorkerProfileCx.vue";
 import WriteReview from "../views/WriteReview.vue";
 import paymentDetails from "../views/payment.vue";
 import ServicesView from "../views/ServicesView.vue";
-// <<<<<<< HEAD
+import AddAgency from "../views/AddAgency.vue";
 import AgancyDash from "../views/AgancyDash.vue";
 import WorkerPageDashboard from "../views/workerPageDashboard.vue";
 import dashReviews from "../views/dashReviews.vue";
 import aboutus from "../views/About.vue";
 import allAgencies from "../views/allAgencySDash.vue";
 import Allworker from "../views/AllWorker.vue";
-import AddAgency from "../views/AddAgency.vue";
-// =======
+
 import CleaningView from "../views/CleaningView.vue";
 import GardeningView from "../views/GardeningView.vue";
 import BabysittingView from "../views/BabysittingView.vue";
@@ -23,13 +22,16 @@ import ElderlycareView from "../views/ElderlycareView.vue";
 import HousenursingView from "../views/HousenursingView.vue";
 import ChefsView from "../views/ChefsView.vue";
 import FoodcateringView from "../views/FoodcateringView.vue";
+import SADashHome from "../views/SADashHome.vue";
+import AllWorkerFromCX from "../views/AllWorkerFromCX.vue";
 import PlumbingView from "../views/PlumbingView.vue";
 import CarpentryView from "../views/CarpentryView.vue";
 import MovingfurnitureView from "../views/MovingfurnitureView.vue";
 import HouseguardView from "../views/HouseguardView.vue";
-
-
+import DriverView from "../views/DriverView.vue";
 // >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
+
+import ServiceHistoryAgency from "../views/ServiceHistoryAgency.vue";
 // start of auth
 // user auth
 import LoginView from "../views/auth/user_auth/LoginView.vue";
@@ -131,9 +133,9 @@ const routes = [
     component: ServicesView,
   },
   {
-    path: "/workerprofileDash",
-    name: "WorkerPageDashboard",
-    component: WorkerPageDashboard,
+    path:  "/workerprofileDash",
+    name:  "WorkerPageDashboard",
+    component:  WorkerPageDashboard,
   },
   {
     path: "/payment",
@@ -168,82 +170,103 @@ const routes = [
   {
     path: "/AllWorker",
     name: "AllWorker",
-// <<<<<<< HEAD
     component: Allworker
   },
   {
-    path: "/CleaningView",
-    name: "CleaningView",
-    component: CleaningView,
-  },
-  {
-    path: "/GardeningView",
-    name: "GardeningView",
-    component: GardeningView,
-  },
-  {
-    path: "/BabysittingView",
-    name: "BabysittingView",
-    component: BabysittingView,
-  },
-  {
-    path: "/ElderlycareView",
-    name: "ElderlycareView",
-    component: ElderlycareView,
-  },
-  {
-    path: "/HousenursingView",
-    name: "HousenursingView",
-    component: HousenursingView,
-  },
-  {
-    path: "/ChefsView",
-    name: "ChefsView",
-    component: ChefsView,
-  },
-  {
-    path: "/FoodcateringView",
-    name: "FoodcateringView",
-    component: FoodcateringView,
-  },
-// =======
-  {
-    path: "/serviceHistorySA",
+    path: "/ServiceHistorySA",
     name: "ServiceHistorySA",
-    component: ServiceHistorySA,
+    component: ServiceHistorySA
   },
   {
     path: "/booking",
     name: "BookingPage",
-    component: BookingPage,
+    component: BookingPage
+  },
+  {
+    path: "/ServiceHistoryAgency",
+    name: "ServiceHistoryAgency",
+    component: ServiceHistoryAgency
+  },
+  {
+    path: "/CleaningView",
+    name: "CleaningView",
+    component: CleaningView
+  },
+  {
+    path: "/GardeningView",
+    name: "GardeningView",
+    component: GardeningView
+  },
+  {
+    path: "/BabysittingView",
+    name: "BabysittingView",
+    component: BabysittingView
+  },
+  {
+    path: "/ElderlycareView",
+    name: "ElderlycareView",
+    component: ElderlycareView
+  },
+  {
+    path: "/HousenursingView",
+    name: "HousenursingView",
+    component: HousenursingView
+  },
+  {
+    path: "/ChefsView",
+    name: "ChefsView",
+    component: ChefsView
+  },
+  {
+    path: "/FoodcateringView",
+    name: "FoodcateringView",
+    component: FoodcateringView
+  },
+  {
+    path: "/SADashHome",
+    name: "SADashHome",
+    component: SADashHome
+  },
+  {
+    path: "/AllWorkerFromCX",
+    name: "AllWorkerFromCX",
+    component: AllWorkerFromCX
   },
   {
     path: "/AddAgency",
     name: "AddAgency",
-    component: AddAgency,
+    component: AddAgency
   },
   {
     path: "/PlumbingView",
     name: "PlumbingView",
-    component: PlumbingView,
+    component: PlumbingView
+  },
+  {
+    path: "/PlumbingView",
+    name: "PlumbingView",
+    component: PlumbingView
   },
   {
     path: "/CarpentryView",
     name: "CarpentryView",
-    component: CarpentryView,
+    component: CarpentryView
   },
   {
     path: "/MovingfurnitureView",
     name: "MovingfurnitureView",
-    component: MovingfurnitureView,
+    component: MovingfurnitureView
   },
   {
     path: "/HouseguardView",
     name: "HouseguardView",
-    component: HouseguardView,
+    component: HouseguardView
   },
-  
-// >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
+  {
+    path: "/DriverView",
+    name: "DriverView",
+    component: DriverView
+  },
 ];
 
 const router = createRouter({

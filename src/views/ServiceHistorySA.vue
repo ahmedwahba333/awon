@@ -1,5 +1,5 @@
 <template>
-<NavBarDash/>
+<NavBarSADash/>
 <div class="all">
 
     <div class="container grid">
@@ -102,12 +102,12 @@
 </template>
 
 <script>
-import NavBarDash from '../components/NavBarDash.vue';
+import NavBarSADash from '../components/NavBarSADash.vue';
 
     export default {
         name:'ServiceHistorySA',
         components:{
-            NavBarDash,
+            NavBarSADash,
            
         }
     }
@@ -223,6 +223,7 @@ input.search {
 
 .all{
     background-color: $backgroundColor;
+    padding-bottom: 30px;
 }
 
 thead tr tbody{
