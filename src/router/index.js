@@ -29,6 +29,7 @@ import CarpentryView from "../views/CarpentryView.vue";
 import MovingfurnitureView from "../views/MovingfurnitureView.vue";
 import HouseguardView from "../views/HouseguardView.vue";
 import DriverView from "../views/DriverView.vue";
+import CXprofileView from "../views/CXprofileView.vue";
 // >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
 
 import ServiceHistoryAgency from "../views/ServiceHistoryAgency.vue";
@@ -266,6 +267,11 @@ const routes = [
     path: "/DriverView",
     name: "DriverView",
     component: DriverView
+  },
+  {
+    path: "/CXprofileView",
+    name: "CXprofileView",
+    component: CXprofileView
   },
 ];
 
