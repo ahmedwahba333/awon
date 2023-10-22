@@ -5,14 +5,73 @@
 
     <div class="container">
 
-            <div class="row pt-3">
-                <form class="search">
-                    <input class="search" type="search" />
-                </form>
-            </div>
-            <div class="row ">
-       
+            <div class="row pt-3 justify-content-center align-items-center">
+                
+                    <button class="servicesDrop dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="37" viewBox="0 0 35 37" fill="none">
+                        <path d="M33.855 30.0427L32.1161 28.3037C33.0226 26.9348 33.5591 25.2884 33.5591 23.5124C33.5591 18.7026 29.6557 14.7993 24.8459 14.7993C20.0361 14.7993 16.1328 18.7026 16.1328 23.5124C16.1328 28.3222 20.0361 32.2256 24.8459 32.2256C26.6219 32.2256 28.2498 31.6891 29.6372 30.7826L31.3761 32.5215C31.7276 32.873 32.1716 33.0395 32.6341 33.0395C33.0966 33.0395 33.5406 32.873 33.892 32.5215C34.5395 31.8556 34.5395 30.7456 33.855 30.0427Z" fill="#F97B22"/>
+                        <path d="M31.7446 3.73684V7.84366C31.7446 9.34209 30.8196 11.2105 29.8947 12.154L29.5617 12.45C29.3027 12.6904 28.9142 12.7459 28.5812 12.635C28.2112 12.5055 27.8413 12.413 27.4713 12.3205C26.6573 12.117 25.7878 12.0245 24.8999 12.0245C18.5177 12.0245 13.3379 17.2043 13.3379 23.5865C13.3379 25.6954 13.9114 27.7673 15.0028 29.5432C15.9278 31.0971 17.2227 32.3921 18.6287 33.2616C19.0541 33.539 19.2206 34.131 18.8506 34.464C18.7211 34.575 18.5917 34.6675 18.4622 34.76L15.8723 36.4434C13.4674 37.9419 10.1561 36.2584 10.1561 33.2616V23.3645C10.1561 22.051 9.41609 20.3676 8.67612 19.4427L1.66493 11.969C0.739968 11.0255 0 9.34209 0 8.23214V3.92183C0 1.68343 1.66493 0 3.68134 0H28.0632C30.0797 0 31.7446 1.68343 31.7446 3.73684Z" fill="#F97B22"/>
+                        </svg>
+                    Filter Services
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                        <div class="dropdown-item">
+                            <h5>House Keeping</h5>
+                            <div class="d-flex align-items-center gap-3" >
+                            <div>
+                            <input type="checkbox" class="form-check-input" >
+                            <label for="" class="form-check-label mt-1 ms-1">Cleaning</label>
+                            </div>
+                            <div>
+                            <input type="checkbox" class="form-check-input" >
+                            <label for="" class="form-check-label mt-1 ms-1">Gardening</label>
+                            </div>
+                        </div>
+                        </div>
+                        </li> <hr/>
 
+                        <li>
+                        <div class="dropdown-item">
+                            <h5>Facilities</h5>
+                            <div class="d-flex align-items-center gap-3" >
+                            <div>
+                            <input type="checkbox" class="form-check-input" >
+                            <label for="" class="form-check-label mt-1 ms-1">House Gaurd</label>
+                            </div>
+                            <div>
+                            <input type="checkbox" class="form-check-input" >
+                            <label for="" class="form-check-label mt-1 ms-1">Driver</label>
+                            </div>
+                            </div>
+                        </div>
+                        </li> <hr/>
+
+                        <li>
+                        <div class="dropdown-item">
+                            <h5>service</h5>
+                            <div class="d-flex align-items-center gap-3" >
+                            <div>
+                            <input type="checkbox" class="form-check-input" >
+                            <label for="" class="form-check-label mt-1 ms-1">Plumbing</label>
+                            </div>
+                            <div>
+                            <input type="checkbox" class="form-check-input" >
+                            <label for="" class="form-check-label mt-1 ms-1">Carpentry</label>
+                            </div>
+                            <div>
+                            <input type="checkbox" class="form-check-input" >
+                            <label for="" class="form-check-label mt-1 ms-1">Moving Furniture</label>
+                            </div>
+                            </div>
+                        </div>
+                        </li><hr/>
+                    </ul>
+                    <input class="search mt-2" type="search" />
+            </div>
+
+            
+     <div class="row ">
         <div class="col-12  col-md-12 col-sm-8 pt-3 mb-3">
          <div id="carouselExampleDark" class="carousel carousel-dark slide">
            <div class="carousel-indicators carasou">
@@ -31,7 +90,7 @@
       <div class="card mb-4" style="width: 18rem">
         <img
           src="../assets/subservices/cleaner3.jpg"
-          class="card-img-top Clip-path:circle()"
+          class="card-img-top object-fit-cover"
           alt="..."
         />
         <div class="card-body">
@@ -72,7 +131,7 @@
       <div class="card mb-4" style="width: 18rem">
         <img
           src="../assets/subservices/cleaner1.jpg"
-          class="card-img-top Clip-path:circle()"
+          class="card-img-top object-fit-cover"
           alt="..."
         />
         <div class="card-body">
@@ -113,7 +172,7 @@
       <div class="card mb-4" style="width: 18rem">
         <img
           src="../assets/subservices/cleaner2.jpg"
-          class="card-img-top Clip-path:circle()"
+          class="card-img-top object-fit-cover"
           alt="..."
         />
         <div class="card-body">
@@ -156,7 +215,7 @@
             <div class="card mb-4" style="width: 18rem">
                 <img
                 src="../assets/subservices/cleaner2.jpg"
-                class="card-img-top Clip-path:circle()"
+                class="card-img-top object-fit-cover"
                 alt="..."
                 />
                 <div class="card-body">
@@ -197,7 +256,7 @@
             <div class="card mb-4" style="width: 18rem">
                 <img
                 src="../assets/subservices/cleaner3.jpg"
-                class="card-img-top Clip-path:circle()"
+                class="card-img-top object-fit-cover"
                 alt="..."
                 />
                 <div class="card-body">
@@ -238,7 +297,7 @@
             <div class="card mb-4" style="width: 18rem">
                 <img
                 src="../assets/subservices/cleaner1.jpg"
-                class="card-img-top Clip-path:circle()"
+                class="card-img-top object-fit-cover"
                 alt="..."
                 />
                 <div class="card-body">
@@ -281,7 +340,7 @@
             <div class="card mb-4" style="width: 18rem">
                 <img
                 src="../assets/subservices/cleaner3.jpg"
-                class="card-img-top Clip-path:circle()"
+                class="card-img-top object-fit-cover"
                 alt="..."
                 />
                 <div class="card-body">
@@ -322,7 +381,7 @@
             <div class="card mb-4" style="width: 18rem">
                 <img
                 src="../assets/subservices/cleaner2.jpg"
-                class="card-img-top Clip-path:circle()"
+                class="card-img-top object-fit-cover"
                 alt="..."
                 />
                 <div class="card-body">
@@ -363,7 +422,7 @@
             <div class="card mb-4" style="width: 18rem">
                 <img
                 src="../assets/subservices/babysitter1.jpg"
-                class="card-img-top Clip-path:circle()"
+                class="card-img-top object-fit-cover"
                 alt="..."
                 />
                 <div class="card-body">
@@ -412,7 +471,7 @@
       <div class="card mb-4" style="width: 18rem">
         <img
           src="../assets/subservices/gardener1.jpg"
-          class="card-img-top Clip-path:circle()"
+          class="card-img-top object-fit-cover"
           alt="..."
         />
         <div class="card-body">
@@ -453,7 +512,7 @@
       <div class="card mb-4" style="width: 18rem">
         <img
           src="../assets/subservices/gardener3.jpg"
-          class="card-img-top Clip-path:circle()"
+          class="card-img-top object-fit-cover"
           alt="..."
         />
         <div class="card-body">
@@ -494,7 +553,7 @@
       <div class="card mb-4" style="width: 18rem">
         <img
           src="../assets/subservices/gardener2.jpg"
-          class="card-img-top Clip-path:circle()"
+          class="card-img-top object-fit-cover"
           alt="..."
         />
         <div class="card-body">
@@ -537,7 +596,7 @@
         <div class="card mb-4" style="width: 18rem">
             <img
             src="../assets/subservices/elderlycare3.jpg"
-            class="card-img-top Clip-path:circle()"
+            class="card-img-top object-fit-cover"
             alt="..."
             />
             <div class="card-body">
@@ -578,7 +637,7 @@
         <div class="card mb-4" style="width: 18rem">
             <img
             src="../assets/subservices/elderlycare1.jpg"
-            class="card-img-top Clip-path:circle()"
+            class="card-img-top object-fit-cover"
             alt="..."
             />
             <div class="card-body">
@@ -619,7 +678,7 @@
         <div class="card mb-4" style="width: 18rem">
             <img
             src="../assets/subservices/elderlycare2.jpg"
-            class="card-img-top Clip-path:circle()"
+            class="card-img-top object-fit-cover"
             alt="..."
             />
             <div class="card-body">
@@ -662,7 +721,7 @@
         <div class="card mb-4" style="width: 18rem">
             <img
             src="../assets/subservices/gardener2.jpg"
-            class="card-img-top Clip-path:circle()"
+            class="card-img-top object-fit-cover"
             alt="..."
             />
             <div class="card-body">
@@ -703,7 +762,7 @@
         <div class="card mb-4" style="width: 18rem">
             <img
             src="../assets/subservices/gardener1.jpg"
-            class="card-img-top Clip-path:circle()"
+            class="card-img-top object-fit-cover"
             alt="..."
             />
             <div class="card-body">
@@ -744,7 +803,7 @@
         <div class="card mb-4" style="width: 18rem">
             <img
             src="../assets/subservices/gardener3.jpg"
-            class="card-img-top Clip-path:circle()"
+            class="card-img-top object-fit-cover"
             alt="..."
             />
             <div class="card-body">
@@ -824,6 +883,29 @@ export default {
 
 .bg {
   background-color: $backgroundColor;
+}
+
+.servicesDrop{
+  background-color: $backgroundColor;
+  width:fit-content;
+  padding: 5px 15px;
+  color:$blueColor;
+  border:solid 2px $backgroundColor;
+  border-radius: 10px;
+  border-color: $orangeColor;
+  
+}
+
+.dropdown-menu{
+  width:fit-content;
+  padding: 20px;
+  
+}
+
+li{
+  label , h5{
+    color: $blueColor !important;
+  }
 }
 
 .search{
@@ -921,4 +1003,6 @@ img {
 .carousel-control-prev,.carousel-control-next{
 width: 5%;
 }
+
+
 </style>
