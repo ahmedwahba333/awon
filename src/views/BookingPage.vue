@@ -225,7 +225,7 @@
       </div>
 
       <div class="row d-flex justify-content-center mt-2">
-          <button class="next">Next</button>
+         <router-link class="btn next" :to="'/payment'"> Next</router-link>
       </div>
 </div> 
 </form>
@@ -322,7 +322,7 @@ margin-top: 30px;
 }
 
 .next{
-@include button
+@include button ;
 }
 
 
