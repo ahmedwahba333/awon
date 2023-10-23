@@ -6,7 +6,7 @@
                     <img class="logo-img" src="../../../../assets/images/logo.jpg" alt="">
                 </figure>
                 <div class="myCon">
-                    <p class="title-heading">Awon</p>
+                    <router-link to="/" class="title-heading">Awon</router-link>
                     <p class="title-slogin">Awon, your help is everywhere</p>
                     <p class="btn-login-text py-2">sign up as a..</p>
                 </div>
@@ -37,6 +37,8 @@ export default {
     .title-heading {
         font-size: $title;
         font-weight: bold;
+        text-decoration: none;
+        color: $blueColor;
     }
 
     .title-slogin {
