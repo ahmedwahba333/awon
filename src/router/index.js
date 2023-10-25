@@ -128,7 +128,7 @@ const routes = [
     component: ServicesView,
   },
   {
-    path: "/workerpageDash",
+    path: "/workerpageDash/:id",
     name: "WorkerPageDashboard",
     component: WorkerPageDashboard,
   },
