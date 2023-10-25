@@ -30,7 +30,7 @@
             d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"
           />
         </svg>
-        <span class="wk-box"> {{wk.Phone}} </span><br />
+        <span class="wk-box" > {{wk.Phone}} </span><br />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
@@ -280,7 +280,6 @@
         <div class="title">Badges</div>
         <div class="b-box row">
           <div class="badge-icon col col-lg-3 col-md-3 col-sm-12 col-12">
-            <div>{{wk.Badge}}</div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="70"
@@ -301,9 +300,9 @@
                 fill="#F97B22"
               />
             </svg>
-            <div class="badge-name">Clean and Tidy</div>
+            <div class="badge-name">{{wk.Badge}}</div>
           </div>
-          <div class="badge-icon col col-lg-3 col-md-3 col-sm-12 col-12">
+          <!-- <div class="badge-icon col col-lg-3 col-md-3 col-sm-12 col-12">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="70"
@@ -348,7 +347,7 @@
               />
             </svg>
             <div class="badge-name">Amazing Speed</div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -389,7 +388,7 @@ export default {
     
     getWkById() {
       this.id = this.$route.params.id
-      axios.get(`http://localhost:2000/worker/1`)
+      axios.get(`http://localhost:2000/worker/71`)
         .then(res =>this.wk = res.data)
         .catch(err=>console.log(err))
     },
