@@ -65,10 +65,13 @@
     </div>
 
     <div class="container">
-      <div class="row text-center my-5">
-        <h2>We offer +200 workers to do everything you need</h2>
-      </div>
+ 
       <div class="row justify-content-center my-5 gap-5">
+        <div class="col-12 col-lg-5">
+        <h2><span>We offer</span> +200 workers to do everything you’d need, 
+        ensuring quality & speed for your everyday tasks, so you can focus on what matters to you. 
+        we’re your <span>Awon.</span></h2>
+      </div>
         <div class="col-12 col-lg-5">
           <div class="card mb-2 gap-2">
             <img
@@ -81,7 +84,10 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-5">
+     
+      </div>
+      <div class="row justify-content-center my-5 gap-5">
+           <div class="col-12 col-lg-5">
           <div class="card mb-2 gap-2">
             <img
               src="../assets/images/cardphotos/foodServices.jpeg"
@@ -93,8 +99,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="row justify-content-center gap-5">
         <div class="col-12 col-lg-5">
           <div class="card mb-2 gap-2">
             <img
@@ -107,6 +111,9 @@
             </div>
           </div>
         </div>
+        
+      </div>
+      <div class="row justify-content-center gap-5 my-5">
         <div class="col-12 col-lg-5">
           <div class="card mb-2 gap-2">
             <img
@@ -119,9 +126,7 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="row justify-content-center my-5">
-        <div class="col-lg-5">
+        <div class="col-12 col-lg-5">
           <div class="card mb-2 gap-2">
             <img
               src="../assets/images/cardphotos/private-services.jpg"
@@ -135,6 +140,7 @@
         </div>
       </div>
 
+<!-- Our Happy customer -->
       <div class="row text-center my-5">
         <h2>Our Happy Customer</h2>
       </div>
@@ -554,6 +560,13 @@ export default {
     color: $blueColor;
     font-size: $title;
     font-weight: $semiBold;
+    line-height: 4rem;
+    @media (max-width:1200px) {
+      line-height: 3.2rem;
+    }
+    span{
+      font-size: 35px;
+    }
   }
   .card {
     height: 20rem;

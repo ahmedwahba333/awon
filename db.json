@@ -4055,27 +4055,32 @@
     {
       "id": 1,
       "Name": "Housekeeping",
-      "Details": "Your home is your sanctuary, a place where you can relax and recharge. it can be tough to find the time to keep your home as clean and tidy as you'd like with busy schedules. That's where housekeeping services come in, so you can focus on what's important to you."
+      "Details": "Your home is your sanctuary, a place where you can relax and recharge. it can be tough to find the time to keep your home as clean and tidy as you'd like with busy schedules. That's where housekeeping services come in, so you can focus on what's important to you.",
+      "img" : "https://i.postimg.cc/CKssHd5L/cleaning.jpg"
     },
     {
       "id": 2,
       "Name": "Caring services",
-      "Details": "Our experienced and compassionate caregivers can provide your loved ones with the care and support they need, so you can have peace of mind. We offer a wide range of services, including elderly care, babysitting, and respite care."
+      "Details": "Our experienced and compassionate caregivers can provide your loved ones with the care and support they need, so you can have peace of mind. We offer a wide range of services, including elderly care, babysitting, and respite care.",
+      "img" : "https://i.postimg.cc/fRTzTrd2/elderly-care.jpg"
     },
     {
       "id": 3,
       "Name": "Food services",
-      "Details": "Whether you're planning a wedding, corporate event, or just a casual get-together, our chefs and caterers can create a delicious and memorable dining experience for you and your guests. We offer a wide range of cuisines and services, so you can find the perfect solution for your needs.."
+      "Details": "Whether you're planning a wedding, corporate event, or just a casual get-together, our chefs and caterers can create a delicious and memorable dining experience for you and your guests. We offer a wide range of cuisines and services, so you can find the perfect solution for your needs..",
+      "img" : "https://i.postimg.cc/Hx0RMpDQ/food-Services.jpg"
     },
     {
       "id": 4,
       "Name": "House maintenance",
-      "Details": "Our experienced and qualified technicians can handle all your house maintenance needs, from routine repairs to major projects. We offer a wide range of services, including plumbing, electrical, carpentry, and HVAC."
+      "Details": "Our experienced and qualified technicians can handle all your house maintenance needs, from routine repairs to major projects. We offer a wide range of services, including plumbing, electrical, carpentry, and HVAC.",
+      "img":"https://i.postimg.cc/596R5ddd/carpentry.jpg"
     },
     {
       "id": 5,
       "Name": "Facilities",
-      "Details": "Our experienced and reliable personal service providers can help you with a variety of tasks, such as house guarding, driving, and running errands. Free up your time and energy to focus on the things that matter most to you."
+      "Details": "Our experienced and reliable personal service providers can help you with a variety of tasks, such as house guarding, driving, and running errands. Free up your time and energy to focus on the things that matter most to you.",
+      "img" : "https://i.postimg.cc/k4kFFHKq/private-services.jpg"
     }
   ],
 
