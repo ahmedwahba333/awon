@@ -5,12 +5,12 @@
         </div>
         <div class="row gy-3">
             <div class="col-sm-6 col-6 text-start">
-                <label class="form-label label-text fs-media-6" for="name">Name</label>
-                <input class="form-control" type="text" name="name" id="name">
+                <label class="form-label label-text fs-media-6" for="Agency_Name">Name</label>
+                <input class="form-control" type="text" v-model="Agency_Name" name="Agency_Name" id="Agency_Name">
             </div>
             <div class="col-sm-6 col-6 text-start">
-                <label class="form-label label-text fs-media-6" for="email">Email</label>
-                <input class="form-control" type="text" name="email" id="email">
+                <label class="form-label label-text fs-media-6" for="Agency_Email">Email</label>
+                <input class="form-control" type="text" v-model="Agency_Email" name="Agency_Email" id="Agency_Email">
             </div>
             <div class="col-sm-6 col-6 text-start">
                 <label class="form-label label-text fs-media-6" for="phone-number1">Phone Number 1</label>
@@ -21,8 +21,8 @@
                 <input class="form-control" type="text" name="phone-number2" id="phone-number2">
             </div>
             <div class="col-sm-6 col-6 text-start">
-                <label class="form-label label-text fs-media-6" for="post-code">Post Code</label>
-                <input class="form-control" type="text" name="post-code" id="post-code">
+                <label class="form-label label-text fs-media-6" for="Agency_PostCode">Post Code</label>
+                <input class="form-control" type="text" v-model="Agency_PostCode" name="Agency_PostCode" id="Agency_PostCode">
             </div>
             <div class="col-sm-6 col-6 text-start">
                 <label class="form-label label-text fs-media-6" for="country">Country</label>
@@ -166,6 +166,13 @@ export default {
             inputType: 'password',
             eyeFlag: true,
             eyeSlashFlag: false,
+            Agency_Name:"",
+            Agency_Email:"",
+            // Agency_Name:"",
+            // Agency_Name:"",
+            // Agency_Name:"",
+            // Agency_Name:"",
+            // Agency_Name:"",
         }
     },
     validations() {

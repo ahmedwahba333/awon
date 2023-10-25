@@ -2896,9 +2896,18 @@
       "Password": "123456789",
       "FrontNational_id": "https://id.nadra.gov.pk/wp-content/uploads/2023/09/NICOP-2.png",
       "BackNational_id": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlGSAy9H4xvsdU501DmqFiYlrVc8YgZQ9bIQ&usqp=CAU"
+    },
+    {
+      "First_name": "ahmed",
+      "Last_name": "mostafa",
+      "Phone_no": "2001116002720",
+      "Gender": "Male",
+      "DOB": "1997-11-04",
+      "Email": "ahmed@gmail.com",
+      "Password": "12345678",
+      "id": 21
     }
   ],
-
   "order": [
     {
       "id": 1,
@@ -4156,34 +4165,33 @@
       "id": 1,
       "Name": "Housekeeping",
       "Details": "Your home is your sanctuary, a place where you can relax and recharge. it can be tough to find the time to keep your home as clean and tidy as you'd like with busy schedules. That's where housekeeping services come in, so you can focus on what's important to you.",
-      "img" : "https://i.postimg.cc/CKssHd5L/cleaning.jpg"
+      "img": "https://i.postimg.cc/CKssHd5L/cleaning.jpg"
     },
     {
       "id": 2,
       "Name": "Caring services",
       "Details": "Our experienced and compassionate caregivers can provide your loved ones with the care and support they need, so you can have peace of mind. We offer a wide range of services, including elderly care, babysitting, and respite care.",
-      "img" : "https://i.postimg.cc/fRTzTrd2/elderly-care.jpg"
+      "img": "https://i.postimg.cc/fRTzTrd2/elderly-care.jpg"
     },
     {
       "id": 3,
       "Name": "Food services",
       "Details": "Whether you're planning a wedding, corporate event, or just a casual get-together, our chefs and caterers can create a delicious and memorable dining experience for you and your guests. We offer a wide range of cuisines and services, so you can find the perfect solution for your needs..",
-      "img" : "https://i.postimg.cc/Hx0RMpDQ/food-Services.jpg"
+      "img": "https://i.postimg.cc/Hx0RMpDQ/food-Services.jpg"
     },
     {
       "id": 4,
       "Name": "House maintenance",
       "Details": "Our experienced and qualified technicians can handle all your house maintenance needs, from routine repairs to major projects. We offer a wide range of services, including plumbing, electrical, carpentry, and HVAC.",
-      "img" : "https://i.postimg.cc/596R5ddd/carpentry.jpg"
+      "img": "https://i.postimg.cc/596R5ddd/carpentry.jpg"
     },
     {
       "id": 5,
       "Name": "Facilities",
       "Details": "Our experienced and reliable personal service providers can help you with a variety of tasks, such as house guarding, driving, and running errands. Free up your time and energy to focus on the things that matter most to you.",
-      "img" : "https://i.postimg.cc/k4kFFHKq/private-services.jpg"
+      "img": "https://i.postimg.cc/k4kFFHKq/private-services.jpg"
     }
   ],
-
   "service": [
     {
       "Category_id": 1,
@@ -4864,7 +4872,6 @@
       "Agency-Phone_no2": 2001114449826
     }
   ],
-
   "comments": [
     {
       "id": 1,

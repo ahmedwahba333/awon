@@ -239,10 +239,46 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
 });
-// router.beforeEach((to, from, next) => {
-//   if (localStorage.getItem("userInfo") != undefined) {
-//   }
-//   console.log();
-// });
+
+router.beforeEach((to) => {
+  // token
+  const userData = JSON.parse(localStorage.getItem("cxInfo"));
+  if (userData == null) {
+    // not authenticated
+    if (
+      to.name == "WorkerPageDashboard" ||
+      to.name == "paymentDetails" ||
+      to.name == "WriteReview" ||
+      to.name == "AgancyDash" ||
+      to.name == "dashReviews" ||
+      to.name == "allAgencies" ||
+      to.name == "AllWorker" ||
+      to.name == "ServiceHistorySA" ||
+      to.name == "BookingPage" ||
+      to.name == "ServiceHistoryAgency" ||
+      to.name == "SADashHome" ||
+      to.name == "AddAgency"
+    ) {
+      return "/login";
+    }
+  } else if (userData != null) {
+    // authenticated
+    if (
+      to.name == "login" ||
+      to.name == "signup" ||
+      to.name == "WorkerPageDashboard" ||
+      to.name == "AgancyDash" ||
+      to.name == "dashReviews" ||
+      to.name == "allAgencies" ||
+      to.name == "AllWorker" ||
+      to.name == "ServiceHistorySA" ||
+      to.name == "ServiceHistoryAgency" ||
+      to.name == "SADashHome" ||
+      to.name == "AddAgency"
+    ) {
+      return "/";
+    }
+  }
+});
 
 export default router;

@@ -101,7 +101,7 @@ export default {
         }
     },
     created() {
-        axios.get("http://localhost:2000/customer").then((res) => {
+        axios.get("http://localhost:2000/cx").then((res) => {
             this.users = res.data;
         }).catch((err) => {
             console.log(err);
@@ -118,19 +118,17 @@ export default {
         //     }
         checkUser() {
             for (let i = 0; i < this.users.length; i++) {
-                if (this.email == this.users[i]['email'] && this.pass == this.users[i]['password']) {
-                    console.log('authenticated');
-                    localStorage.setItem("userInfo", JSON.stringify(this.users[i]))
+                if (this.email == this.users[i]['Email'] && this.pass == this.users[i]['Password']) {
+                    localStorage.setItem("cxInfo", JSON.stringify(this.users[i]))
                     this.$router.push('/');
                     break;
                 }
             }
         },
         submitData() {
-            this.checkUser();
             this.v$.$validate();
             if (!this.v$.$error) {
-                console.log('ok');
+                this.checkUser();
             } else {
                 console.log('cannot');
             }
