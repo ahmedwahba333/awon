@@ -29,7 +29,7 @@
             </div>
 
             <div class="col-md-7 col-sm-5"> 
-                <input type="search" class="search">
+                <input type="search" class="search form-control" v-model="orderID">
             </div>
 
             <div class="col-lg-3 col-md-4 col-sm-5">
@@ -37,7 +37,7 @@
             </div>
 
             <div class="col-md-7 col-sm-5"> 
-                <input type="search" class="search">
+                <input type="search" class="search form-control" v-model="cxID">
             </div>
 
             <div class="col-lg-3 col-md-4 col-sm-5">
@@ -45,7 +45,7 @@
             </div>
 
             <div class="col-md-7 col-sm-5"> 
-                <input type="search" class="search">
+                <input type="search" class="search form-control" v-model="workerNm">
             </div>
 
             <div class="col-lg-3 col-md-4 col-sm-5">
@@ -53,7 +53,7 @@
             </div>
 
             <div class="col-md-7 col-sm-5"> 
-                <input type="search" class="search">
+                <input type="search" class="search form-control" v-model="orderDate">
             </div>
         </div>
 
@@ -76,22 +76,14 @@
                          </tr>
                        </thead>
                        <tbody>
-                        <tr>
-                           <td>#128</td>
-                           <td>2 Bedrooms</td>
-                           <td>12/7/2023</td>
-                           <td>#127566</td>
-                           <td>Mark Lee</td>
-                           <td>Mohsen</td>
-                         </tr>
-                         <tr v-for="n in 12" :key="n">
-                           <td>#127</td>
-                           <td>2 Bedrooms</td>
-                           <td>12/7/2023</td>
-                           <td>#127566</td>
-                           <td>Mark Lee</td>
-                           <td>Mohsen</td>
-                         </tr>
+                         <tr v-for="order in  handleSearch" :key="order.id">
+                           <td>{{order.id}}</td>
+                           <td>{{order.Order_Details}}</td>
+                           <td>{{order.Order_Date}}</td>
+                           <td>{{order.Customer_id}}</td>
+                           <td>{{ order.Customer_FName }} {{  order.Customer_LName}}</td>
+                           <td>{{order.Worker_FName }} {{order.Worker_LName  }}</td>
+                    </tr>
                        </tbody>
                     </table>
             </div>
@@ -103,13 +95,49 @@
 
 <script>
 import NavBarSADash from '../components/NavBarSADash.vue';
+import axios from 'axios';
 
     export default {
         name:'ServiceHistorySA',
         components:{
             NavBarSADash,
-           
-        }
+
+        },
+
+        data(){
+            return{
+                  orders:[],
+                  orderID:'',
+                  cxID:'',
+                  orderDate:'',
+                  workerNm:'',
+            }
+        },
+
+            created(){
+                this.getAllOrders();
+            },
+
+            methods:{
+                getAllOrders(){
+                    axios.get("http://localhost:2000/order")
+                    .then ((res)=> this.orders=res.data)
+                    .catch (err=> console.log (err))
+                },
+            },
+
+            computed:{
+            handleSearch(){
+                return this.orders.filter((elem) => {
+                       return (
+                         elem.id.toString().toLowerCase().includes(this.orderID.toLowerCase()) &&
+                         elem.Customer_id.toString().toLowerCase().includes(this.cxID.toLowerCase()) &&
+                         elem.Worker_Name.toLowerCase().includes(this.workerNm.toLowerCase()) &&
+                         elem.Order_Date.toString().toLowerCase().includes(this.orderDate.toLowerCase())
+                                );
+                                                     });
+                           }
+                    } 
     }
 </script>
 
@@ -201,6 +229,17 @@ input.search {
         margin-left: 30px;
     }
 
+    thead{
+       font-size: $paragraph !important;
+        }
+
+   tbody{
+            font-size: $small !important;  
+        }
+
+    p{
+        font-size: $paragraph !important;
+    }
 }
 
 @media (max-width:575px){
@@ -215,6 +254,22 @@ input.search {
         display: flex;
         justify-content: center;
 }
+
+   thead{
+       font-size: $paragraph !important;
+        }
+
+   tbody{
+            font-size: $small !important;  
+        }
+        
+   .servicesTable{
+    margin: 0px 5px 0px 5px;
+    }
+
+    p{
+        font-size: $paragraph !important;
+    }
 
 .search{
     width:350px
