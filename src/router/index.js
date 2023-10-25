@@ -7,8 +7,8 @@ import WorkerProfile from "../views/WorkerProfileCx.vue";
 import WriteReview from "../views/WriteReview.vue";
 import paymentDetails from "../views/payment.vue";
 import ServicesView from "../views/ServicesView.vue";
-import AddAgency from "../views/AddAgency.vue";
-import AgancyDash from "../views/AgancyDash.vue";
+// import AddAgency from "../views/AddAgency.vue";
+// import AgancyDash from "../views/AgancyDash.vue";
 import WorkerPageDashboard from "../views/workerPageDashboard.vue";
 import dashReviews from "../views/dashReviews.vue";
 import aboutus from "../views/About.vue";
@@ -129,11 +129,11 @@ const routes = [
     name: "WriteReview",
     component: WriteReview,
   },
-  {
-    path: "/agancydash",
-    name: "AgancyDash",
-    component: AgancyDash,
-  },
+  // {
+  //   path: "/agancydash",
+  //   name: "AgancyDash",
+  //   component: AgancyDash,
+  // },
   {
     path: "/dashReviews",
     name: "dashReviews",
@@ -144,11 +144,11 @@ const routes = [
     name: "aboutUs",
     component: aboutus,
   },
-  {
-    path: "/Agencies",
-    name: "allAgencies",
-    component: allAgencies,
-  },
+  // {
+  //   path: "/Agencies",
+  //   name: "allAgencies",
+  //   component: allAgencies,
+  // },
   {
     path: "/AllWorker",
     name: "AllWorker",
