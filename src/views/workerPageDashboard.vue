@@ -30,7 +30,7 @@
                     </div>
                     
                     <div class="col-lg-10 col-sm-9 mt-md-2 ms-md-5 ms-lg-0 ms-sm-5 mb-0" >
-                          <p class="workerName fw-bold mb-0">{{ worker.first_name }}</p>
+                          <p class="workerName fw-bold mb-0">{{ worker.first_name}} {{ worker.last_name }}</p>
                           <p class="position">Qualified employee</p>
                     </div>
     
@@ -46,7 +46,7 @@
                                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                                     <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
                                 </svg> 
-                                <p class="mx-1 mt-5">Service Name</p>
+                                <p class="mx-1 mt-5">{{ worker.Categories }}</p>
                             </div>
 
                             <div>
@@ -54,7 +54,7 @@
                                      <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
                                      <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                                 </svg>
-                                <p class="mx-1">Building B F-12</p>
+                                <p class="mx-1">{{ worker.Address }}</p>
                             </div>
                            </div>
 
@@ -63,14 +63,14 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-map" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z"/>
                                     </svg>
-                                    <p> Haram-Giza</p>
+                                    <p class="mx-1">{{ worker.Area }}</p>
                                 </div>
 
                                 <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
                                          <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
                                     </svg>
-                                    <p class="mx-1">01312883904</p>
+                                    <p class="mx-1">{{ worker.Phone}}</p>
                                 </div>
                                 
                             </div>
@@ -109,11 +109,11 @@
                          </tr>
                        </thead>
                        <tbody>
-                         <tr v-for="n in 6" :key="n">
-                           <td>suzy Nabil</td>
-                           <td>cooking</td>
-                           <td>1200$</td>
-                           <td>10/11/2023</td>
+                         <tr v-for="order in orders" :key="order.Worker_id" v-show="order.Worker_id==worker.id">
+                           <td>{{ order.Customer_FName }}</td>
+                           <td>{{ order.Order_Details }}</td>
+                           <td>{{ order.Order_Price}}</td>
+                           <td>{{ order.Order_Date }}</td>
                          </tr>
                        </tbody>
                     </table>
@@ -282,20 +282,28 @@ import axios from 'axios';
         data(){
             return{
                 worker:[],
+                orders:[],
                 id:'5'
             }
         },
 
         created(){
                 this.getAllWorkers();
+                this.getAllOrders();
             },
 
         methods:{
                 getAllWorkers(){
                     this.id = this.$route.params.id
-                axios.get(`http://localhost:2000/worker/${this.id}`)
+                axios.get(`http://localhost:3000/worker/${this.id}`)
                 .then(res=>this.worker = res.data)
                 .catch(err=>console.log(err))
+                },
+
+                getAllOrders(){
+                    axios.get("http://localhost:3000/order")
+                    .then ((res)=> this.orders=res.data)
+                    .catch (err=> console.log (err))
                 },
 
             }
