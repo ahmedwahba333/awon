@@ -2,12 +2,23 @@
     <div class="container">
         <div class="row gy-3 justify-content-center">
             <div class="col-md-6 text-start">
-                <label class="form-label label-text" for="name">Name</label>
-                <input class="form-control" type="text" name="name" id="name">
+                <label class="form-label label-text" for="fName">First Name</label>
+                <input class="form-control" type="text" name="fName" id="fName">
+            </div>
+            <div class="col-md-6 text-start">
+                <label class="form-label label-text" for="lName">Last Name</label>
+                <input class="form-control" type="text" name="lName" id="lName">
             </div>
             <div class="col-md-6 text-start">
                 <label class="form-label label-text" for="phone-number">Phone Number</label>
                 <input class="form-control" type="text" name="phone-number" id="phone-number">
+            </div>
+            <div class="col-md-6 text-start">
+                <label class="form-label label-text" for="Gender">Gender</label>
+                <select class="form-select" name="Gender" id="Gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
             </div>
             <div class="col-md-6 text-start">
                 <label class="form-label label-text" for="date of birth">Date Of Birth</label>
@@ -99,7 +110,8 @@ export default {
             this.eyeSlashFlag = !this.eyeSlashFlag;
             this.eyeFlag = !this.eyeFlag;
             this.inputType = "password";
-        }
+        },
+
     }
 }
 </script>

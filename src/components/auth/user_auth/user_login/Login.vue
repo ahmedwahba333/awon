@@ -79,6 +79,7 @@
 import FooterComponent from '@/components/footer.vue';
 import useVuelidate from '@vuelidate/core';
 import { required, email } from '@vuelidate/validators';
+import axios from 'axios';
 export default {
     name: 'LoginComponent',
     components: { FooterComponent },
@@ -90,6 +91,7 @@ export default {
             inputType: 'password',
             eyeFlag: true,
             eyeSlashFlag: false,
+            users: [],
         }
     },
     validations() {
@@ -97,6 +99,13 @@ export default {
             email: { required, email },
             pass: { required }
         }
+    },
+    created() {
+        axios.get("http://localhost:2000/customer").then((res) => {
+            this.users = res.data;
+        }).catch((err) => {
+            console.log(err);
+        })
     },
     methods: {
         //     getImageIdFromGoogleDriveLink(link) {
@@ -107,7 +116,18 @@ export default {
         //     imgHandle() {
         //         this.imgSrc = "https://drive.google.com/uc?export=view&id=" + this.getImageIdFromGoogleDriveLink(this.img);
         //     }
+        checkUser() {
+            for (let i = 0; i < this.users.length; i++) {
+                if (this.email == this.users[i]['email'] && this.pass == this.users[i]['password']) {
+                    console.log('authenticated');
+                    localStorage.setItem("userInfo", JSON.stringify(this.users[i]))
+                    this.$router.push('/');
+                    break;
+                }
+            }
+        },
         submitData() {
+            this.checkUser();
             this.v$.$validate();
             if (!this.v$.$error) {
                 console.log('ok');
