@@ -17,7 +17,7 @@
       <!-- Worker Personal Details -->
         <div class="row mt-sm-3  firstRow mb-5">
             <div class="col-lg-4 col-md-3 col-sm-3">
-                 <img src="../assets/workerimg.jpg" class="rounded-circle">
+                 <img :src="worker.img" class="rounded-circle">
             </div>
 
             <div class="col-lg-8 col-md-9 col-sm-9 mt-md-3 mt-lg-0"> 
