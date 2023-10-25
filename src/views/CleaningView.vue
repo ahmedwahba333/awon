@@ -399,9 +399,9 @@
     <!-- http://localhost:8080/img/cleaner1.65740dc5.jpg -->
     <!-- <img src="@/assets/subservices/cleaner1.jpg" alt=""> -->
     <div class="container">
-      <div class="row">
+      <div class="row gy-4">
         <div class="card col-md-4 col-sm-6 col-6" v-for="(worker, i) in workerData" :key="i">
-          <img :src="`../assets/subservices/${worker.img}`" class="card-img-top Clip-path:circle()" :alt="`workerimg${i}`" />
+          <img :src="`${worker.img}`" class="card-img-top Clip-path:circle()" :alt="`workerimg${i}`" />
           <div class="card-body">
             <h5 class="card-title">{{ worker['first_name'] }} {{ worker['last_name'] }}</h5>
             <p class="card-text">16 St. Emad Eldein - Down Town - Cairo</p>
@@ -528,6 +528,9 @@ img {
   height: 200px;
 }
 
+.card{
+  // width: 270px;
+}
 .card-title {
   text-align: center;
   font-size: $subTitle;
