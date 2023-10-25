@@ -5,11 +5,11 @@
       <div class="d-flex justify-content-start">
       <div class="top d-flex justify-content-around align-items-center">
         <div class="">
-          <div class="img"><img src="../assets/images/1.jpg"/></div>
+          <div class="img">{{wk.img}} </div>
         </div>
         <div class="">
-          <div class="w-name">name of worker</div>
-          <div class="btn m-0 mt-2">Book now</div>
+          <div class="w-name">{{wk.first_name}} {{wk.last_name}}</div>
+          <router-link :to="`./booking`"><div class="btn m-0 mt-2">Book now</div></router-link>
         </div>
       </div>
     </div>
@@ -30,8 +30,24 @@
             d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"
           />
         </svg>
-        <span class="wk-box">House Cleaning, Bathroom Cleaning, Kitchen Cleaning</span><br />
+        <span class="wk-box"> {{wk.Phone}} </span><br />
         <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-check-circle"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+          />
+          <path
+            d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"
+          />
+        </svg>
+        <span class="wk-box">Available for work in these areas: {{wk.Area}}</span><br>
+                <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
           height="16"
@@ -47,22 +63,6 @@
           />
         </svg>
         <span class="wk-box">Available for work</span><br />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="bi bi-check-circle"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-          />
-          <path
-            d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"
-          />
-        </svg>
-        <span class="wk-box">Available for work in these areas: Giza, Sheikh Zayed, Haram</span>
       </div>
       <div class="box">
         <div class="title">Worker Reviews</div>
@@ -280,6 +280,7 @@
         <div class="title">Badges</div>
         <div class="b-box row">
           <div class="badge-icon col col-lg-3 col-md-3 col-sm-12 col-12">
+            <div>{{wk.Badge}}</div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="70"
@@ -359,13 +360,52 @@
 <script>
 import NavBarPages from "@/components/NavBarPages.vue";
 import FooterComponent from "@/components/footer.vue";
+import axios from 'axios';
+
 export default {
+  
   name: "WorkerProfile",
+  data() {
+    return {
+      id: '',
+      wk: {},
+      bad: [],
+      // rev: [],
+    }
+  },
+
+  created() {
+    this.getWkById()
+    this.getWkBad()
+    // this.getWkInfo()
+    // this.getReviews()
+  },
   components: {
     FooterComponent,
     NavBarPages,
+    
   },
-};
+  methods: {
+    
+    getWkById() {
+      this.id = this.$route.params.id
+      axios.get(`http://localhost:2000/worker/1`)
+        .then(res =>this.wk = res.data)
+        .catch(err=>console.log(err))
+    },
+    getWkBad() {
+      axios.get("http://localhost:2000/worker")
+        .then((res) => this.bad = res.data)
+      .catch((err)=>console.log(err))
+    },
+    // getReviews() {
+    //   axios.get("http://localhost:2000/review")
+    //     .then((res) => this.rev = res.data)
+    //   .catch((err)=>console.log(err))      
+    }
+  }
+
+// };
 </script>
 
 <style lang="scss" scoped>
