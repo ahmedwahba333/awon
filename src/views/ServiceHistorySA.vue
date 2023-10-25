@@ -132,7 +132,7 @@ import axios from 'axios';
                        return (
                          elem.id.toString().toLowerCase().includes(this.orderID.toLowerCase()) &&
                          elem.Customer_id.toString().toLowerCase().includes(this.cxID.toLowerCase()) &&
-                         elem.Worker_Name.toLowerCase().includes(this.workerNm.toLowerCase()) &&
+                         elem.Worker_FName.toLowerCase().includes(this.workerNm.toLowerCase()) &&
                          elem.Order_Date.toString().toLowerCase().includes(this.orderDate.toLowerCase())
                                 );
                                                      });
@@ -338,11 +338,4 @@ tbody{
 
  
 
-</style>
-
-
-
-<style>
-
-    
 </style>
