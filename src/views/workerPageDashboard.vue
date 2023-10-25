@@ -30,7 +30,7 @@
                     </div>
                     
                     <div class="col-lg-10 col-sm-9 mt-md-2 ms-md-5 ms-lg-0 ms-sm-5 mb-0" >
-                          <p class="workerName fw-bold mb-0">Ahmad A</p>
+                          <p class="workerName fw-bold mb-0">{{ worker.first_name }}</p>
                           <p class="position">Qualified employee</p>
                     </div>
     
@@ -271,14 +271,34 @@
 <script>
 
 import NavBarDash from '../components/NavBarDash.vue';
+import axios from 'axios';
 
     export default {
         name:'WorkerPageDashboard',
         components:{
             NavBarDash,
-        }
+        },
 
+        data(){
+            return{
+                worker:[],
+                id:'5'
+            }
+        },
 
+        created(){
+                this.getAllWorkers();
+            },
+
+        methods:{
+                getAllWorkers(){
+                    this.id = this.$route.params.id
+                axios.get(`http://localhost:2000/worker/${this.id}`)
+                .then(res=>this.worker = res.data)
+                .catch(err=>console.log(err))
+                },
+
+            }
     }
 </script>
 
