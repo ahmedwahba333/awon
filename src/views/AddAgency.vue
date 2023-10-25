@@ -124,7 +124,7 @@
             <div class="col-lg-6 col-md-6 col-sm-12">
               <label for="">Date of Birth</label>
               <input
-                type="text"
+                type="date"
                 class="form-control w-100 rounded-5"
                 placeholder="Date of Birth"
                 aria-label="Date of Birth"

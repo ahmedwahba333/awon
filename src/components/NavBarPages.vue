@@ -20,7 +20,7 @@
                 </li>
               </ul>
               <ul>
-                <span>Giving</span>
+                <span>Caring Services</span>
                 <li>
                   <router-link to="#CareGiving"
                     ><a>Baby sitting</a></router-link
