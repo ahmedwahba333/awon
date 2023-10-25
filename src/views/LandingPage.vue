@@ -125,13 +125,12 @@
                 </svg>
               </div>
               <div>
-                <img src="../assets/images/reviews/1.jpg" alt="Cx" />
+                <img :src="`${rev.picture}`" alt="Cx" />
               </div>
             </div>
             <div>
               <p class="p-2">
-                I’ve been using Aown services for the past few months. It’s
-                excellent!
+                {{rev['Review']}}
               </p>
             </div>
           </div>
