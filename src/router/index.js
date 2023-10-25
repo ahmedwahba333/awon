@@ -12,8 +12,7 @@ import ServicesView from "../views/ServicesView.vue";
 import WorkerPageDashboard from "../views/workerPageDashboard.vue";
 import dashReviews from "../views/dashReviews.vue";
 import aboutus from "../views/About.vue";
-import Allworker from "../views/AllWorker.vue"
-import allAgencies from "../views/allAgencySDash.vue";
+// import allAgencies from "../views/allAgencySDash.vue";
 import Allworker from "../views/AllWorker.vue";
 
 import CleaningView from "../views/CleaningView.vue";
@@ -228,11 +227,11 @@ const routes = [
     name: "AllWorkerFromCX",
     component: AllWorkerFromCX
   },
-  {
-    path: "/AddAgency",
-    name: "AddAgency",
-    component: AddAgency
-  },
+  // {
+  //   path: "/AddAgency",
+  //   name: "AddAgency",
+  //   component: AddAgency
+  // },
 ];
 
 const router = createRouter({
