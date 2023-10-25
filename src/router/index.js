@@ -12,9 +12,7 @@ import AgancyDash from "../views/AgancyDash.vue";
 import WorkerPageDashboard from "../views/workerPageDashboard.vue";
 import dashReviews from "../views/dashReviews.vue";
 import aboutus from "../views/About.vue";
-import allAgencies from "../views/allAgencySDash.vue";
 import Allworker from "../views/AllWorker.vue";
-
 import CleaningView from "../views/CleaningView.vue";
 import GardeningView from "../views/GardeningView.vue";
 import BabysittingView from "../views/BabysittingView.vue";
@@ -30,6 +28,9 @@ import MovingfurnitureView from "../views/MovingfurnitureView.vue";
 import HouseguardView from "../views/HouseguardView.vue";
 import DriverView from "../views/DriverView.vue";
 import CXprofileView from "../views/CXprofileView.vue";
+import allAgencies from "../views/allAgencySDash.vue";
+import AgencyProfile from "../views/AgencyProfile.vue";
+import SAAllWorker from "../views/SAAllWorker.vue";
 // >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
 
 import ServiceHistoryAgency from "../views/ServiceHistoryAgency.vue";
@@ -134,9 +135,10 @@ const routes = [
     component: ServicesView,
   },
   {
-    path:  "/workerprofileDash",
-    name:  "WorkerPageDashboard",
-    component:  WorkerPageDashboard,
+    path: "/workerprofileDash",
+    name: "WorkerPageDashboard",
+    component: WorkerPageDashboard,
+
   },
   {
     path: "/payment",
@@ -171,12 +173,13 @@ const routes = [
   {
     path: "/AllWorker",
     name: "AllWorker",
-    component: Allworker
+    component: Allworker,
   },
-  {
+
+    {
     path: "/ServiceHistorySA",
     name: "ServiceHistorySA",
-    component: ServiceHistorySA
+    component: ServiceHistorySA,
   },
   {
     path: "/booking",
@@ -271,7 +274,17 @@ const routes = [
   {
     path: "/CXprofileView",
     name: "CXprofileView",
-    component: CXprofileView
+    component: CXprofileView,
+  },
+  {
+    path: "/AgencyProfile",
+    name: "AgencyProfile",
+    component: AgencyProfile,
+  },
+  {
+    path: "/SAAllWorker",
+    name: "SAAllWorker",
+    component: SAAllWorker,
   },
 ];
 
