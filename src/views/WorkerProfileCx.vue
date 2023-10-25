@@ -8,7 +8,7 @@
           <div class="img">{{wk.img}}</div>
         </div>
         <div class="">
-          <div class="w-name"> {{wk.first_name}} {{wk.last_name}} </div>
+          <div class="w-name"> {{wk.First_name}} {{wk.Last_name}} </div>
           <router-link :to="`./booking`"><div class="btn m-0 mt-2">Book now</div></router-link>
         </div>
       </div>
@@ -62,7 +62,7 @@
             d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"
           />
         </svg>
-        <span class="wk-box">Available for work</span><br />
+        <span class="wk-box">{{wk.First_name}} has prior experience of {{wk.Experience}} years.</span><br />
       </div>
       <div class="box">
         <div class="title">Worker Reviews</div>
@@ -368,14 +368,12 @@ export default {
     return {
       id: '',
       wk: {},
-      bad: [],
       // rev: [],
     }
   },
 
   created() {
     this.getWkById()
-    this.getWkBad()
     // this.getWkInfo()
     // this.getReviews()
   },
@@ -392,15 +390,15 @@ export default {
         .then(res =>this.wk = res.data)
         .catch(err=>console.log(err))
     },
-    getWkBad() {
-      axios.get("http://localhost:2000/worker")
-        .then((res) => this.bad = res.data)
-      .catch((err)=>console.log(err))
+    // getWkBad() {
+    //   axios.get("http://localhost:2000/worker")
+    //     .then((res) => this.bad = res.data)
+    //   .catch((err)=>console.log(err))
     },
-    // getReviews() {
-    //   axios.get("http://localhost:2000/review")
-    //     .then((res) => this.rev = res.data)
-    //   .catch((err)=>console.log(err))      
+    getReviews() {
+      axios.get("http://localhost:2000/review")
+        .then((res) => this.rev = res.data)
+      .catch((err)=>console.log(err))      
     }
   }
 
