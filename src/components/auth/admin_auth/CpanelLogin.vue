@@ -39,7 +39,7 @@
                             </svg>
                         </router-link>
                     </div>
-                    <router-link to="cpanel-login"><button class="btn-login">login</button></router-link>
+                    <router-link to="SADashHome"><button class="btn-login">login</button></router-link>
                 </div>
             </div>
         </div>
