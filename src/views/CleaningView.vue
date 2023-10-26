@@ -466,7 +466,6 @@ export default {
 .bg {
   background-color: $backgroundColor;
 }
-
 form {
   .input {
     border: 3px solid $blueColor;
@@ -475,22 +474,18 @@ form {
     height: 69px;
     padding: 9px 4px 9px 40px;
     background: white;
-
     @media (max-width: 767px) {
       width: 350px;
       height: 55px;
     }
-
     &:focus {
       border-color: $orangeColor;
       outline: none;
     }
-
     &#inputMessage {
       height: 262px;
     }
   }
-
   .input[placeholder] {
     font-size: $paragraph;
     font-weight: $semiBold;
@@ -528,9 +523,9 @@ img {
   height: 200px;
 }
 
-.card{
-  // width: 270px;
-}
+// .card{
+//   // width: 270px;
+// }
 .card-title {
   text-align: center;
   font-size: $subTitle;
@@ -546,5 +541,85 @@ img {
 
 .btn {
   @include button;
+}
+
+.accordion {
+  margin: auto;
+  // width: 50%;
+}
+.accordion input {
+  display: none;
+}
+.accordion {
+  .box {
+    position: relative;
+    background: white;
+    height: 64px;
+    transition: all 1s linear;
+    border: 3px solid $blueColor;
+    border-radius: 33px;
+    width: 716px;
+    height: 69px;
+    padding: 9px 4px 9px 40px;
+    margin-bottom: 10px;
+    background: white;
+    @media (max-width: 767px) {
+      width: 350px;
+      height: 55px;
+    }
+  }
+
+  .box-title {
+    font-weight: $semiBold;
+    font-size: $small;
+    color: $blueColor;
+    width: calc(100% - 30px);
+    height: 64px;
+    text-align: center;
+    line-height: 36px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    @media (min-width: 767px) {
+      font-size: 20px;
+    }
+  }
+  .box-content {
+    width: calc(100% - 40px);
+    padding: 30px 20px;
+    font-size: $small;
+    font-weight: $semiBold;
+    color: black;
+    display: none;
+    @media (min-width: 767px) {
+      font-size: 20px;
+    }
+  }
+  .box-close {
+    position: absolute;
+    height: 64px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: none;
+  }
+  input:checked + .box {
+    height: auto;
+    margin-top: 20px;
+  }
+  input:checked + .box .box-title {
+    border-bottom: 1px solid $blueColor;
+  }
+  input:checked + .box .box-content,
+  input:checked + .box .box-close {
+    display: inline-block;
+  }
 }
 </style>
