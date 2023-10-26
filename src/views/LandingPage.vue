@@ -95,34 +95,7 @@
             <div class="d-flex flex-row justify-content-between">
               <div class="p-2">
                 <h4>{{rev['Name']}}</h4>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="125"
-                  height="22"
-                  viewBox="0 0 125 22"
-                  fill="none"
-                >
-                  <path
-                    d="M10.8425 0.0842438L13.2768 7.57622L21.1543 7.57622L14.7813 12.2065L17.2155 19.6985L10.8425 15.0682L4.46943 19.6985L6.90373 12.2065L0.530669 7.57622L8.4082 7.57622L10.8425 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M36.5935 0.0842438L39.0278 7.57622L46.9053 7.57622L40.5322 12.2065L42.9665 19.6985L36.5935 15.0682L30.2204 19.6985L32.6547 12.2065L26.2816 7.57622L34.1592 7.57622L36.5935 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M62.3444 0.0842438L64.7787 7.57622L72.6563 7.57622L66.2832 12.2065L68.7175 19.6985L62.3444 15.0682L55.9714 19.6985L58.4057 12.2065L52.0326 7.57622L59.9102 7.57622L62.3444 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M88.0954 0.0842438L90.5297 7.57622L98.4072 7.57622L92.0342 12.2065L94.4685 19.6985L88.0954 15.0682L81.7224 19.6985L84.1567 12.2065L77.7836 7.57622L85.6611 7.57622L88.0954 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M113.846 0.0842438L116.281 7.57622L124.158 7.57622L117.785 12.2065L120.219 19.6985L113.846 15.0682L107.473 19.6985L109.908 12.2065L103.535 7.57622L111.412 7.57622L113.846 0.0842438Z"
-                    fill="#C3C3C3"
-                  />
-                </svg>
+               <star-rating active-color="#F97B22"  star-size=30 :rating="`${rev.Rate}`"></star-rating>
               </div>
               <div>
                 <img :src="`${rev.picture}`" alt="Cx" />
@@ -229,9 +202,10 @@
 import NavBarPages from "@/components/NavBarPages.vue";
 import FooterComponent from "@/components/footer.vue";
 import axios from 'axios';
+import StarRating from 'vue-star-rating';
 export default {
   name: "LandingPage",
-  components: { FooterComponent, NavBarPages },
+  components: { FooterComponent, NavBarPages, StarRating },
   data() {
     return {
        categories:[],
@@ -452,5 +426,7 @@ export default {
       display: inline-block;
     }
   }
+
+
 }
 </style>

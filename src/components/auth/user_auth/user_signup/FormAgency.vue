@@ -100,7 +100,7 @@
                         </label>
                     </div>
                     <div>
-                        <router-link to="login"><button class="signup-btn">Signup</button></router-link>
+                        <router-link to="agancydash"><button class="signup-btn">Signup</button></router-link>
                     </div>
                 </div>
             </div>

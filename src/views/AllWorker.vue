@@ -78,7 +78,7 @@
             <div class="ag-name col-lg-12">Fathy Ahmed - Cooking - Mansoura</div>
           </div>
           <div class="icons col-lg-3">
-            <span class="view">
+            <router-link to="workerprofileDash"><span class="view">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -92,7 +92,7 @@
                   d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"
                 />
               </svg>
-            </span>
+            </span> </router-link>
             <span class="edit">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

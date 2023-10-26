@@ -43,7 +43,7 @@
       <div class="offcanvas-body">
         <ul class="nav nav-pills flex-column mt-4">
           <li class="nav-item py-2 py-sm-0">
-            <router-link to="#" class="nav-link">
+            <router-link to="agancydash" class="nav-link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -59,7 +59,7 @@
             </router-link>
           </li>
           <li class="nav-item py-2 py-sm-0">
-            <router-link to="#" class="nav-link">
+            <router-link to="AllWorker" class="nav-link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -75,7 +75,7 @@
             </router-link>
           </li>
           <li class="nav-item py-2 py-sm-0">
-            <router-link to="#" class="nav-link">
+            <router-link to="ServiceHistoryAgency" class="nav-link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -99,7 +99,7 @@
             </router-link>
           </li>
           <li class="nav-item py-2 py-sm-0">
-            <router-link to="#" class="nav-link">
+            <router-link to="dashReviews" class="nav-link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
