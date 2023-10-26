@@ -91,10 +91,10 @@
         <h2>Our Happy Customer</h2>
       </div>
       <div class="row justify-content-center gap-4">
-          <div class="box m-0 col-md-4 col-sm-6 col-12 ">
+          <div class="box m-0 col-md-4 col-sm-6 col-12" v-for="(rev,i) in cxReview" :key="i">
             <div class="d-flex flex-row justify-content-between">
               <div class="p-2">
-                <h4>Fatma O.</h4>
+                <h4>{{rev['Name']}}</h4>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="125"
@@ -125,13 +125,12 @@
                 </svg>
               </div>
               <div>
-                <img src="../assets/images/reviews/1.jpg" alt="Cx" />
+                <img :src="`${rev.picture}`" alt="Cx" />
               </div>
             </div>
             <div>
               <p class="p-2">
-                I’ve been using Aown services for the past few months. It’s
-                excellent!
+                {{rev['Review']}}
               </p>
             </div>
           </div>
@@ -242,6 +241,7 @@ export default {
   },
   created(){
     this.getCategory();
+    this.getReview();
   },
   methods:{
     getCategory(){
@@ -251,7 +251,7 @@ export default {
     },
     getReview(){
       axios.get("http://localhost:2000/review")
-      .then((res)=> {this.cxReview = res.data})
+      .then((res)=> {console.log(this.cxReview = res.data)})
       .catch((err)=>{console.log(err)})
     }
   }
