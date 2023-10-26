@@ -101,6 +101,7 @@
           <!-- </div> -->
         </li>
         <li><router-link to="login">login</router-link></li>
+        <li><router-link to="AgancyDash">workdash</router-link></li>
       </ul>
     </div>
   </div>

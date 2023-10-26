@@ -22,15 +22,39 @@
             </div>
             <div class="col-sm-6 col-6 text-start">
                 <label class="form-label label-text fs-media-6" for="Agency_PostCode">Post Code</label>
-                <input class="form-control" type="text" v-model="Agency_PostCode" name="Agency_PostCode" id="Agency_PostCode">
-            </div>
-            <div class="col-sm-6 col-6 text-start">
-                <label class="form-label label-text fs-media-6" for="country">Country</label>
-                <input class="form-control" type="text" name="country" id="country">
+                <input class="form-control" type="text" v-model="Agency_PostCode" name="Agency_PostCode"
+                    id="Agency_PostCode">
             </div>
             <div class="col-md-6 col-sm-12 col-12 text-start">
                 <label class="form-label label-text fs-media-6" for="governorate">Governorate</label>
                 <input class="form-control" type="text" name="governorate" id="governorate">
+                <!-- <select name="" id="">
+                    <option value="Alabama">Alabama</option>
+                    <option value="Alaska">Alaska</option>
+                    <option value="Arizona">Arizona</option>
+                    <option value="Arkansas">Arkansas</option>
+                    <option value="California">California</option>
+                    <option value="Colorado">Colorado</option>
+                    <option value="Connecticut">Connecticut</option>
+                    <option value="Delaware">Delaware</option>
+                    <option value="Florida">Florida</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Hawaii">Hawaii</option>
+                    <option value="Idaho">Idaho</option>
+                    <option value="Illinois">Illinois</option>
+                    <option value="Indiana">Indiana</option>
+                    <option value="Iowa">Iowa</option>
+                    <option value="Kansas">Kansas</option>
+                    <option value="Kentucky">Kentucky</option>
+                    <option value="Louisiana">Louisiana</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select> -->
+            </div>
+            <div class="col-sm-6 col-6 text-start">
+                <label class="form-label label-text fs-media-6" for="city">City</label>
+                <input class="form-control" type="text" name="city" id="city">
             </div>
             <div class="col-md-6 col-sm-12 col-12 text-start">
                 <label class="form-label label-text fs-media-6" for="address">Address</label>
@@ -145,7 +169,8 @@
                         </label>
                     </div>
                     <div>
-                        <router-link to="login"><button type="submit" @click="submitData" class="signup-btn">Signup</button></router-link>
+                        <router-link to="login"><button type="submit" @click="submitData"
+                                class="signup-btn">Signup</button></router-link>
                     </div>
                 </div>
             </div>
@@ -166,8 +191,8 @@ export default {
             inputType: 'password',
             eyeFlag: true,
             eyeSlashFlag: false,
-            Agency_Name:"",
-            Agency_Email:"",
+            Agency_Name: "",
+            Agency_Email: "",
             // Agency_Name:"",
             // Agency_Name:"",
             // Agency_Name:"",
