@@ -67,10 +67,11 @@
       <div class="box">
         <div class="title">Worker Reviews</div>
         <div class="row justify-content-center align-items-start">
-          <div class="col col-lg-6 col-md-6 col-sm-12 col-12">
-            <div class="content row align-items-start">
+          <div class="col col-lg-6 col-md-6 col-sm-12 col-12" v-for="(index,i) in rev.slice(0,4)" :key="i" >
+            <div class="content row align-items-start" >
               <div class="col-sm-7 col-7 d-flex align-items-center">
-                <svg
+                <img :src="`${index.picture}`" alt="Cx" />
+                <!-- <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="30"
                   height="30"
@@ -83,12 +84,13 @@
                     fill-rule="evenodd"
                     d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
                   />
-                </svg>
-              <div class="cx name ms-2">Nada M.</div>
+                </svg> -->
+              <div class="cx name ms-2"> {{ review.Name }} </div>
               </div>
               <div class="cx rate col-lg-5 col-md-5 col-5">
                 <div class="rating">
-                  <input type="radio" name="rating" value="5" id="5" /><label
+                <star-rating active-color="#F97B22"  star-size=30 :rating="`${rev.Rate}`"></star-rating>
+                  <!-- <input type="radio" name="rating" value="5" id="5" /><label
                     for="5"
                     >☆</label
                   >
@@ -107,14 +109,13 @@
                   <input type="radio" name="rating" value="1" id="1" /><label
                     for="1"
                     >☆</label
-                  >
+                  > -->
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="cx-comment col-sm-12 col-md-12 col-lg-12">
-                Abdul Rahman is very neat and fast. I willl recommend him to my
-                friends
+                {{review.Review}}
               </div>
             </div>
           </div>
@@ -359,6 +360,7 @@
 <script>
 import NavBarPages from "@/components/NavBarPages.vue";
 import FooterComponent from "@/components/footer.vue";
+import StarRating from 'vue-star-rating';
 import axios from 'axios';
 
 export default {
@@ -367,8 +369,8 @@ export default {
   data() {
     return {
       id: '',
-      wk: {},
-      // rev: [],
+      wk: [],
+      rev: [],
     }
   },
 
@@ -380,29 +382,23 @@ export default {
   components: {
     FooterComponent,
     NavBarPages,
-    
+    StarRating,
   },
   methods: {
-    
     getWkById() {
       this.id = this.$route.params.id
       axios.get(`http://localhost:2000/worker/71`)
         .then(res =>this.wk = res.data)
         .catch(err=>console.log(err))
     },
-    // getWkBad() {
-    //   axios.get("http://localhost:2000/worker")
-    //     .then((res) => this.bad = res.data)
-    //   .catch((err)=>console.log(err))
-    },
     getReviews() {
       axios.get("http://localhost:2000/review")
-        .then((res) => this.rev = res.data)
-      .catch((err)=>console.log(err))      
+        .then((res) => {console.log(this.rev = res.data)})
+        .catch((err) => { console.log(err) })      
     }
   }
 
-// };
+};
 </script>
 
 <style lang="scss" scoped>
