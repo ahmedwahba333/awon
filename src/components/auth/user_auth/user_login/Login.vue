@@ -9,9 +9,9 @@
                     <router-link to="/" class="title-heading">Awon</router-link>
                 </figure>
                 <div class="myCon">
-                    <router-link to="/" class="title-heading">Awon</router-link>
-                    <input type="text" v-model="img">
-                    <button @click="imgHandle()">submit</button>
+                    <!-- <router-link to="/" class="title-heading">Awon</router-link> -->
+                    <!-- <input type="text" v-model="img"> -->
+                    <!-- <button @click="imgHandle()">submit</button> -->
 
 
 

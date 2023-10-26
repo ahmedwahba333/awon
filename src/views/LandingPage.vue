@@ -65,349 +65,52 @@
     </div>
 
     <div class="container">
-      <div class="row text-center my-5">
-        <h2>We offer +200 workers to do everything you need</h2>
-      </div>
+ <!-- We offer -->
       <div class="row justify-content-center my-5 gap-5">
         <div class="col-12 col-lg-5">
+        <h2><span>We offer</span> +200 workers to do everything you’d need, 
+        ensuring quality & speed for your everyday tasks, so you can focus on what matters to you. 
+        we’re your <span>Awon.</span></h2>
+      </div>
+        <div class="col-12 col-lg-5" v-for="(category,id) in categories" :key="id">
           <div class="card mb-2 gap-2">
             <img
-              src="../assets/images/cardphotos/cleaning.jpg"
+              :src="`${category.img}`"
               class="card-img-top object-fit-cover"
               alt="..."
             />
             <div class="card-body">
-              <h5 class="card-title">House Keeping</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-lg-5">
-          <div class="card mb-2 gap-2">
-            <img
-              src="../assets/images/cardphotos/foodServices.jpeg"
-              class="card-img-top object-fit-cover"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Food Services</h5>
+              <h5 class="card-title">{{ category['Name'] }}</h5>
             </div>
           </div>
         </div>
       </div>
-      <div class="row justify-content-center gap-5">
-        <div class="col-12 col-lg-5">
-          <div class="card mb-2 gap-2">
-            <img
-              src="../assets/images/cardphotos/elderly-care.jpg"
-              class="card-img-top object-fit-cover"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Care giving</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-lg-5">
-          <div class="card mb-2 gap-2">
-            <img
-              src="../assets/images/cardphotos/carpentry.jpg"
-              class="card-img-top object-fit-cover"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">House Maintenance</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center my-5">
-        <div class="col-lg-5">
-          <div class="card mb-2 gap-2">
-            <img
-              src="../assets/images/cardphotos/private-services.jpg"
-              class="card-img-top object-fit-cover"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Personal services</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      
+<!-- Our Happy customer -->
       <div class="row text-center my-5">
         <h2>Our Happy Customer</h2>
       </div>
       <div class="row justify-content-center gap-4">
-        <!-- <div class="d-flex flex-wrap justify-content-around"> -->
-          <div class="box m-0 col-md-4 col-sm-6 col-12 ">
+          <div class="box m-0 col-md-4 col-sm-6 col-12" v-for="(rev,i) in cxReview.slice(0,6)" :key="i" >
             <div class="d-flex flex-row justify-content-between">
               <div class="p-2">
-                <h4>Fatma O.</h4>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="125"
-                  height="22"
-                  viewBox="0 0 125 22"
-                  fill="none"
-                >
-                  <path
-                    d="M10.8425 0.0842438L13.2768 7.57622L21.1543 7.57622L14.7813 12.2065L17.2155 19.6985L10.8425 15.0682L4.46943 19.6985L6.90373 12.2065L0.530669 7.57622L8.4082 7.57622L10.8425 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M36.5935 0.0842438L39.0278 7.57622L46.9053 7.57622L40.5322 12.2065L42.9665 19.6985L36.5935 15.0682L30.2204 19.6985L32.6547 12.2065L26.2816 7.57622L34.1592 7.57622L36.5935 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M62.3444 0.0842438L64.7787 7.57622L72.6563 7.57622L66.2832 12.2065L68.7175 19.6985L62.3444 15.0682L55.9714 19.6985L58.4057 12.2065L52.0326 7.57622L59.9102 7.57622L62.3444 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M88.0954 0.0842438L90.5297 7.57622L98.4072 7.57622L92.0342 12.2065L94.4685 19.6985L88.0954 15.0682L81.7224 19.6985L84.1567 12.2065L77.7836 7.57622L85.6611 7.57622L88.0954 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M113.846 0.0842438L116.281 7.57622L124.158 7.57622L117.785 12.2065L120.219 19.6985L113.846 15.0682L107.473 19.6985L109.908 12.2065L103.535 7.57622L111.412 7.57622L113.846 0.0842438Z"
-                    fill="#C3C3C3"
-                  />
-                </svg>
+                <h4>{{rev['Name']}}</h4>
+              <star-rating active-color="#F97B22"  star-size=30 :rating="`${rev.Rate}`"></star-rating>
               </div>
               <div>
-                <img src="../assets/images/reviews/1.jpg" alt="Cx" />
+                <img :src="`${rev.picture}`" alt="Cx" />
               </div>
             </div>
             <div>
               <p class="p-2">
-                I’ve been using Aown services for the past few months. It’s
-                excellent!
+                {{rev['Review']}}
               </p>
             </div>
           </div>
-          <div class="box m-0 col-md-4 col-sm-6 col-12 ">
-            <div class="d-flex flex-row justify-content-between">
-              <div class="p-2">
-                <h4>Ahmed E.</h4>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="125"
-                  height="22"
-                  viewBox="0 0 125 22"
-                  fill="none"
-                >
-                  <path
-                    d="M10.8425 0.0842438L13.2768 7.57622L21.1543 7.57622L14.7813 12.2065L17.2155 19.6985L10.8425 15.0682L4.46943 19.6985L6.90373 12.2065L0.530669 7.57622L8.4082 7.57622L10.8425 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M36.5935 0.0842438L39.0278 7.57622L46.9053 7.57622L40.5322 12.2065L42.9665 19.6985L36.5935 15.0682L30.2204 19.6985L32.6547 12.2065L26.2816 7.57622L34.1592 7.57622L36.5935 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M62.3444 0.0842438L64.7787 7.57622L72.6563 7.57622L66.2832 12.2065L68.7175 19.6985L62.3444 15.0682L55.9714 19.6985L58.4057 12.2065L52.0326 7.57622L59.9102 7.57622L62.3444 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M88.0954 0.0842438L90.5297 7.57622L98.4072 7.57622L92.0342 12.2065L94.4685 19.6985L88.0954 15.0682L81.7224 19.6985L84.1567 12.2065L77.7836 7.57622L85.6611 7.57622L88.0954 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M113.846 0.0842438L116.281 7.57622L124.158 7.57622L117.785 12.2065L120.219 19.6985L113.846 15.0682L107.473 19.6985L109.908 12.2065L103.535 7.57622L111.412 7.57622L113.846 0.0842438Z"
-                    fill="#C3C3C3"
-                  />
-                </svg>
-              </div>
-              <div>
-                <img src="../assets/images/reviews/2.jpg" alt="Cx" />
-              </div>
-            </div>
-            <div>
-              <p class="p-2">
-                heard about Aown from a friend and gave them a try. very
-                professional indeed.
-              </p>
-            </div>
-          </div>
-          <div class="box m-0 col-md-4 col-sm-6 col-12 ">
-            <div class="d-flex flex-row justify-content-between">
-              <div class="p-2">
-                <h4>Eyad K.</h4>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="125"
-                  height="22"
-                  viewBox="0 0 125 22"
-                  fill="none"
-                >
-                  <path
-                    d="M10.8425 0.0842438L13.2768 7.57622L21.1543 7.57622L14.7813 12.2065L17.2155 19.6985L10.8425 15.0682L4.46943 19.6985L6.90373 12.2065L0.530669 7.57622L8.4082 7.57622L10.8425 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M36.5935 0.0842438L39.0278 7.57622L46.9053 7.57622L40.5322 12.2065L42.9665 19.6985L36.5935 15.0682L30.2204 19.6985L32.6547 12.2065L26.2816 7.57622L34.1592 7.57622L36.5935 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M62.3444 0.0842438L64.7787 7.57622L72.6563 7.57622L66.2832 12.2065L68.7175 19.6985L62.3444 15.0682L55.9714 19.6985L58.4057 12.2065L52.0326 7.57622L59.9102 7.57622L62.3444 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M88.0954 0.0842438L90.5297 7.57622L98.4072 7.57622L92.0342 12.2065L94.4685 19.6985L88.0954 15.0682L81.7224 19.6985L84.1567 12.2065L77.7836 7.57622L85.6611 7.57622L88.0954 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M113.846 0.0842438L116.281 7.57622L124.158 7.57622L117.785 12.2065L120.219 19.6985L113.846 15.0682L107.473 19.6985L109.908 12.2065L103.535 7.57622L111.412 7.57622L113.846 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                </svg>
-              </div>
-              <div>
-                <img src="../assets/images/reviews/3.jpg" alt="Cx" />
-              </div>
-            </div>
-            <div>
-              <p class="p-2">
-                I tried the services while travelling and I loved coming back to
-                a clean house.
-              </p>
-            </div>
-          </div>
-        <!-- </div> -->
-      <!-- </div>
-      <div class="row gy-4"> -->
-        <!-- <div class="d-flex flex-wrap justify-content-around"> -->
-          <div class="box m-0 col-md-4 col-sm-6 col-12 ">
-            <div class="d-flex flex-row justify-content-between">
-              <div class="p-2">
-                <h4>Sarah M.</h4>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="125"
-                  height="22"
-                  viewBox="0 0 125 22"
-                  fill="none"
-                >
-                  <path
-                    d="M10.8425 0.0842285L13.2768 7.57621L21.1543 7.57621L14.7813 12.2065L17.2155 19.6985L10.8425 15.0682L4.46943 19.6985L6.90373 12.2065L0.530669 7.57621L8.4082 7.57621L10.8425 0.0842285Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M36.5935 0.0842285L39.0278 7.57621L46.9053 7.57621L40.5322 12.2065L42.9665 19.6985L36.5935 15.0682L30.2204 19.6985L32.6547 12.2065L26.2816 7.57621L34.1592 7.57621L36.5935 0.0842285Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M62.3444 0.0842285L64.7787 7.57621L72.6563 7.57621L66.2832 12.2065L68.7175 19.6985L62.3444 15.0682L55.9714 19.6985L58.4057 12.2065L52.0326 7.57621L59.9102 7.57621L62.3444 0.0842285Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M88.0954 0.0842285L90.5297 7.57621L98.4072 7.57621L92.0342 12.2065L94.4685 19.6985L88.0954 15.0682L81.7224 19.6985L84.1567 12.2065L77.7836 7.57621L85.6611 7.57621L88.0954 0.0842285Z"
-                    fill="#C3C3C3"
-                  />
-                  <path
-                    d="M113.846 0.0842285L116.281 7.57621L124.158 7.57621L117.785 12.2065L120.219 19.6985L113.846 15.0682L107.473 19.6985L109.908 12.2065L103.535 7.57621L111.412 7.57621L113.846 0.0842285Z"
-                    fill="#C3C3C3"
-                  />
-                </svg>
-              </div>
-              <div>
-                <img src="../assets/images/reviews/4.jpg" alt="Cx" />
-              </div>
-            </div>
-            <div>
-              <p class="p-2">
-                Best cleaning services that I’ve tried in while.
-              </p>
-            </div>
-          </div>
-          <div class="box m-0 col-md-4 col-sm-6 col-12 ">
-            <div class="d-flex flex-row justify-content-between">
-              <div class="p-2">
-                <h4>Nada A.</h4>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="125"
-                  height="22"
-                  viewBox="0 0 125 22"
-                  fill="none"
-                >
-                  <path
-                    d="M10.8425 0.0842285L13.2768 7.57621L21.1543 7.57621L14.7813 12.2065L17.2155 19.6985L10.8425 15.0682L4.46943 19.6985L6.90373 12.2065L0.530669 7.57621L8.4082 7.57621L10.8425 0.0842285Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M36.5935 0.0842285L39.0278 7.57621L46.9053 7.57621L40.5322 12.2065L42.9665 19.6985L36.5935 15.0682L30.2204 19.6985L32.6547 12.2065L26.2816 7.57621L34.1592 7.57621L36.5935 0.0842285Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M62.3444 0.0842285L64.7787 7.57621L72.6563 7.57621L66.2832 12.2065L68.7175 19.6985L62.3444 15.0682L55.9714 19.6985L58.4057 12.2065L52.0326 7.57621L59.9102 7.57621L62.3444 0.0842285Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M88.0954 0.0842285L90.5297 7.57621L98.4072 7.57621L92.0342 12.2065L94.4685 19.6985L88.0954 15.0682L81.7224 19.6985L84.1567 12.2065L77.7836 7.57621L85.6611 7.57621L88.0954 0.0842285Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M113.846 0.0842285L116.281 7.57621L124.158 7.57621L117.785 12.2065L120.219 19.6985L113.846 15.0682L107.473 19.6985L109.908 12.2065L103.535 7.57621L111.412 7.57621L113.846 0.0842285Z"
-                    fill="#F97B22"
-                  />
-                </svg>
-              </div>
-              <div>
-                <img src="../assets/images/reviews/5.jpg" alt="Cx" />
-              </div>
-            </div>
-            <div>
-              <p class="p-2">
-                I always count on Aown in babysitting my kids. I don’t have to
-                worry when I’m at work.
-              </p>
-            </div>
-          </div>
-          <div class="box m-0 col-md-4 col-sm-6 col-12 ">
-            <div class="d-flex flex-row justify-content-between">
-              <div class="p-2">
-                <h4>Haidy M.</h4>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="125"
-                  height="22"
-                  viewBox="0 0 125 22"
-                  fill="none"
-                >
-                  <path
-                    d="M10.8425 0.0842438L13.2768 7.57622L21.1543 7.57622L14.7813 12.2065L17.2155 19.6985L10.8425 15.0682L4.46943 19.6985L6.90373 12.2065L0.530669 7.57622L8.4082 7.57622L10.8425 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M36.5935 0.0842438L39.0278 7.57622L46.9053 7.57622L40.5322 12.2065L42.9665 19.6985L36.5935 15.0682L30.2204 19.6985L32.6547 12.2065L26.2816 7.57622L34.1592 7.57622L36.5935 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M62.3444 0.0842438L64.7787 7.57622L72.6563 7.57622L66.2832 12.2065L68.7175 19.6985L62.3444 15.0682L55.9714 19.6985L58.4057 12.2065L52.0326 7.57622L59.9102 7.57622L62.3444 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M88.0954 0.0842438L90.5297 7.57622L98.4072 7.57622L92.0342 12.2065L94.4685 19.6985L88.0954 15.0682L81.7224 19.6985L84.1567 12.2065L77.7836 7.57622L85.6611 7.57622L88.0954 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                  <path
-                    d="M113.846 0.0842438L116.281 7.57622L124.158 7.57622L117.785 12.2065L120.219 19.6985L113.846 15.0682L107.473 19.6985L109.908 12.2065L103.535 7.57622L111.412 7.57622L113.846 0.0842438Z"
-                    fill="#F97B22"
-                  />
-                </svg>
-              </div>
-              <div>
-                <img src="../assets/images/reviews/6.jpg" alt="Cx" />
-              </div>
-            </div>
-            <div>
-              <p class="p-2">very quick service.Love it!</p>
-            </div>
-          </div>
-        <!-- </div> -->
       </div>
 
-      <div class="row text-center my-5">
+<!-- Contact Us -->
+      <div class="row text-center my-5" id>
         <h2>Contact us</h2>
       </div>
       <div class="d-flex justify-content-center">
@@ -500,9 +203,33 @@
 <script>
 import NavBarPages from "@/components/NavBarPages.vue";
 import FooterComponent from "@/components/footer.vue";
+import axios from 'axios';
+import StarRating from 'vue-star-rating';
 export default {
   name: "LandingPage",
-  components: { FooterComponent, NavBarPages },
+  components: { FooterComponent, NavBarPages, StarRating },
+  data() {
+    return {
+       categories:[],
+       cxReview:[]
+    }
+  },
+  created(){
+    this.getCategory();
+    this.getReview();
+  },
+  methods:{
+    getCategory(){
+      axios.get("http://localhost:2000/category")
+      .then((res)=> {this.categories = res.data})
+      .catch((err)=>{console.log(err)})
+    },
+    getReview(){
+      axios.get("http://localhost:2000/review")
+      .then((res)=> {console.log(this.cxReview = res.data)})
+      .catch((err)=>{console.log(err)})
+    }
+  }
 };
 </script>
 
@@ -554,6 +281,13 @@ export default {
     color: $blueColor;
     font-size: $title;
     font-weight: $semiBold;
+    line-height: 4rem;
+    @media (max-width:1200px) {
+      line-height: 3.2rem;
+    }
+    span{
+      font-size: 35px;
+    }
   }
   .card {
     height: 20rem;
@@ -694,5 +428,7 @@ export default {
       display: inline-block;
     }
   }
+
+
 }
 </style>

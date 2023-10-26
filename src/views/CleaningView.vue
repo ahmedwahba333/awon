@@ -399,11 +399,11 @@
     <!-- http://localhost:8080/img/cleaner1.65740dc5.jpg -->
     <!-- <img src="@/assets/subservices/cleaner1.jpg" alt=""> -->
     <div class="container">
-      <div class="row">
+      <div class="row gy-4">
         <div class="card col-md-4 col-sm-6 col-6" v-for="(worker, i) in workerData" :key="i">
-          <img :src="`../assets/subservices/${worker.img}`" class="card-img-top Clip-path:circle()" :alt="`workerimg${i}`" />
+          <img :src="`${worker.img}`" class="card-img-top object-fit-cover" :alt="`workerimg${i}`" />
           <div class="card-body">
-            <h5 class="card-title">{{ worker['first_name'] }} {{ worker['last_name'] }}</h5>
+            <h5 class="card-title">{{ worker['First_name'] }} {{ worker['Last_name'] }}</h5>
             <p class="card-text">16 St. Emad Eldein - Down Town - Cairo</p>
             <svg class="d-block m-auto" xmlns="http://www.w3.org/2000/svg" width="125" height="22" viewBox="0 0 125 22"
               fill="none">
@@ -423,7 +423,7 @@
                 d="M113.846 0.0842438L116.281 7.57622L124.158 7.57622L117.785 12.2065L120.219 19.6985L113.846 15.0682L107.473 19.6985L109.908 12.2065L103.535 7.57622L111.412 7.57622L113.846 0.0842438Z"
                 fill="#F97B22" />
             </svg>
-            <a href="#" class="btn d-block m-auto mb-3 mt-3">Book Now</a>
+           <router-link to="workerProfile"> <a class="btn d-block m-auto mb-3 mt-3">Book Now</a></router-link>
           </div>
         </div>
       </div>
@@ -528,6 +528,9 @@ img {
   height: 200px;
 }
 
+.card{
+  // width: 270px;
+}
 .card-title {
   text-align: center;
   font-size: $subTitle;
