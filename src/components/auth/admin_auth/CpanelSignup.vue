@@ -29,7 +29,7 @@
                     </div>
                 </form>
                 <div>
-                    <router-link to="cpanel-login"><button class="btn-login">Signup</button></router-link>
+                    <router-link to="SADashHome"><button class="btn-login">Signup</button></router-link>
                 </div>
             </div>
         </div>

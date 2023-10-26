@@ -38,7 +38,7 @@
                     </div>
                     <div class="col-12">
                         <div class="btn ">
-                            <div class="pay">Pay</div>
+                            <router-link to=""><div class="pay">Pay</div></router-link>
                             <span class="fas fa-arrow-right"></span>
                         </div>
                     </div>
