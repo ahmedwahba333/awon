@@ -401,9 +401,9 @@
     <div class="container">
       <div class="row gy-4">
         <div class="card col-md-4 col-sm-6 col-6" v-for="(worker, i) in workerData" :key="i">
-          <img :src="`${worker.img}`" class="card-img-top Clip-path:circle()" :alt="`workerimg${i}`" />
+          <img :src="`${worker.img}`" class="card-img-top object-fit-cover" :alt="`workerimg${i}`" />
           <div class="card-body">
-            <h5 class="card-title">{{ worker['first_name'] }} {{ worker['last_name'] }}</h5>
+            <h5 class="card-title">{{ worker['First_name'] }} {{ worker['Last_name'] }}</h5>
             <p class="card-text">16 St. Emad Eldein - Down Town - Cairo</p>
             <svg class="d-block m-auto" xmlns="http://www.w3.org/2000/svg" width="125" height="22" viewBox="0 0 125 22"
               fill="none">
