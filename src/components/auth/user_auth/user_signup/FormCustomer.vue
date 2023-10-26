@@ -11,7 +11,7 @@
             </div>
             <div class="col-md-6 text-start">
                 <label class="form-label label-text" for="date of birth">Date Of Birth</label>
-                <input class="form-control" type="text" name="date of birth" id="date of birth">
+                <input class="form-control" type="date" name="date of birth" id="date of birth">
             </div>
             <div class="col-md-6 text-start">
                 <label class="form-label label-text" for="email">Email</label>

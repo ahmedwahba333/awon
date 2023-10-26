@@ -3,10 +3,18 @@
         <div class="d-flex justify-content-center align-items-center py-5">
             <div class="text-center">
                 <figure>
-                    <img class="logo-img" src="../../../../assets/images/logo.jpg" alt="">
+                    <!-- <img class="logo-img" src="../../../../assets/images/logo.jpg" alt=""> -->
+                    <!-- https://drive.google.com/file/d/1elgLJgasuBtUMk56bf-tdRUR8K8JiW8Y/view?usp=sharing -->
+                    <!-- <img :src="imgSrc" alt="Image description" v-if="imgSrc != ''"> -->
+                    <router-link to="/" class="title-heading">Awon</router-link>
                 </figure>
                 <div class="myCon">
-                    <p class="title-heading">Awon</p>
+                    <router-link to="/" class="title-heading">Awon</router-link>
+                    <input type="text" v-model="img">
+                    <button @click="imgHandle()">submit</button>
+
+
+
                     <p class="title-slogin">Awon, your help is everywhere</p>
                     <p class="btn-login-text py-2">login</p>
                     <div class="forget-pass my-2">
@@ -19,7 +27,7 @@
                         </router-link>
                     </div>
                 </div>
-                <form>
+                <form @submit="prevent">
                     <div class="d-flex flex-column text-start mb-2">
                         <label class="form-label label-text" for="email">Email</label>
                         <input class="form-control myInput" type="text" name="email" id="email">
@@ -49,9 +57,27 @@
 
 <script>
 import FooterComponent from '@/components/footer.vue';
+// import useVuelidate from '@vuelidate/core';
+// import { required } from '@vuelidate/validators';
 export default {
     name: 'LoginComponent',
     components: { FooterComponent },
+    // data() {
+    //     return {
+    //         imgSrc: '',
+    //         img: '',
+    //     }
+    // },
+    // methods: {
+    //     getImageIdFromGoogleDriveLink(link) {
+    //         const linkParts = link.split("/");
+    //         const imageId = linkParts[linkParts.length - 2];
+    //         return imageId;
+    //     },
+    //     imgHandle() {
+    //         this.imgSrc = "https://drive.google.com/uc?export=view&id=" + this.getImageIdFromGoogleDriveLink(this.img);
+    //     }
+    // }
 }
 </script>
 
@@ -66,6 +92,8 @@ export default {
     .title-heading {
         font-size: $title;
         font-weight: bold;
+        text-decoration: none;
+        color: $blueColor;
     }
 
     .title-slogin {

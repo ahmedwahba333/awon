@@ -13,26 +13,26 @@
               <ul>
                 <span>House Keeping</span>
                 <li>
-                  <router-link to="#HouseKeeping"><a>Cleaning</a></router-link>
+                  <router-link to="CleaningView"><a>Cleaning</a></router-link>
                 </li>
                 <li>
-                  <router-link to="#HouseKeeping"><a>Gardening</a></router-link>
+                  <router-link to="GardeningView"><a>Gardening</a></router-link>
                 </li>
               </ul>
               <ul>
-                <span>Giving</span>
+                <span>Caring Services</span>
                 <li>
-                  <router-link to="#CareGiving"
+                  <router-link to="BabysittingView"
                     ><a>Baby sitting</a></router-link
                   >
                 </li>
                 <li>
-                  <router-link to="#CareGiving"
+                  <router-link to="ElderlycareView"
                     ><a>Elderly care</a></router-link
                   >
                 </li>
                 <li>
-                  <router-link to="#CareGiving"
+                  <router-link to="HousenursingView"
                     ><a>Home nursing</a></router-link
                   >
                 </li>
@@ -40,12 +40,12 @@
               <ul>
                 <span>Food Services</span>
                 <li>
-                  <router-link to="#FoodServices"
+                  <router-link to="FoodcateringView"
                     ><a>Food Catering</a></router-link
                   >
                 </li>
                 <li>
-                  <router-link to="#FoodServices"><a>Chefs</a></router-link>
+                  <router-link to="ChefsView"><a>Chefs</a></router-link>
                 </li>
               </ul>
               <ul>
@@ -85,7 +85,7 @@
           <router-link to="aboutus"><a>About Us</a></router-link>
         </li>
         <li>
-          <router-link to="#Contact Us"><a>Contact Us</a></router-link>
+          <router-link to="/"><a>Contact Us</a></router-link>
         </li>
         
         <div class="image">
@@ -127,7 +127,7 @@ export default {
 .loginDrop{
   background-color: $blueColor;
   width:fit-content;
-  padding: 5px 15px;
+  // padding: 5px 15px;
   color:$blueColor;
   border:solid 2px $blueColor;
   border-radius: 10px;
@@ -186,7 +186,7 @@ ul {
   }
   .mainNav {
     display: flex;
-
+  height: 72px;
     > li {
       &:hover {
         .mega-menu {
