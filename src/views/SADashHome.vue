@@ -377,11 +377,19 @@ export default {
        }
 
     }
+    .up{
+      width: 60px;
+      height: 30px;
+      background-color: $backgroundColor;
+
+    }
+
+
 .box {
 @include box;
-   
+
     padding: 15px;
-    
+
     margin: 10px;
     &.sectionOne{
        width: 350px;
@@ -389,22 +397,16 @@ export default {
     }
 
     &.sectionTwoA,&.sectionThreeB{
-      width: 350px;
+      width: 730px;
        height: 400px;
+
     }
     &.sectionTwoB,&.sectionThreeA{
       width: 350px;
        height: 400px;
 
     }
-
-    // @media(max-width: 767px) {
-    //    &.sectionTwoA,&.sectionTwoB{
-    //  margin-left: 5px;
-    //  margin-right: 5px;
-    //    }
-    // }
-  &.sectionThreeB{
+   &.sectionThreeB{
    @media(min-width: 375px) {
          p{
         font-size: $small;
@@ -413,6 +415,7 @@ export default {
        }
 
     }
+}
   h4 {
     font-weight: $bold;
   }
@@ -420,6 +423,5 @@ export default {
     font-size: $paragraph;
     font-weight: $bold;
   }
-}
 
 </style>

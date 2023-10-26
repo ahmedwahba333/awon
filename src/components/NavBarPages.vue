@@ -13,10 +13,10 @@
               <ul>
                 <span>House Keeping</span>
                 <li>
-                  <router-link to="#HouseKeeping"><a>Cleaning</a></router-link>
+                  <router-link to="CleaningView"><a>Cleaning</a></router-link>
                 </li>
                 <li>
-                  <router-link to="#HouseKeeping"><a>Gardening</a></router-link>
+                  <router-link to="GardeningView"><a>Gardening</a></router-link>
                 </li>
               </ul>
               <ul>
@@ -37,7 +37,7 @@
                   <router-link to="#FoodServices"><a>Food Catering</a></router-link>
                 </li>
                 <li>
-                  <router-link to="#FoodServices"><a>Chefs</a></router-link>
+                  <router-link to="ChefsView"><a>Chefs</a></router-link>
                 </li>
               </ul>
               <ul>
@@ -71,7 +71,7 @@
           <router-link to="aboutus"><a>About Us</a></router-link>
         </li>
         <li>
-          <router-link to="#Contact Us"><a>Contact Us</a></router-link>
+          <router-link to="/"><a>Contact Us</a></router-link>
         </li>
 
         <li>

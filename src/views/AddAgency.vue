@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <NavBarDash />
+    <NavBarSADash />
     <form action="" class="form-control">
       <div class="d-flex border-2 justify-content-center flex-wrap">
         <h2 class="headline">Agency Info</h2>
@@ -233,11 +233,11 @@
 </template>
 
 <script>
-import NavBarDash from "@/components/NavBarDash.vue";
+import NavBarSADash from "@/components/NavBarSADash.vue";
 export default {
   name: "AddAgency",
   components: {
-    NavBarDash,
+    NavBarSADash,
   },
 };
 </script>
