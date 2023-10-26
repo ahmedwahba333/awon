@@ -423,7 +423,7 @@
                 d="M113.846 0.0842438L116.281 7.57622L124.158 7.57622L117.785 12.2065L120.219 19.6985L113.846 15.0682L107.473 19.6985L109.908 12.2065L103.535 7.57622L111.412 7.57622L113.846 0.0842438Z"
                 fill="#F97B22" />
             </svg>
-            <a href="#" class="btn d-block m-auto mb-3 mt-3">Book Now</a>
+           <router-link to="workerProfile"> <a class="btn d-block m-auto mb-3 mt-3">Book Now</a></router-link>
           </div>
         </div>
       </div>
