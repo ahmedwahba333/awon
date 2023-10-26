@@ -91,7 +91,7 @@
         <h2>Our Happy Customer</h2>
       </div>
       <div class="row justify-content-center gap-4">
-          <div class="box m-0 col-md-4 col-sm-6 col-12" v-for="(rev,i) in cxReview" :key="i">
+          <div class="box m-0 col-md-4 col-sm-6 col-12" v-for="(rev,i) in cxReview.slice(0,6)" :key="i" >
             <div class="d-flex flex-row justify-content-between">
               <div class="p-2">
                 <h4>{{rev['Name']}}</h4>
@@ -136,7 +136,8 @@
           </div>
       </div>
 
-      <div class="row text-center my-5">
+<!-- Contact Us -->
+      <div class="row text-center my-5" id>
         <h2>Contact us</h2>
       </div>
       <div class="d-flex justify-content-center">
