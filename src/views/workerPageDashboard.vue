@@ -46,7 +46,7 @@
                                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                                     <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
                                 </svg> 
-                                <p class="mx-1 mt-5">{{ worker.Categories }}</p>
+                                <p class="mx-1 my-5">{{ worker.Categories }}</p>
                             </div>
 
                             <div>
@@ -146,13 +146,13 @@
                 </div>
                 <div class="col-lg-6 col-md-7 col-sm-7 innerReview mb-3">
        
-                   <div class="CXName">Suzy Nabil</div>
+                   <div class="CXName" >{{ reviews.Name }}</div>
                     <div v-for="i in 5" :key="i" class="stars">
                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill me-0" viewBox="0 0 16 16">
                             <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
                          </svg>
                      </div>
-                    <div class="review"> I had hight hopes for this, i wansn't disappointed.</div>
+                    <div class="review"> I had high hopes for this, i wansn't disappointed.</div>
                   </div>
             </div>
 
@@ -173,20 +173,20 @@
         </div>
 
         <!-- Carasol slides -->
-    <div class="carousel-item mb-0 pb-0" data-bs-interval="2000" v-for="i in 2" :key="i">
+    <div class="carousel-item mb-0 pb-0" data-bs-interval="2000" v-for="review in reviews" :key="review.Worker_id" v-show="review.Worker_id==worker.id">
         <div class="row reviewBox">
                 <div class="col-1"> 
                    <img src="../assets/workerimg.jpg" class="reviewImg rounded-circle">
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-4 innerReview mb-3">
-                   <div class="CXName">Suzy Nabil</div>
+                   <div class="CXName">{{ reviews.Name }}</div>
                     <div v-for="i in 5" :key="i" class="stars">
                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill me-0" viewBox="0 0 16 16">
                             <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
                          </svg>
                         </div>
                          
-                    <div class="review"> {{ worker.Reviews }}</div>
+                    <div class="review"> {{ review.Review }}</div>
                   </div>
             </div>
 
@@ -283,7 +283,7 @@ import axios from 'axios';
             return{
                 worker:[],
                 orders:[],
-                id:'',
+                reviews:[],
                 totalIncome:'',
                 sum:'',
                 installments:''
@@ -293,7 +293,7 @@ import axios from 'axios';
         created(){
                 this.getAllWorkers();
                 this.getAllOrders();
-                this.t();
+                this.getAllReviews();
             },
 
         methods:{
@@ -310,20 +310,15 @@ import axios from 'axios';
                     .catch (err=> console.log (err))
                 },
 
-                // getAllReviewa(){
-                //     axios.get(`http://localhost:2000/review/${this.id}`)
-                //     .then ((res)=> this.reviews=res.data)
-                //     .catch (err=> console.log (err))
-                // },
+                getAllReviews(){
+                    this.id = this.$route.params.id
+                    axios.get(`http://localhost:2000/review/${this.id}`)
+                    .then ((res)=> this.reviews=res.data)
+                    .catch (err=> console.log (err))
+                },
                 
 
-                t(){
-                     this.installments = this.orders.filter(orders => orders.Worker_id);
-                    return this.totalIncome = this.installments.reduce((sum, orders) => sum + parseInt(orders.Order_Price),0);
-                }
-            
-            },
-               
+        }  
         }
 </script>
 
