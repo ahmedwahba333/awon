@@ -30,7 +30,7 @@
                     </div>
                     
                     <div class="col-lg-10 col-sm-9 mt-md-2 ms-md-5 ms-lg-0 ms-sm-5 mb-0" >
-                          <p class="workerName fw-bold mb-0">{{ worker.first_name}} {{ worker.last_name }}</p>
+                          <p class="workerName fw-bold mb-0">{{ worker.First_name}} {{ worker.Last_name }}</p>
                           <p class="position">Qualified employee</p>
                     </div>
     
@@ -95,7 +95,7 @@
         <div class="row grid ServiceDet mb-5 ">
             <div class=" tableTitle mt-4 ">
                 <span class="col-10 ms-lg-5 ms-md-3">Worker Services Details </span>
-                <span class="price col-2">2450$</span>
+                <span class="price col-2">{{ totalIncome }}</span>
             </div>
 
             <div class="col-12 mt-3">
@@ -186,7 +186,7 @@
                          </svg>
                         </div>
                          
-                    <div class="review"> I had high hopes for this, i wansn't disappointed.</div>
+                    <div class="review"> {{ worker.Reviews }}</div>
                   </div>
             </div>
 
@@ -283,13 +283,17 @@ import axios from 'axios';
             return{
                 worker:[],
                 orders:[],
-                id:'5'
+                id:'',
+                totalIncome:'',
+                sum:'',
+                installments:''
             }
         },
 
         created(){
                 this.getAllWorkers();
                 this.getAllOrders();
+                this.t();
             },
 
         methods:{
@@ -306,8 +310,21 @@ import axios from 'axios';
                     .catch (err=> console.log (err))
                 },
 
-            }
-    }
+                // getAllReviewa(){
+                //     axios.get(`http://localhost:2000/review/${this.id}`)
+                //     .then ((res)=> this.reviews=res.data)
+                //     .catch (err=> console.log (err))
+                // },
+                
+
+                t(){
+                     this.installments = this.orders.filter(orders => orders.Worker_id);
+                    return this.totalIncome = this.installments.reduce((sum, orders) => sum + parseInt(orders.Order_Price),0);
+                }
+            
+            },
+               
+        }
 </script>
 
 <style lang="scss" scoped>
