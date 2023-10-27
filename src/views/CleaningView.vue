@@ -141,7 +141,7 @@
             Deep clean(Kitchen&Bathroom):
             {{ worker["Deep clean(Kitchen&Bathroom)"] }}
           </p>
-          <star-rating active-color="#F97B22"  star-size=30 :rating="`${rev.Rate}`"></star-rating>
+          <!-- <star-rating active-color="#F97B22"  star-size=30 :rating="`${rev.Rate}`"></star-rating> -->
           <router-link to="workerProfile">
             <a class="btn d-block m-auto mb-3 mt-3">See details</a></router-link
           >
@@ -218,12 +218,12 @@
 import NavBarPages from "@/components/NavBarPages.vue";
 import FooterComponent from "@/components/footer.vue";
 import axios from "axios";
-import StarRating from "vue-star-rating"
+// import StarRating from "vue-star-rating"
 export default {
   components: {
     NavBarPages,
     FooterComponent,
-    StarRating,
+    // StarRating,
   },
   data() {
     return {
