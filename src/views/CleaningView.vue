@@ -1,5 +1,5 @@
 <template>
-  <div class="bg container-fluid">
+  <div class="bg">
     <NavBarPages />
     <div class="child d-flex justify-content-center">
       <form>
