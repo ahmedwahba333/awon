@@ -95,7 +95,7 @@
             <div class="d-flex flex-row justify-content-between">
               <div class="p-2">
                 <h4>{{rev['Name']}}</h4>
-               <star-rating active-color="#F97B22"  star-size=30 :rating="`${rev.Rate}`"></star-rating>
+               <star-rating active-color="#F97B22"  star-size=30 read-only :rating="`${rev.Rate}`"></star-rating>
               </div>
               <div>
                 <img :src="`${rev.picture}`" alt="Cx" />
