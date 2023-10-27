@@ -295,13 +295,13 @@ import axios from 'axios';
         methods:{
                 getAllWorkers(){
                     this.id = this.$route.params.id
-                axios.get(`http://localhost:3000/worker/${this.id}`)
+                axios.get(`http://localhost:2000/worker/${this.id}`)
                 .then(res=>this.worker = res.data)
                 .catch(err=>console.log(err))
                 },
 
                 getAllOrders(){
-                    axios.get("http://localhost:3000/order")
+                    axios.get("http://localhost:2000/order")
                     .then ((res)=> this.orders=res.data)
                     .catch (err=> console.log (err))
                 },
