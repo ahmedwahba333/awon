@@ -1,26 +1,7 @@
 <template>
   <div class="bg">
     <NavBarPages />
-    <div class="child d-flex justify-content-center">
-      <form>
-        <div class="mb-3 col-lg-6 col-md-4">
-          <div>
-            <input type="text" class="input" id="inputName" placeholder="Bedroom, Living room" />
-          </div>
-        </div>
-        <div class="mb-3 col-lg-6 col-md-4">
-          <div>
-            <input type="email" class="input" id="inputEmail" placeholder="Bathroom" />
-          </div>
-        </div>
-        <div class="mb-3 col-lg-6 col-md-4">
-          <div>
-            <input type="text" class="input" id="inputPhone" placeholder="Kitchen" />
-          </div>
-        </div>
-        <div class="mb-3 col-lg-6 col-md-4"></div>
-      </form>
-    </div>
+    
     <div class="d-flex col-lg-2">
       <h2 class="serv">Cleaning</h2>
     </div>
@@ -271,6 +252,7 @@ export default {
 
 .bar {
   justify-content: end;
+  margin-right: 140px;
   width: auto;
   height: 100px;
 }
