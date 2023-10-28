@@ -7,10 +7,15 @@
                 <p class="title py-3">Payment Details</p>
                 <div class="row gx-8">
                     <div class="col-12">
-                        <div class="d-flex flex-column">
+                        <!-- <div class="d-flex flex-column">
+                            <p class="text">Person Name yo</p>
+                            <input class="form-control" type="text" placeholder="Name" value="" v-model="fullName">
+                            <span class="error-feedback" v-if="v$.fullName.$error"> {{ v$.fullName.$errors[0].$message }}</span>
+                        </div> -->
+                            <div class="d-flex flex-column">
                             <p class="text">Person Name</p>
-                            <input class="form-control" type="text" placeholder="Name" value="" v-model="name">
-                            <span class="error-feedback" v-if="v$.name.$error"> {{ v$.name.$errors[0].$message }}</span>
+                            <input class="form-control" type="text" placeholder="Card Holder Name"  v-model="fullName">
+                            <span class="error-feedback" v-if="v$.fullName.$error"> {{ v$.fullName.$errors[0].$message }}</span>
                         </div>
                     </div>
                     <div class="col-12">
@@ -112,7 +117,7 @@ export default {
     data() {
         return {
             v$: useVuelidate(),
-            name: "",
+            fullName: "",
             cardNumber: "",
             expiry: "",
             cvv: "",
