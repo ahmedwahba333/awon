@@ -1,5 +1,5 @@
 <template>
-  <div class="bg container-fluid">
+  <div class="bg">
     <NavBarPages />
     <div class="child">
       <h2 class="serv">House Keeping: Your home, your haven.</h2>

@@ -30,13 +30,8 @@
             d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"
           />
         </svg>
-          <!-- <span v-for="(r, ri) in rev.relevantArray[0]" :key="ri">
-            {{ ri }} ==> {{ r }}
-          <span class="wk-box" v-for="(service, index) in r" :key="index">
-            {{ index }}
-          </span>
-          </span>
-          <br /> -->
+          <span class="wk-box"> {{ wk.Categories }} </span>
+          <br />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
@@ -69,6 +64,22 @@
           />
         </svg>
         <span class="wk-box">{{wk.First_name}} has prior experience of {{wk.Experience}} years.</span><br />
+        <div class="title">Worker Availability</div>
+        <div class="subtitle"> {{ wk.Categories }} </div>
+        <div class="row">
+          <div class="col-sm-7">
+            <div> {{ wk.Service_1 }} </div>
+            <div> {{ wk.Service_2 }} </div>
+            <div> {{ wk.Service_3 }} </div>
+            <div> {{ wk.Service_4 }} </div>
+          </div>
+          <div class="col-sm-5">
+            <div> {{ wk.Service_1_price }} LE </div>
+            <div> {{ wk.Service_2_price }} LE </div>
+            <div v-if="wk.Service_3_price"> {{ wk.Service_3_price }} LE </div>
+            <div v-if="wk.Service_4_price"> {{ wk.Service_4_price }} LE </div>
+          </div>
+          </div>
       </div>
       <div class="box">
         <div class="title">Worker Reviews</div>
@@ -76,7 +87,7 @@
           <div class="col col-lg-6 col-md-6 col-sm-12 col-12" v-for="(index,i) in rev.slice(0,4)" :key="i" >
             <div class="content row align-items-start" >
               <div class="col-sm-7 col-7 d-flex align-items-center">
-                <img :src="`${index.picture}`" alt="Cx" />
+                <div><img :src="`${index.picture}`" alt="Cx" /></div>
               <div class="cx name ms-2"> {{ index.Name }} </div>
               </div>
               <div class="cx rate col-lg-5 col-md-5 col-5">
@@ -156,7 +167,7 @@ export default {
   methods: {
     getWkById(){
       this.id = this.$route.params.id
-      axios.get(`http://localhost:2000/worker/71`)
+      axios.get(`http://localhost:2000/worker/77`)
         .then(res =>this.wk = res.data)
         .catch(err=>console.log(err))
     },
@@ -198,7 +209,17 @@ export default {
   font-weight: bold;
   font-size: $subTitle;
   color: $blueColor;
-  margin: 1%;
+  margin-bottom: 1%;
+  margin-top: 1%;
+
+}
+.subtitle {
+  font-weight: bold;
+  font-size: $paragraph;
+  color: $blueColor;
+  margin-bottom: 1%;
+  margin-top: 1%;
+
 }
 .wk-box{
   padding: 20px;
