@@ -9,7 +9,7 @@
                     <div class="col-12">
                         <div class="d-flex flex-column">
                             <p class="text">Person Name</p>
-                            <input class="form-control" type="text" placeholder="Name" value="" v-model="name">
+                            <!-- <input class="form-control" type="text" placeholder="Name" value="" v-model="name"> -->
                             <span class="error-feedback" v-if="v$.name.$error"> {{ v$.name.$errors[0].$message }}</span>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
 </div>
         </div>
         <FooterComponent/>
-</template>
+</template> -->
 
 <script>
     import NavBarPages from "@/components/NavBarPages.vue";

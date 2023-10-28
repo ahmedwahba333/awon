@@ -22,8 +22,9 @@ import ElderlycareView from "../views/ElderlycareView.vue";
 import HousenursingView from "../views/HousenursingView.vue";
 import ChefsView from "../views/ChefsView.vue";
 import FoodcateringView from "../views/FoodcateringView.vue";
-import SADashHome from "../views/SADashHome.vue"
-import AllWorkerFromCX from "../views/AllWorkerFromCX.vue"
+import SADashHome from "../views/SADashHome.vue";
+import AllWorkerFromCX from "../views/AllWorkerFromCX.vue";
+import AddWorker from "../views/AddWorker.vue"
 // >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
 
 import ServiceHistoryAgency from "../views/ServiceHistoryAgency.vue";
@@ -231,6 +232,11 @@ const routes = [
     path: "/AddAgency",
     name: "AddAgency",
     component: AddAgency
+  },
+  {
+    path: "/AddWorker",
+    name: "AddWorker",
+    component: AddWorker
   },
 ];
 
