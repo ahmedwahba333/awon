@@ -22,11 +22,11 @@
         </ol>
         <ol class="addCard mx-2 col-lg-10 col-md-12 col-sm-12">
           <li>
-            <button class="btn">Add category</button>
+            <button class="btn">Add new category</button>
           </li>
         </ol>
       </div>
-      <div class="row justify-content-center my-5">
+      <div class="row justify-content-center mt-3">
         <div
           class="col-12 col-lg-8 box"
           v-for="(category, id) in categories"
@@ -42,8 +42,8 @@
               <h5 class="card-title">{{ category["Name"] }}</h5>
               <p class="m-3">{{ category["Details"] }}</p>
               <div class="d-flex justify-content-end align-item-end">
-                <button class="btn">Add services</button>
-                <button class="btn">Delete Cat</button>
+                <button class="btn">Add new services</button>
+                <button class="btn">Delete category</button>
               </div>
             </div>
           </div>

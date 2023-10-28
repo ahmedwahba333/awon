@@ -24,7 +24,8 @@ import ChefsView from "../views/ChefsView.vue";
 import FoodcateringView from "../views/FoodcateringView.vue";
 import SADashHome from "../views/SADashHome.vue"
 import AllWorkerFromCX from "../views/AllWorkerFromCX.vue";
-import SACatigoryVue from "@/views/SACatigory.vue";
+import SACatigory from "@/views/SACatigory.vue";
+import SAServiceCategories from "@/views/SAServiceCategories.vue";
 // >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
 
 import ServiceHistoryAgency from "../views/ServiceHistoryAgency.vue";
@@ -159,7 +160,7 @@ const routes = [
     component: aboutus,
   },
   {
-    path: "/Agencies",
+    path: "/allAgencies",
     name: "allAgencies",
     component: allAgencies,
   },
@@ -236,7 +237,12 @@ const routes = [
   {
     path:"/SACatigory",
     name:"SACatigory",
-    component: SACatigoryVue
+    component: SACatigory
+  },
+  {
+    path:"/SAServiceCategories",
+    name:"SAServiceCategories",
+    component: SAServiceCategories
   }
 ];
 
