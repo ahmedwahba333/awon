@@ -92,6 +92,7 @@ export default {
             eyeFlag: true,
             eyeSlashFlag: false,
             users: [],
+            agencies: [],
         }
     },
     validations() {
@@ -103,9 +104,12 @@ export default {
     created() {
         axios.get("http://localhost:2000/cx").then((res) => {
             this.users = res.data;
-        }).catch((err) => {
-            console.log(err);
-        })
+        }).then(
+            axios.get("http://localhost:2000/agency").then((res) => {
+                this.agencies = res.data;
+            })).catch((err) => {
+                console.log(err);
+            })
     },
     methods: {
         //     getImageIdFromGoogleDriveLink(link) {
@@ -122,15 +126,19 @@ export default {
                     localStorage.setItem("cxInfo", JSON.stringify(this.users[i]))
                     this.$router.push('/');
                     break;
+                }else if (this.email == this.agencies[i]['Email'] && this.pass == this.agencies[i]['owner_Password']) {
+                    localStorage.setItem("agInfo", JSON.stringify(this.agencies[i]))
+                    this.$router.push('/agancydash');
+                    break;
                 }
             }
         },
         submitData() {
             this.v$.$validate();
             if (!this.v$.$error) {
-                this.checkUser();
+            this.checkUser();
             } else {
-                console.log('cannot');
+            console.log('cannot');
             }
         },
         triggerEye() {

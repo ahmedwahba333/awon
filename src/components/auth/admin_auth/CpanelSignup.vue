@@ -13,17 +13,18 @@
                 <form>
                     <div class="d-flex flex-column text-start mb-2">
                         <label class="form-label label-text" for="email">Email</label>
-                        <input class="form-control myInput" type="text" name="email" id="email">
+                        <input class="form-control myInput" type="text" v-model="super_admin.email" name="email" id="email">
                     </div>
                     <div class="d-flex flex-column text-start mb-2">
                         <label class="form-label label-text" for="adminKey">Admin Key</label>
-                        <input class="form-control myInput" type="text" name="adminKey" id="adminKey">
+                        <input class="form-control myInput" type="text" v-model="adminKey" name="adminKey" id="adminKey">
                     </div>
                     <div class="d-flex flex-column text-start mb-2">
                         <label class="form-label label-text" for="Password">Password</label>
                         <div class="d-flex flex-column text-start mb-2">
                             <div class="d-flex align-items-center">
-                                <input class="form-control myInput" :type="inputType" name="Password" id="Password">
+                                <input class="form-control myInput" :type="inputType" v-model="super_admin.Password"
+                                    name="Password" id="Password">
                                 <svg @click="triggerEye()" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
                                     fill="currentColor" class="bi bi-eye eye-icon ms-2" viewBox="0 0 16 16" v-if="eyeFlag">
                                     <path
@@ -45,10 +46,10 @@
                         </div>
                     </div>
                     <div class="d-flex flex-column text-start mb-2">
-                        <label class="form-label label-text" for="Confirm-Password">Confirm Password</label>
+                        <label class="form-label label-text" for="Confirm_Password">Confirm Password</label>
                         <div class="d-flex align-items-center">
-                            <input class="form-control myInput" :type="inputType" name="Confirm-Password"
-                                id="Confirm-Password">
+                            <input class="form-control myInput" :type="inputType" v-model="Confirm_Password"
+                                name="Confirm_Password" id="Confirm_Password">
                             <svg @click="triggerEye()" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
                                 fill="currentColor" class="bi bi-eye eye-icon ms-2" viewBox="0 0 16 16" v-if="eyeFlag">
                                 <path
@@ -70,7 +71,7 @@
                     </div>
                 </form>
                 <div>
-                    <router-link to="SADashHome"><button class="btn-login">Signup</button></router-link>
+                    <button class="btn-login" @click="signup">Signup</button>
                 </div>
             </div>
         </div>
@@ -79,6 +80,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import FooterComponent from '@/components/footer.vue';
 export default {
     name: 'LoginComponent',
@@ -88,6 +90,12 @@ export default {
             inputType: 'password',
             eyeFlag: true,
             eyeSlashFlag: false,
+            adminKey: "",
+            super_admin: {
+                email: "",
+                Password: "",
+            },
+            Confirm_Password: "",
         }
     },
     methods: {
@@ -100,6 +108,13 @@ export default {
             this.eyeSlashFlag = !this.eyeSlashFlag;
             this.eyeFlag = !this.eyeFlag;
             this.inputType = "password";
+        },
+        async signup() {
+            if (this.adminKey == "123456789" && this.super_admin.Password == this.Confirm_Password) {
+                localStorage.setItem("saInfo", JSON.stringify(this.super_admin));
+                await axios.post("http://localhost:2000/super_admin", this.super_admin);
+                this.$router.push("/SADashHome")
+            }
         }
     }
 }

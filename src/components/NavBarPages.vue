@@ -77,7 +77,7 @@
         <li>
           <!-- <div class="image"> -->
           <!-- <img src="../assets/images/2.jpg" alt="Cx" /> -->
-          <template v-if="user != null">
+          <template v-if="user != null && agency == null">
             <button class="loginDrop dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               Welcome {{ user['First_name'] }}
             </button>
@@ -95,13 +95,29 @@
               </li>
             </ul>
           </template>
-          <template v-else>
+          <template v-else-if="user == null && agency != null">
+            <button class="loginDrop dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Welcome {{ agency['Agency_Name'] }}
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <div class="dropdown-item">
+                  <router-link to="login" @click="logout"><a>Log Out</a></router-link>
+                </div>
+              </li>
+              <hr />
+              <li>
+                <div class="dropdown-item">
+                  <router-link to="/agancydash"><a>Dashboard</a></router-link>
+                </div>
+              </li>
+            </ul>
+          </template>
+          <template v-else-if="user == null && agency == null">
             <router-link to="login">Log In</router-link>
           </template>
           <!-- </div> -->
         </li>
-        <li><router-link to="login">login</router-link></li>
-        <li><router-link to="AgancyDash">workdash</router-link></li>
       </ul>
     </div>
   </div>
@@ -112,14 +128,22 @@
 export default {
   name: "NavBarPages",
   user: "",
+  agency: "",
+  // admin:"",
   created() {
-    const userData = JSON.parse(localStorage.getItem("cxInfo"));
-    this.user = userData;
-    // console.log(this.user);
+    this.user = JSON.parse(localStorage.getItem("cxInfo"));
+    this.agency = JSON.parse(localStorage.getItem("agInfo"));
+    // console.log(this.user, this.agency);
+    // const userData = JSON.parse(localStorage.getItem("cxInfo"));
+    // this.user = userData;
   },
   methods: {
     logout() {
-      localStorage.removeItem("cxInfo");
+      if (this.user != null) {
+        localStorage.removeItem("cxInfo");
+      } else if (this.agency != null) {
+        localStorage.removeItem("agInfo");
+      }
       this.$router.push("/login");
     },
   },
@@ -131,12 +155,8 @@ export default {
 
 .loginDrop {
   background-color: $blueColor;
-  //   // width: fit-content;
-  //   // padding: 5px 15px;
   color: $whiteColor;
   border: none;
-  //   // border-radius: 10px;
-  //   // font-size: 8px;
 }
 
 .dropdown-menu {

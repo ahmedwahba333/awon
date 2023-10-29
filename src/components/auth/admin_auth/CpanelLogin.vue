@@ -22,12 +22,12 @@
                 <form>
                     <div class="d-flex flex-column text-start mb-2">
                         <label class="form-label label-text" for="email">Email</label>
-                        <input class="form-control myInput" type="text" name="email" id="email">
+                        <input class="form-control myInput" type="text" v-model="email" name="email" id="email">
                     </div>
                     <div class="d-flex flex-column text-start mb-2">
                         <label class="form-label label-text" for="password">Password</label>
                         <div class="d-flex align-items-center">
-                            <input class="form-control myInput" v-model="pass" :type="inputType" name="password"
+                            <input class="form-control myInput" v-model="password" :type="inputType" name="password"
                                 id="password">
                             <svg @click="triggerEye()" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
                                 fill="currentColor" class="bi bi-eye eye-icon ms-2" viewBox="0 0 16 16" v-if="eyeFlag">
@@ -59,7 +59,7 @@
                             </svg>
                         </router-link>
                     </div>
-                    <router-link to="SADashHome"><button class="btn-login">login</button></router-link>
+                    <button class="btn-login" @click="login">login</button>
                 </div>
             </div>
         </div>
@@ -68,6 +68,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import FooterComponent from '@/components/footer.vue';
 export default {
     name: 'LoginComponent',
@@ -77,7 +78,17 @@ export default {
             inputType: 'password',
             eyeFlag: true,
             eyeSlashFlag: false,
+            email: "",
+            password: "",
+            suber_admins: [],
         }
+    },
+    created() {
+        axios.get("http://localhost:2000/super_admin").then((res) => {
+            this.suber_admins = res.data;
+        }).catch((err) => {
+            console.log(err);
+        })
     },
     methods: {
         triggerEye() {
@@ -89,6 +100,18 @@ export default {
             this.eyeSlashFlag = !this.eyeSlashFlag;
             this.eyeFlag = !this.eyeFlag;
             this.inputType = "password";
+        },
+        checkUser() {
+            for (let i = 0; i < this.suber_admins.length; i++) {
+                if (this.email == this.suber_admins[i]['email'] && this.password == this.suber_admins[i]['Password']) {
+                    localStorage.setItem("saInfo", JSON.stringify(this.suber_admins[i]))
+                    this.$router.push('/SADashHome');
+                    break;
+                }
+            }
+        },
+        login() {
+            this.checkUser();
         }
     }
 }

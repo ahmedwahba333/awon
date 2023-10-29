@@ -20,6 +20,7 @@
                 <div class="col-md-6 text-start">
                     <label class="form-label label-text" for="Gender">Gender</label>
                     <select class="form-select" v-model="userData.Gender" name="Gender" id="Gender">
+                        <option value="" selected disabled>Select</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
@@ -85,10 +86,120 @@
                 </div>
                 <div class="confirm d-flex justify-content-between align-items-center">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="checkTerms" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
+                        <input class="form-check-input check-sec" type="checkbox" value="" name="owner_check_terms"
+                            id="owner_check_terms">
+                        <!-- Button trigger modal -->
+                        <label class="form-check-label check-sec text-decoration-underline" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
                             agree on terms and conditions
                         </label>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Awon</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-start">
+                                        <h2 class="text-center">Welcome to Awon!</h2>
+
+                                        Awon is an online platform that connects users with a wide range of services, such
+                                        as house cleaning, babysitting, cooking, and more. The platform allows users to
+                                        easily find and book qualified and trusted service providers in their area. Awon is
+                                        the perfect solution for anyone who is looking for a convenient and reliable way to
+                                        find and book high-quality services.
+
+                                        These terms and conditions (the "Terms") govern your use of the Awon website (the
+                                        "Website") and the services offered through the Website (the "Services"). By using
+                                        the Website or the Services, you agree to be bound by these Terms. If you do not
+                                        agree to these Terms, please do not use the Website or the Services.
+
+                                        1. Definitions
+
+                                        "Awon" means Awon, Inc., a corporation incorporated in Egypt.
+                                        "Customer" means any individual or entity that uses the Website or the Services.
+                                        "Provider" means any individual or entity that provides services through the
+                                        Website.
+                                        "Services" means the services offered through the Website, such as house cleaning,
+                                        babysitting, cooking, and more.
+                                        /*"Website" means the Awon website located at https://www.awon.org/the-website.*/
+                                        2. Use of the Website and Services
+
+                                        You must be at least 18 years of age to use the Website or the Services.
+                                        You must create an account on the Website in order to use the Services.
+                                        You agree to use the Website and the Services in accordance with these Terms and all
+                                        applicable laws and regulations.
+                                        You agree not to use the Website or the Services for any unlawful or unauthorized
+                                        purpose.
+                                        3. Provider Qualifications
+
+                                        All Providers on the Awon platform are subject to a rigorous screening process.
+                                        Awon requires all Providers to undergo a background check and to provide references.
+                                        Awon also requires all Providers to have the necessary skills and experience to
+                                        provide the services they offer.
+                                        4. Booking Services
+
+                                        To book a service, you must create an account on the Website and provide your
+                                        contact information.
+                                        Once you have created an account, you can browse the list of Providers and select
+                                        the Provider that you would like to book.
+                                        Once you have selected a Provider, you will be able to see their availability and
+                                        book a service.
+                                        You will be required to pay for the service in advance.
+                                        5. Payment
+
+                                        All payments for services are processed through the Awon website.
+                                        Awon accepts all major credit cards.
+                                        You will be required to pay for the service in full before the Provider arrives.
+                                        6. Cancellations and Refunds
+
+                                        You may cancel a booking at any time, but you may be subject to a cancellation fee.
+                                        You may request a refund if the Provider does not arrive on time or if the Provider
+                                        does not meet your expectations.
+                                        All refund requests will be reviewed by Awon on a case-by-case basis.
+                                        7. Disclaimer of Warranties
+
+                                        Awon disclaims all warranties, express or implied, with respect to the Website and
+                                        the Services, including but not limited to any warranties of merchantability,
+                                        fitness for a particular purpose, and title.
+                                        Awon does not warrant that the Website or the Services will be available,
+                                        uninterrupted, secure, or error-free.
+                                        8. Limitation of Liability
+
+                                        To the fullest extent permitted by law, Awon shall not be liable for any direct,
+                                        indirect, incidental, special, or consequential damages arising out of or in
+                                        connection with your use of the Website or the Services.
+                                        9. Governing Law
+
+                                        These Terms and your use of the Website and the Services shall be governed by and
+                                        construed in accordance with the laws of the State of California, without regard to
+                                        its conflict of law provisions.
+                                        10. Entire Agreement
+
+                                        These Terms constitute the entire agreement between you and Awon with respect to
+                                        your use of the Website and the Services.
+                                        11. Severability
+
+                                        If any provision of these Terms is held to be invalid or unenforceable, such
+                                        provision shall be struck from these Terms and the remaining provisions shall remain
+                                        in full force and effect.
+                                        12. Changes to the Terms
+
+                                        Awon reserves the right to change these Terms at any time. Any changes to these
+                                        Terms will be posted on the Website. Your continued use of the Website or the
+                                        Services after any changes to these Terms
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <button class="signup-btn" type="submit">Signup</button>
@@ -135,7 +246,7 @@ export default {
         async signup() {
             await axios.post("http://localhost:2000/cx", this.userData);
             localStorage.setItem("cxInfo", JSON.stringify(this.userData));
-            this.$router.push("/");
+            this.$router.push("agancydash");
         },
     }
 }

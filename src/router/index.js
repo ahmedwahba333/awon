@@ -240,11 +240,21 @@ const router = createRouter({
   routes,
 });
 
+/*
+لو يوزر
+لوادمن
+لو شركة
+
+*/
+
 router.beforeEach((to) => {
   // token
   const userData = JSON.parse(localStorage.getItem("cxInfo"));
-  if (userData == null) {
-    // not authenticated
+  const agencyData = JSON.parse(localStorage.getItem("agInfo"));
+  const suber_adminData = JSON.parse(localStorage.getItem("saInfo"));
+
+  if (userData == null && agencyData == null && suber_adminData == null) {
+    // not authenticated user or agency or suber admin
     if (
       to.name == "WorkerPageDashboard" ||
       to.name == "paymentDetails" ||
@@ -253,19 +263,29 @@ router.beforeEach((to) => {
       to.name == "dashReviews" ||
       to.name == "allAgencies" ||
       to.name == "AllWorker" ||
-      to.name == "ServiceHistorySA" ||
       to.name == "BookingPage" ||
-      to.name == "ServiceHistoryAgency" ||
+      to.name == "ServiceHistoryAgency"
+    ) {
+      return "/login";
+    } else if (
+      to.name == "ServiceHistorySA" ||
       to.name == "SADashHome" ||
       to.name == "AddAgency"
     ) {
-      return "/login";
+      return "/cpanel-login";
     }
-  } else if (userData != null) {
-    // authenticated
+  } else if (
+    userData != null &&
+    agencyData == null &&
+    suber_adminData == null
+  ) {
+    // authenticated user but not agency or suber admin
     if (
       to.name == "login" ||
       to.name == "signup" ||
+      to.name == "reset-password" ||
+      to.name == "reset-password-confirm" ||
+      to.name == "setup-password" ||
       to.name == "WorkerPageDashboard" ||
       to.name == "AgancyDash" ||
       to.name == "dashReviews" ||
@@ -278,7 +298,92 @@ router.beforeEach((to) => {
     ) {
       return "/";
     }
+  } else if (
+    userData == null &&
+    agencyData != null &&
+    suber_adminData == null
+  ) {
+    // authenticated agency but not user or suber admin
+    if (
+      to.name == "login" ||
+      to.name == "signup" ||
+      to.name == "reset-password" ||
+      to.name == "reset-password-confirm" ||
+      to.name == "setup-password" ||
+      to.name == "paymentDetails" ||
+      to.name == "WriteReview" ||
+      to.name == "ServiceHistorySA" ||
+      to.name == "BookingPage" ||
+      to.name == "SADashHome" ||
+      to.name == "AddAgency"
+    ) {
+      return "/agancydash";
+    }
+  } else if (
+    userData == null &&
+    agencyData == null &&
+    suber_adminData != null
+  ) {
+    // authenticated suber admin but not user or agency
+    if (
+      to.name == "cpanel-login" ||
+      to.name == "cpanel-signup" ||
+      to.name == "cpanel-reset-password" ||
+      to.name == "cpanel-reset-password-confirm" ||
+      to.name == "cpanel-setup-password" ||
+      to.name == "WorkerPageDashboard" ||
+      to.name == "paymentDetails" ||
+      to.name == "WriteReview" ||
+      to.name == "AgancyDash" ||
+      to.name == "dashReviews" ||
+      to.name == "allAgencies" ||
+      to.name == "AllWorker" ||
+      to.name == "BookingPage" ||
+      to.name == "ServiceHistoryAgency"
+    ) {
+      return "/SADashHome";
+    }
   }
+
+  // if (agencyData == null) {
+  //   // not authenticated agency
+  //   if (
+  //     to.name == "paymentDetails" ||
+  //     to.name == "WriteReview" ||
+  //     to.name == "WorkerPageDashboard" ||
+  //     to.name == "AgancyDash" ||
+  //     to.name == "dashReviews" ||
+  //     to.name == "allAgencies" ||
+  //     to.name == "AllWorker" ||
+  //     to.name == "ServiceHistorySA" ||
+  //     to.name == "BookingPage" ||
+  //     to.name == "ServiceHistoryAgency" ||
+  //     to.name == "SADashHome" ||
+  //     to.name == "AddAgency"
+  //   ) {
+  //     return "/login";
+  //   }
+  // } else if (agencyData != null) {
+  //   // authenticated agency
+  //   if (
+  //     to.name == "login" ||
+  //     to.name == "signup" ||
+  //     to.name == "reset-password" ||
+  //     to.name == "reset-password-confirm" ||
+  //     to.name == "setup-password" ||
+  //     to.name == "WorkerPageDashboard" ||
+  //     to.name == "AgancyDash" ||
+  //     to.name == "dashReviews" ||
+  //     to.name == "allAgencies" ||
+  //     to.name == "AllWorker" ||
+  //     to.name == "ServiceHistorySA" ||
+  //     to.name == "ServiceHistoryAgency" ||
+  //     to.name == "SADashHome" ||
+  //     to.name == "AddAgency"
+  //   ) {
+  //     return "/";
+  //   }
+  // }
 });
 
 export default router;
