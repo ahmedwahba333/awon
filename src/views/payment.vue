@@ -42,7 +42,7 @@
                     <div class="col-12">
                         <div class="">
                         <div class=""> <label class="radio"> <input type="radio" value="terms">
-                        accept terms and conditions <span></span> </label> </div>
+                        accept terms and conditions</label> </div>
                         </div>
                     </div>
                     <div class="col-12">
@@ -125,12 +125,23 @@ export default {
     },
     validations() {
         return {
-            name: { required },
+            fullName: { required },
             cardNumber: { required, numeric, minLength: minLength(16) },
-            expiry: { required, numeric, minLength: minLength(6) },
+            expiry: { required, minLength: minLength(7) },
             cvv: { required, numeric, minLength: minLength(3) },
         };
     },
+
+    mounted() {
+    this.v$.$validate();
+
+    if (!this.v$.$error) {
+                console.log('Payment completed successfully');
+    } else {
+                console.log('payement failed');
+    }
+    },
+
     methods: {
         completePayment() {
             this.v$.$validate();
