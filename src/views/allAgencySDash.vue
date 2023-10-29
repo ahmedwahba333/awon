@@ -1,5 +1,5 @@
 <template>
-    <NavBarDash/>
+    <NavBarSADash/>
     <div class="bg">
 
         <div class="container">
@@ -233,12 +233,11 @@
 </template>
 
 <script>
-import NavBarDash from "@/components/NavBarDash.vue";
-
+import NavBarSADash from "@/components/NavBarSADash.vue";
 export default {
     name: "allAgencies",
     components: {
-    NavBarDash,
+        NavBarSADash,
     }
 }
 
