@@ -145,26 +145,33 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Select Category
+                  Select Services
                 </button>
-                <ul class="dropdown-menu ">
-                  <li v-for="(category,id) in categories" :key="id">
-                    <div class="dropdown-item">
-                      <div>
-                        <div class="row">
-                          <div class="col-8">
-                            <input type="checkbox" class="form-check-input" />
-                            <label for="" class="form-check-label mt-1 ms-1">{{ category['Name']}}</label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
+                <ul class="dropdown-menu">
+          <li v-for="(category,id) in categories" :key="id">
+            <div class="dropdown-item">
+              <h5>{{ category['Name']}}</h5>
+              <div class="d-flex align-items-center gap-3">
+                <div v-for="(service,id) in services" :key="id">
+                  <input type="checkbox" class="form-check-input" />
+                  <label for="" class="form-check-label mt-1 ms-1"  v-if="category['id']==service['Category_id']" 
+                    >{{service['Name']}}</label
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+          <hr />
+
+        </ul>
               </div>
             </div>
       </div>
-        
+          <div class="row justify-content-end">
+                                      <div class="col-12 col-xl-2 col-md-4 col-sm-8 ">
+                                      <button class="btn">Add</button>      
+                                      </div>
+                                      </div>
       </form>
 
 
@@ -187,15 +194,23 @@ export default {
   data() {
     return {
        categories:[],
+       services:[]
     }
   },
   created(){
     this.getCategory();
+    this.getService();
   },
+  
   methods:{
     getCategory(){
       axios.get("http://localhost:2000/category")
       .then((res)=> {this.categories = res.data})
+      .catch((err)=>{console.log(err)})
+    },
+    getService(){
+      axios.get("http://localhost:2000/service")
+      .then((res)=> {this.services = res.data})
       .catch((err)=>{console.log(err)})
     },
   }
