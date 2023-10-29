@@ -25,11 +25,11 @@
         <div>
         <h5>{{workers.Categories}}</h5>
           <div class="row" v-show="workers.Service_1=='Full house (120m2 ~ 170m2)'">
-            <div class="col-9"> 
+            <div class="col-8"> 
           <input type="checkbox" class="form-check-input" >
           <label for="" class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
            </div>
-           <div class="col-3">
+           <div class="col-4">
           <label class>Price: {{workers.Service_1_price }}LE </label>
            </div>
           </div>
@@ -192,7 +192,7 @@
 
 <div class="row">
   <p class="mb-0 mt-3">For how many days would you like to book the service?</p>
-  <div class="col-lg-3 mt-0"><input type="radio" name="bookingDays" value="singleDay" class="me-1" v-model="single">Single day</div>
+  <div class="col-lg-3 mt-0"><input type="radio" name="bookingDays" value="singleDay" class="me-1" v-model="single" ref="hh">Single day</div>
 </div>
    
 
@@ -267,16 +267,16 @@
          
           <div class="form-row row mb-2">
             <div class="form-group col-lg-2 col-md-3">
-              <input type="radio" value="home" name="address" class="mx-1" >Home
+              <input type="radio" value="home" name="address" class="mx-1" v-model="selected">Home
             </div>
             <div class="form-group col-lg-3 col-md-3 col-md-5">
-              <input type="radio" value="home" name="address" class="mx-1">Another place
+              <input type="radio" value="anotherPlace" name="address" class="mx-1">Another place
             </div>
           </div>
          
           <div class="form-group">
             <label for="inputAddress">National ID</label>
-            <input type="text" class="form-control" id="inputAddress">
+            <input type="text" class="form-control" id="inputAddress" >
           </div>
           <div class="form-group">
             <label for="inputGovernate">Governate</label>
@@ -369,12 +369,35 @@ import axios from 'axios';
   data(){
     return{
       workers:[],
+      selected:'',
+      cxInfo:{
+              First_name:'',
+              Last_name:'',
+              FrontNational_id:'',
+              BackNational_id:'',
+              Governorate:'',
+              City:'',
+              Address:'',
+              Floor_no:'',
+              Flat_no:'',
+              Building_no:'',
+              Phone_no:'',
+              Phone_no_2:'',
+
+      }
+    }
+  },
+
+  watch: {
+    selected(newValue) {
+      if (newValue === 'home') {
+        this.doSomething();
+      }
     }
   },
 
   created(){
-                this.getAllWorkers();
-                // this.inputDisabled();
+     this.getAllWorkers();
            },    
 
    methods:{
@@ -386,10 +409,17 @@ import axios from 'axios';
                 },
 
                 // inputDisabled(){
-                //   if(this.$refs.single.checked== true){
-                //     this.date.validated=0
-                //   }
+                //   // if(this.$refs.single.validate){
+                //   //   console.log('jjjj')
+                // //   // }
+                // //   if(this.selected) {
+                // // alert('isSelected');
+                // //      }
                 // }
+
+                doSomething() {
+                   console.log('Option 1 is selected');
+               }
 
    }
 }
