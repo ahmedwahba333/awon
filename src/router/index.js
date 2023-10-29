@@ -262,7 +262,6 @@ const routes = [
   name:"AddWorker",
   component: AddWorker
 },
-  
 ];
 
 const router = createRouter({
