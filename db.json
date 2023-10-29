@@ -3500,7 +3500,7 @@
       "Gender": "Female",
       "Address": "92529 Farmco Alley",
       "City": "El Parco District",
-      "Governorate": "Mansoura",
+      "Governorate": "Dakahlia",
       "Floor_no": 7,
       "Flat_no": 47,
       "Phone_no": 2001157287172,
@@ -4175,7 +4175,7 @@
       "Agency_id": 12
     }, {
       "id": 18,
-      "Governate": "Mansoura",
+      "Governate": "Dakahlia",
       "City": "Wiang Nuea",
       "Order_Address": "93918 Bonner Parkway",
       "Building_No": 23,
@@ -4200,7 +4200,7 @@
       "Agency_id": 12
     }, {
       "id": 19,
-      "Governate": "Mansoura",
+      "Governate": "Dakahlia",
       "City": "Baras",
       "Order_Address": "6 Marquette Crossing",
       "Building_No": 15,
@@ -4425,7 +4425,7 @@
       "Agency_id": 18
     }, {
       "id": 28,
-      "Governate": "Mansoura",
+      "Governate": "Dakahlia",
       "City": "Acao",
       "Order_Address": "4643 Golf Course Hill",
       "Building_No": 28,
@@ -4775,7 +4775,7 @@
       "Agency_id": 5
     }, {
       "id": 42,
-      "Governate": "Mansoura",
+      "Governate": "Dakahlia",
       "City": "Marisgama",
       "Order_Address": "71 Chive Court",
       "Building_No": 4,
@@ -4850,7 +4850,7 @@
       "Agency_id": 13
     }, {
       "id": 45,
-      "Governate": "Mansoura",
+      "Governate": "Dakahlia",
       "City": "Sibulan",
       "Order_Address": "066 Drewry Park",
       "Building_No": 2,
@@ -5275,7 +5275,7 @@
       "Agency_id": 10
     }, {
       "id": 62,
-      "Governate": "Mansoura",
+      "Governate": "Dakahlia",
       "City": "Ponggok",
       "Order_Address": "0 Nancy Hill",
       "Building_No": 15,
@@ -5755,7 +5755,7 @@
       "Rate": 4,
       "Review": "Outstanding customer service!",
       "Gender": "female",
-      "cx_picture": "https://randomuser.me/api/portraits/women/43.jpg",
+      "_picture": "https://randomuser.me/api/portraits/women/43.jpg",
       "picture": "https://randomuser.me/api/portraits/women/43.jpg"
     },
     {
