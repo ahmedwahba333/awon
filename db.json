@@ -5612,6 +5612,13 @@
       "Name": "House Guard",
       "Details": "We responsible for protecting you from any kind of robbery or assault on your house ",
       "img": "https://i.postimg.cc/TwLNS3Zq/House-guard.jpg"
+    },
+    {
+      "Category_id": 3,
+      "id": 12,
+      "Name": "Chefs",
+      "Details": "Studying recipes, setting up menus and preparing high-quality dishes. Personal chef are responsible for preparing specialized meals for you. ",
+      "img": "https://i.postimg.cc/gcgWgfKN/chefs.jpg"
     }
   ],
   "review": [
