@@ -235,7 +235,7 @@
 <script>
 import NavBarSADashVue from '@/components/NavBarSADash.vue';
 export default {
-  name: "AgencyProfile",
+  name: "SAAgencyProfile",
   components: {
     NavBarSADashVue,
   },

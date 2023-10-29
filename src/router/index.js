@@ -35,6 +35,7 @@ import MovingfurnitureView from "../views/MovingfurnitureView.vue";
 import HouseguardView from "../views/HouseguardView.vue";
 import DriverView from "../views/DriverView.vue";
 import CXprofileView from "../views/CXprofileView.vue";
+import SAAgencyProfile from "../views/SAAgencyProfile.vue";
 // >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
 
 import ServiceHistoryAgency from "../views/ServiceHistoryAgency.vue";
@@ -298,6 +299,11 @@ const routes = [
   name: "CXprofileView",
   component: CXprofileView
 },
+{
+  path:"/SAAgencyProfile",
+  name:"SAAgencyProfile",
+  component: SAAgencyProfile
+}
 ];
 
 const router = createRouter({
