@@ -22,8 +22,13 @@ import ElderlycareView from "../views/ElderlycareView.vue";
 import HousenursingView from "../views/HousenursingView.vue";
 import ChefsView from "../views/ChefsView.vue";
 import FoodcateringView from "../views/FoodcateringView.vue";
-import SADashHome from "../views/SADashHome.vue"
-import AllWorkerFromCX from "../views/AllWorkerFromCX.vue"
+import SADashHome from "../views/SADashHome.vue";
+import AllWorkerFromCX from "../views/AllWorkerFromCX.vue";
+import PlumbingView from "../views/PlumbingView.vue";
+import CarpentryView from "../views/CarpentryView.vue";
+import MovingfurnitureView from "../views/MovingfurnitureView.vue";
+import HouseguardView from "../views/HouseguardView.vue";
+import DriverView from "../views/DriverView.vue";
 // >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
 
 import ServiceHistoryAgency from "../views/ServiceHistoryAgency.vue";
@@ -231,6 +236,31 @@ const routes = [
     path: "/AddAgency",
     name: "AddAgency",
     component: AddAgency
+  },
+  {
+    path: "/PlumbingView",
+    name: "PlumbingView",
+    component: PlumbingView
+  },
+  {
+    path: "/CarpentryView",
+    name: "CarpentryView",
+    component: CarpentryView
+  },
+  {
+    path: "/MovingfurnitureView",
+    name: "MovingfurnitureView",
+    component: MovingfurnitureView
+  },
+  {
+    path: "/HouseguardView",
+    name: "HouseguardView",
+    component: HouseguardView
+  },
+  {
+    path: "/DriverView",
+    name: "DriverView",
+    component: DriverView
   },
 ];
 

@@ -1,7 +1,11 @@
 <template>
   <div class="bg">
     <NavBarPages />
-    
+    <div class="bar d-flex justify-content-end">
+      <form class="search">
+        <input class="search" type="search" placeholder="Search" />
+      </form>
+    </div>
     <div class="d-flex col-lg-2">
       <h2 class="serv">Cleaning</h2>
     </div>
@@ -146,7 +150,7 @@
     </div>
     <!-- http://localhost:8080/img/cleaner1.65740dc5.jpg -->
     <!-- <img src="@/assets/subservices/cleaner1.jpg" alt=""> -->
-    <div class="container">
+    <!-- <div class="container">
       <div class="row gy-4">
         <div
           class="card col-lg-4 col-md-4 col-sm-6 col-6"
@@ -205,7 +209,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <FooterComponent />
   </div>
 </template>
@@ -257,7 +261,7 @@ export default {
   height: 100px;
 }
 input.search {
-  border: 2px solid $orangeColor;
+  border: 2px solid $blueColor;
   border-radius: 28px;
   width: 350px;
   padding: 9px 4px 9px 40px;
