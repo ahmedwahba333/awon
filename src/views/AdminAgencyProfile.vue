@@ -17,30 +17,14 @@
               d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
             />
           </svg>
-          <!-- <li class="breadcrumb-item" aria-current="page">Agencies</li>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="1em"
-            viewBox="0 0 320 512"
-            fill="#F97B22"
-            class="mt-2 me-2"
-          >
-            <path
-              d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
-            />
-          </svg> -->
           <li class="breadcrumb-item" aria-current="page">Agency Profile</li>
         </ol>
       </div>
       <!-- Search Filter -->
       <div class="row searchCard pt-3 pb-3">
-        <p class="subtitle mx-4">Account</p>
+        <p class="subtitle mx-3">Account</p>
         <div class="col-lg-5 col-md-5 col-sm-12">
-          <img
-            src="../assets/images/about-us.jpg"
-            class="card-img-top Clip-path:circle()"
-            alt=""
-          />
+          <img :src="`${agency.Agency_Logo}`" class="card-img-top Clip-path:circle()" alt=""/>
         </div>
 
         <div class="a-pro col-lg-3 col-md-3 col-sm-5">
@@ -54,15 +38,16 @@
 
         <div class="a-pro col-lg-3 col-md-3 col-sm-5">
           <div class="a-title">Location</div>
-          <div class="a-data">3 street sayed algarhe haram al giza, Giza, GZ 12512 - Egypt</div>
+          <div class="a-data">{{ agency.Agency_Address }}, {{ agency.Agency_City }}, {{ agency.Agency_Governorate }}, {{ agency.Agency_PostCode }} </div>
           <div class="a-title">Rating</div>
-          <div class="a-data">UTC+03:00 cairo</div>
+          <div class="a-data">
+            <star-rating active-color="#F97B22"  star-size=15 :rating="`${agency.rating}`"></star-rating>
+          </div>
         </div>
-      </div>
 
       <!-- Services Table -->
 
-      <div class="row grid servicesTable mt-4 text-center" id="table-wrapper">
+      <!-- <div class="row grid servicesTable mt-4 text-center" id="table-wrapper">
         <div class="col-12 mt-3 overflow-auto" id="table-scroll">
           <table
             class="table mb-2"
@@ -99,8 +84,36 @@
             </tbody>
           </table>
         </div>
-      </div>
+      </div> -->
+              <div class="row grid servicesTable mt-4 text-center" id="table-wrapper">
+            
+            <div class="col-12 mt-3 overflow-auto" id="table-scroll">
+                <table class="table mb-2" style="color:$blueColor; --bs-table-color:$blueColor;" id="">
+                       <thead>
+                         <tr>
+                           <th scope="col">Order ID</th>
+                           <th scope="col">Order Details</th>
+                           <th scope="col">Order Date</th>
+                           <th scope="col">Customer ID</th>
+                           <th scope="col">Customer Name</th>
+                           <th scope="col">Worker Name</th>
+                         </tr>
+                       </thead>
+                       <tbody>
+                         <tr>
+                           <td>{{ order.id }}</td>
+                           <td>{{ order.Order_Details }}</td>
+                           <td>{{ order.Order_Date }}</td>
+                           <td>{{ order.Customer_id }}</td>
+                           <td>{{ order.Customer_FName }} {{  order.Customer_LName}}</td>
+                           <td>{{ order.Worker_FName }} {{ order.Worker_LName  }}</td>
+                    </tr>
+                       </tbody>
+                    </table>
+            </div>
+        </div>
 
+      <!-- Agency Worker -->
         <p class="subtitle mt-4">Agency Worker</p>
         <div class="row justify-content-center my-5 gap-5">
           <div class="card " style="width: 18rem">
@@ -228,6 +241,7 @@
           </div>
         </div>
       </div>
+    </div>
   </div>
 </template>
 
@@ -241,10 +255,12 @@ export default {
   data() {
     return {
       agency: [],
+      order: [],
     }
   },
   created() {
-      this.agencyInfo();
+    this.agencyInfo();
+    this.orderInfo();
     },
   components: {
     NavBarSADashVue,
@@ -253,9 +269,15 @@ export default {
   
     methods: {
       agencyInfo() {
-        this.id = this.$route.params.id
+        // this.id = this.$route.params.id
         axios.get(`http://localhost:2000/agency/1`)
           .then(res => this.agency = res.data)
+          .catch(err => console.log(err))
+      },
+      orderInfo() {
+        // this.id = this.$route.params.id
+        axios.get("http://localhost:2000/order")
+          .then(res => this.order = res.data)
           .catch(err => console.log(err))
       }
     }
@@ -293,9 +315,6 @@ img {
 .btn {
   @include button;
 }
-p {
-  color: $blueColor;
-}
 
 .breadCrumb {
   margin-left: 1px;
@@ -315,6 +334,8 @@ p {
 .subtitle {
   font-size: $subTitle;
   font-weight: bold;
+    color: $blueColor;
+
 }
 
 .cardStyle {
