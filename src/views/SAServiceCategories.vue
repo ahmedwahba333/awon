@@ -22,7 +22,9 @@
         </ol>
         <ol class="addCard mx-2 col-lg-10 col-md-12 col-sm-12">
           <li>
+            <router-link to="AddServiceSA">
             <button class="btn">Add new service</button>
+          </router-link>
           </li>
         </ol>
       </div>
@@ -42,8 +44,8 @@
               <h5 class="card-title">{{ service["Name"] }}</h5>
               <p class="m-3">{{ service["Details"] }}</p>
               <div class="d-flex justify-content-end align-item-end">
-                <button class="btn">Remove service</button>
-                <button class="btn">Edit service</button>
+                <button class="btn" @click="deleteCat(service.id)">Remove service</button>
+                <button class="btn">Edit Service</button>
               </div>
             </div>
           </div>
@@ -80,6 +82,14 @@ export default {
           console.log(err);
         });
     },
+    deleteCat(id){
+      axios.delete(`http://localhost:2000/service/${id}`)
+      .then((res)=>console.log(res))
+      .catch((err) => {
+          console.log(err);
+        });
+        this.getServices()
+    }
   },
 };
 </script>

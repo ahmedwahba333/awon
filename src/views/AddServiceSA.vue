@@ -16,19 +16,28 @@
               d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
             />
           </svg>
-          <li class="breadcrumb-item" aria-current="page">
-            Services Categories
-          </li>
+          <li class="breadcrumb-item" aria-current="page">Add Services</li>
         </ol>
       </div>
       <div class="row m-5">
-        <h2>Adding new category</h2>
+        <h2>Adding new Service</h2>
       </div>
       <div class="row">
         <form action="" @submit.prevent="handlSubmit">
           <div class="mb-3 d-flex col-auto">
             <label for="exampleFormControlInput1" class="form-label col-2"
-              >Category Name:
+              >Category Name:</label
+            >
+            <input
+              type=""
+              class="form-control"
+              id="exampleFormControlInput1"
+              v-model="FormValue[Category_id]"
+            />
+          </div>
+          <div class="mb-3 d-flex col-auto">
+            <label for="exampleFormControlInput1" class="form-label col-2"
+              >Service Name:
             </label>
             <input
               type="text"
@@ -50,7 +59,7 @@
           </div>
           <div class="mb-3 d-flex col-auto">
             <label for="exampleFormControlTextarea1" class="form-label col-2"
-              >Category Details:</label
+              >Service Details:</label
             >
             <textarea
               class="form-control"
@@ -72,7 +81,7 @@
 import axios from "axios";
 import NavBarSADash from "@/components/NavBarSADash.vue";
 export default {
-  name: "AddCatigory",
+  name: "AddServiceSA",
   components: {
     NavBarSADash,
   },
@@ -88,10 +97,10 @@ export default {
   methods: {
     handlSubmit() {
       axios
-        .post("http://localhost:2000/category", this.FormValue)
+        .post("http://localhost:2000/service", this.FormValue)
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
-      this.$router.push("/SACatigory");
+      this.$router.push("/SAServiceCategories");
     },
   },
 };

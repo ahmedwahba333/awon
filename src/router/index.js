@@ -26,6 +26,8 @@ import SADashHome from "../views/SADashHome.vue"
 import AllWorkerFromCX from "../views/AllWorkerFromCX.vue";
 import SACatigory from "@/views/SACatigory.vue";
 import SAServiceCategories from "@/views/SAServiceCategories.vue";
+import AddCatigory from "@/views/AddCatigory.vue";
+import AddServiceSA from "@/views/AddServiceSA.vue"
 // >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
 
 import ServiceHistoryAgency from "../views/ServiceHistoryAgency.vue";
@@ -243,6 +245,16 @@ const routes = [
     path:"/SAServiceCategories",
     name:"SAServiceCategories",
     component: SAServiceCategories
+  },
+  {
+    path:"/AddCatigory",
+    name:"AddCatigory",
+    component: AddCatigory
+  },
+  {
+    path:"/AddServiceSA",
+    name:"AddServiceSA",
+    component: AddServiceSA
   }
 ];
 

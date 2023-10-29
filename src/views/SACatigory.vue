@@ -22,7 +22,11 @@
         </ol>
         <ol class="addCard mx-2 col-lg-10 col-md-12 col-sm-12">
           <li>
-            <button class="btn">Add new category</button>
+            <router-link to="AddCatigory">
+              <button class="btn">
+              Add New Category
+            </button>
+            </router-link>
           </li>
         </ol>
       </div>
@@ -42,8 +46,10 @@
               <h5 class="card-title">{{ category["Name"] }}</h5>
               <p class="m-3">{{ category["Details"] }}</p>
               <div class="d-flex justify-content-end align-item-end">
+                <router-link to="AddServiceSA">
                 <button class="btn">Add new services</button>
-                <button class="btn">Delete category</button>
+              </router-link>
+                <button class="btn" @click="deleteCat(category.id)">Delete category</button>
               </div>
             </div>
           </div>
@@ -80,6 +86,14 @@ export default {
           console.log(err);
         });
     },
+    deleteCat(id){
+      axios.delete(`http://localhost:2000/category/${id}`)
+      .then((res)=>console.log(res))
+      .catch((err) => {
+          console.log(err);
+        });
+        this.getCategory()
+    }
   },
 };
 </script>

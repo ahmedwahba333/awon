@@ -3381,7 +3381,6 @@
       "Service_4_price": null
     }
   ],
-
   "cx": [
     {
       "id": 1,
@@ -3744,7 +3743,6 @@
       "BackNational_id": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlGSAy9H4xvsdU501DmqFiYlrVc8YgZQ9bIQ&usqp=CAU"
     }
   ],
-
   "order": [
     {
       "id": 1,
@@ -5029,7 +5027,6 @@
       "img": "https://i.postimg.cc/k4kFFHKq/private-services.jpg"
     }
   ],
-
   "service": [
     {
       "Category_id": 1,
@@ -5065,13 +5062,6 @@
       "Name": "Home Nursing ",
       "Details": "We allows a person with special needs to stay in their home. It might be for people who are getting older. It could also be for people who are chronically ill, recovering from surgery, or have a disability.",
       "img": "https://i.postimg.cc/qqhq8sRs/house-nursing.jpg"
-    },
-    {
-      "Category_id": 3,
-      "id": 6,
-      "Name": "Chefs ",
-      "Details": "Studying recipes, setting up menus and preparing high-quality dishes. Personal chef are responsible for preparing specialized meals for you. ",
-      "img": "https://i.postimg.cc/9XJsT35Y/chefs.jpg"
     },
     {
       "Category_id": 3,
@@ -5142,7 +5132,7 @@
       "Review": "Amazing customer service!",
       "Gender": "male",
       "picture": "https://randomuser.me/api/portraits/men/24.jpg",
-      "worker_id": 12    
+      "worker_id": 12
     },
     {
       "id": 4,
@@ -5178,10 +5168,10 @@
       "Review": "Superb service!",
       "Gender": "female",
       "picture": "https://randomuser.me/api/portraits/women/33.jpg",
-      "Worker_id": 18    
+      "Worker_id": 18
     },
     {
-      "id":8,
+      "id": 8,
       "Name": "Aridatha",
       "Rate": 3,
       "Review": "Amazing service!",
@@ -5198,7 +5188,7 @@
       "picture": "https://randomuser.me/api/portraits/men/77.jpg"
     },
     {
-      "id":10,
+      "id": 10,
       "Name": "Duff",
       "Rate": 4,
       "Review": "Excellent service!",
@@ -5296,7 +5286,7 @@
       "Worker_id": 19
     },
     {
-      "id":21,
+      "id": 21,
       "Name": "Violet",
       "Rate": 5,
       "Review": "Amazing service!",
@@ -5305,16 +5295,16 @@
       "Worker_id": 14
     },
     {
-      "id":22,
+      "id": 22,
       "Name": "Sal",
       "Rate": 4,
       "Review": "Great service!",
       "Gender": "male",
       "picture": "https://randomuser.me/api/portraits/men/56.jpg",
-      "worker_id": 11    
+      "worker_id": 11
     },
     {
-      "id":23,
+      "id": 23,
       "Name": "Rawley",
       "Rate": 3,
       "Review": "Outstanding customer support!",
@@ -5323,7 +5313,7 @@
       "worker_id": 17
     },
     {
-      "id":24,
+      "id": 24,
       "Name": "Even",
       "Rate": 4,
       "Review": "Outstanding customer support!",
@@ -5332,7 +5322,7 @@
       "worker_id": 15
     },
     {
-      "id":25,
+      "id": 25,
       "Name": "Robbie",
       "Rate": 4,
       "Review": "Amazing customer service!",
@@ -5341,7 +5331,7 @@
       "worker_id": 9
     },
     {
-      "id":26,
+      "id": 26,
       "Name": "Suzanna",
       "Rate": 4,
       "Review": "Great service!",
@@ -5350,16 +5340,16 @@
       "Worker_id": 10
     },
     {
-      "id":27,
+      "id": 27,
       "Name": "Amy",
       "Rate": 5,
       "Review": "Great service!",
       "Gender": "female",
       "picture": "https://randomuser.me/api/portraits/women/44.jpg",
-      "Worker_id": 2    
+      "Worker_id": 2
     },
     {
-      "id":28,
+      "id": 28,
       "Name": "Kendall",
       "Rate": 4,
       "Review": "Excellent service!",
@@ -5368,16 +5358,16 @@
       "worker_id": 1
     },
     {
-      "id":29,
+      "id": 29,
       "Name": "Inge",
       "Rate": 4,
       "Review": "Excellent experience!",
       "Gender": "female",
       "picture": "https://randomuser.me/api/portraits/women/48.jpg",
-      "Worker_id": 11    
+      "Worker_id": 11
     },
     {
-      "id":30,
+      "id": 30,
       "Name": "Tiebout",
       "Rate": 4,
       "Review": "Excellent service!",
@@ -5386,7 +5376,7 @@
       "worker_id": 2
     },
     {
-      "id":31,
+      "id": 31,
       "Name": "Chloette",
       "Rate": 5,
       "Review": "Impressive service!",
@@ -5395,7 +5385,7 @@
       "Worker_id": 16
     },
     {
-      "id":32,
+      "id": 32,
       "Name": "Beaufort",
       "Rate": 4,
       "Review": "Superb assistance!",
@@ -5404,7 +5394,7 @@
       "worker_id": 13
     },
     {
-      "id":33,
+      "id": 33,
       "Name": "Trip",
       "Rate": 5,
       "Review": "Exceptional service!",
@@ -5413,7 +5403,7 @@
       "worker_id": 3
     },
     {
-      "id":34,
+      "id": 34,
       "Name": "Pren",
       "Rate": 3,
       "Review": "Highly recommended!",
@@ -5422,7 +5412,7 @@
       "worker_id": 6
     },
     {
-      "id":35,
+      "id": 35,
       "Name": "Claus",
       "Rate": 3,
       "Review": "Outstanding customer support!",
@@ -5431,7 +5421,7 @@
       "worker_id": 20
     },
     {
-      "id":36,
+      "id": 36,
       "Name": "Claude",
       "Rate": 4,
       "Review": "Impressive service!",
@@ -5440,16 +5430,16 @@
       "Worker_id": 5
     },
     {
-      "id":37,
+      "id": 37,
       "Name": "Hasty",
       "Rate": 5,
       "Review": "Amazing customer service!",
       "Gender": "male",
       "picture": "https://randomuser.me/api/portraits/men/79.jpg",
-      "worker_id": 18    
+      "worker_id": 18
     },
     {
-      "id":38,
+      "id": 38,
       "Name": "Myrah",
       "Rate": 5,
       "Review": "Exceptional service!",
@@ -5458,7 +5448,7 @@
       "Worker_id": 15
     },
     {
-      "id":39,
+      "id": 39,
       "Name": "Bax",
       "Rate": 3,
       "Review": "Impressive experience!",
@@ -5467,7 +5457,7 @@
       "worker_id": 7
     },
     {
-      "id":40,
+      "id": 40,
       "Name": "Leigh",
       "Rate": 3,
       "Review": "Highly recommended!",
@@ -5918,7 +5908,6 @@
       "Agency-Phone_no2": 2001114449826
     }
   ],
-
   "comments": [
     {
       "id": 1,
