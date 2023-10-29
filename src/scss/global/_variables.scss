@@ -9,7 +9,7 @@ $semiBold:600;
 $regular: 400 ;
 
 @mixin button {
-    width: 150px;
+    min-width: 150px;
     height: 40px;
     font-size: 18px;
     margin:20px;

@@ -117,7 +117,7 @@ body {
 footer{
     background-color:$blueColor;
     position: relative;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
     border-top-left-radius: 60px ;
     border-top-right-radius: 60px ;

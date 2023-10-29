@@ -19,6 +19,7 @@
     "popper.js": "^1.16.1",
     "register-service-worker": "^1.7.2",
     "vue": "^3.2.13",
+    "vue-loader": "^17.3.0",
     "vue-router": "^4.0.3",
     "vue-star-rating": "^2.1.0",
     "vuex": "^4.0.0"
