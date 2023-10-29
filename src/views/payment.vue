@@ -9,7 +9,7 @@
                     <div class="col-12">
                         <div class="d-flex flex-column">
                             <p class="text">Person Name yo</p>
-                            <input class="form-control" type="text" placeholder="Name" value="" v-model="fullName">
+                            <input class="form-control" type="text" placeholder="Name" v-model="fullName">
                             <span class="error-feedback" v-if="v$.fullName.$error"> {{ v$.fullName.$errors[0].$message }}</span>
                         </div>
                             <div class="d-flex flex-column">
@@ -35,7 +35,7 @@
                     <div class="col-6">
                         <div class="d-flex flex-column">
                             <p class="text">CVV/CVC</p>
-                            <!-- <input class="form-control" type="password" placeholder="***" v-model="cvv"> -->
+                            <input class="form-control" type="password" placeholder="***" v-model="cvv">
                             <span class="error-feedback" v-if="v$.cvv.$error"> {{ v$.cvv.$errors[0].$message }}</span>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                     </div>
                     <div class="col-12">
                         <div class="btn ">
-                            <div><router-link to="#" class="pay" @click="completePayment()" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"> Pay</router-link></div>
+                            <div @click="completePayment()" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><router-link to="#" class="pay" > Pay</router-link></div>
                         </div>
                         <div class="back-btn d-flex align-items-start">
                             <div class="back"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#193655" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
@@ -91,7 +91,7 @@
 				<p class="text-center">Your booking has been confirmed. Check your email for detials.</p>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+				<router-link to="/"><button class="btn btn-success btn-block" data-dismiss="modal">OK</button></router-link>
 			</div>
 		</div>
 	</div>
