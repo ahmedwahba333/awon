@@ -298,8 +298,6 @@ const routes = [
   name: "CXprofileView",
   component: CXprofileView
 },
-
-  
 ];
 
 const router = createRouter({
