@@ -7,12 +7,12 @@ import WorkerProfile from "../views/WorkerProfileCx.vue";
 import WriteReview from "../views/WriteReview.vue";
 import paymentDetails from "../views/payment.vue";
 import ServicesView from "../views/ServicesView.vue";
-// // import AddAgency from "../views/AddAgency.vue";
-// // import AgancyDash from "../views/AgancyDash.vue";
+import AddAgency from "../views/AddAgency.vue";
+import AgancyDash from "../views/AgancyDash.vue";
 import WorkerPageDashboard from "../views/workerPageDashboard.vue";
 import dashReviews from "../views/dashReviews.vue";
 import aboutus from "../views/About.vue";
-// import allAgencies from "../views/allAgencySDash.vue";
+import allAgencies from "../views/allAgencySDash.vue";
 import Allworker from "../views/AllWorker.vue";
 
 import CleaningView from "../views/CleaningView.vue";
@@ -142,11 +142,11 @@ const routes = [
     name: "WriteReview",
     component: WriteReview,
   },
-  // {
-  //   path: "/agancydash",
-  //   name: "AgancyDash",
-  //   component: AgancyDash,
-  // },
+  {
+    path: "/agancydash",
+    name: "AgancyDash",
+    component: AgancyDash,
+  },
   {
     path: "/dashReviews",
     name: "dashReviews",
@@ -157,11 +157,11 @@ const routes = [
     name: "aboutUs",
     component: aboutus,
   },
-  // {
-  //   path: "/Agencies",
-  //   name: "allAgencies",
-  //   component: allAgencies,
-  // },
+  {
+    path: "/Agencies",
+    name: "allAgencies",
+    component: allAgencies,
+  },
   {
     path: "/AllWorker",
     name: "AllWorker",
@@ -173,12 +173,12 @@ const routes = [
     component: ServiceHistorySA
   },
   {
-    path: "/booking",
+    path: "/booking/:id",
     name: "BookingPage",
     component: BookingPage
   },
   {
-    path: "/ServiceHistoryAgency",
+    path: "/ServiceHistoryAgency/:id",
     name: "ServiceHistoryAgency",
     component: ServiceHistoryAgency
   },
@@ -227,11 +227,11 @@ const routes = [
     name: "AllWorkerFromCX",
     component: AllWorkerFromCX
   },
-  // {
-  //   path: "/AddAgency",
-  //   name: "AddAgency",
-  //   component: AddAgency
-  // },
+  {
+    path: "/AddAgency",
+    name: "AddAgency",
+    component: AddAgency
+  },
 ];
 
 const router = createRouter({

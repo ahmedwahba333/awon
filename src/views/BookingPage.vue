@@ -11,7 +11,7 @@
          <!-- Booking Details -->
     <div class="bookingDet">
       <div class="cardInner">
-      <div><p class="worckerNm mb-2">Worker Name: Mohamed Ali</p></div>
+      <div><p class="worckerNm mb-2">Worker Name: {{workers.First_name}} {{workers.Last_name}}</p></div>
       <form>
 
 <div class="form-group row">
@@ -20,94 +20,102 @@
    Select Services
   </button>
   <ul class="dropdown-menu">
-    <li>
+    <li v-show="workers.Categories=='House Keeping'">
       <div class="dropdown-item">
         <div>
-        <h5>House Keeping</h5>
-        <div class="row"> 
-          <label class="form-check-label mt-1 ms-1 fw-bold">Cleaning</label>
-        </div>
-
-        <!-- <div class="d-flex align-items-center gap-3" > -->
-          <div class="row">
-            <div class="col-8"> 
+        <h5>{{workers.Categories}}</h5>
+          <div class="row" v-show="workers.Service_1=='Full house (120m2 ~ 170m2)'">
+            <div class="col-9"> 
           <input type="checkbox" class="form-check-input" >
-          <label for="" class="form-check-label mt-1 ms-1">Full house(120m-170m)</label>
+          <label for="" class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
            </div>
-           <div class="col-4">
-          <label class> price :400LE</label>
+           <div class="col-3">
+          <label class>Price: {{workers.Service_1_price }}LE </label>
            </div>
           </div>
-          <!-- </div> -->
-      
-
-
-        <div class="row">
+    
+        <div class="row" v-show="workers.Service_2=='Full house (170m2 ~ 240m2)'">
             <div class="col-8"> 
           <input type="checkbox" class="form-check-input" >
-          <label for="" class="form-check-label mt-1 ms-1">Full house(170m-240m)</label>
+          <label for="" class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_2 }}</label>
            </div>
            <div class="col-4">
-          <label class=""> price :600LE</label>
+          <label class="">Price: {{workers.Service_2_price }}LE</label>
            </div>
           </div>
       
-          <div class="row">
+          <div class="row" v-show="workers.Service_3 || workers.Service_1 =='Deep clean(Kitchen&Bathroom)'">
             <div class="col-8"> 
           <input type="checkbox" class="form-check-input" >
-          <label for="" class="form-check-label mt-1 ms-1">Deep clean(bathroom+kitchen)</label>
+          <label for="" class="form-check-label mt-1 ms-1 fw-bold" >{{ workers.Service_3 || workers.Service_1 }}</label>
             </div>
            <div class="col-4">
-          <label> price :300LE</label>
+          <label> Price: {{workers.Service_3_price || workers.Service_1_price}}LE</label>
            </div>
           </div>
   
-        <div class="d-flex align-items-center gap-3" >
-          <div class="row">
+        <div class="d-flex align-items-center gap-3 fw-bold" >
+          <div class="row" v-show="workers.Service_2 =='Furniture cleaning'">
             <div class="col-4"> 
           <input type="checkbox" class="form-check-input" >
-          <label class="form-check-label mt-1 ms-1">Deap clean furniture</label>
+          <label class="form-check-label mt-1 ms-1 fw-bold">{{workers.Service_2}}</label>
            </div>
-
            <div class="col-4">
-             <label class="ms-4"> 50LE per piece</label>
+             <label class="ms-4">{{workers.Service_2_price }}LE per piece</label>
            </div>
            <div class=" col-4">
              <label> no of pieces</label>
              <input type="text" class="no ms-1">
            </div>
-         
           </div>
         </div>
       
-
-        <div class="row mt-3">
+        <div class="row mt-3" v-show="workers.Service_1 =='Gardening'">
           <div class="col-4">
             <input type="checkbox" class="form-check-input" >
-            <label class="form-check-label mt-1 ms-1 fw-bold">Gardening</label>
+            <label class="form-check-label mt-1 ms-1 fw-bold">{{workers.Service_1}}</label>
           </div>
           <div class="col-4">
-            <label class="ms-4">30LE per meter</label>
+            <label class="ms-4">{{workers.Service_1_price }}LE per meter</label>
           </div>
           <div class=" col-4">
-             <label> no of meter</label>
+             <label> no of meters</label>
              <input type="text" class="no ms-2">
            </div>
           </div>
       </div>
       </div>
-    </li><hr/>
+    </li>
 
     <li>
-      <div class="dropdown-item">
-        <h5>Caring Services</h5>
-          <div class="row mt-1">
+      <div class="dropdown-item" v-show="workers.Categories=='Caring services'">
+        <h5>{{ workers.Categories }}</h5>
+          <div class="row mt-1" v-show="workers.Service_1=='Babysitting' || 'Elderly care' || 'Home Nursing'">
           <div class="col-4">
             <input type="checkbox" class="form-check-input" >
-            <label class="form-check-label mt-1 ms-1 fw-bold">House nursing</label>
+            <label class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
           </div>
           <div class="col-4">
-            <label class="ms-4">30LE per hour</label>
+            <label class="ms-4">{{ workers.Service_1_price }}LE per hour</label>
+          </div>
+          <div class=" col-4">
+             <label> no of hours</label>
+             <input type="text" class="no ms-2">
+           </div>
+        </div>
+      </div>
+      </li> 
+
+      <!-- <li>
+      <div class="dropdown-item" v-show="workers.Categories=='Food services'">
+        <h5>{{ workers.Categories }}</h5>
+          <div class="row mt-1" v-show="workers.Service_1=='Babysitting'">
+          <div class="col-4">
+            <input type="checkbox" class="form-check-input" >
+            <label class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
+          </div>
+          <div class="col-4">
+            <label class="ms-4">{{ workers.Service_1_price }}LE per hour</label>
           </div>
           <div class=" col-4">
              <label> no of hours</label>
@@ -115,13 +123,13 @@
            </div>
         </div>
 
-        <div class="row mt-1">
+        <div class="row mt-1" v-show="workers.Service_1=='Elderly care'">
           <div class="col-4">
             <input type="checkbox" class="form-check-input" >
-            <label class="form-check-label mt-1 ms-1 fw-bold">Baby sitting</label>
+            <label class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
           </div>
           <div class="col-4">
-            <label class="ms-4">30LE per hour</label>
+            <label class="ms-4">{{ workers.Service_1_price }}LE per hour</label>
           </div>
           <div class=" col-4">
              <label> no of hours</label>
@@ -129,13 +137,13 @@
            </div> 
         </div>
 
-        <div class="row mt-1">
+        <div class="row mt-1" v-show="workers.Service_1=='Home Nursing'">
           <div class="col-4">
             <input type="checkbox" class="form-check-input" >
-            <label class="form-check-label mt-1 ms-1 fw-bold">Elderly Care</label>
+            <label class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
           </div>
           <div class="col-4">
-            <label class="ms-4">30LE per hour</label>
+            <label class="ms-4">{{ workers.Service_1_price }}LE per hour</label>
           </div>
           <div class=" col-4">
              <label> no of hours</label>
@@ -143,56 +151,55 @@
            </div>
         </div>
       </div>
-    </li> <hr/>
+      <hr/></li>  -->
 
     <li>
-      <div class="dropdown-item">
-        <h5>House Maintenance</h5>
-        <div class="row mt-1">
-          <div class="col-4">
+      <div class="dropdown-item" v-show="workers.Categories=='House maintenance'">
+        <h5>{{ workers.Categories }}</h5>
+        <div class="row mt-1" v-show="workers.Service_1=='Plumbing' || 'Carpentry' || 'Moving Furniture'">
+          <div class="col-6">
             <input type="checkbox" class="form-check-input" >
-            <label class="form-check-label mt-1 ms-1 fw-bold">Plumping</label>
+            <label class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
           </div>
-          <div class="col-4">
-            <label class="ms-4">100 per preview</label>
-          </div>
-        </div>
-
-        <div class="row mt-1">
-          <div class="col-4">
-            <input type="checkbox" class="form-check-input" >
-            <label class="form-check-label mt-1 ms-1 fw-bold">Carpentry</label>
-          </div>
-          <div class="col-4">
-            <label class="ms-4">100 per preview</label>
-          </div>
-        </div>
-
-        <div class="row mt-1">
-          <div class="col-4">
-            <input type="checkbox" class="form-check-input" >
-            <label class="form-check-label mt-1 ms-1 fw-bold">Moving Furniture</label>
-          </div>
-          <div class="col-4">
-            <label class="ms-4">100 per preview</label>
+          <div class="col-6">
+            <label class="ms-4">{{ workers.Service_1_price }}LE per preview</label>
           </div>
         </div>
       </div>
-    </li><hr/>
+    </li>
+
+    <li>
+      <div class="dropdown-item" v-show="workers.Categories=='Facilities'">
+        <h5>{{ workers.Categories }}</h5>
+        <div class="row mt-1" v-show="workers.Service_1=='House Guard' || 'Driver'">
+          <div class="col-3">
+            <input type="checkbox" class="form-check-input" >
+            <label class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
+          </div>
+          <div class="col-4">
+            <label class="ms-4">{{ workers.Service_1_price }}LE per hour</label>
+          </div>
+          <div class=" col-5">
+             <label> no of hours</label>
+             <input type="text" class="no ms-2">
+           </div>
+        </div>
+      </div>
+    </li>
   </ul>
 </div>
 </div>
 
 <div class="row">
   <p class="mb-0 mt-3">For how many days would you like to book the service?</p>
-  <div class="col-lg-3 mt-0"><input type="radio" name="bookingDays" value="singleDay" class="me-1">Single day</div>
+  <div class="col-lg-3 mt-0"><input type="radio" name="bookingDays" value="singleDay" class="me-1" v-model="single">Single day</div>
 </div>
    
 
 <div class="form-row row">
             <div class="form-group col-md-6 mb-2">
               <label for="dateFrom" class="mx-2 fw-light dateLable">choose date</label>
-              <input type="Date" class="form-control" >
+              <input type="Date" class="form-control">
             </div>
             <div class="form-group col-md-6 tS1">
               <select name="timeSlot" class="form-control">
@@ -216,7 +223,7 @@
             </div>
             <div class="form-group col-md-6 mb-sm-3 mb-md-0">
               <label for="dateTo" class="mx-2 fw-light dateLable">to</label>
-              <input type="Date" class="form-control" id="dateTo" >
+              <input type="Date" class="form-control" id="dateTo" v-model="date" >
             </div>
       </div>
 
@@ -260,7 +267,7 @@
          
           <div class="form-row row mb-2">
             <div class="form-group col-lg-2 col-md-3">
-              <input type="radio" value="home" name="address" class="mx-1">Home
+              <input type="radio" value="home" name="address" class="mx-1" >Home
             </div>
             <div class="form-group col-lg-3 col-md-3 col-md-5">
               <input type="radio" value="home" name="address" class="mx-1">Another place
@@ -350,6 +357,7 @@
 <script>
 import NavBarPages from '@/components/NavBarPages.vue';
 import FooterComponent from '../components/footer.vue';
+import axios from 'axios';
 
   export default {
   name: 'BookingPage',
@@ -357,6 +365,33 @@ import FooterComponent from '../components/footer.vue';
       NavBarPages ,
       FooterComponent
   },
+
+  data(){
+    return{
+      workers:[],
+    }
+  },
+
+  created(){
+                this.getAllWorkers();
+                // this.inputDisabled();
+           },    
+
+   methods:{
+    getAllWorkers(){
+                this.id = this.$route.params.id
+                axios.get(`http://localhost:2000/worker/${this.id}`)
+                .then(res=>this.workers = res.data)
+                .catch(err=>console.log(err))
+                },
+
+                // inputDisabled(){
+                //   if(this.$refs.single.checked== true){
+                //     this.date.validated=0
+                //   }
+                // }
+
+   }
 }
 
 </script>
