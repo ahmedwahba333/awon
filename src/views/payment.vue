@@ -9,7 +9,7 @@
                     <div class="col-12">
                         <div class="d-flex flex-column">
                             <p class="text">Person Name yo</p>
-                            <input class="form-control" type="text" placeholder="Name" value="" v-model="fullName">
+                            <input class="form-control" type="text" placeholder="Name" v-model="fullName">
                             <span class="error-feedback" v-if="v$.fullName.$error"> {{ v$.fullName.$errors[0].$message }}</span>
                         </div>
                             <div class="d-flex flex-column">
