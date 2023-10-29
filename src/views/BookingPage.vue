@@ -11,7 +11,7 @@
          <!-- Booking Details -->
     <div class="bookingDet">
       <div class="cardInner">
-      <div><p class="worckerNm mb-2">Worker Name: {{workers.First_name}} {{workers.Last_name}}</p></div>
+      <div><p class="worckerNm mb-2">Worker Name: {{ result }}  {{ checkInput }}  {{ noOfPieces }} {{ noOfMeters }} {{ noOfhours }} {{workers.First_name}} {{workers.Last_name}}</p></div>
       <form>
 
 <div class="form-group row">
@@ -26,7 +26,7 @@
         <h5>{{workers.Categories}}</h5>
           <div class="row" v-show="workers.Service_1=='Full house (120m2 ~ 170m2)'">
             <div class="col-8"> 
-          <input type="checkbox" class="form-check-input" >
+          <input type="checkbox" class="form-check-input" :value="workers.Service_1_price" v-model="checkInput">
           <label for="" class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
            </div>
            <div class="col-4">
@@ -36,7 +36,7 @@
     
         <div class="row" v-show="workers.Service_2=='Full house (170m2 ~ 240m2)'">
             <div class="col-8"> 
-          <input type="checkbox" class="form-check-input" >
+          <input type="checkbox" class="form-check-input" :value="workers.Service_2_price" v-model="checkInput">
           <label for="" class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_2 }}</label>
            </div>
            <div class="col-4">
@@ -46,7 +46,7 @@
       
           <div class="row" v-show="workers.Service_3 || workers.Service_1 =='Deep clean(Kitchen&Bathroom)'">
             <div class="col-8"> 
-          <input type="checkbox" class="form-check-input" >
+          <input type="checkbox" class="form-check-input" :value="workers.Service_3_price || workers.Service_1_price" v-model="checkInput">
           <label for="" class="form-check-label mt-1 ms-1 fw-bold" >{{ workers.Service_3 || workers.Service_1 }}</label>
             </div>
            <div class="col-4">
@@ -57,7 +57,7 @@
         <div class="d-flex align-items-center gap-3 fw-bold" >
           <div class="row" v-show="workers.Service_2 =='Furniture cleaning'">
             <div class="col-4"> 
-          <input type="checkbox" class="form-check-input" >
+          <input type="checkbox" class="form-check-input" :value="workers.Service_2_price" v-model="checkInput1">
           <label class="form-check-label mt-1 ms-1 fw-bold">{{workers.Service_2}}</label>
            </div>
            <div class="col-4">
@@ -65,14 +65,14 @@
            </div>
            <div class=" col-4">
              <label> no of pieces</label>
-             <input type="text" class="no ms-1">
+             <input type="text" class="no ms-1" v-model="noOfPieces">
            </div>
           </div>
         </div>
       
         <div class="row mt-3" v-show="workers.Service_1 =='Gardening'">
           <div class="col-4">
-            <input type="checkbox" class="form-check-input" >
+            <input type="checkbox" class="form-check-input" :value="workers.Service_1_price" v-model="checkInput2">
             <label class="form-check-label mt-1 ms-1 fw-bold">{{workers.Service_1}}</label>
           </div>
           <div class="col-4">
@@ -80,7 +80,8 @@
           </div>
           <div class=" col-4">
              <label> no of meters</label>
-             <input type="text" class="no ms-2">
+             <input type="text" class="no ms-2" v-model="noOfMeters">
+             <input type="text" class="no ms-2" v-model="totalPrice">
            </div>
           </div>
       </div>
@@ -92,7 +93,7 @@
         <h5>{{ workers.Categories }}</h5>
           <div class="row mt-1" v-show="workers.Service_1=='Babysitting' || 'Elderly care' || 'Home Nursing'">
           <div class="col-4">
-            <input type="checkbox" class="form-check-input" >
+            <input type="checkbox" class="form-check-input" :value="workers.Service_1_price" v-model="checkInput3">
             <label class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
           </div>
           <div class="col-4">
@@ -100,7 +101,7 @@
           </div>
           <div class=" col-4">
              <label> no of hours</label>
-             <input type="text" class="no ms-2">
+             <input type="text" class="no ms-2" v-model="noOfhours">
            </div>
         </div>
       </div>
@@ -158,7 +159,7 @@
         <h5>{{ workers.Categories }}</h5>
         <div class="row mt-1" v-show="workers.Service_1=='Plumbing' || 'Carpentry' || 'Moving Furniture'">
           <div class="col-6">
-            <input type="checkbox" class="form-check-input" >
+            <input type="checkbox" class="form-check-input" :value="workers.Service_1_price" v-model="checkInput">
             <label class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
           </div>
           <div class="col-6">
@@ -173,7 +174,7 @@
         <h5>{{ workers.Categories }}</h5>
         <div class="row mt-1" v-show="workers.Service_1=='House Guard' || 'Driver'">
           <div class="col-3">
-            <input type="checkbox" class="form-check-input" >
+            <input type="checkbox" class="form-check-input" :value="workers.Service_1_price" v-model="checkInput3">
             <label class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
           </div>
           <div class="col-4">
@@ -181,7 +182,7 @@
           </div>
           <div class=" col-5">
              <label> no of hours</label>
-             <input type="text" class="no ms-2">
+             <input type="text" class="no ms-2" v-model="noOfhours">
            </div>
         </div>
       </div>
@@ -192,17 +193,17 @@
 
 <div class="row">
   <p class="mb-0 mt-3">For how many days would you like to book the service?</p>
-  <div class="col-lg-3 mt-0"><input type="radio" name="bookingDays" value="singleDay" class="me-1" v-model="single" ref="hh">Single day</div>
+  <div class="col-lg-3 mt-0"><input type="radio" name="bookingDays" value="singleDay" class="me-1" v-model="select">Single day</div>
 </div>
    
 
 <div class="form-row row">
             <div class="form-group col-md-6 mb-2">
               <label for="dateFrom" class="mx-2 fw-light dateLable">choose date</label>
-              <input type="Date" class="form-control">
+              <input type="Date" class="form-control" :disabled="select==='multibleDays'">
             </div>
             <div class="form-group col-md-6 tS1">
-              <select name="timeSlot" class="form-control">
+              <select name="timeSlot" class="form-control" :disabled="select==='multibleDays'">
                   <option selected>choose time slot</option>
                   <option value="9-12">9-12Am</option>
                   <option value="9-3">12-3pm</option>
@@ -213,23 +214,23 @@
           </div>
 
       <div class="row">
-          <div class="col-lg-4 col-md-6 mt-3"><input type="radio" name="bookingDays" value="multibleDays" class="me-1">more then one day</div>
+          <div class="col-lg-4 col-md-6 mt-3"><input type="radio" name="bookingDays" value="multibleDays" class="me-1" v-model="select">more then one day</div>
       </div>
 
       <div class="form-row row">
             <div class="form-group col-md-6">
               <label for="dateFrom" class="mx-2 fw-light dateLable">from</label>
-              <input type="Date" class="form-control" id="dateFrom"  >
+              <input type="Date" class="form-control" id="dateFrom" :disabled="select==='singleDay'">
             </div>
             <div class="form-group col-md-6 mb-sm-3 mb-md-0">
               <label for="dateTo" class="mx-2 fw-light dateLable">to</label>
-              <input type="Date" class="form-control" id="dateTo" v-model="date" >
+              <input type="Date" class="form-control" id="dateTo" :disabled="select==='singleDay'">
             </div>
       </div>
 
       <div class="form-row row mt-3">
           <div class="form-group col-md-6">
-              <select name="timeSlot" class="form-control">   
+              <select name="timeSlot" class="form-control" :disabled="select==='singleDay'">   
                   <option selected>choose time slot</option>
                   <option value="9-12">9-12Am</option>
                   <option value="9-3">12-3pm</option>
@@ -255,11 +256,11 @@
           <div class="form-row row">
             <div class="form-group col-md-6">
               <label for="inputEmail4">First Name</label>
-              <input type="text" class="form-control" id="inputEmail4" >
+              <input type="text" class="form-control" id="inputEmail4" v-model="cxInfo.First_name" >
             </div>
             <div class="form-group col-md-6">
               <label for="inputPassword4">Last Name</label>
-              <input type="text" class="form-control" id="inputPassword4" >
+              <input type="text" class="form-control" id="inputPassword4" v-model="cxInfo.Last_name">
             </div>
           </div>
          
@@ -267,20 +268,24 @@
          
           <div class="form-row row mb-2">
             <div class="form-group col-lg-2 col-md-3">
-              <input type="radio" value="home" name="address" class="mx-1" v-model="selected">Home
+              <input type="radio" value="home" name="address" class="mx-1" v-model="selectedLoc">Home
             </div>
             <div class="form-group col-lg-3 col-md-3 col-md-5">
-              <input type="radio" value="anotherPlace" name="address" class="mx-1">Another place
+              <input type="radio" value="anotherPlace" name="address" class="mx-1" v-model="selectedLoc">Another place
             </div>
           </div>
          
           <div class="form-group">
-            <label for="inputAddress">National ID</label>
-            <input type="text" class="form-control" id="inputAddress" >
+            <label for="FrontID">Front National ID</label>
+            <input type="text" class="form-control" id="FrontID" v-model="cxInfo.FrontNational_id">
           </div>
           <div class="form-group">
-            <label for="inputGovernate">Governate</label>
-            <select name="timeSlot" class="form-control">
+            <label for="BackID">Back National ID</label>
+            <input type="text" class="form-control" id="BackID" v-model="cxInfo.BackNational_id">
+          </div>
+          <div class="form-group">
+            <label for="inputGovernate">Governorate</label>
+            <select name="governorate" class="form-control" id="inputGovernate" v-model="cxInfo.Governorate">
                   <option value="select">Select</option>
                   <option value="Alexandria">Alexandria</option>
                   <option value="Aswan">Aswan</option>
@@ -312,34 +317,34 @@
           </div>
           <div class="form-group">
             <label for="inputCity">City</label>
-            <input type="text" class="form-control" id="inputCity" placeholder="">
+            <input type="text" class="form-control" id="inputCity" v-model="cxInfo.City">
           </div>
           <div class="form-group">
             <label for="inputCity">Address</label>
-            <input type="text" class="form-control" id="inputAdress" placeholder="">
+            <input type="text" class="form-control" id="inputAdress" v-model="cxInfo.Address">
           </div>
           <div class="form-row row">
             <div class="form-group col-md-4">
               <label for="inputBuilding">Building no.</label>
-              <input type="text" class="form-control" id="inputBuilding">
+              <input type="text" class="form-control" id="inputBuilding" v-model="cxInfo.Building_no">
             </div>
             <div class="form-group col-md-4">
               <label for="inputFloor">Floor no.</label>
-              <input type="text" class="form-control" id="inputFloor">
+              <input type="text" class="form-control" id="inputFloor" v-model="cxInfo.Floor_no">
             </div>
             <div class="form-group col-md-4">
               <label for="inputFlat">Flat no.</label>
-              <input type="text" class="form-control" id="inputFlat">
+              <input type="text" class="form-control" id="inputFlat" v-model="cxInfo.Flat_no">
             </div>
             </div>
             <div class="form-row row">
             <div class="form-group col-md-6">
               <label for="inputMobile1">Mobile 1</label>
-              <input type="email" class="form-control" id="inputMobile1" >
+              <input type="text" class="form-control" id="inputMobile1" v-model="cxInfo.Phone_no">
             </div>
             <div class="form-group col-md-6">
               <label for="inputMobile2">Mobile 2</label>
-              <input type="password" class="form-control" id="inputMobile2" >
+              <input type="text" class="form-control" id="inputMobile2" v-model="cxInfo.Phone_no_2">
             </div>
           </div>
 
@@ -354,10 +359,17 @@
 </div>
 </template>
 
+
+  
+
+
+
+
 <script>
 import NavBarPages from '@/components/NavBarPages.vue';
 import FooterComponent from '../components/footer.vue';
 import axios from 'axios';
+
 
   export default {
   name: 'BookingPage',
@@ -368,8 +380,20 @@ import axios from 'axios';
 
   data(){
     return{
-      workers:[],
-      selected:'',
+      checkInput:[] ,
+      checkInput1:'' ,
+      checkInput2:'',
+      checkInput3:'',
+          result: 0,
+          workers:[],
+          cx:[],
+          order:[],
+          selectedLoc:'',
+          select:'' ,
+          totalPrice:'',
+          noOfPieces:'',
+          noOfMeters:'',
+          noOfhours:'',
       cxInfo:{
               First_name:'',
               Last_name:'',
@@ -383,46 +407,109 @@ import axios from 'axios';
               Building_no:'',
               Phone_no:'',
               Phone_no_2:'',
-
-      }
-    }
-  },
+            }
+        }
+      },
 
   watch: {
-    selected(newValue) {
-      if (newValue === 'home') {
-        this.doSomething();
+    selectedLoc(value) {
+      if (value === 'home') {
+        this.getCXInfo();
+      }
+      else if (value==='anotherPlace') {
+      this.cxInfo={
+              First_name:'',
+              Last_name:'',
+              FrontNational_id:'',
+              BackNational_id:'',
+              Governorate:'',
+              City:'',
+              Address:'',
+              Floor_no:'',
+              Flat_no:'',
+              Building_no:'',
+              Phone_no:'',
+              Phone_no_2:'',
+         }
+      }
+    },
+
+    select(val){
+      if (val==='singleDay'){
+        this.sum();
       }
     }
   },
 
   created(){
      this.getAllWorkers();
+     this.getCx();
+     this.getOrder();
+    //  this.CalcTotalPrice();
            },    
 
    methods:{
-    getAllWorkers(){
+              getAllWorkers(){
                 this.id = this.$route.params.id
                 axios.get(`http://localhost:2000/worker/${this.id}`)
                 .then(res=>this.workers = res.data)
                 .catch(err=>console.log(err))
                 },
 
-                // inputDisabled(){
-                //   // if(this.$refs.single.validate){
-                //   //   console.log('jjjj')
-                // //   // }
-                // //   if(this.selected) {
-                // // alert('isSelected');
-                // //      }
+              getCx(){
+                this.id = this.$route.params.id
+                axios.get(`http://localhost:2000/cx/${this.id}`)
+                .then(res=>this.cx=res.data)
+                .catch(err=>console.log(err))
+                },
+
+              getOrder()  {
+                axios.get("http://localhost:2000/order")
+                .then(res=>this.order=res.data)
+                .catch(err=>console.log(err))
+                },
+
+                getCXInfo(){
+                console.log('home is selected');
+                this.cxInfo.First_name=this.cx.First_name
+                this.cxInfo.Last_name=this.cx.Last_name
+                this.cxInfo.FrontNational_id=this.cx.FrontNational_id
+                this.cxInfo.BackNational_id=this.cx.BackNational_id
+                this.cxInfo.Governorate=this.cx.Governorate
+                this.cxInfo.Address=this.cx.Address
+                this.cxInfo.City=this.cx.City
+                this.cxInfo.Building_no=this.cx.Building_no
+                this.cxInfo.Flat_no=this.cx.Flat_no
+                this.cxInfo.Floor_no=this.cx.Floor_no
+                this.cxInfo.Phone_no=this.cx.Phone_no
+                this.cxInfo.Phone_no_2=this.cx.Phone_no_2
+                },
+
+                sum() {
+          this.result = parseInt(this.checkInput[0]) + parseInt(this.checkInput[1]) + parseInt(this.checkInput[2])
+                        +parseInt(this.checkInput1)* this.noOfPieces 
+                        +parseInt(this.checkInput2)* this.noOfMeters
+                        +parseInt(this.checkInput3)* this.noOfhours
+                  
+                      
+
+          // console.log(this.checkInput[1])
+          // console.log(this.checkInput[0])
+                }
+
+                // CalcTotalPrice(){
+                //   this.checkInput.totalPrice=this.checkInput.Service_1_price;
+                //   console.log(this.checkInput.totalPrice)
                 // }
+        },
 
-                doSomething() {
-                   console.log('Option 1 is selected');
-               }
+        // mounted:{
+        //   totalPrice =checkInput.Service_1_price+checkInput.Service_2_price
+        // }
 
-   }
-}
+  
+     
+         }
 
 </script>
 
