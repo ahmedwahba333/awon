@@ -22,7 +22,7 @@
     
             <!-- Search Filter -->
             <div class="row searchCard pt-3 pb-3">
-                <p class="subtitle mx-4"> Search using:</p>
+                <p class="subtitle mx-4 col-sm-10"> Search using:</p>
     
                 <div class="col-lg-3 col-md-4 col-sm-5">
                     <p class="searchKey">Order ID</p>
@@ -58,13 +58,11 @@
             </div>
     
             <!-- Services Table -->
-    
-    
-    
+
             <div class="row grid servicesTable mt-4 text-center" id="table-wrapper">
                 
                 <div class="col-12 mt-3 overflow-auto" id="table-scroll">
-                    <table class="table mb-2" style="color:$blueColor; --bs-table-color:$blueColor;" id="">
+                    <table class="table mb-2" style="color:$blueColor; --bs-table-color:$blueColor;">
                            <thead>
                              <tr>
                                <th scope="col">Order ID</th>
@@ -76,7 +74,7 @@
                              </tr>
                            </thead>
                            <tbody>
-                            <tr v-for="order in  handleSearch" :key="order.id">
+                            <tr v-for="order in  handleSearch" :key="order.id" v-show="order.Agency_id==agency.id">
                               <td>{{order.id}}</td>
                               <td>{{order.Order_Details}}</td>
                               <td>{{order.Order_Date}}</td>
@@ -107,6 +105,7 @@
         data(){
             return{
                   orders:[],
+                  agency:[],
                   orderID:'',
                   cxID:'',
                   orderDate:'',
@@ -117,6 +116,7 @@
 
             created(){
                 this.getAllOrders();
+                this.getAllAgencies();
             },
 
             methods:{
@@ -125,6 +125,13 @@
                     .then ((res)=> this.orders=res.data)
                     .catch (err=> console.log (err))
                 },
+
+                getAllAgencies(){
+                   this.id = this.$route.params.id
+                   axios.get(`http://localhost:2000/agency/${this.id}`)
+                   .then(res=>this.agency= res.data)
+                   .catch(err=>console.log(err))
+                    },
             },
 
             computed:{
@@ -166,7 +173,6 @@
     .title{
         font-size: $title;
         font-weight: bold;
-    
     }
     
     .subtitle{
@@ -207,7 +213,7 @@
     };
     
     
-    @media (min-width:991px) {
+    @media (min-width:992px) {
         .search{
             width: 500px;
         }
@@ -217,7 +223,7 @@
         }  
     }
     
-    @media (max-width: 990.999px) {
+    @media (max-width: 991.999px) {
     
         .searchKey{
             padding-left: 30px;
@@ -258,7 +264,10 @@
     }
     
     .search{
-        width:350px
+        width:300px;
+    }
+    .subtitle{
+        padding-left:none !important;
     }
 
     thead{
@@ -291,10 +300,9 @@
     
     }
     #table-scroll {
-      height:350px;
+    //   height:350px;
       overflow:auto;  
       margin-top:20px;
-      
     }
     #table-wrapper table {
       width:100%;
@@ -317,7 +325,7 @@
       height: 66px;
     }
     
-      /* Handle on hover */
+    //   /* Handle on hover */
       ::-webkit-scrollbar-thumb:hover {
       background: $orangeColor; 
     }

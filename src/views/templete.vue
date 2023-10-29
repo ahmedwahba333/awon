@@ -10,7 +10,7 @@
 import NavBarPages from "@/components/NavBarPages.vue";
 import FooterComponent from "@/components/footer.vue";
 export default {
-  name: " ",
+  name: "",
   components: {
     FooterComponent,
     NavBarPages,

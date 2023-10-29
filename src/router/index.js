@@ -23,7 +23,11 @@ import HousenursingView from "../views/HousenursingView.vue";
 import ChefsView from "../views/ChefsView.vue";
 import FoodcateringView from "../views/FoodcateringView.vue";
 import SADashHome from "../views/SADashHome.vue"
-import AllWorkerFromCX from "../views/AllWorkerFromCX.vue"
+import AllWorkerFromCX from "../views/AllWorkerFromCX.vue";
+import SACatigory from "@/views/SACatigory.vue";
+import SAServiceCategories from "@/views/SAServiceCategories.vue";
+import AddCatigory from "@/views/AddCatigory.vue";
+import AddServiceSA from "@/views/AddServiceSA.vue"
 // >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
 
 import ServiceHistoryAgency from "../views/ServiceHistoryAgency.vue";
@@ -128,9 +132,9 @@ const routes = [
     component: ServicesView,
   },
   {
-    path:  "/workerprofileDash",
-    name:  "WorkerPageDashboard",
-    component:  WorkerPageDashboard,
+    path: "/workerpageDash/:id",
+    name: "WorkerPageDashboard",
+    component: WorkerPageDashboard,
   },
   {
     path: "/payment",
@@ -158,7 +162,7 @@ const routes = [
     component: aboutus,
   },
   {
-    path: "/Agencies",
+    path: "/allAgencies",
     name: "allAgencies",
     component: allAgencies,
   },
@@ -173,12 +177,12 @@ const routes = [
     component: ServiceHistorySA
   },
   {
-    path: "/booking",
+    path: "/booking/:id",
     name: "BookingPage",
     component: BookingPage
   },
   {
-    path: "/ServiceHistoryAgency",
+    path: "/ServiceHistoryAgency/:id",
     name: "ServiceHistoryAgency",
     component: ServiceHistoryAgency
   },
@@ -232,6 +236,26 @@ const routes = [
     name: "AddAgency",
     component: AddAgency
   },
+  {
+    path:"/SACatigory",
+    name:"SACatigory",
+    component: SACatigory
+  },
+  {
+    path:"/SAServiceCategories",
+    name:"SAServiceCategories",
+    component: SAServiceCategories
+  },
+  {
+    path:"/AddCatigory",
+    name:"AddCatigory",
+    component: AddCatigory
+  },
+  {
+    path:"/AddServiceSA",
+    name:"AddServiceSA",
+    component: AddServiceSA
+  }
 ];
 
 const router = createRouter({
