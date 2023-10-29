@@ -2,7 +2,7 @@
   <div class="bg">
     <NavBarSADash />
     <div class="container">
-      <form action="" class="form-control">
+      <form @submit.prevent="addWorker" class="form-control">
         <h2 class="headline">Add Worker</h2>
 
         <div>
@@ -19,7 +19,7 @@
             <div class="col-lg-6 col-md-6 col-sm-12">
               <label for="">Last name</label>
               <input
-                type="email"
+                type="text"
                 class="form-control w-100 rounded-5"
                 placeholder="Last name"
                 aria-label="Last name"
@@ -39,7 +39,7 @@
             <div class="col-lg-6 col-md-6 col-sm-12">
               <label for="">Phone</label>
               <input
-                type="email"
+                type="text"
                 class="form-control w-100 rounded-5"
                 placeholder="Phone"
                 aria-label="Phone"
@@ -47,19 +47,37 @@
             </div>
           </div>
           <div class="row mb-4">
-            <div class="col-lg-6 col-md-6 col-sm-12">
-              <label>Gender</label>
-              <input
-                type="text"
-                class="form-control w-100 rounded-5"
-                placeholder="Gender"
-                aria-label="Gender"
-              />
+              <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                <label for="">Gender</label>
+              <div class="dropdown ">
+                <button
+                  class="servicesDrop w-100 rounded-5 dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Select Gender
+                </button>
+                <ul class="dropdown-menu ">
+                  <li v-for="singleGender in genders" :key="singleGender">
+                    <div class="dropdown-item">
+                      <div>
+                        <div class="row">
+                          <div class="col-8">
+                            <input type="checkbox" class="form-check-input"  v-model="gender" v-bind:value="singleGender.code" />
+                            <label for="" class="form-check-label mt-1 ms-1">{{singleGender.description}}</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
               <label for="">Years of exp.</label>
               <input
-                type="email"
+                type="text"
                 class="form-control w-100 rounded-5"
                 placeholder="Years of exp."
                 aria-label="Years of exp."
@@ -111,6 +129,7 @@
         </div>
 
       <div class="row">
+        
         <div class="form-group mb-4 col-lg-6 col-md-6 col-sm-12">
               <div class="dropdown ">
                 <button
@@ -194,7 +213,20 @@ export default {
   data() {
     return {
        categories:[],
-       services:[]
+       services:[],
+       inpVal: '',
+      inpValSubmitted: 'Not submitted yet',
+      gender: "M",
+        genders: [
+          {
+            code: "F",
+            description: "Female"
+          }, 
+          {
+            code: "M",
+            description: "Male"
+          }
+        ]
     }
   },
   created(){
@@ -213,6 +245,11 @@ export default {
       .then((res)=> {this.services = res.data})
       .catch((err)=>{console.log(err)})
     },
+    addWorker() {
+      if(this.inpVal) {
+        this.inpValSubmitted = this.inpVal;
+      }
+    }
   }
 };
 </script>
@@ -241,6 +278,7 @@ button {
   @include button;
   margin:0;
   padding: 0;
+  
 }
 .headline {
   margin-top: 20px;
@@ -253,6 +291,7 @@ button {
   color: $blueColor;
   border: solid 1px $backgroundColor;
   // border-radius: 10px;
+  border: 1px solid black;
 }
 
 .dropdown-menu {
