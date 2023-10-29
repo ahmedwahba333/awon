@@ -153,8 +153,8 @@
               <h5>{{ category['Name']}}</h5>
               <div class="d-flex align-items-center gap-3">
                 <div v-for="(service,id) in services" :key="id">
-                  <input type="checkbox" class="form-check-input" />
-                  <label for="" class="form-check-label mt-1 ms-1"  v-if="category['id']==service.Category_id" 
+                  <input type="checkbox" class="form-check-input" v-if="category['id']==service['Category_id']" />
+                  <label for="" class="form-check-label mt-1 ms-1"  v-if="category['id']==service['Category_id']"  
                     >{{service['Name']}}</label
                   >
                 </div>
