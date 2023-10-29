@@ -17,7 +17,7 @@
               d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
             />
           </svg>
-          <li class="breadcrumb-item" aria-current="page">Agencies</li>
+          <!-- <li class="breadcrumb-item" aria-current="page">Agencies</li>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
@@ -28,7 +28,7 @@
             <path
               d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
             />
-          </svg>
+          </svg> -->
           <li class="breadcrumb-item" aria-current="page">Agency Profile</li>
         </ol>
       </div>
@@ -43,21 +43,20 @@
           />
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-6">
-          <p class="searchKey">Name</p>
-          <p class="servent">Home care</p>
-          <p class="searchKey">Email&Phone</p>
-          <p class="servent">a******76@gmail.com</p>
-          <p class="servent">+20 1121998968</p>
+        <div class="a-pro col-lg-3 col-md-3 col-sm-5">
+          <div class="a-title">Name</div>
+          <div class="a-data"> {{ agency.Agency_Name }} </div>
+          <div class="a-title">Email</div>
+          <div class="a-data">{{ agency.Agency_Email }}</div>
+          <div class="a-title">Phone no.</div>
+          <div class="a-data">{{ agency.Agency_Phone_no }}</div>
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-6">
-          <p class="searchKey">Location</p>
-          <p class="servent">
-            3 street sayed algarhe haram al giza, Giza, GZ 12512 - Egypt
-          </p>
-          <p class="searchKey">Time Zone</p>
-          <p class="servent">UTC+03:00 cairo</p>
+        <div class="a-pro col-lg-3 col-md-3 col-sm-5">
+          <div class="a-title">Location</div>
+          <div class="a-data">3 street sayed algarhe haram al giza, Giza, GZ 12512 - Egypt</div>
+          <div class="a-title">Rating</div>
+          <div class="a-data">UTC+03:00 cairo</div>
         </div>
       </div>
 
@@ -234,12 +233,34 @@
 
 <script>
 import NavBarSADashVue from '@/components/NavBarSADash.vue';
+import StarRating from 'vue-star-rating';
+import axios from 'axios';
+
 export default {
-  name: "SAAgencyProfile",
+  name: "AdminAgencyProfile",
+  data() {
+    return {
+      agency: [],
+    }
+  },
+  created() {
+      this.agencyInfo();
+    },
   components: {
     NavBarSADashVue,
+    StarRating,
   },
-};
+  
+    methods: {
+      agencyInfo() {
+        this.id = this.$route.params.id
+        axios.get(`http://localhost:2000/agency/1`)
+          .then(res => this.agency = res.data)
+          .catch(err => console.log(err))
+      }
+    }
+  }
+
 </script>
 
 <style lang="scss" scoped>
@@ -256,7 +277,19 @@ img {
   clip-path: circle();
   height: 200px;
 }
-
+.a-title{
+  font-weight: bold;
+  font-size: $paragraph;
+  color: $blueColor;
+}
+.a-data{
+  font-size: $paragraph;
+  color: $blueColor;
+  font-weight: $regular;
+}
+.a-pro{
+  margin: 2%;
+}
 .btn {
   @include button;
 }
@@ -418,4 +451,3 @@ tbody {
 }
 </style>
 
-<style></style>
