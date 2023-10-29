@@ -22,7 +22,7 @@
 
         <!-- Search Filter -->
         <div class="row searchCard pt-3 pb-3">
-            <p class="subtitle mx-4"> Search using:</p>
+            <p class="subtitle mx-4 col-sm-10"> Search using:</p>
 
             <div class="col-lg-3 col-md-4 col-sm-5">
                 <p class="searchKey">Order ID</p>
@@ -206,7 +206,7 @@ input.search {
 };
 
 
-@media (min-width:991px) {
+@media (min-width:992px) {
     .search{
         width: 500px;
     }
@@ -216,7 +216,7 @@ input.search {
     }  
 }
 
-@media (max-width: 990.999px) {
+@media (max-width: 991.999px) {
 
     .searchKey{
         padding-left: 30px;
@@ -289,9 +289,9 @@ display: block;
 
 }
 #table-scroll {
-  height:350px;
+  height:375px;
   overflow:auto;  
-  margin-top:20px;
+  margin-top:20px !important;
   
 }
 #table-wrapper table {
@@ -334,8 +334,7 @@ tbody{
     font-size: $paragraph;
 }
 
-
-
- 
-
+th{
+    width:200px
+}
 </style>
