@@ -247,7 +247,7 @@
 
 <script>
 import NavBarSADashVue from '@/components/NavBarSADash.vue';
-import StarRating from 'vue-star-rating';
+// import StarRating from 'vue-star-rating';
 import axios from 'axios';
 
 export default {
@@ -264,7 +264,7 @@ export default {
     },
   components: {
     NavBarSADashVue,
-    StarRating,
+    // StarRating,
   },
   
     methods: {
