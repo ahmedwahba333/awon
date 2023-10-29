@@ -129,9 +129,9 @@ const routes = [
     component: ServicesView,
   },
   {
-    path:  "/workerprofileDash",
-    name:  "WorkerPageDashboard",
-    component:  WorkerPageDashboard,
+    path: "/workerpageDash/:id",
+    name: "WorkerPageDashboard",
+    component: WorkerPageDashboard,
   },
   {
     path: "/payment",
@@ -174,12 +174,12 @@ const routes = [
     component: ServiceHistorySA
   },
   {
-    path: "/booking",
+    path: "/booking/:id",
     name: "BookingPage",
     component: BookingPage
   },
   {
-    path: "/ServiceHistoryAgency",
+    path: "/ServiceHistoryAgency/:id",
     name: "ServiceHistoryAgency",
     component: ServiceHistoryAgency
   },
