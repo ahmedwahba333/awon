@@ -262,12 +262,22 @@ export default {
         },
       ],
       v$: useVuelidate(),
-      firstName: "",
-      lastName: "",
-      phone: "",
-      address: "",
+      First_name: "",
+      Last_name: "",
+      Phone: "",
+      Address: "",
       frontId: "",
       backId: "",
+
+      formValues: {
+        First_name: "",
+        Last_name: "",
+        Phone:"",
+        Address: "",
+        frontId: "",
+        backId: "",
+
+      },
     };
   },
   validations() {
