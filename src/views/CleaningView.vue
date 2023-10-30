@@ -91,7 +91,7 @@
             <label class="box-title" for="cb3">Deep clean furniture</label>
             <label class="box-close" for="acc-close"></label>
             <div class="box-content d-flex flex-wrap">
-              <div class="col-4">
+              <div class="col-12">
                 <p>
                   Cleaning your furniture pieces like: chairs. sofas, curtains
                   and carpets.
@@ -115,9 +115,9 @@
     <div class="row justify-content-center gap-4">
       <div
         class="card mb-4 col-md-4 col-sm-6 col-6"
-        v-for="(worker, i) in workerData"
+        v-for="(worker, i) in workerData.slice(20,21,30,31,40,41)"
         :key="i"
-        style="width: 25rem;"
+        style="width: 25rem; border-radius: 15px;"
       >
         <img
           :src="`${worker.img}`"
@@ -130,16 +130,23 @@
             {{ worker["First_name"] }} {{ worker["Last_name"] }}
           </h5>
           <p class="card-text">
-            Full house (120m2 ~ 170m2):
-            {{ worker["Full house (120m2 ~ 170m2)"] }}
+            {{ worker["Service_1"] }}:
+            {{ worker["Service_1_price"] }}
           </p>
           <p class="card-text">
-            Full house (170m2 ~ 240m2):
-            {{ worker["Full house (170m2 ~ 240m2)"] }}
+            {{ worker["Service_2"] }}:
+            {{ worker["Service_2_price"] }}
           </p>
           <p class="card-text">
-            Deep clean(Kitchen&Bathroom):
-            {{ worker["Deep clean(Kitchen&Bathroom)"] }}
+            {{ worker["Service_3"] }}:
+            {{ worker["Service_3_price"] }}
+          </p>
+          <p class="card-text">
+            {{ worker["Service_4"] }}
+            {{ worker["Service_4_price"] }}
+          </p>
+          <p class="card-text">Exp years:
+            {{ worker["Experience"] }}
           </p>
           <!-- <star-rating active-color="#F97B22"  star-size=30 :rating="`${rev.Rate}`"></star-rating> -->
           <router-link to="workerProfile">
@@ -284,6 +291,7 @@ input.search {
   font-weight: bold;
   text-align: center;
   color: $blueColor;
+  padding: 20px;
 }
 
 .accordion {
@@ -315,7 +323,7 @@ input.search {
 }
 .box-title {
   font-weight: $semiBold;
-  font-size: $small;
+  font-size: $subTitle;
   color: $blueColor;
   width: calc(100% - 30px);
   height: 64px;
@@ -331,18 +339,18 @@ input.search {
   user-select: none;
 
   @media (min-width: 767px) {
-    font-size: 20px;
+    // font-size: 20px;
   }
 }
 .box-content {
   width: calc(100% - 40px);
-  padding: 30px 20px;
-  font-size: $small;
-  font-weight: $semiBold;
+  padding: 10px 5px;
+  font-size: $paragraph;
+  font-weight: $regular;
   color: $blueColor;
   display: none;
   @media (min-width: 767px) {
-    font-size: 20px;
+    // font-size: 20px;
   }
 }
 .box-close {
@@ -431,7 +439,7 @@ img {
 }
 
 // .card{
-//   width: 270px;
+//   border-radius: 25px;
 // }
 .card-title {
   text-align: center;
