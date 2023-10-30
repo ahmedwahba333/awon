@@ -5994,7 +5994,8 @@
       "Agency_City": "Dayton",
       "Agency_Governorate": "Ohio",
       "Agency_Phone_no": 2001091356771,
-      "Agency_Phone_no2": 2001153414603
+      "Agency_Phone_no2": 2001153414603,
+      "owner_Password": 123456789
     },
     {
       "id": 2,
@@ -6016,7 +6017,8 @@
       "Agency_City": "Lake Charles",
       "Agency_Governorate": "Louisiana",
       "Agency_Phone_no": 2001197376192,
-      "Agency_Phone_no2": 2001187932946
+      "Agency_Phone_no2": 2001187932946,
+      "owner_Password": 123456789
     },
     {
       "id": 3,
@@ -6038,7 +6040,8 @@
       "Agency_City": "Boston",
       "Agency_Governorate": "Massachusetts",
       "Agency_Phone_no": 2001087209789,
-      "Agency_Phone_no2": 2001111849832
+      "Agency_Phone_no2": 2001111849832,
+      "owner_Password": 123456789
     },
     {
       "id": 4,
@@ -6060,7 +6063,8 @@
       "Agency_City": "Pittsburgh",
       "Agency_Governorate": "Pennsylvania",
       "Agency_Phone_no": 2001007856940,
-      "Agency_Phone_no2": 2001038260469
+      "Agency_Phone_no2": 2001038260469,
+      "owner_Password": 123456789
     },
     {
       "id": 5,
@@ -6082,7 +6086,8 @@
       "Agency_City": "Bronx",
       "Agency_Governorate": "New York",
       "Agency_Phone_no": 2001058850742,
-      "Agency_Phone_no2": 2001016359710
+      "Agency_Phone_no2": 2001016359710,
+      "owner_Password": 123456789
     },
     {
       "id": 6,
@@ -6104,7 +6109,8 @@
       "Agency_City": "Young America",
       "Agency_Governorate": "Minnesota",
       "Agency_Phone_no": 2001103974561,
-      "Agency_Phone_no2": 2001149852528
+      "Agency_Phone_no2": 2001149852528,
+      "owner_Password": 123456789
     },
     {
       "id": 7,
@@ -6126,7 +6132,8 @@
       "Agency_City": "Philadelphia",
       "Agency_Governorate": "Pennsylvania",
       "Agency_Phone_no": 2001114148876,
-      "Agency_Phone_no2": 2001085137810
+      "Agency_Phone_no2": 2001085137810,
+      "owner_Password": 123456789
     },
     {
       "id": 8,
@@ -6148,7 +6155,8 @@
       "Agency_City": "Dayton",
       "Agency_Governorate": "Ohio",
       "Agency_Phone_no": 2001169349832,
-      "Agency_Phone_no2": 2001117323812
+      "Agency_Phone_no2": 2001117323812,
+      "owner_Password": 123456789
     },
     {
       "id": 9,
@@ -6170,7 +6178,8 @@
       "Agency_City": "Grand Rapids",
       "Agency_Governorate": "Michigan",
       "Agency_Phone_no": 2001177727430,
-      "Agency_Phone_no2": 2001004397775
+      "Agency_Phone_no2": 2001004397775,
+      "owner_Password": 123456789
     },
     {
       "id": 10,
@@ -6192,7 +6201,8 @@
       "Agency_City": "Charlotte",
       "Agency_Governorate": "North Carolina",
       "Agency_Phone_no": 2001145572753,
-      "Agency_Phone_no2": 2001212581116
+      "Agency_Phone_no2": 2001212581116,
+      "owner_Password": 123456789
     },
     {
       "id": 11,
@@ -6214,7 +6224,8 @@
       "Agency_City": "Detroit",
       "Agency_Governorate": "Michigan",
       "Agency_Phone_no": 2001199649291,
-      "Agency_Phone_no2": 2001041960709
+      "Agency_Phone_no2": 2001041960709,
+      "owner_Password": 123456789
     },
     {
       "id": 12,
@@ -6236,7 +6247,8 @@
       "Agency_City": "Minneapolis",
       "Agency_Governorate": "Minnesota",
       "Agency_Phone_no": 2001032294677,
-      "Agency_Phone_no2": 2001003942292
+      "Agency_Phone_no2": 2001003942292,
+      "owner_Password": 123456789
     },
     {
       "id": 13,
@@ -6258,7 +6270,8 @@
       "Agency_City": "Dallas",
       "Agency_Governorate": "Texas",
       "Agency_Phone_no": 2001194561300,
-      "Agency_Phone_no2": 2001087681039
+      "Agency_Phone_no2": 2001087681039,
+      "owner_Password": 123456789
     },
     {
       "id": 14,
@@ -6280,7 +6293,8 @@
       "Agency_City": "Irvine",
       "Agency_Governorate": "California",
       "Agency_Phone_no": 2001098011676,
-      "Agency_Phone_no2": 2001151684305
+      "Agency_Phone_no2": 2001151684305,
+      "owner_Password": 123456789
     },
     {
       "id": 15,
@@ -6302,7 +6316,8 @@
       "Agency_City": "Corona",
       "Agency_Governorate": "California",
       "Agency_Phone_no": 2001023768131,
-      "Agency_Phone_no2": 2001069435752
+      "Agency_Phone_no2": 2001069435752,
+      "owner_Password": 123456789
     },
     {
       "id": 16,
@@ -6324,7 +6339,8 @@
       "Agency_City": "Orlando",
       "Agency_Governorate": "Florida",
       "Agency_Phone_no": 2001170466645,
-      "Agency_Phone_no2": 2001092792546
+      "Agency_Phone_no2": 2001092792546,
+      "owner_Password": 123456789
     },
     {
       "id": 17,
@@ -6346,7 +6362,8 @@
       "Agency_City": "Kansas City",
       "Agency_Governorate": "Missouri",
       "Agency_Phone_no": 2001213404816,
-      "Agency_Phone_no2": 2001080016925
+      "Agency_Phone_no2": 2001080016925,
+      "owner_Password": 123456789
     },
     {
       "id": 18,
@@ -6368,7 +6385,8 @@
       "Agency_City": "Charlotte",
       "Agency_Governorate": "North Carolina",
       "Agency_Phone_no": 2001219120556,
-      "Agency_Phone_no2": 2001174788052
+      "Agency_Phone_no2": 2001174788052,
+      "owner_Password": 123456789
     },
     {
       "id": 19,
@@ -6390,7 +6408,8 @@
       "Agency_City": "El Paso",
       "Agency_Governorate": "Texas",
       "Agency_Phone_no": 2001165970858,
-      "Agency_Phone_no2": 2001106910972
+      "Agency_Phone_no2": 2001106910972,
+      "owner_Password": 123456789
     },
     {
       "id": 20,
@@ -6412,7 +6431,36 @@
       "Agency_City": "Houston",
       "Agency_Governorate": "Texas",
       "Agency_Phone_no": 2001146312455,
-      "Agency_Phone_no2": 2001114449826
+      "Agency_Phone_no2": 2001114449826,
+      "owner_Password": 123456789
+    },
+    {
+      "Agency_Name": "bokbok",
+      "Agency_Email": "bokbok@gmail.com",
+      "Agency_Phone_no": "2001116002720",
+      "Agency_Phone_no2": "2001005646474",
+      "Agency_PostCode": "1234",
+      "Agency_Governorate": "Alexandria",
+      "Agency_City": "elshaitbi",
+      "Agency_Address": "156 elshatbi street",
+      "Logo": "https://drive.google.com/uc?export=view&id=1OEN3rYghNYMCs_177UDFuleZg7oGQr2S",
+      "trade_register_card": "https://drive.google.com/uc?export=view&id=1A_AEhnzFIYU3bLdzywNYJ6l3hdiTDf0H",
+      "Owner_First_name": "ahmed",
+      "Owner_last_name": "mostafa",
+      "Email": "ahmed@gmail.com",
+      "Owner_Phone_no": "2001116665544",
+      "Owner_DOB": "1997-11-04",
+      "Owner_front_nid": "https://s20532.pcdn.co/files/azdriverlicense-travel-id-800x502.jpg",
+      "Owner_back_nid": "https://png.pngtree.com/png-clipart/20221006/original/pngtree-corporate-id-card-design-template-png-image_8659790.png",
+      "owner_Password": "123456789",
+      "id": 21
+    }
+  ],
+  "super_admin": [
+    {
+      "email": "ahmed@gmail.com",
+      "Password": "12345678",
+      "id": 1
     }
   ],
   "comments": [
