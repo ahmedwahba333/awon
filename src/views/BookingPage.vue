@@ -381,10 +381,10 @@ import axios from 'axios';
   data(){
     return{
       checkInput:[] ,
-      checkInput1:'' ,
-      checkInput2:'',
-      checkInput3:'',
-          result: 0,
+      checkInput1:[] ,
+      checkInput2:[],
+      checkInput3:[],
+          result:0,
           workers:[],
           cx:[],
           order:[],
@@ -443,7 +443,7 @@ import axios from 'axios';
 
   created(){
      this.getAllWorkers();
-     this.getCx();
+    //  this.getCx();
      this.getOrder();
     //  this.CalcTotalPrice();
            },    
@@ -456,12 +456,12 @@ import axios from 'axios';
                 .catch(err=>console.log(err))
                 },
 
-              getCx(){
-                this.id = this.$route.params.id
-                axios.get(`http://localhost:2000/cx/${this.id}`)
-                .then(res=>this.cx=res.data)
-                .catch(err=>console.log(err))
-                },
+              // getCx(){
+              //   this.id = this.$route.params.id
+              //   axios.get(`http://localhost:2000/cx/${this.id}`)
+              //   .then(res=>this.cx=res.data)
+              //   .catch(err=>console.log(err))
+              //   },
 
               getOrder()  {
                 axios.get("http://localhost:2000/order")
@@ -486,15 +486,26 @@ import axios from 'axios';
                 },
 
                 sum() {
-          this.result = parseInt(this.checkInput[0]) + parseInt(this.checkInput[1]) + parseInt(this.checkInput[2])
-                        +parseInt(this.checkInput1)* this.noOfPieces 
-                        +parseInt(this.checkInput2)* this.noOfMeters
-                        +parseInt(this.checkInput3)* this.noOfhours
+          this.result = (parseInt(this.checkInput[0]) + parseInt(this.checkInput[1]) + parseInt(this.checkInput[2])) ||
+                         (parseInt(this.checkInput[0]) + parseInt(this.checkInput[1])) || (parseInt(this.checkInput1)*this.noOfPieces + parseInt(this.checkInput[0])) ||
+                         (parseInt(this.checkInput[0]) + parseInt(this.checkInput[2])) ||
+                         (parseInt(this.checkInput[1]) + parseInt(this.checkInput[2])) ||
+                         (parseInt(this.checkInput[0])) || (parseInt(this.checkInput[1])) || (parseInt(this.checkInput[2])) ||
+                         (parseInt(this.checkInput1)*this.noOfPieces) || (parseInt(this.checkInput2)*this.noOfMeters) || 
+                         (parseInt(this.checkInput3)*this.noOfhours);
+
+                        
                   
                       
 
-          // console.log(this.checkInput[1])
-          // console.log(this.checkInput[0])
+          console.log(this.checkInput[1])
+          console.log(this.checkInput3[0])
+          console.log(this.checkInput[0])
+          console.log(this.checkInput[2])
+          console.log(this.checkInput[2])
+
+          console.log(this.result)
+          
                 }
 
                 // CalcTotalPrice(){
