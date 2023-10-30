@@ -15,7 +15,7 @@
       "Service_3_price": 322,
       "Service_4_price": null,
       "Address": "PO Box 72442",
-      "Experience": 6,
+      "..": 6,
       "Rate": 3,
       "Reviews": "I’ve been using Aown services for the past few months. It’s excellent!",
       "Area": "Tangqian",
@@ -5588,8 +5588,8 @@
   "category": [
     {
       "id": 1,
-      "Name": "Housekeeping",
-      "Details": "Your home is your sanctuary, a place where you can relax and recharge. it can be tough to find the time to keep your home as clean and tidy as you'd like with busy schedules. That's where housekeeping services come in, so you can focus on what's important to you.",
+      "Name": "House keeping",
+      "Details": "Your home is your sanctuary, a place where you can relax and recharge. it can be tough to find the time to keep your home as clean and tidy as you'd like with busy schedules. That's where house keeping services come in, so you can focus on what's important to you.",
       "img": "https://i.postimg.cc/CKssHd5L/cleaning.jpg"
     },
     {
@@ -5621,15 +5621,15 @@
     {
       "Category_id": 1,
       "id": 1,
-      "Name": "Cleaning ",
-      "Details": "cleaning your furniture pieces like: chairs. sofas, curtains and carpets.\nVacuum the pieces thoroughly and wash them.\nremove cushion and outer covers, and vacuum them separately.\nSpot clean any stains.\niron pieces if needed ",
+      "Name": "Cleaning",
+      "Details": "cleaning your furniture pieces like: chairs. sofas, curtains and carpets.\nVacuum the pieces thoroughly and wash them.\nremove cushion and outer covers, and vacuum them separately.\nSpot clean any stains.\niron pieces if needed",
       "img": "https://i.postimg.cc/hjHcRHDm/cleaning.jpg"
     },
     {
       "Category_id": 1,
       "id": 2,
-      "Name": "Gardening ",
-      "Details": "Monitoring the health of all plants and greenscapes, watering and feeding plants, trimming trees and shrubs, fertilizing and mowing lawns, Weeding gardens and keeping green spaces and walkways clear of debris and litter. ",
+      "Name": "Gardening",
+      "Details": "Monitoring the health of all plants and greenscapes, watering and feeding plants, trimming trees and shrubs, fertilizing and mowing lawns, Weeding gardens and keeping green spaces and walkways clear of debris and litter.",
       "img": "https://i.postimg.cc/XY7MmVfh/gardening.jpg"
     },
     {
@@ -5642,14 +5642,14 @@
     {
       "Category_id": 2,
       "id": 4,
-      "Name": "Elderly care ",
-      "Details": "Old age is a sensitive phase; elderly people need care and comfort to lead a healthy life without worries and anxiety. We intend to help older people live as comfortably and independently as possible.      ",
+      "Name": "Elderly care",
+      "Details": "Old age is a sensitive phase; elderly people need care and comfort to lead a healthy life without worries and anxiety. We intend to help older people live as comfortably and independently as possible.     ",
       "img": "https://i.postimg.cc/N0kHMk9L/elderly-care.jpg"
     },
     {
       "Category_id": 2,
       "id": 5,
-      "Name": "Home Nursing ",
+      "Name": "Home Nursing",
       "Details": "We allows a person with special needs to stay in their home. It might be for people who are getting older. It could also be for people who are chronically ill, recovering from surgery, or have a disability.",
       "img": "https://i.postimg.cc/qqhq8sRs/house-nursing.jpg"
     },
@@ -5692,14 +5692,14 @@
       "Category_id": 5,
       "id": 11,
       "Name": "House Guard",
-      "Details": "We responsible for protecting you from any kind of robbery or assault on your house ",
+      "Details": "We responsible for protecting you from any kind of robbery or assault on your house",
       "img": "https://i.postimg.cc/TwLNS3Zq/House-guard.jpg"
     },
     {
       "Category_id": 3,
       "id": 12,
       "Name": "Chefs",
-      "Details": "Studying recipes, setting up menus and preparing high-quality dishes. Personal chef are responsible for preparing specialized meals for you. ",
+      "Details": "Studying recipes, setting up menus and preparing high-quality dishes. Personal chef are responsible for preparing specialized meals for you.",
       "img": "https://i.postimg.cc/gcgWgfKN/chefs.jpg"
     }
   ],

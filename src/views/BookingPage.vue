@@ -9,225 +9,200 @@
                     
               
          <!-- Booking Details -->
-    <div class="bookingDet">
+    <div class="bookingDet" >
       <div class="cardInner">
-      <div><p class="worckerNm mb-2">Worker Name: Mohamed Ali</p></div>
+      <div><p class="worckerNm mb-2">Worker Name: {{ workers.First_name }} {{workers.Last_name}}</p></div>
       <form>
 
 <div class="form-group row">
 <div class="dropdown">
   <button class="servicesDrop dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-   Select Services
+   Select Service
   </button>
   <ul class="dropdown-menu">
-    <li>
+    <li v-show="workers.Categories=='House Keeping'">
       <div class="dropdown-item">
         <div>
-        <h5>House Keeping</h5>
-        <div class="row"> 
-          <label class="form-check-label mt-1 ms-1 fw-bold">Cleaning</label>
-        </div>
-
-        <!-- <div class="d-flex align-items-center gap-3" > -->
-          <div class="row">
+        <h5>{{workers.Categories}}</h5>
+          <div class="row" v-show="workers.Service_1=='Full house (120m2 ~ 170m2)'">
             <div class="col-8"> 
-          <input type="checkbox" class="form-check-input" >
-          <label for="" class="form-check-label mt-1 ms-1">Full house(120m-170m)</label>
+          <input type="checkbox" class="form-check-input" :value="workers.Service_1_price" v-model="checkInput">
+          <label for="" class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
            </div>
            <div class="col-4">
-          <label class> price :400LE</label>
+          <label class>Price: {{workers.Service_1_price }}LE </label>
            </div>
           </div>
-          <!-- </div> -->
-      
-
-
-        <div class="row">
+    
+        <div class="row" v-show="workers.Service_2=='Full house (170m2 ~ 240m2)'">
             <div class="col-8"> 
-          <input type="checkbox" class="form-check-input" >
-          <label for="" class="form-check-label mt-1 ms-1">Full house(170m-240m)</label>
+          <input type="checkbox" class="form-check-input" :value="workers.Service_2_price" v-model="checkInput">
+          <label for="" class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_2 }}</label>
            </div>
            <div class="col-4">
-          <label class=""> price :600LE</label>
+          <label class="">Price: {{workers.Service_2_price }}LE</label>
            </div>
           </div>
       
-          <div class="row">
+          <div class="row" v-show="workers.Service_3 || workers.Service_1 =='Deep clean(Kitchen&Bathroom)'">
             <div class="col-8"> 
-          <input type="checkbox" class="form-check-input" >
-          <label for="" class="form-check-label mt-1 ms-1">Deep clean(bathroom+kitchen)</label>
+          <input type="checkbox" class="form-check-input" :value="workers.Service_3_price || workers.Service_1_price" v-model="checkInput">
+          <label for="" class="form-check-label mt-1 ms-1 fw-bold" >{{ workers.Service_3 || workers.Service_1 }}</label>
             </div>
            <div class="col-4">
-          <label> price :300LE</label>
+          <label> Price: {{workers.Service_3_price || workers.Service_1_price}}LE</label>
            </div>
           </div>
   
-        <div class="d-flex align-items-center gap-3" >
-          <div class="row">
+        <div class="d-flex align-items-center gap-3 fw-bold" >
+          <div class="row" v-show="workers.Service_2 =='Furniture cleaning'">
             <div class="col-4"> 
-          <input type="checkbox" class="form-check-input" >
-          <label class="form-check-label mt-1 ms-1">Deap clean furniture</label>
+          <input type="checkbox" class="form-check-input" :value="workers.Service_2_price" v-model="checkInput1">
+          <label class="form-check-label mt-1 ms-1 fw-bold">{{workers.Service_2}}</label>
            </div>
-
            <div class="col-4">
-             <label class="ms-4"> 50LE per piece</label>
+             <label class="ms-4">{{workers.Service_2_price }}LE per piece</label>
            </div>
            <div class=" col-4">
              <label> no of pieces</label>
-             <input type="text" class="no ms-1">
+             <input type="text" class="no ms-1" v-model="noOfPieces">
            </div>
-         
           </div>
         </div>
       
-
-        <div class="row mt-3">
+        <div class="row mt-3" v-show="workers.Service_1 =='Gardening'">
           <div class="col-4">
-            <input type="checkbox" class="form-check-input" >
-            <label class="form-check-label mt-1 ms-1 fw-bold">Gardening</label>
+            <input type="checkbox" class="form-check-input" :value="workers.Service_1_price" v-model="checkInput2">
+            <label class="form-check-label mt-1 ms-1 fw-bold">{{workers.Service_1}}</label>
           </div>
           <div class="col-4">
-            <label class="ms-4">30LE per meter</label>
+            <label class="ms-4">{{workers.Service_1_price }}LE per meter</label>
           </div>
           <div class=" col-4">
-             <label> no of meter</label>
-             <input type="text" class="no ms-2">
+             <label> no of meters</label>
+             <input type="text" class="no ms-2" v-model="noOfMeters">
            </div>
           </div>
       </div>
       </div>
-    </li><hr/>
+    </li>
 
     <li>
-      <div class="dropdown-item">
-        <h5>Caring Services</h5>
+      <div class="dropdown-item" v-show="workers.Categories=='Caring services'">
+        <h5>{{ workers.Categories }}</h5>
+          <div class="row mt-1" v-show="workers.Service_1=='Babysitting' || 'Elderly care' || 'Home Nursing'">
+          <div class="col-4">
+            <input type="checkbox" class="form-check-input" :value="workers.Service_1_price" v-model="checkInput3">
+            <label class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
+          </div>
+          <div class="col-4">
+            <label class="ms-4">{{ workers.Service_1_price }}LE per hour</label>
+          </div>
+          <div class=" col-4">
+             <label> no of hours</label>
+             <input type="text" class="no ms-2" v-model="noOfhours">
+           </div>
+        </div>
+      </div>
+      </li> 
+
+      <li>
+      <div class="dropdown-item" v-show="workers.Categories=='Food services'">
+        <h5>{{ workers.Categories }}</h5>
           <div class="row mt-1">
-          <div class="col-4">
-            <input type="checkbox" class="form-check-input" >
-            <label class="form-check-label mt-1 ms-1 fw-bold">House nursing</label>
+          <div class="col-7">
+            <input type="checkbox" class="form-check-input" :value="workers.Service_1_price" v-model="checkInput4">
+            <label class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
           </div>
-          <div class="col-4">
-            <label class="ms-4">30LE per hour</label>
+          <div class="col-5">
+            <label class="ms-4">Price: {{ workers.Service_1_price }}</label>
           </div>
-          <div class=" col-4">
-             <label> no of hours</label>
-             <input type="text" class="no ms-2">
-           </div>
         </div>
-
-        <div class="row mt-1">
-          <div class="col-4">
-            <input type="checkbox" class="form-check-input" >
-            <label class="form-check-label mt-1 ms-1 fw-bold">Baby sitting</label>
+        <div class="row">
+          <div class="col-7">
+            <input type="checkbox" class="form-check-input" :value="workers.Service_2_price" v-model="checkInput5">
+            <label class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_2 }}</label>
           </div>
-          <div class="col-4">
-            <label class="ms-4">30LE per hour</label>
+          <div class="col-5">
+            <label class="ms-4">Price: {{ workers.Service_2_price }}</label>
           </div>
-          <div class=" col-4">
-             <label> no of hours</label>
-             <input type="text" class="no ms-2">
-           </div> 
-        </div>
-
-        <div class="row mt-1">
-          <div class="col-4">
-            <input type="checkbox" class="form-check-input" >
-            <label class="form-check-label mt-1 ms-1 fw-bold">Elderly Care</label>
-          </div>
-          <div class="col-4">
-            <label class="ms-4">30LE per hour</label>
-          </div>
-          <div class=" col-4">
-             <label> no of hours</label>
-             <input type="text" class="no ms-2">
-           </div>
         </div>
       </div>
-    </li> <hr/>
+      </li> 
 
     <li>
-      <div class="dropdown-item">
-        <h5>House Maintenance</h5>
-        <div class="row mt-1">
-          <div class="col-4">
-            <input type="checkbox" class="form-check-input" >
-            <label class="form-check-label mt-1 ms-1 fw-bold">Plumping</label>
+      <div class="dropdown-item" v-show="workers.Categories=='House maintenance'">
+        <h5>{{ workers.Categories }}</h5>
+        <div class="row mt-1" v-show="workers.Service_1=='Plumbing' || 'Carpentry' || 'Moving Furniture'">
+          <div class="col-6">
+            <input type="checkbox" class="form-check-input" :value="workers.Service_1_price" v-model="checkInput">
+            <label class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
           </div>
-          <div class="col-4">
-            <label class="ms-4">100 per preview</label>
-          </div>
-        </div>
-
-        <div class="row mt-1">
-          <div class="col-4">
-            <input type="checkbox" class="form-check-input" >
-            <label class="form-check-label mt-1 ms-1 fw-bold">Carpentry</label>
-          </div>
-          <div class="col-4">
-            <label class="ms-4">100 per preview</label>
-          </div>
-        </div>
-
-        <div class="row mt-1">
-          <div class="col-4">
-            <input type="checkbox" class="form-check-input" >
-            <label class="form-check-label mt-1 ms-1 fw-bold">Moving Furniture</label>
-          </div>
-          <div class="col-4">
-            <label class="ms-4">100 per preview</label>
+          <div class="col-6">
+            <label class="ms-4">{{ workers.Service_1_price }}LE per preview</label>
           </div>
         </div>
       </div>
-    </li><hr/>
+    </li>
+
+    <li>
+      <div class="dropdown-item" v-show="workers.Categories=='Facilities'">
+        <h5>{{ workers.Categories }}</h5>
+        <div class="row mt-1" v-show="workers.Service_1=='House Guard' || 'Driver'">
+          <div class="col-3">
+            <input type="checkbox" class="form-check-input" :value="workers.Service_1_price" v-model="checkInput3">
+            <label class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
+          </div>
+          <div class="col-4">
+            <label class="ms-4">{{ workers.Service_1_price }}LE per hour</label>
+          </div>
+          <div class=" col-5">
+             <label> no of hours</label>
+             <input type="text" class="no ms-2" v-model="noOfhours">
+           </div>
+        </div>
+      </div>
+    </li>
   </ul>
 </div>
 </div>
 
 <div class="row">
   <p class="mb-0 mt-3">For how many days would you like to book the service?</p>
-  <div class="col-lg-3 mt-0"><input type="radio" name="bookingDays" value="singleDay" class="me-1">Single day</div>
+  <div class="col-lg-3 mt-0"><input type="radio" name="bookingDays" value="singleDay" class="me-1" v-model="selectedDays">Single day</div>
 </div>
    
 
 <div class="form-row row">
             <div class="form-group col-md-6 mb-2">
               <label for="dateFrom" class="mx-2 fw-light dateLable">choose date</label>
-              <input type="Date" class="form-control" >
-            </div>
-            <div class="form-group col-md-6 tS1">
-              <select name="timeSlot" class="form-control">
-                  <option selected>choose time slot</option>
-                  <option value="9-12">9-12Am</option>
-                  <option value="9-3">12-3pm</option>
-                  <option value="3-6">3-6pm</option>
-                  <option value="6-9">6-9pm</option>
-              </select>
+              <input type="Date" class="form-control" :disabled="selectedDays==='multibleDays'" v-model="newOrderDet.multDateTo">
             </div>
           </div>
 
       <div class="row">
-          <div class="col-lg-4 col-md-6 mt-3"><input type="radio" name="bookingDays" value="multibleDays" class="me-1">more then one day</div>
+          <div class="col-lg-4 col-md-6 mt-3"><input type="radio" name="bookingDays" value="multibleDays" class="me-1" v-model="selectedDays">more then one day</div>
       </div>
 
       <div class="form-row row">
             <div class="form-group col-md-6">
               <label for="dateFrom" class="mx-2 fw-light dateLable">from</label>
-              <input type="Date" class="form-control" id="dateFrom"  >
+              <input type="Date" class="form-control" id="dateFrom" :disabled="selectedDays==='singleDay'" v-model="newOrderDet.multDateFrom">
             </div>
             <div class="form-group col-md-6 mb-sm-3 mb-md-0">
               <label for="dateTo" class="mx-2 fw-light dateLable">to</label>
-              <input type="Date" class="form-control" id="dateTo" >
+              <input type="Date" class="form-control" id="dateTo" :disabled="selectedDays==='singleDay'"  v-model="newOrderDet.multDateTo">
             </div>
       </div>
 
       <div class="form-row row mt-3">
           <div class="form-group col-md-6">
-              <select name="timeSlot" class="form-control">   
-                  <option selected>choose time slot</option>
-                  <option value="9-12">9-12Am</option>
-                  <option value="9-3">12-3pm</option>
-                  <option value="3-6">3-6pm</option>
-                  <option value="6-9">6-9pm</option>
+            <label for="dateFrom" class="mx-2 fw-bold dateLable"> choose time slot</label>
+              <select name="timeSlot" class="form-control"  v-model="newOrderDet.Time_Slot">   
+                  <option value="9:00 AM - 12:00 PM">9:00 AM - 12:00 PM</option>
+                  <option value="12:00 PM - 3:00 PM">12:00 PM - 3:00 PM</option>
+                  <option value="3:00 PM - 6:00 PM">3:00 PM - 6:00 PM</option>
+                  <option value="6:00 PM - 9:00 PM">6:00 PM - 9:00 PM</option>
               </select>
           </div>
       </div>
@@ -248,11 +223,11 @@
           <div class="form-row row">
             <div class="form-group col-md-6">
               <label for="inputEmail4">First Name</label>
-              <input type="text" class="form-control" id="inputEmail4" >
+              <input type="text" class="form-control" id="inputEmail4" v-model="newOrderDet.Customer_FName" >
             </div>
             <div class="form-group col-md-6">
               <label for="inputPassword4">Last Name</label>
-              <input type="text" class="form-control" id="inputPassword4" >
+              <input type="text" class="form-control" id="inputPassword4" v-model="newOrderDet.Customer_LName">
             </div>
           </div>
          
@@ -260,20 +235,24 @@
          
           <div class="form-row row mb-2">
             <div class="form-group col-lg-2 col-md-3">
-              <input type="radio" value="home" name="address" class="mx-1">Home
+              <input type="radio" value="home" name="address" class="mx-1" v-model="selectedLoc">Home
             </div>
             <div class="form-group col-lg-3 col-md-3 col-md-5">
-              <input type="radio" value="home" name="address" class="mx-1">Another place
+              <input type="radio" value="anotherPlace" name="address" class="mx-1" v-model="selectedLoc">Another place
             </div>
           </div>
          
           <div class="form-group">
-            <label for="inputAddress">National ID</label>
-            <input type="text" class="form-control" id="inputAddress">
+            <label for="FrontID">Front National ID</label>
+            <input type="text" class="form-control" id="FrontID" v-model="newOrderDet.FrontNational_id">
           </div>
           <div class="form-group">
-            <label for="inputGovernate">Governate</label>
-            <select name="timeSlot" class="form-control">
+            <label for="BackID">Back National ID</label>
+            <input type="text" class="form-control" id="BackID" v-model="newOrderDet.BackNational_id">
+          </div>
+          <div class="form-group">
+            <label for="inputGovernate">Governorate</label>
+            <select name="governorate" class="form-control" id="inputGovernate" v-model="newOrderDet.Governorate">
                   <option value="select">Select</option>
                   <option value="Alexandria">Alexandria</option>
                   <option value="Aswan">Aswan</option>
@@ -305,41 +284,41 @@
           </div>
           <div class="form-group">
             <label for="inputCity">City</label>
-            <input type="text" class="form-control" id="inputCity" placeholder="">
+            <input type="text" class="form-control" id="inputCity" v-model="newOrderDet.City">
           </div>
           <div class="form-group">
             <label for="inputCity">Address</label>
-            <input type="text" class="form-control" id="inputAdress" placeholder="">
+            <input type="text" class="form-control" id="inputAdress" v-model="newOrderDet.Order_Address">
           </div>
           <div class="form-row row">
             <div class="form-group col-md-4">
               <label for="inputBuilding">Building no.</label>
-              <input type="text" class="form-control" id="inputBuilding">
+              <input type="text" class="form-control" id="inputBuilding" v-model="newOrderDet.Building_No">
             </div>
             <div class="form-group col-md-4">
               <label for="inputFloor">Floor no.</label>
-              <input type="text" class="form-control" id="inputFloor">
+              <input type="text" class="form-control" id="inputFloor" v-model="newOrderDet.Floor_No">
             </div>
             <div class="form-group col-md-4">
               <label for="inputFlat">Flat no.</label>
-              <input type="text" class="form-control" id="inputFlat">
+              <input type="text" class="form-control" id="inputFlat" v-model="newOrderDet.Flat_No">
             </div>
             </div>
             <div class="form-row row">
             <div class="form-group col-md-6">
               <label for="inputMobile1">Mobile 1</label>
-              <input type="email" class="form-control" id="inputMobile1" >
+              <input type="text" class="form-control" id="inputMobile1" v-model="newOrderDet.Phone_Num1">
             </div>
             <div class="form-group col-md-6">
               <label for="inputMobile2">Mobile 2</label>
-              <input type="password" class="form-control" id="inputMobile2" >
+              <input type="text" class="form-control" id="inputMobile2" v-model="newOrderDet.Phone_Num2">
             </div>
           </div>
-
-          <div class="row d-flex justify-content-center mt-2">
-            <router-link class="btn next" :to="'/payment'"> Next</router-link>
-          </div>
       </form>
+      <div class="row d-flex justify-content-center mt-2">
+            <!-- <router-link class="btn next" :to="'/payment'" > Next</router-link> -->
+            <button @click="calcTotalPrice">next </button>
+          </div>
       </div>
 
 </div>
@@ -347,9 +326,17 @@
 </div>
 </template>
 
+
+  
+
+
+
+
 <script>
 import NavBarPages from '@/components/NavBarPages.vue';
 import FooterComponent from '../components/footer.vue';
+import axios from 'axios';
+
 
   export default {
   name: 'BookingPage',
@@ -357,7 +344,145 @@ import FooterComponent from '../components/footer.vue';
       NavBarPages ,
       FooterComponent
   },
+
+  data(){
+    return{
+      workers:[],
+      cx:[],
+      order:[],
+
+      dateDiff:'',
+      noOfDays:'',
+      checkInput:[] ,
+      checkInput1:[] ,
+      checkInput2:[],
+      checkInput3:[],
+      checkInput4:[],
+      checkInput5:[],
+      selectedLoc:'',
+      selectedDays:'',
+      noOfPieces:'',
+      noOfMeters:'',
+      noOfhours:'',
+
+      newOrderDet:{
+              Customer_FName:'',
+              Customer_LName:'',
+              FrontNational_id:'',
+              BackNational_id:'',
+              Governorate:'',
+              City:'',
+              Order_Address:'',
+              Floor_No:'',
+              Flat_No:'',
+              Building_No:'',
+              Phone_Num1:'',
+              Phone_Num1_2:'',
+              Time_Slot:'',
+              multDateFrom:'',
+              multDateTo:'',
+              Order_Price:0,
+            },    
+        }
+      },
+
+  watch: {
+    selectedLoc(value) {
+      if (value === 'home') {
+        this.getnewOrderDet();
+      }
+      else if (value==='anotherPlace') {
+      this.newOrderDet={
+              Customer_FName:'',
+              Customer_LName:'',
+              FrontNational_id:'',
+              BackNational_id:'',
+              Governorate:'',
+              City:'',
+              Order_Address:'',
+              Floor_No:'',
+              Flat_No:'',
+              Building_No:'',
+              Phone_Num1:'',
+              Phone_Num2:'',
+              
+         }
+      }
+    },
+},
+
+  created(){
+     this.getAllWorkers();
+     this.getCx();
+     this.getOrder();
+           },    
+
+   methods:{
+              getAllWorkers(){
+                this.id = this.$route.params.id
+                axios.get(`http://localhost:2000/worker/${this.id}`)
+                .then(res=>this.workers = res.data)
+                .catch(err=>console.log(err))
+                },
+
+              getCx(){
+                this.id = this.$route.params.id
+                axios.get(`http://localhost:2000/cx/${this.id}`)
+                .then(res=>this.cx=res.data)
+                .catch(err=>console.log(err))
+                },
+
+              getOrder()  {
+                axios.get("http://localhost:2000/order")
+                .then(res=>this.order=res.data)
+                .catch(err=>console.log(err))
+                },
+
+                getnewOrderDet(){
+                this.newOrderDet.Customer_FName=this.cx.First_name
+                this.newOrderDet.Customer_LName=this.cx.Last_name
+                this.newOrderDet.FrontNational_id=this.cx.FrontNational_id
+                this.newOrderDet.BackNational_id=this.cx.BackNational_id
+                this.newOrderDet.Governorate=this.cx.Governorate
+                this.newOrderDet.Order_Address=this.cx.Address
+                this.newOrderDet.City=this.cx.City
+                this.newOrderDet.Building_No=this.cx.Building_no
+                this.newOrderDet.Flat_No=this.cx.Flat_no
+                this.newOrderDet.Floor_No=this.cx.Floor_no
+                this.newOrderDet.Phone_Num1=this.cx.Phone_no
+                this.newOrderDet.Phone_Num2=this.cx.Phone_no_2
+                },
+
+                calcTotalPrice(){
+                  const dateTo = new Date(this.newOrderDet.multDateTo);
+                  const dateFrom = new Date(this.newOrderDet.multDateFrom);
+                  this.dateDiff =dateTo -dateFrom;
+                  this.noOfDays= Math.floor(this.dateDiff / (1000 * 60 * 60 * 24));
+
+                  const res = (parseInt(this.checkInput[0]) + parseInt(this.checkInput[1]) + parseInt(this.checkInput[2])) ||
+                    (parseInt(this.checkInput[0]) + parseInt(this.checkInput[1])) || (parseInt(this.checkInput1)*this.noOfPieces + parseInt(this.checkInput[0])) ||
+                    (parseInt(this.checkInput[0]) + parseInt(this.checkInput[2])) || 
+                    (parseInt(this.checkInput[1]) + parseInt(this.checkInput[2])) || 
+                    (parseInt(this.checkInput[0])) || (parseInt(this.checkInput[1])) || (parseInt(this.checkInput[2])) ||
+                    (parseInt(this.checkInput1)*this.noOfPieces) || (parseInt(this.checkInput2)*this.noOfMeters) || 
+                    (parseInt(this.checkInput3)*this.noOfhours)||
+                    (parseInt(this.checkInput4) + parseInt(this.checkInput5) ) || (parseInt(this.checkInput4)) || (parseInt(this.checkInput5))
+
+                    if( this.selectedDays==='multibleDays'){
+                  
+                         this.newOrderDet.Order_Price= this.noOfDays * res;
+                    }
+
+                    else if(this.selectedDays==='singleDay'){
+                            this.newOrderDet.Order_Price=res
+                    }
+
+                    console.log(this.newOrderDet)
+                      } 
+        },
+  
 }
+         
 
 </script>
 
@@ -372,7 +497,7 @@ import FooterComponent from '../components/footer.vue';
 }
 
 .title{
-  font-size: $subTitle;
+  font-size: $title;
   font-weight: $bold;
 }
 
@@ -412,7 +537,7 @@ font-size: $paragraph;
 }
 
 .worckerNm{
-  font-size: $title;
+  font-size: $subTitle;
   margin:0px 60px 0px 60px;
  
 }
@@ -431,8 +556,9 @@ margin-top: 30px;
   font-size:18px !important;
 }
 
-.next{
+button{
 @include button ;
+width: 150px;
 }
 
 
