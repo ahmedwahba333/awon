@@ -36,13 +36,12 @@
       <div class="row searchCard pt-3 pb-3">
         <p class="subtitle mx-4">Account</p>
         <div class="col-lg-5 col-md-5 col-sm-12">
-          <img
-            src="../assets/images/about-us.jpg"
-            class="card-img-top Clip-path:circle()"
-            alt=""
-          />
+          <!-- <img
+          :src="`${agency.Logo}`"
+          class="card-img-top object-fit-cover Clip-path:circle()"
+          :alt="`agencyimg${i}`"
+        /> -->
         </div>
-
         <div class="col-lg-3 col-md-3 col-sm-6">
           <p class="searchKey">Name</p>
           <p class="servent">Home care</p>
@@ -50,7 +49,6 @@
           <p class="servent">a******76@gmail.com</p>
           <p class="servent">+20 1121998968</p>
         </div>
-
         <div class="col-lg-3 col-md-3 col-sm-6">
           <p class="searchKey">Location</p>
           <p class="servent">
@@ -60,9 +58,7 @@
           <p class="servent">UTC+03:00 cairo</p>
         </div>
       </div>
-
       <!-- Services Table -->
-
       <div class="row grid servicesTable mt-4 text-center" id="table-wrapper">
         <div class="col-12 mt-3 overflow-auto" id="table-scroll">
           <table
@@ -80,38 +76,29 @@
                 <th scope="col">Worker Name</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>#128</td>
-                <td>2 Bedrooms</td>
-                <td>12/7/2023</td>
-                <td>#127566</td>
-                <td>Mark Lee</td>
-                <td>Mohsen</td>
-              </tr>
-              <tr v-for="n in 12" :key="n">
-                <td>#127</td>
-                <td>2 Bedrooms</td>
-                <td>12/7/2023</td>
-                <td>#127566</td>
-                <td>Mark Lee</td>
-                <td>Mohsen</td>
+            <tbody >
+              <tr v-for="(order,id) in Ordres" :key="id">
+                <td>{{ order[id] }}</td>
+                <td>{{ order[Order_Details] }}</td>
+                <td>{{ order[Order_Date] }}</td>
+                <td>{{ order[Customer_id] }}</td>
+                <td>{{ order[Customer_Name] }}</td>
+                <td>{{ order[Marchelle] }}</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
-
         <p class="subtitle mt-4">Agency Worker</p>
-        <div class="row justify-content-center my-5 gap-5">
-          <div class="card " style="width: 18rem">
+        <div class="row justify-content-center  gap-5">
+          <div class="card mb-4" style="width: 18rem">
             <img
-              src="../assets/subservices/gardener1.jpg"
+              src="../assets/subservices/gardener3.jpg"
               class="card-img-top Clip-path:circle()"
               alt="..."
             />
             <div class="card-body">
-              <h5 class="card-title">Mohamed Tarek</h5>
+              <h5 class="card-title">Salma Osama</h5>
               <p class="card-text">16 St. Emad Eldein - Down Town - Cairo</p>
               <svg
                 class="d-block m-auto"
@@ -139,7 +126,7 @@
                 />
                 <path
                   d="M113.846 0.0842438L116.281 7.57622L124.158 7.57622L117.785 12.2065L120.219 19.6985L113.846 15.0682L107.473 19.6985L109.908 12.2065L103.535 7.57622L111.412 7.57622L113.846 0.0842438Z"
-                  fill="#F97B22"
+                  fill="#C3C3C3"
                 />
               </svg>
               <a href="#" class="btn d-block m-auto mb-3 mt-3">Book Now</a>
@@ -233,11 +220,48 @@
 </template>
 
 <script>
+import axios from 'axios';
 import NavBarSADashVue from '@/components/NavBarSADash.vue';
 export default {
   name: "SAAgencyProfile",
   components: {
     NavBarSADashVue,
+  },
+  data() {
+    return {
+      Agencies: [],
+      Ordres: []
+    };
+  },
+  created() {
+    this.getAgency();
+  },
+  methods: {
+    getOrder(){
+      axios.get("http://localhost:2000/order")
+      .then((res)=>{
+        this.orders = res.data
+      })
+      .catch((err)=>console.log(err))
+    },
+    getAgency() {
+      axios
+        .get(`http://localhost:2000/agency/2`)
+        .then((res) => {
+          this.Agencies = res.data;
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+    deleteCat(id){
+      axios.delete(`http://localhost:2000/agency/${id}`)
+      .then((res)=>console.log(res))
+      .catch((err) => {
+          console.log(err);
+        });
+        this.getAgency()
+    }
   },
 };
 </script>
