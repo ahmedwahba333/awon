@@ -256,6 +256,9 @@
           ></canvas>
         </div>
         <div class="box sectionThreeB m-0 col-md-4 col-sm-6 col-12">
+          <div class="p-2">
+            <h4>Recent Reviews</h4>
+          </div>
           <div class="d-flex flex-row my-3">
             <div>
               <img src="../assets/images/dashhome/2.jpg" alt="Cx" />
