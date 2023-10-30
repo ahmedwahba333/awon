@@ -15,15 +15,7 @@
                 <div class="col-md-6 text-start">
                     <label class="form-label label-text" for="Phone_no">Phone Number</label>
                     <input class="form-control" type="text" v-model="userData.Phone_no" name="Phone_no" id="Phone_no"
-                        placeholder="2001116002720" v-on:input="v$.Phone_no.$touch()">
-                        <template v-if="v$.Phone_no.$error">
-                            <span class="invalid-feedback d-block"><svg xmlns="http://www.w3.org/2000/svg" width="13"
-                                    height="13" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 19 19">
-                                    <path
-                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-                                </svg> {{ v$.Phone_no.$errors[0].$message
-                                }}</span>
-                        </template>
+                        placeholder="2001116002720">
                 </div>
                 <div class="col-md-6 text-start">
                     <label class="form-label label-text" for="Gender">Gender</label>
@@ -41,14 +33,6 @@
                     <label class="form-label label-text" for="Email">Email</label>
                     <input class="form-control" type="text" v-model="userData.Email" name="Email" id="Email"
                         placeholder="example@example.com">
-                    <template v-if="v$.Email.$error">
-                        <span class="invalid-feedback d-block">{{ v$.Email.$errors[0].$message
-                        }} <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
-                                class="bi bi-x-lg" viewBox="0 0 16 16">
-                                <path
-                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-                            </svg></span>
-                    </template>
                 </div>
                 <div class="col-md-6 text-start">
                     <label class="form-label label-text" for="Password">Password</label>
@@ -79,8 +63,8 @@
                 <div class="col-md-6 text-start">
                     <label class="form-label label-text" for="Confirm-Password">Confirm Password</label>
                     <div class="d-flex align-items-center">
-                        <input class="form-control myInput" :type="inputType" v-model="confirm_pass" name="Confirm-Password"
-                            id="Confirm-Password" placeholder="#########">
+                        <input class="form-control myInput" :type="inputType" name="Confirm-Password" id="Confirm-Password"
+                            placeholder="#########">
                         <svg @click="triggerEye()" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
                             fill="currentColor" class="bi bi-eye eye-icon ms-2" viewBox="0 0 16 16" v-if="eyeFlag">
                             <path
@@ -102,8 +86,8 @@
                 </div>
                 <div class="confirm d-flex justify-content-between align-items-center">
                     <div class="form-check">
-                        <input class="form-check-input check-sec" type="checkbox" v-model="check_terms"
-                            name="owner_check_terms" id="owner_check_terms">
+                        <input class="form-check-input check-sec" type="checkbox" value="" name="owner_check_terms"
+                            id="owner_check_terms">
                         <!-- Button trigger modal -->
                         <label class="form-check-label check-sec text-decoration-underline" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
@@ -228,20 +212,13 @@
 
 <script>
 import axios from 'axios';
-import useVuelidate from '@vuelidate/core';
-import { required, email, sameAs, helpers } from '@vuelidate/validators';
-
 export default {
     name: "FormCustomerComponent",
     data() {
         return {
-            v$: useVuelidate(),
-            // phone_val: "sssssssss",
             inputType: 'password',
             eyeFlag: true,
             eyeSlashFlag: false,
-            confirm_pass: "",
-            check_terms: "",
             userData: {
                 First_name: "",
                 Last_name: "",
@@ -251,23 +228,6 @@ export default {
                 Email: "",
                 Password: "",
             }
-        }
-    },
-    validations() {
-        return {
-            // minLength: helpers.withMessage("wrong phone number", /^(2001\d{8})$/)
-            First_name: { required: helpers.withMessage("First Name is Required", required) },
-            Last_name: { required: helpers.withMessage("Last Name is Required", required) },
-            Phone_no: {
-                required: helpers.withMessage("Phone Number is required", required),
-                // regex: helpers.regex(/^(2001\d{8})$/),
-            },
-            Email: { required: helpers.withMessage("Email is Required", required), email: helpers.withMessage("Wrong Email", email) },
-            Gender: { required },
-            DOB: { required },
-            Password: { required },
-            confirm_pass: { sameAsPassword: sameAs(this.userData.Password) },
-            check_terms: { required },
         }
     },
     methods: {
@@ -284,12 +244,9 @@ export default {
         },
         // end of eye icon logic
         async signup() {
-            this.v$.$validate();
-            if (!this.v$.$error) {
-                await axios.post("http://localhost:2000/cx", this.userData);
-                localStorage.setItem("cxInfo", JSON.stringify(this.userData));
-                this.$router.push("agancydash");
-            }
+            await axios.post("http://localhost:2000/cx", this.userData);
+            localStorage.setItem("cxInfo", JSON.stringify(this.userData));
+            this.$router.push("agancydash");
         },
     }
 }
