@@ -1,5 +1,5 @@
 <template>
-  <div class="bg container-fluid">
+  <div class="bg">
     <NavBarPages />
     <div class="bar d-flex justify-content-end">
       <form class="search">
@@ -17,8 +17,7 @@
     <div class="row justify-content-center gap-4">
       <div
         class="card mb-4 col-md-4 col-sm-6 col-6"
-        v-for="(worker, i) in workerData"
-        :key="i"
+        v-for="(worker, i) in workerData.slice(81,90)" :key="i"
         style="width: 25rem; border-radius: 15px;"
       >
         <img
@@ -32,18 +31,13 @@
             {{ worker["First_name"] }} {{ worker["Last_name"] }}
           </h5>
           <p class="card-text">
-            Full house (120m2 ~ 170m2):
-            {{ worker["Full house (120m2 ~ 170m2)"] }}
+            Visiting fee:
+            {{ worker["Service_1_price"] }}LE
           </p>
-          <p class="card-text">
-            Full house (170m2 ~ 240m2):
-            {{ worker["Full house (170m2 ~ 240m2)"] }}
+          <p class="card-text">Exp: 
+            {{ worker["Experience"] }} years
           </p>
-          <p class="card-text">
-            Deep clean(Kitchen&Bathroom):
-            {{ worker["Deep clean(Kitchen&Bathroom)"] }}
-          </p>
-          <!-- <star-rating active-color="#F97B22"  star-size=30 :rating="`${rev.Rate}`"></star-rating> -->
+          <star-rating active-color="#F97B22"  star-size=30 :rating="`${worker.Rate}`" style="justify-content: center;"></star-rating>
           <router-link to="workerProfile">
             <a class="btn d-block m-auto mb-3 mt-3">See details</a></router-link
           >
@@ -131,13 +125,16 @@ input.search {
   font-weight: bold;
   text-align: left;
   color: $blueColor;
-  padding: 20px;
+  padding: 15px;
+  padding-bottom: 0px;
 }
 
 .servpara {
   font-size: $paragraph;
   font-family: "raleway";
   color: $blueColor;
+  padding: 15px;
+  padding-top: 0px;
 }
 
 img {
@@ -146,6 +143,9 @@ img {
   height: 200px;
 }
 
+p {
+  margin: 0px;
+}
 .card-title {
   text-align: center;
   font-size: $subTitle;
