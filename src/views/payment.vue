@@ -7,11 +7,6 @@
                 <p class="title py-3">Payment Details</p>
                 <div class="row gx-8">
                     <div class="col-12">
-                        <div class="d-flex flex-column">
-                            <p class="text">Person Name yo</p>
-                            <input class="form-control" type="text" placeholder="Name" v-model="fullName">
-                            <span class="error-feedback" v-if="v$.fullName.$error"> {{ v$.fullName.$errors[0].$message }}</span>
-                        </div>
                             <div class="d-flex flex-column">
                             <p class="text">Person Name</p>
                             <input class="form-control" type="text" placeholder="Card Holder Name"  v-model="fullName">
@@ -174,14 +169,7 @@ export default {
     .sub-title{
         font-weight: bold;
     }
-    .btn {
-    @include button;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 
-    }
 
     .back-btn{
     &:hover {
@@ -284,14 +272,30 @@ export default {
         line-height: normal;
         border: none;
     }
+    .modal-footer {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: space-evenly;
+    padding: calc(var(--bs-modal-padding) - var(--bs-modal-footer-gap) * .5);
+    background-color: var(--bs-modal-footer-bg);
+    border-top: var(--bs-modal-footer-border-width) solid var(--bs-modal-footer-border-color);
+    border-bottom-right-radius: var(--bs-modal-inner-border-radius);
+    border-bottom-left-radius: var(--bs-modal-inner-border-radius);
+    align-content: flex-end;
+    flex-direction: row-reverse;}
+    
 	.modal-confirm .btn:hover, .modal-confirm .btn:focus {
 		background: $orangeColor;
 		outline: none;
 	}
-	.trigger-btn {
-		display: inline-block;
-		margin: 100px auto;
-	}
+    .btn {
+    @include button;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 
-
+    }
 </style>
