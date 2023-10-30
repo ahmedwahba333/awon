@@ -20,7 +20,7 @@
         class="card mb-4 col-md-4 col-sm-6 col-6"
         v-for="(worker, i) in workerData"
         :key="i"
-        style="width: 25rem"
+        style="width: 25rem; border-radius: 15px;"
       >
         <img
           :src="`${worker.img}`"
@@ -132,6 +132,7 @@ input.search {
   font-weight: bold;
   text-align: left;
   color: $blueColor;
+  padding: 20px;
 }
 
 .servpara {
