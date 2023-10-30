@@ -36,6 +36,8 @@ import HouseguardView from "../views/HouseguardView.vue";
 import DriverView from "../views/DriverView.vue";
 import CXprofileView from "../views/CXprofileView.vue";
 import SAAgencyProfile from "../views/SAAgencyProfile.vue";
+import AdminAgencyProfile from "../views/AdminAgencyProfile.vue";
+
 // >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
 
 import ServiceHistoryAgency from "../views/ServiceHistoryAgency.vue";
@@ -268,43 +270,48 @@ const routes = [
   path:"/AddWorker",
   name:"AddWorker",
   component: AddWorker
-},
-{
-  path: "/PlumbingView",
-  name: "PlumbingView",
-  component: PlumbingView
-},
-{
-  path: "/CarpentryView",
-  name: "CarpentryView",
-  component: CarpentryView
-},
-{
-  path: "/MovingfurnitureView",
-  name: "MovingfurnitureView",
-  component: MovingfurnitureView
-},
-{
-  path: "/HouseguardView",
-  name: "HouseguardView",
-  component: HouseguardView
-},
-{
-  path: "/DriverView",
-  name: "HouseguardView",
-  component: DriverView
-},
-{
-  path: "/CXprofileView",
-  name: "CXprofileView",
-  component: CXprofileView
-},
-{
-  path:"/SAAgencyProfile",
-  name:"SAAgencyProfile",
-  component: SAAgencyProfile
-}
-];
+  },
+  {
+    path: "/PlumbingView",
+    name: "PlumbingView",
+    component: PlumbingView
+  },
+  {
+    path: "/CarpentryView",
+    name: "CarpentryView",
+    component: CarpentryView
+  },
+  {
+    path: "/MovingfurnitureView",
+    name: "MovingfurnitureView",
+    component: MovingfurnitureView
+  },
+  {
+    path: "/HouseguardView",
+    name: "HouseguardView",
+    component: HouseguardView
+  },
+  {
+    path: "/DriverView",
+    name: "HouseguardView",
+    component: DriverView
+  },
+  {
+    path: "/CXprofileView",
+    name: "CXprofileView",
+    component: CXprofileView
+  },
+  {
+    path:"/SAAgencyProfile",
+    name:"SAAgencyProfile",
+    component: SAAgencyProfile
+  },
+  {
+    path:"/AdminAgencyProfile",
+    name:"AdminAgencyProfile",
+    component: AdminAgencyProfile
+  }
+  ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
