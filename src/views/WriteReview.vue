@@ -5,14 +5,14 @@
       <div class="box">
         <!-- <div class="d-flex flex-row mx-5 justify-content-between"> -->
         <div
-          class="d-flex flex-wrap justify-content-center align-items-center col-12 col-lg-6 col-md-8 col-sm-12"
+          class="d-flex flex-wrap justify-content-start align-items-center col-6 col-lg-6 col-md-4 col-sm-12 ms-5"
         >
           <img :src="`${worker.img}`" alt="Cx" class="object-fit-cover" />
-          <h4 class="mx-5">{{worker['First_name']}} {{worker['Last_name']}}</h4>
+          <h4 class="mx-2">{{worker['First_name']}} {{worker['Last_name']}}</h4>
         </div>
         <!-- </div> -->
         <div
-          class="d-flex flex-wrap justify-content-between align-items-center col-12 col-lg-8 col-md-4 col-sm-12 p-5"
+          class="d-flex flex-wrap justify-content-between align-items-center col-12 col-lg-6 col-md-4 col-sm-12 p-5"
         >
           <div class="rateWorker">
             <div>
@@ -21,7 +21,8 @@
             <star-rating
               active-color="#F97B22"
               star-size="30"
-              @rating-selected="setRatingOfWorker"
+              v-model:rating="values.Rate"
+                @update:rating ="setRatingWorker"
             ></star-rating>
           </div>
           <div class="rateService justify-content-center">
@@ -32,7 +33,8 @@
               <star-rating
                 active-color="#F97B22"
                 star-size="30"
-                @rating-selected="setRatingOfService"
+                v-model:rating="values.RateService"
+              @update:rating ="setRatingService"
               ></star-rating>
             </div>
           </div>
@@ -42,12 +44,12 @@
             <div class="commentbox">
               <h4>Write review</h4>
               <div class="comment-area">
-                <textarea class="form-control" rows="4"></textarea>
+                <textarea class="form-control" rows="4" v-model="values.Review"></textarea>
               </div>
               <div class="comment-btns mt-2">
                 <div class="row justify-content-end">
                   <div class="col-12 col-xl-3 col-md-7 col-sm-10">
-                    <button class="btn" >Add</button>
+                    <button class="btn" @click="addReview(worker.id)">Add</button>
                   </div>
 
                   <div class="col-12 col-xl-3 col-md-7 col-sm-10">
@@ -77,30 +79,46 @@ export default {
   components: { FooterComponent, NavBarPages,StarRating },
 data() {
   return{
-    ratingWorker: 0,
-    ratingService:0,
     worker:{},
     id:'',
+    values:{
+      Rate: 0,
+      RateService: 0,
+      Review:"",
+      Name:""
+    
+    },
 }
   },
   created(){
     this.getWorkerByID();
-   
+    this.setRatingWorker();
+  this.setRatingService();
   },
   methods: {
-    setRatingOfWorker(ratingWorker){
-      this.ratingWorker= ratingWorker;
-      // console.log(ratingWorker);
-    },
-    setRatingOfService(ratingService){
-      this.ratingService= ratingService;
-    },
+
     getWorkerByID(){
       this.id = this.$route.params.id;
       axios.get(`http://localhost:2000/worker/${this.id}`)
       .then((res)=> {this.worker = res.data})
       .catch((err)=>{console.log(err)})
     },
+    setRatingWorker(Rate){
+      this.rating= Rate;
+      // console.log(Rate);
+    },
+      setRatingService(RateService){
+      this.rating= RateService;
+      // console.log(Rate_service);
+    },
+    addReview() {
+      axios
+        .post("http://localhost:2000/review", this.values)
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+      this.$router.push("/review");
+    },
+
   },
 
 };
