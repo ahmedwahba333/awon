@@ -49,21 +49,6 @@ export default {
     this.getservice();
     this.getcategory();
   },
-<<<<<<< HEAD
-  methods:{
-    getservice(){
-      axios.get("http://localhost:2000/service")
-      .then((res)=> {this.service = res.data})
-      .catch((err)=>{console.log(err)})
-    },
-    getcategory(){
-      axios.get("http://localhost:2000/category")
-      .then((res)=> {this.category = res.data})
-      .catch((err)=>{console.log(err)})
-    },
-
-},
-=======
   methods: {
     getservice() {
       axios.get("http://localhost:2000/service")
@@ -76,7 +61,6 @@ export default {
         .catch((err) => { console.log(err) })
     },
   },
->>>>>>> master
 };
 </script>
 
