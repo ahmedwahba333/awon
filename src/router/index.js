@@ -22,7 +22,7 @@ import ElderlycareView from "../views/ElderlycareView.vue";
 import HousenursingView from "../views/HousenursingView.vue";
 import ChefsView from "../views/ChefsView.vue";
 import FoodcateringView from "../views/FoodcateringView.vue";
-import SADashHome from "../views/SADashHome.vue"
+import SADashHome from "../views/SADashHome.vue";
 import AllWorkerFromCX from "../views/AllWorkerFromCX.vue";
 import SACatigory from "@/views/SACatigory.vue";
 import SAServiceCategories from "@/views/SAServiceCategories.vue";
@@ -35,6 +35,9 @@ import MovingfurnitureView from "../views/MovingfurnitureView.vue";
 import HouseguardView from "../views/HouseguardView.vue";
 import DriverView from "../views/DriverView.vue";
 import CXprofileView from "../views/CXprofileView.vue";
+import SAAgencyProfile from "../views/SAAgencyProfile.vue";
+import AdminAgencyProfile from "../views/AdminAgencyProfile.vue";
+
 // >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
 
 import ServiceHistoryAgency from "../views/ServiceHistoryAgency.vue";
@@ -61,15 +64,6 @@ const routes = [
 
     // name: "home",
     // component: HomeView,
-  },
-  {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
 
   // start of auth
@@ -176,94 +170,96 @@ const routes = [
   {
     path: "/AllWorker",
     name: "AllWorker",
-    component: Allworker
+    component: Allworker,
   },
   {
     path: "/ServiceHistorySA",
     name: "ServiceHistorySA",
-    component: ServiceHistorySA
+    component: ServiceHistorySA,
   },
   {
     path: "/booking/:id",
     name: "BookingPage",
-    component: BookingPage
+    component: BookingPage,
   },
   {
     path: "/ServiceHistoryAgency/:id",
     name: "ServiceHistoryAgency",
-    component: ServiceHistoryAgency
+    component: ServiceHistoryAgency,
   },
   {
     path: "/CleaningView",
     name: "CleaningView",
-    component: CleaningView
+    component: CleaningView,
   },
   {
     path: "/GardeningView",
     name: "GardeningView",
-    component: GardeningView
+    component: GardeningView,
   },
   {
     path: "/BabysittingView",
     name: "BabysittingView",
-    component: BabysittingView
+    component: BabysittingView,
   },
   {
     path: "/ElderlycareView",
     name: "ElderlycareView",
-    component: ElderlycareView
+    component: ElderlycareView,
   },
   {
     path: "/HousenursingView",
     name: "HousenursingView",
-    component: HousenursingView
+    component: HousenursingView,
   },
   {
     path: "/ChefsView",
     name: "ChefsView",
-    component: ChefsView
+    component: ChefsView,
   },
   {
     path: "/FoodcateringView",
     name: "FoodcateringView",
-    component: FoodcateringView
+    component: FoodcateringView,
   },
   {
     path: "/SADashHome",
     name: "SADashHome",
-    component: SADashHome
+    component: SADashHome,
   },
   {
     path: "/AllWorkerFromCX",
     name: "AllWorkerFromCX",
-    component: AllWorkerFromCX
+    component: AllWorkerFromCX,
   },
   {
     path: "/AddAgency",
     name: "AddAgency",
-    component: AddAgency
+    component: AddAgency,
+    // meta: false,
   },
   {
-    path:"/SACatigory",
-    name:"SACatigory",
-    component: SACatigory
+    path: "/SACatigory",
+    name: "SACatigory",
+    component: SACatigory,
   },
   {
-    path:"/SAServiceCategories",
-    name:"SAServiceCategories",
-    component: SAServiceCategories
+    path: "/SAServiceCategories",
+    name: "SAServiceCategories",
+    component: SAServiceCategories,
   },
   {
-    path:"/AddCatigory",
-    name:"AddCatigory",
-    component: AddCatigory
+    path: "/AddCatigory",
+    name: "AddCatigory",
+    component: AddCatigory,
   },
   {
-    path:"/AddServiceSA",
-    name:"AddServiceSA",
-    component: AddServiceSA
+    path: "/AddServiceSA",
+    name: "AddServiceSA",
+    component: AddServiceSA,
   },
   {
+<<<<<<< HEAD
   path:"/AddWorker",
   name:"AddWorker",
   component: AddWorker
@@ -298,11 +294,237 @@ const routes = [
   name: "CXprofileView",
   component: CXprofileView
 },
+=======
+    path: "/AddWorker",
+    name: "AddWorker",
+    component: AddWorker,
+  },
+  {
+    path: "/PlumbingView",
+    name: "PlumbingView",
+    component: PlumbingView,
+  },
+  {
+    path: "/CarpentryView",
+    name: "CarpentryView",
+    component: CarpentryView,
+  },
+  {
+    path: "/MovingfurnitureView",
+    name: "MovingfurnitureView",
+    component: MovingfurnitureView,
+  },
+  {
+    path: "/HouseguardView",
+    name: "HouseguardView",
+    component: HouseguardView,
+  },
+  {
+    path: "/DriverView",
+    name: "HouseguardView",
+    component: DriverView,
+  },
+  {
+    path: "/CXprofileView",
+    name: "CXprofileView",
+    component: CXprofileView,
+  },
+  {
+    path: "/SAAgencyProfile",
+    name: "SAAgencyProfile",
+    component: SAAgencyProfile,
+  },
+  {
+    path: "/AdminAgencyProfile",
+    name: "AdminAgencyProfile",
+    component: AdminAgencyProfile,
+  },
+>>>>>>> master
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+});
+
+router.beforeEach((to) => {
+  // token
+  const userData = JSON.parse(localStorage.getItem("cxInfo"));
+  const agencyData = JSON.parse(localStorage.getItem("agInfo"));
+  const suber_adminData = JSON.parse(localStorage.getItem("saInfo"));
+
+  if (userData == null && agencyData == null && suber_adminData == null) {
+    // not authenticated user or agency or suber admin
+    if (
+      // agency
+      to.name == "WorkerPageDashboard" ||
+      to.name == "ServiceHistoryAgency" ||
+      to.name == "AgancyDash" ||
+      to.name == "dashReviews" ||
+      to.name == "allAgencies" ||
+      to.name == "AllWorker" ||
+      // customer
+      to.name == "paymentDetails" ||
+      to.name == "WriteReview" ||
+      to.name == "BookingPage"
+    ) {
+      return "/login";
+    } else if (
+      // suberadmin
+      to.name == "ServiceHistorySA" ||
+      to.name == "AddAgency" ||
+      to.name == "SADashHome" ||
+      to.name == "SACatigory" ||
+      to.name == "SAServiceCategories" ||
+      to.name == "AddCatigory" ||
+      to.name == "AddServiceSA" ||
+      to.name == "AddWorker" ||
+      to.name == "AdminAgencyProfile" ||
+      to.name == "SAAgencyProfile"
+    ) {
+      return "/cpanel-login";
+    }
+  } else if (
+    userData != null &&
+    agencyData == null &&
+    suber_adminData == null
+  ) {
+    // authenticated user but not agency or suber admin
+    if (
+      to.name == "login" ||
+      to.name == "signup" ||
+      to.name == "reset-password" ||
+      to.name == "reset-password-confirm" ||
+      to.name == "setup-password" ||
+      // agency
+      to.name == "WorkerPageDashboard" ||
+      to.name == "ServiceHistoryAgency" ||
+      to.name == "AgancyDash" ||
+      to.name == "dashReviews" ||
+      to.name == "allAgencies" ||
+      to.name == "AllWorker" ||
+      // suber admin
+      to.name == "ServiceHistorySA" ||
+      to.name == "AddAgency" ||
+      to.name == "SADashHome" ||
+      to.name == "SACatigory" ||
+      to.name == "SAServiceCategories" ||
+      to.name == "AddCatigory" ||
+      to.name == "AddServiceSA" ||
+      to.name == "AddWorker" ||
+      to.name == "AdminAgencyProfile" ||
+      to.name == "SAAgencyProfile"
+    ) {
+      return "/";
+    }
+  } else if (
+    userData == null &&
+    agencyData != null &&
+    suber_adminData == null
+  ) {
+    // authenticated agency but not user or suber admin
+    if (
+      to.name == "login" ||
+      to.name == "signup" ||
+      to.name == "reset-password" ||
+      to.name == "reset-password-confirm" ||
+      to.name == "setup-password" ||
+      // customer
+      to.name == "paymentDetails" ||
+      to.name == "WriteReview" ||
+      to.name == "BookingPage" ||
+      // suberadmin
+      to.name == "ServiceHistorySA" ||
+      to.name == "AddAgency" ||
+      to.name == "SADashHome" ||
+      to.name == "SACatigory" ||
+      to.name == "SAServiceCategories" ||
+      to.name == "AddCatigory" ||
+      to.name == "AddServiceSA" ||
+      to.name == "AddWorker" ||
+      to.name == "AdminAgencyProfile" ||
+      to.name == "SAAgencyProfile"
+    ) {
+      return "/agancydash";
+    }
+  } else if (
+    userData == null &&
+    agencyData == null &&
+    suber_adminData != null
+  ) {
+    // authenticated suber admin but not user or agency
+    if (
+      to.name == "cpanel-login" ||
+      to.name == "cpanel-signup" ||
+      to.name == "cpanel-reset-password" ||
+      to.name == "cpanel-reset-password-confirm" ||
+      to.name == "cpanel-setup-password" ||
+      // agency
+      to.name == "WorkerPageDashboard" ||
+      to.name == "ServiceHistoryAgency" ||
+      to.name == "AgancyDash" ||
+      to.name == "dashReviews" ||
+      to.name == "allAgencies" ||
+      to.name == "AllWorker" ||
+      // customer
+      to.name == "paymentDetails" ||
+      to.name == "WriteReview" ||
+      to.name == "BookingPage"
+    ) {
+      return "/SADashHome";
+    }
+  } else if (
+    userData == null &&
+    agencyData != null &&
+    suber_adminData != null
+  ) {
+    // authenticated suber admin and agency but not user
+    if (
+      to.name == "cpanel-login" ||
+      to.name == "cpanel-signup" ||
+      to.name == "cpanel-reset-password" ||
+      to.name == "cpanel-reset-password-confirm" ||
+      to.name == "cpanel-setup-password" ||
+      to.name == "login" ||
+      to.name == "signup" ||
+      to.name == "reset-password" ||
+      to.name == "reset-password-confirm" ||
+      to.name == "setup-password" ||
+      // customer
+      to.name == "paymentDetails" ||
+      to.name == "WriteReview" ||
+      to.name == "BookingPage"
+    ) {
+      return "/";
+    }
+  } else if (
+    userData != null &&
+    agencyData == null &&
+    suber_adminData != null
+  ) {
+    // authenticated suber admin and user but not agency
+    if (
+      to.name == "cpanel-login" ||
+      to.name == "cpanel-signup" ||
+      to.name == "cpanel-reset-password" ||
+      to.name == "cpanel-reset-password-confirm" ||
+      to.name == "cpanel-setup-password" ||
+      to.name == "login" ||
+      to.name == "signup" ||
+      to.name == "reset-password" ||
+      to.name == "reset-password-confirm" ||
+      to.name == "setup-password" ||
+      // agency
+      to.name == "WorkerPageDashboard" ||
+      to.name == "ServiceHistoryAgency" ||
+      to.name == "AgancyDash" ||
+      to.name == "dashReviews" ||
+      to.name == "allAgencies" ||
+      to.name == "AllWorker"
+    ) {
+      return "/";
+    }
+  }
 });
 
 export default router;

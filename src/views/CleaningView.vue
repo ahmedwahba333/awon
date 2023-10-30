@@ -115,7 +115,7 @@
     <div class="row justify-content-center gap-4">
       <div
         class="card mb-4 col-md-4 col-sm-6 col-6"
-        v-for="(worker, i) in workerData.slice(20,21,30,31,40,41)"
+        v-for="(worker, i) in workerData.slice(17,26)"
         :key="i"
         style="width: 25rem; border-radius: 15px;"
       >
@@ -148,6 +148,7 @@
           <p class="card-text">Exp years:
             {{ worker["Experience"] }}
           </p>
+          <star-rating active-color="#F97B22"  star-size=30 :rating="`${worker.Rate}`"></star-rating>
           <router-link to="workerProfile">
             <a class="btn d-block m-auto mb-3 mt-3">See details</a></router-link
           >
@@ -224,10 +225,12 @@
 import NavBarPages from "@/components/NavBarPages.vue";
 import FooterComponent from "@/components/footer.vue";
 import axios from "axios";
+import StarRating from "vue-star-rating"
 export default {
   components: {
     NavBarPages,
     FooterComponent,
+    StarRating,
   },
   data() {
     return {
