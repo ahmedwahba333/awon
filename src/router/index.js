@@ -259,42 +259,6 @@ const routes = [
     component: AddServiceSA,
   },
   {
-<<<<<<< HEAD
-  path:"/AddWorker",
-  name:"AddWorker",
-  component: AddWorker
-},
-{
-  path: "/PlumbingView",
-  name: "PlumbingView",
-  component: PlumbingView
-},
-{
-  path: "/CarpentryView",
-  name: "CarpentryView",
-  component: CarpentryView
-},
-{
-  path: "/MovingfurnitureView",
-  name: "MovingfurnitureView",
-  component: MovingfurnitureView
-},
-{
-  path: "/HouseguardView",
-  name: "HouseguardView",
-  component: HouseguardView
-},
-{
-  path: "/DriverView",
-  name: "DriverView",
-  component: DriverView
-},
-{
-  path: "/CXprofileView",
-  name: "CXprofileView",
-  component: CXprofileView
-},
-=======
     path: "/AddWorker",
     name: "AddWorker",
     component: AddWorker,
@@ -339,7 +303,6 @@ const routes = [
     name: "AdminAgencyProfile",
     component: AdminAgencyProfile,
   },
->>>>>>> master
 ];
 
 const router = createRouter({
