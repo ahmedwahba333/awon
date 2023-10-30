@@ -259,51 +259,51 @@ const routes = [
     component: AddServiceSA,
   },
   {
-  path:"/AddWorker",
-  name:"AddWorker",
-  component: AddWorker
+    path: "/AddWorker",
+    name: "AddWorker",
+    component: AddWorker,
   },
   {
     path: "/PlumbingView",
     name: "PlumbingView",
-    component: PlumbingView
+    component: PlumbingView,
   },
   {
     path: "/CarpentryView",
     name: "CarpentryView",
-    component: CarpentryView
+    component: CarpentryView,
   },
   {
     path: "/MovingfurnitureView",
     name: "MovingfurnitureView",
-    component: MovingfurnitureView
+    component: MovingfurnitureView,
   },
   {
     path: "/HouseguardView",
     name: "HouseguardView",
-    component: HouseguardView
+    component: HouseguardView,
   },
   {
     path: "/DriverView",
     name: "HouseguardView",
-    component: DriverView
+    component: DriverView,
   },
   {
     path: "/CXprofileView",
     name: "CXprofileView",
-    component: CXprofileView
+    component: CXprofileView,
   },
   {
-    path:"/SAAgencyProfile",
-    name:"SAAgencyProfile",
-    component: SAAgencyProfile
+    path: "/SAAgencyProfile",
+    name: "SAAgencyProfile",
+    component: SAAgencyProfile,
   },
   {
-    path:"/AdminAgencyProfile",
-    name:"AdminAgencyProfile",
-    component: AdminAgencyProfile
-  }
-  ];
+    path: "/AdminAgencyProfile",
+    name: "AdminAgencyProfile",
+    component: AdminAgencyProfile,
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
@@ -319,31 +319,31 @@ router.beforeEach((to) => {
   if (userData == null && agencyData == null && suber_adminData == null) {
     // not authenticated user or agency or suber admin
     if (
+      // agency
       to.name == "WorkerPageDashboard" ||
-      to.name == "aaaaaaaaaaaa" ||
-      to.name == "aaaaaaaaaaaa" ||
-      to.name == "aaaaaaaaaaaa" ||
-      to.name == "aaaaaaaaaaaa" ||
-      to.name == "aaaaaaaaaaaa" ||
-      to.name == "aaaaaaaaaaaa" ||
-      to.name == "aaaaaaaaaaaa" ||
-      to.name == "aaaaaaaaaaaa" ||
-      to.name == "aaaaaaaaaaaa" ||
-      to.name == "aaaaaaaaaaaa" ||
-      to.name == "aaaaaaaaaaaa" ||
-      to.name == "aaaaaaaaaaaa" ||
-      to.name == "aaaaaaaaaaaa" ||
+      to.name == "ServiceHistoryAgency" ||
+      to.name == "AgancyDash" ||
+      to.name == "dashReviews" ||
+      to.name == "allAgencies" ||
+      to.name == "AllWorker" ||
+      // customer
+      to.name == "paymentDetails" ||
+      to.name == "WriteReview" ||
+      to.name == "BookingPage"
     ) {
       return "/login";
     } else if (
+      // suberadmin
       to.name == "ServiceHistorySA" ||
+      to.name == "AddAgency" ||
       to.name == "SADashHome" ||
       to.name == "SACatigory" ||
       to.name == "SAServiceCategories" ||
       to.name == "AddCatigory" ||
       to.name == "AddServiceSA" ||
       to.name == "AddWorker" ||
-      to.name == "AddAgency"
+      to.name == "AdminAgencyProfile" ||
+      to.name == "SAAgencyProfile"
     ) {
       return "/cpanel-login";
     }
@@ -359,20 +359,24 @@ router.beforeEach((to) => {
       to.name == "reset-password" ||
       to.name == "reset-password-confirm" ||
       to.name == "setup-password" ||
+      // agency
       to.name == "WorkerPageDashboard" ||
+      to.name == "ServiceHistoryAgency" ||
       to.name == "AgancyDash" ||
       to.name == "dashReviews" ||
       to.name == "allAgencies" ||
       to.name == "AllWorker" ||
+      // suber admin
       to.name == "ServiceHistorySA" ||
-      to.name == "ServiceHistoryAgency" ||
+      to.name == "AddAgency" ||
       to.name == "SADashHome" ||
       to.name == "SACatigory" ||
       to.name == "SAServiceCategories" ||
       to.name == "AddCatigory" ||
       to.name == "AddServiceSA" ||
       to.name == "AddWorker" ||
-      to.name == "AddAgency"
+      to.name == "AdminAgencyProfile" ||
+      to.name == "SAAgencyProfile"
     ) {
       return "/";
     }
@@ -388,17 +392,21 @@ router.beforeEach((to) => {
       to.name == "reset-password" ||
       to.name == "reset-password-confirm" ||
       to.name == "setup-password" ||
+      // customer
       to.name == "paymentDetails" ||
       to.name == "WriteReview" ||
-      to.name == "ServiceHistorySA" ||
       to.name == "BookingPage" ||
+      // suberadmin
+      to.name == "ServiceHistorySA" ||
+      to.name == "AddAgency" ||
       to.name == "SADashHome" ||
       to.name == "SACatigory" ||
       to.name == "SAServiceCategories" ||
       to.name == "AddCatigory" ||
       to.name == "AddServiceSA" ||
       to.name == "AddWorker" ||
-      to.name == "AddAgency"
+      to.name == "AdminAgencyProfile" ||
+      to.name == "SAAgencyProfile"
     ) {
       return "/agancydash";
     }
@@ -414,15 +422,17 @@ router.beforeEach((to) => {
       to.name == "cpanel-reset-password" ||
       to.name == "cpanel-reset-password-confirm" ||
       to.name == "cpanel-setup-password" ||
+      // agency
       to.name == "WorkerPageDashboard" ||
-      to.name == "paymentDetails" ||
-      to.name == "WriteReview" ||
+      to.name == "ServiceHistoryAgency" ||
       to.name == "AgancyDash" ||
       to.name == "dashReviews" ||
       to.name == "allAgencies" ||
       to.name == "AllWorker" ||
-      to.name == "BookingPage" ||
-      to.name == "ServiceHistoryAgency"
+      // customer
+      to.name == "paymentDetails" ||
+      to.name == "WriteReview" ||
+      to.name == "BookingPage"
     ) {
       return "/SADashHome";
     }
@@ -443,6 +453,7 @@ router.beforeEach((to) => {
       to.name == "reset-password" ||
       to.name == "reset-password-confirm" ||
       to.name == "setup-password" ||
+      // customer
       to.name == "paymentDetails" ||
       to.name == "WriteReview" ||
       to.name == "BookingPage"
@@ -454,7 +465,7 @@ router.beforeEach((to) => {
     agencyData == null &&
     suber_adminData != null
   ) {
-    // authenticated suber admin but not user or agency
+    // authenticated suber admin and user but not agency
     if (
       to.name == "cpanel-login" ||
       to.name == "cpanel-signup" ||
@@ -466,14 +477,15 @@ router.beforeEach((to) => {
       to.name == "reset-password" ||
       to.name == "reset-password-confirm" ||
       to.name == "setup-password" ||
-      to.name == "aaaaaaaaaaaa" ||
-      to.name == "aaaaaaaaaaaa" ||
-      to.name == "aaaaaaaaaaaa" ||
-      to.name == "aaaaaaaaaaaa" ||
-      to.name == "aaaaaaaaaaaa" ||
-      to.name == "aaaaaaaaaaaa"
+      // agency
+      to.name == "WorkerPageDashboard" ||
+      to.name == "ServiceHistoryAgency" ||
+      to.name == "AgancyDash" ||
+      to.name == "dashReviews" ||
+      to.name == "allAgencies" ||
+      to.name == "AllWorker"
     ) {
-      return "/SADashHome";
+      return "/";
     }
   }
 });
