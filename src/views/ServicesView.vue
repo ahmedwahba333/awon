@@ -10,8 +10,8 @@
         in, so you can focus on what's important to you.
       </p>
     </div>
-    <div class="row justify-content-center my-5 gap-5"  v-for="(service,category_id) in service.slice(1)" :key="category_id">
-      <div class="card" style="width: 382px">
+    <div class="row justify-content-center my-5 gap-5">
+      <div class="card" style="width: 382px" v-for="(service,i) in service.slice(1)" :key="i">
         <img
           src="`${service.img}`"
           class="card-img-top"
@@ -225,17 +225,25 @@ export default {
   data() {
     return {
        service:[],
+       category:[],
     }
   },
   created(){
     this.getservice();
+    this.getcategory();
   },
   methods:{
     getservice(){
-      axios.get("http://localhost:2000/category")
+      axios.get("http://localhost:2000/service")
       .then((res)=> {this.service = res.data})
       .catch((err)=>{console.log(err)})
     },
+    getcategory(){
+      axios.get("http://localhost:2000/category")
+      .then((res)=> {this.category = res.data})
+      .catch((err)=>{console.log(err)})
+    },
+
 },
 };
 </script>
