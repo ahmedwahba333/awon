@@ -56,15 +56,6 @@ const routes = [
     // name: "home",
     // component: HomeView,
   },
-  {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
-  },
 
   // start of auth
   // user auth
@@ -280,14 +271,19 @@ router.beforeEach((to) => {
     // not authenticated user or agency or suber admin
     if (
       to.name == "WorkerPageDashboard" ||
-      to.name == "paymentDetails" ||
-      to.name == "WriteReview" ||
-      to.name == "AgancyDash" ||
-      to.name == "dashReviews" ||
-      to.name == "allAgencies" ||
-      to.name == "AllWorker" ||
-      to.name == "BookingPage" ||
-      to.name == "ServiceHistoryAgency"
+      to.name == "aaaaaaaaaaaa" ||
+      to.name == "aaaaaaaaaaaa" ||
+      to.name == "aaaaaaaaaaaa" ||
+      to.name == "aaaaaaaaaaaa" ||
+      to.name == "aaaaaaaaaaaa" ||
+      to.name == "aaaaaaaaaaaa" ||
+      to.name == "aaaaaaaaaaaa" ||
+      to.name == "aaaaaaaaaaaa" ||
+      to.name == "aaaaaaaaaaaa" ||
+      to.name == "aaaaaaaaaaaa" ||
+      to.name == "aaaaaaaaaaaa" ||
+      to.name == "aaaaaaaaaaaa" ||
+      to.name == "aaaaaaaaaaaa" ||
     ) {
       return "/login";
     } else if (
@@ -378,6 +374,55 @@ router.beforeEach((to) => {
       to.name == "AllWorker" ||
       to.name == "BookingPage" ||
       to.name == "ServiceHistoryAgency"
+    ) {
+      return "/SADashHome";
+    }
+  } else if (
+    userData == null &&
+    agencyData != null &&
+    suber_adminData != null
+  ) {
+    // authenticated suber admin and agency but not user
+    if (
+      to.name == "cpanel-login" ||
+      to.name == "cpanel-signup" ||
+      to.name == "cpanel-reset-password" ||
+      to.name == "cpanel-reset-password-confirm" ||
+      to.name == "cpanel-setup-password" ||
+      to.name == "login" ||
+      to.name == "signup" ||
+      to.name == "reset-password" ||
+      to.name == "reset-password-confirm" ||
+      to.name == "setup-password" ||
+      to.name == "paymentDetails" ||
+      to.name == "WriteReview" ||
+      to.name == "BookingPage"
+    ) {
+      return "/";
+    }
+  } else if (
+    userData != null &&
+    agencyData == null &&
+    suber_adminData != null
+  ) {
+    // authenticated suber admin but not user or agency
+    if (
+      to.name == "cpanel-login" ||
+      to.name == "cpanel-signup" ||
+      to.name == "cpanel-reset-password" ||
+      to.name == "cpanel-reset-password-confirm" ||
+      to.name == "cpanel-setup-password" ||
+      to.name == "login" ||
+      to.name == "signup" ||
+      to.name == "reset-password" ||
+      to.name == "reset-password-confirm" ||
+      to.name == "setup-password" ||
+      to.name == "aaaaaaaaaaaa" ||
+      to.name == "aaaaaaaaaaaa" ||
+      to.name == "aaaaaaaaaaaa" ||
+      to.name == "aaaaaaaaaaaa" ||
+      to.name == "aaaaaaaaaaaa" ||
+      to.name == "aaaaaaaaaaaa"
     ) {
       return "/SADashHome";
     }
