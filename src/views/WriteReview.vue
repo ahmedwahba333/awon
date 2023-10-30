@@ -7,8 +7,8 @@
         <div
           class="d-flex flex-wrap justify-content-center align-items-center col-12 col-lg-6 col-md-8 col-sm-12"
         >
-          <img src="../assets/images/writereview/1.jpg" alt="Cx" />
-          <h4 class="mx-5">Fatma A.</h4>
+          <img :src="`${worker.img}`" alt="Cx" class="object-fit-cover" />
+          <h4 class="mx-5">{{worker['First_name']}} {{worker['Last_name']}}</h4>
         </div>
         <!-- </div> -->
         <div
@@ -47,11 +47,11 @@
               <div class="comment-btns mt-2">
                 <div class="row justify-content-end">
                   <div class="col-12 col-xl-3 col-md-7 col-sm-10">
-                    <button class="btn">Add</button>
+                    <button class="btn" >Add</button>
                   </div>
 
                   <div class="col-12 col-xl-3 col-md-7 col-sm-10">
-                    <button class="btn btn-cancel">
+                    <button class="btn btn-cancel" >
                       Cancel <i class="fa fa-long-arrow-right ml-1"></i>
                     </button>
                   </div>
@@ -71,22 +71,36 @@
 import NavBarPages from "@/components/NavBarPages.vue";
 import FooterComponent from "@/components/footer.vue";
 import StarRating from 'vue-star-rating';
+import axios from 'axios';
 export default {
   name: "WriteReview",
   components: { FooterComponent, NavBarPages,StarRating },
 data() {
   return{
     ratingWorker: 0,
-    ratingService:0
+    ratingService:0,
+    worker:{},
+    id:'',
 }
+  },
+  created(){
+    this.getWorkerByID();
+   
   },
   methods: {
     setRatingOfWorker(ratingWorker){
       this.ratingWorker= ratingWorker;
+      // console.log(ratingWorker);
     },
     setRatingOfService(ratingService){
       this.ratingService= ratingService;
-    }
+    },
+    getWorkerByID(){
+      this.id = this.$route.params.id;
+      axios.get(`http://localhost:2000/worker/${this.id}`)
+      .then((res)=> {this.worker = res.data})
+      .catch((err)=>{console.log(err)})
+    },
   },
 
 };
@@ -95,7 +109,9 @@ data() {
 <style lang="scss" scoped>
 @import "../scss/global/colors";
 @import "../scss/global/variables";
-
+  img {
+      clip-path: circle();
+      }
 .bg {
   background-color: $backgroundColor;
 }

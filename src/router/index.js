@@ -152,7 +152,7 @@ const routes = [
     component: paymentDetails,
   },
   {
-    path: "/writereview",
+    path: "/writereview/:id",
     name: "WriteReview",
     component: WriteReview,
   },
