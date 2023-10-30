@@ -249,6 +249,7 @@ export default {
 .bg {
   background-color: $backgroundColor;
 }
+
 .child {
   margin: auto;
   margin-top: 25px;
@@ -259,6 +260,7 @@ export default {
   height: auto;
   border-radius: $border-radius-big;
 }
+
 .serv {
   font-size: $title;
   font-family: "raleway";
@@ -287,6 +289,7 @@ export default {
     
   }
 }
+
 .card-title {
   font-size: $subTitle;
   font-weight: bold;

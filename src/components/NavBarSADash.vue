@@ -7,7 +7,22 @@
       <form class="search">
         <input class="search" type="search" />
       </form>
-      <img src="../assets/images/2.jpg" alt="Cx" />
+      <!-- <img src="../assets/images/2.jpg" alt="Cx" /> -->
+      <template v-if="suber_admin != null">
+        <button class="loginDrop dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Welcome {{ suber_admin['email'] }}
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <div class="dropdown-item">
+              <button class="logout" @click="logout">Log Out</button>
+            </div>
+          </li>
+        </ul>
+      </template>
+      <template v-else-if="suber_admin == null">
+        <router-link class="login" to="cpanel-login">Log In</router-link>
+      </template>
     </div>
   </div>
 </template>
@@ -19,11 +34,45 @@ export default {
   components: {
     SuperSidebar,
   },
+  data() {
+    return {
+      suber_admin: [],
+    }
+  },
+  created() {
+    this.suber_admin = JSON.parse(localStorage.getItem("saInfo"));
+  },
+  methods: {
+    logout() {
+      if (this.suber_admin != null) {
+        localStorage.removeItem("saInfo");
+      }
+      this.$router.push("/cpanel-login");
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../scss/global/colors";
+
+.loginDrop {
+  background-color: $blueColor;
+  color: $whiteColor;
+  border: none;
+}
+
+.logout {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  text-align: start;
+}
+
+.login {
+  color: $whiteColor;
+}
+
 .header {
   background-color: $blueColor;
   position: relative;
@@ -36,6 +85,7 @@ export default {
     position: relative;
     width: 100%;
   }
+
   .logo {
     color: $whiteColor;
     font-size: 26px;
@@ -45,6 +95,7 @@ export default {
     justify-content: center;
     align-items: center;
   }
+
   img {
     clip-path: circle();
     height: 60px;
@@ -52,14 +103,14 @@ export default {
     justify-content: center;
     align-items: center;
   }
+
   & input.search {
     border: 2px solid $orangeColor;
     border-radius: 28px;
     width: 350px;
     padding: 9px 4px 9px 40px;
-    background: $backgroundColor
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='orange' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
-      no-repeat 13px center;
+    background: $backgroundColor url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='orange' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+
     &:focus {
       border-color: $orangeColor;
       outline: none;
@@ -76,14 +127,17 @@ a {
     .logo {
       width: 20%;
     }
-img{
-margin: auto;
-}
+
+    img {
+      margin: auto;
+    }
+
     input.search {
-      width:100%;
+      width: 100%;
     }
   }
 }
+
 // @media (min-width: 992px) {
 //   .container {
 //     width: 970px;
@@ -101,5 +155,4 @@ margin: auto;
 //       height: 50px;
 //     }
 //   }
-//   }
-</style>
+//   }</style>

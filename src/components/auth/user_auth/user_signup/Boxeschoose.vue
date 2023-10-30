@@ -56,7 +56,8 @@ export default {
     width: 316px;
     height: 105px;
 }
-.signup-btn{
+
+.signup-btn {
     @include button;
     margin: 0;
 }
@@ -73,5 +74,10 @@ export default {
         color: $blueColor;
         font-size: $paragraph;
     }
+}
+
+.check-sec {
+    cursor: pointer;
+    color: $blueColor;
 }
 </style>
