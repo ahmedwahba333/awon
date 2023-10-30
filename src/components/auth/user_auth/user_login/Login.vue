@@ -10,11 +10,6 @@
                 </figure>
                 <div class="myCon">
                     <router-link to="/" class="title-heading">Awon</router-link>
-                    <!-- <input type="text" v-model="img">
-                    <button @click="imgHandle()">submit</button> -->
-
-
-
                     <p class="title-slogin">Awon, your help is everywhere</p>
                     <p class="btn-login-text py-2">login</p>
                     <div class="forget-pass my-2">
@@ -30,13 +25,28 @@
                 <form @submit="prevent">
                     <div class="d-flex flex-column text-start mb-2">
                         <label class="form-label label-text" for="email">Email</label>
-                        <input class="form-control myInput" v-model="email" type="text" name="email" id="email">
+                        <input class="form-control myInput" v-model="email" type="text" name="email" id="email"
+                            v-on:input="v$.email.$touch()">
+                        <template v-if="v$.email.$error">
+                            <span class="invalid-feedback d-block"><svg xmlns="http://www.w3.org/2000/svg" width="13"
+                                    height="13" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 19 19">
+                                    <path
+                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                                </svg> {{ v$.email.$errors[0].$message
+                                }}</span>
+                        </template>
+                        <template v-else-if="v$.email.$anyDirty"><span class="valid-feedback d-block"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                    class="bi bi-check" viewBox="0 0 19 19">
+                                    <path
+                                        d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                </svg> Right Email</span></template>
                     </div>
                     <div class="d-flex flex-column text-start mb-2">
                         <label class="form-label label-text" for="password">Password</label>
                         <div class="d-flex align-items-center">
                             <input class="form-control myInput" v-model="pass" :type="inputType" name="password"
-                                id="password">
+                                id="password" v-on:input="v$.pass.$touch()">
                             <svg @click="triggerEye()" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
                                 fill="currentColor" class="bi bi-eye eye-icon ms-2" viewBox="0 0 16 16" v-if="eyeFlag">
                                 <path
@@ -55,6 +65,18 @@
                                     d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z" />
                             </svg>
                         </div>
+                        <span class="invalid-feedback d-block" v-if="v$.pass.$error"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="13" height="13" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 19 19">
+                                <path
+                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                            </svg> {{ v$.pass.$errors[0].$message
+                            }}</span>
+                        <span class="valid-feedback d-block" v-else-if="v$.pass.$anyDirty"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                class="bi bi-check" viewBox="0 0 19 19">
+                                <path
+                                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                            </svg> Good Password</span>
                     </div>
                 </form>
                 <div>
@@ -78,7 +100,7 @@
 <script>
 import FooterComponent from '@/components/footer.vue';
 import useVuelidate from '@vuelidate/core';
-import { required, email } from '@vuelidate/validators';
+import { required, email, minLength, helpers } from '@vuelidate/validators';
 import axios from 'axios';
 export default {
     name: 'LoginComponent',
@@ -97,8 +119,10 @@ export default {
     },
     validations() {
         return {
-            email: { required, email },
-            pass: { required }
+            email: {
+                required: helpers.withMessage("Email is Required", required), email: helpers.withMessage("Wrong Email", email)
+            },
+            pass: { required: helpers.withMessage("Password is Required", required), minLength: helpers.withMessage("Weak Password", minLength(8)) }
         }
     },
     created() {
@@ -126,7 +150,7 @@ export default {
                     localStorage.setItem("cxInfo", JSON.stringify(this.users[i]))
                     this.$router.push('/');
                     break;
-                }else if (this.email == this.agencies[i]['Email'] && this.pass == this.agencies[i]['owner_Password']) {
+                } else if (this.email == this.agencies[i]['Email'] && this.pass == this.agencies[i]['owner_Password']) {
                     localStorage.setItem("agInfo", JSON.stringify(this.agencies[i]))
                     this.$router.push('/agancydash');
                     break;
@@ -136,9 +160,7 @@ export default {
         submitData() {
             this.v$.$validate();
             if (!this.v$.$error) {
-            this.checkUser();
-            } else {
-            console.log('cannot');
+                this.checkUser();
             }
         },
         triggerEye() {
