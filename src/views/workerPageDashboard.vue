@@ -145,13 +145,13 @@
 
 
             <!-- Worker Reviews -->
-            <div class="row reviewsCard">
+            <!-- <div class="row reviewsCard">
                 <div class="col-lg-12 col-md-12 col-sm-8 pt-3 mb-3">
                     <p class="mx-sm-5 reviewTit">Worker Reviews</p>
                 </div>
 
                 <div class="col-12">
-                    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                    <div id="carouselExampleDark" class="carousel carousel-dark slide"> -->
                         <!-- <div class="carousel-indicators ">
                             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
                                 aria-current="true" aria-label="Slide 1"></button>
@@ -162,9 +162,8 @@
                         </div> -->
 
 
-                        <!-- {{ arr }} -->
+<!--                       
                         <div class="carousel-inner mb-5 row">
-                            <!-- Carasol first slide -->
                             <template v-for="(review, i) in reviews" :key="i">
                                 <template v-if="reviews[i].Worker_id == worker.id">
                             <div class="carousel-item active" data-bs-interval="10000">
@@ -209,7 +208,7 @@
                             </template>
                         </div>
 
-                        <!-- Carasol Buttons < > -->
+                      
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
                             data-bs-slide="prev">
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -224,7 +223,7 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Edit popup -->
             <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
@@ -282,13 +281,13 @@
 
 import NavBarDash from '../components/NavBarDash.vue';
 import axios from 'axios';
-import StarRating from 'vue-star-rating';
+// import StarRating from 'vue-star-rating';
 
 export default {
     name: 'WorkerPageDashboard',
     components: {
         NavBarDash,
-        StarRating
+        // StarRating
     },
 
     data() {
