@@ -438,6 +438,9 @@ img {
   height: 200px;
 }
 
+p {
+  margin: 0px;
+}
 // .card{
 //   border-radius: 25px;
 // }
