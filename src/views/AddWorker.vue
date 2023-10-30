@@ -296,9 +296,9 @@ export default {
     this.getService();
   },
 
-mounted(){
-  this.addWorker();
-},
+// mounted(){
+//   this.addWorker();
+// },
   methods: {
     getCategory() {
       axios
