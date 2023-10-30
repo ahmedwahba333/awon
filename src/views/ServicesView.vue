@@ -10,7 +10,7 @@
         in, so you can focus on what's important to you.
       </p>
     </div>
-    <div class="row justify-content-center my-5 gap-5"  v-for="(service,Category_id) in service" :key="Category_id">
+    <div class="row justify-content-center my-5 gap-5"  v-for="(service,category_id) in service.slice(1)" :key="category_id">
       <div class="card" style="width: 382px">
         <img
           src="`${service.img}`"
@@ -21,7 +21,7 @@
           <h5 class="card-title">{{ service['Name'] }}</h5>
         </div>
       </div>
-      <div class="card" style="width: 382px">
+      <!-- <div class="card" style="width: 382px">
         <img
           src="../assets/images/cardphotos/cleaning.jpg"
           class="card-img-top"
@@ -40,7 +40,7 @@
         <div class="card-body">
           <h5 class="card-title">Coming soon</h5>
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="child">
       <h2 class="serv">Caring services: For the people you love.</h2>

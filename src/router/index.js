@@ -290,7 +290,7 @@ const routes = [
 },
 {
   path: "/DriverView",
-  name: "HouseguardView",
+  name: "DriverView",
   component: DriverView
 },
 {
