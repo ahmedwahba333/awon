@@ -168,6 +168,7 @@ export default {
     getWkById(){
       this.id = this.$route.params.id
       axios.get(`http://localhost:2000/worker/77`)
+      // axios.get(`http://localhost:2000/worker/${id}`)
         .then(res =>this.wk = res.data)
         .catch(err=>console.log(err))
     },

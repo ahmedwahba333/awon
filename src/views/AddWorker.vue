@@ -13,11 +13,9 @@
                 class="w-100 rounded-5 p-2"
                 placeholder="First name"
                 aria-label="First name"
-                v-model="firstName"
+                v-model="formValues.First_name"
               />
-              <span class="error-feedback" v-if="v$.firstName.$error">{{
-                v$.firstName.$errors[0].$message
-              }}</span>
+              <!-- <span class="error-feedback" v-if="v$.First_name.$error">{{v$.First_name.$errors[0].$message}}</span> -->
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
               <label for="">Last name</label>
@@ -26,11 +24,9 @@
                 class="w-100 rounded-5 p-2"
                 placeholder="Last name"
                 aria-label="Last name"
-                v-model="lastName"
+                v-model="formValues.Last_name"
               />
-              <span class="error-feedback" v-if="v$.lastName.$error">{{
-                v$.lastName.$errors[0].$message
-              }}</span>
+              <!-- <span class="error-feedback" v-if="v$.Last_name.$error">{{v$.Last_name.$errors[0].$message}}</span> -->
             </div>
           </div>
           <div class="row mb-4">
@@ -41,11 +37,9 @@
                 class="w-100 rounded-5 p-2"
                 placeholder="Address"
                 aria-label="Address"
-                v-model="address"
+                v-model="formValues.Address"
               />
-              <span class="error-feedback" v-if="v$.address.$error">{{
-                v$.address.$errors[0].$message
-              }}</span>
+              <!-- <span class="error-feedback" v-if="v$.Address.$error">{{ v$.Address.$errors[0].$message}}</span> -->
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
               <label for="">Phone</label>
@@ -54,11 +48,9 @@
                 class="w-100 rounded-5 p-2"
                 placeholder="start number with 20"
                 aria-label="Phone"
-                v-model="phone"
+                v-model="formValues.Phone"
               />
-              <span class="error-feedback" v-if="v$.phone.$error">{{
-                v$.phone.$errors[0].$message
-              }}</span>
+              <!-- <span class="error-feedback" v-if="v$.Phone.$error">{{ v$.Phone.$errors[0].$message}}</span> -->
             </div>
           </div>
           <div class="row mb-4">
@@ -82,7 +74,7 @@
                             <input
                               type="radio"
                               class="form-check-input"
-                              v-model="gender"
+                              v-model="formValues.Gender"
                               v-bind:value="singleGender.code"
                             />
                             <label for="" class="form-check-label mt-1 ms-1">{{
@@ -103,6 +95,7 @@
                 class="w-100 rounded-5 p-2"
                 placeholder="Years of exp."
                 aria-label="Years of exp."
+                v-model="formValues.Experience"
               />
             </div>
           </div>
@@ -119,10 +112,11 @@
             <div class="col-lg-6 col-md-6 col-sm-12">
               <label for="">Area</label>
               <input
-                type="email"
+                type="text"
                 class="w-100 rounded-5 p-2"
                 placeholder="Area"
                 aria-label="Area"
+                v-model="formValues.Area"
               />
             </div>
           </div>
@@ -134,24 +128,20 @@
                 class="w-100 rounded-5 p-2"
                 placeholder="Front national ID card"
                 aria-label="Front national ID card"
-                v-model="frontId"
+                v-model="formValues.FrontNational_ID"
               />
-              <span class="error-feedback" v-if="v$.frontId.$error">{{
-                v$.frontId.$errors[0].$message
-              }}</span>
+              <!-- <span class="error-feedback" v-if="v$.FrontNational_ID.$error">{{v$.FrontNational_ID.$errors[0].$message}}</span> -->
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
               <label for="">Back national ID card</label>
               <input
-                type="email"
+                type="text"
                 class="w-100 rounded-5 p-2"
                 placeholder="Back national ID card"
                 aria-label="Back national ID card"
-                v-model="backId"
+                v-model="formValues.BackNational_ID"
               />
-              <span class="error-feedback" v-if="v$.backId.$error">{{
-                v$.backId.$errors[0].$message
-              }}</span>
+              <!-- <span class="error-feedback" v-if="v$.BackNational_ID.$error">{{v$.BackNational_ID.$errors[0].$message}}</span> -->
             </div>
           </div>
         </div>
@@ -173,7 +163,11 @@
                     <div>
                       <div class="row">
                         <div class="col-8">
-                          <input type="checkbox" class="form-check-input" />
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            v-model="formValues.Categories"
+                          />
                           <label for="" class="form-check-label mt-1 ms-1">{{
                             category["Name"]
                           }}</label>
@@ -205,6 +199,7 @@
                           type="checkbox"
                           class="form-check-input"
                           v-if="category['id'] == service['Category_id']"
+                          v-model="formValues.Service_1"
                         />
                         <label
                           for=""
@@ -249,14 +244,14 @@ export default {
     return {
       categories: [],
       services: [],
-      gender: "M",
+      // gender: "M",
       genders: [
         {
-          code: "F",
+          code: "Female",
           description: "Female",
         },
         {
-          code: "M",
+          code: "Male",
           description: "Male",
         },
       ],
@@ -265,17 +260,24 @@ export default {
       Last_name: "",
       Phone: "",
       Address: "",
-      frontId: "",
-      backId: "",
+      FrontNational_ID: "",
+      BackNational_ID: "",
 
       formValues: {
         First_name: "",
         Last_name: "",
-        Phone:"",
+        Phone: "",
         Address: "",
-        frontId: "",
-        backId: "",
-
+        FrontNational_ID: "",
+        BackNational_ID: "",
+        Gender: "",
+        Categories: "",
+        Service_1: "",
+        // Service_2: "",
+        // Service_3: "",
+        // Service_4: "",
+        Area: "",
+        Experience: "",
       },
     };
   },
@@ -294,6 +296,9 @@ export default {
     this.getService();
   },
 
+// mounted(){
+//   this.addWorker();
+// },
   methods: {
     getCategory() {
       axios
@@ -324,11 +329,11 @@ export default {
         console.log("Form validate failed");
       }
 
-        axios
+      axios
         .post("http://localhost:2000/worker", this.formValues)
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
-      this.$router.push("/products");
+      this.$router.push("/worker");
     },
   },
 };
