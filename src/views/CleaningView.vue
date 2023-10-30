@@ -1,24 +1,9 @@
 <template>
   <div class="bg">
     <NavBarPages />
-    <div class="child d-flex justify-content-center">
-      <form>
-        <div class="mb-3 col-lg-6 col-md-4">
-          <div>
-            <input type="text" class="input" id="inputName" placeholder="Bedroom, Living room" />
-          </div>
-        </div>
-        <div class="mb-3 col-lg-6 col-md-4">
-          <div>
-            <input type="email" class="input" id="inputEmail" placeholder="Bathroom" />
-          </div>
-        </div>
-        <div class="mb-3 col-lg-6 col-md-4">
-          <div>
-            <input type="text" class="input" id="inputPhone" placeholder="Kitchen" />
-          </div>
-        </div>
-        <div class="mb-3 col-lg-6 col-md-4"></div>
+    <div class="bar d-flex justify-content-end">
+      <form class="search">
+        <input class="search" type="search" placeholder="Search" />
       </form>
     </div>
     <div class="d-flex col-lg-2">
@@ -106,7 +91,7 @@
             <label class="box-title" for="cb3">Deep clean furniture</label>
             <label class="box-close" for="acc-close"></label>
             <div class="box-content d-flex flex-wrap">
-              <div class="col-4">
+              <div class="col-12">
                 <p>
                   Cleaning your furniture pieces like: chairs. sofas, curtains
                   and carpets.
@@ -130,9 +115,9 @@
     <div class="row justify-content-center gap-4">
       <div
         class="card mb-4 col-md-4 col-sm-6 col-6"
-        v-for="(worker, i) in workerData"
+        v-for="(worker, i) in workerData.slice(17,26)"
         :key="i"
-        style="width: 25rem;"
+        style="width: 25rem; border-radius: 15px;"
       >
         <img
           :src="`${worker.img}`"
@@ -145,18 +130,25 @@
             {{ worker["First_name"] }} {{ worker["Last_name"] }}
           </h5>
           <p class="card-text">
-            Full house (120m2 ~ 170m2):
-            {{ worker["Full house (120m2 ~ 170m2)"] }}
+            {{ worker["Service_1"] }}:
+            {{ worker["Service_1_price"] }}
           </p>
           <p class="card-text">
-            Full house (170m2 ~ 240m2):
-            {{ worker["Full house (170m2 ~ 240m2)"] }}
+            {{ worker["Service_2"] }}:
+            {{ worker["Service_2_price"] }}
           </p>
           <p class="card-text">
-            Deep clean(Kitchen&Bathroom):
-            {{ worker["Deep clean(Kitchen&Bathroom)"] }}
+            {{ worker["Service_3"] }}:
+            {{ worker["Service_3_price"] }}
           </p>
-          <star-rating active-color="#F97B22"  star-size=30 :rating="`${rev.Rate}`"></star-rating>
+          <p class="card-text">
+            {{ worker["Service_4"] }}
+            {{ worker["Service_4_price"] }}
+          </p>
+          <p class="card-text">Exp years:
+            {{ worker["Experience"] }}
+          </p>
+          <star-rating active-color="#F97B22"  star-size=30 :rating="`${worker.Rate}`"></star-rating>
           <router-link to="workerProfile">
             <a class="btn d-block m-auto mb-3 mt-3">See details</a></router-link
           >
@@ -165,7 +157,7 @@
     </div>
     <!-- http://localhost:8080/img/cleaner1.65740dc5.jpg -->
     <!-- <img src="@/assets/subservices/cleaner1.jpg" alt=""> -->
-    <div class="container">
+    <!-- <div class="container">
       <div class="row gy-4">
         <div
           class="card col-lg-4 col-md-4 col-sm-6 col-6"
@@ -224,7 +216,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <FooterComponent />
   </div>
 </template>
@@ -271,11 +263,12 @@ export default {
 
 .bar {
   justify-content: end;
+  margin-right: 140px;
   width: auto;
   height: 100px;
 }
 input.search {
-  border: 2px solid $orangeColor;
+  border: 2px solid $blueColor;
   border-radius: 28px;
   width: 350px;
   padding: 9px 4px 9px 40px;
@@ -298,6 +291,7 @@ input.search {
   font-weight: bold;
   text-align: center;
   color: $blueColor;
+  padding: 20px;
 }
 
 .accordion {
@@ -329,7 +323,7 @@ input.search {
 }
 .box-title {
   font-weight: $semiBold;
-  font-size: $small;
+  font-size: $subTitle;
   color: $blueColor;
   width: calc(100% - 30px);
   height: 64px;
@@ -345,18 +339,18 @@ input.search {
   user-select: none;
 
   @media (min-width: 767px) {
-    font-size: 20px;
+    // font-size: 20px;
   }
 }
 .box-content {
   width: calc(100% - 40px);
-  padding: 30px 20px;
-  font-size: $small;
-  font-weight: $semiBold;
+  padding: 10px 5px;
+  font-size: $paragraph;
+  font-weight: $regular;
   color: $blueColor;
   display: none;
   @media (min-width: 767px) {
-    font-size: 20px;
+    // font-size: 20px;
   }
 }
 .box-close {
@@ -445,7 +439,7 @@ img {
 }
 
 // .card{
-//   width: 270px;
+//   border-radius: 25px;
 // }
 .card-title {
   text-align: center;
