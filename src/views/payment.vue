@@ -35,14 +35,12 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <div class="">
-                        <div class=""> <label class="radio" > <input type="radio" value="terms" >
-                        accept terms and conditions</label> </div>
-                        </div>
+                            <input type="radio" value="terms" required v-model="terms">  accept terms and conditions
+                            <div class="error-feedback" v-if="v$.terms.$error"> {{ v$.terms.$errors[0].$message }}</div>
                     </div>
                     <div class="col-12">
                         <div class="btn ">
-                            <div @click="completePayment()" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" :disabled="!radioIsActive"><router-link to="#" class="pay" > Pay</router-link></div>
+                            <div @click="completePayment()" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><router-link to="#" class="pay" > Pay</router-link></div>
                         </div>
                         <div class="back-btn d-flex align-items-start">
                             <div class="back"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#193655" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
@@ -96,7 +94,7 @@
     import NavBarPages from "@/components/NavBarPages.vue";
     import FooterComponent from "@/components/footer.vue";
     import useVuelidate from "@vuelidate/core";
-    import { required, minLength, numeric } from "@vuelidate/validators";
+    import { required, minLength, numeric, maxLength } from "@vuelidate/validators";
     
 export default {
     name: "paymentDetails",
@@ -111,25 +109,25 @@ export default {
             cardNumber: "",
             expiry: "",
             cvv: "",
+            terms: "",
             newOrder: [],
-            radioIsActive: false,
+            // radioIsActive: false,
         }
     },
     validations() {
         return {
             fullName: { required },
-            cardNumber: { required, numeric, minLength: minLength(16) },
-            expiry: { required, minLength: minLength(7) },
-            cvv: { required, numeric, minLength: minLength(3) },
+            cardNumber: { required, numeric, minLength: minLength(16), maxLength: maxLength(16) },
+            expiry: { required, minLength: minLength(7),maxLength: maxLength(7) },
+            cvv: { required, numeric, minLength: minLength(3),maxLength: maxLength(3) },
+            terms: { required }
         };
     },
 
     mounted() {
     this.v$.$validate();
     const NewOrderArray = localStorage.getItem('newOrderDet');
-    if (NewOrderArray) {
-      this.newOrder = JSON.parse(NewOrderArray);
-    }
+
     },
 
     methods: {
@@ -137,16 +135,15 @@ export default {
             this.v$.$validate();
             if (!this.v$.$error) {
                 console.log('Payment completed successfully');
-                console.log(radioIsActive);
+                // console.log(radioIsActive);
             } else {
                 console.log('payement failed');
             }
         },
-        stopProcess() {
-            if (!this.radioIsActive) {
-                console.log('Radio button is not active');
-                return;
-            }
+        getNewOrder() {
+            if (NewOrderArray) {
+            this.newOrder = JSON.parse(NewOrderArray);
+    }
         }
     }
 }
