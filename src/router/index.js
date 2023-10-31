@@ -294,7 +294,7 @@ const routes = [
     component: CXprofileView,
   },
   {
-    path: "/SAAgencyProfile",
+    path: "/SAAgencyProfile/:id",
     name: "SAAgencyProfile",
     component: SAAgencyProfile,
   },

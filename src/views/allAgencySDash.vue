@@ -60,7 +60,7 @@
           </div>
           <div class="icons col-lg-3">
             <span class="view">
-              <router-link to="SAAgencyProfile">
+              <router-link :to="`SAAgencyProfile/${agency.id}`">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
