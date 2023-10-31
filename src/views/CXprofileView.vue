@@ -227,7 +227,7 @@ img {
 }
 
 .searchKe {
-  ont-size: $paragraph;
+  font-size: $paragraph;
   font-weight: $semiBold;
   margin-left: auto;
   text-align: center;
