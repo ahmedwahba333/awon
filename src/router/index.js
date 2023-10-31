@@ -123,7 +123,7 @@ const routes = [
   // end of auth
 
   {
-    path: "/workerProfile",
+    path: "/workerProfile/:id",
     name: "WorkerProfile",
     component: WorkerProfile,
   },
