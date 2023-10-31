@@ -144,7 +144,7 @@ const routes = [
     component: paymentDetails,
   },
   {
-    path: "/writereview",
+    path: "/writereview/:id",
     name: "WriteReview",
     component: WriteReview,
   },
@@ -330,7 +330,6 @@ router.beforeEach((to) => {
       to.name == "ServiceHistoryAgency" ||
       to.name == "AgancyDash" ||
       to.name == "dashReviews" ||
-      to.name == "allAgencies" ||
       to.name == "AllWorker" ||
       // customer
       to.name == "paymentDetails" ||
@@ -340,6 +339,7 @@ router.beforeEach((to) => {
       return "/login";
     } else if (
       // suberadmin
+      to.name == "allAgencies" ||
       to.name == "ServiceHistorySA" ||
       to.name == "AddAgency" ||
       to.name == "SADashHome" ||
@@ -370,9 +370,9 @@ router.beforeEach((to) => {
       to.name == "ServiceHistoryAgency" ||
       to.name == "AgancyDash" ||
       to.name == "dashReviews" ||
-      to.name == "allAgencies" ||
       to.name == "AllWorker" ||
       // suber admin
+      to.name == "allAgencies" ||
       to.name == "ServiceHistorySA" ||
       to.name == "AddAgency" ||
       to.name == "SADashHome" ||
@@ -403,6 +403,7 @@ router.beforeEach((to) => {
       to.name == "WriteReview" ||
       to.name == "BookingPage" ||
       // suberadmin
+      to.name == "allAgencies" ||
       to.name == "ServiceHistorySA" ||
       to.name == "AddAgency" ||
       to.name == "SADashHome" ||
@@ -433,7 +434,6 @@ router.beforeEach((to) => {
       to.name == "ServiceHistoryAgency" ||
       to.name == "AgancyDash" ||
       to.name == "dashReviews" ||
-      to.name == "allAgencies" ||
       to.name == "AllWorker" ||
       // customer
       to.name == "paymentDetails" ||
