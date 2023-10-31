@@ -18,8 +18,9 @@
     <div class="row justify-content-center gap-4">
       <div
         class="card mb-4 col-md-4 col-sm-6 col-6"
-        v-for="(worker, i) in workerData.slice(31,35,33,34,32)" :key="i"
-        style="width: 25rem; border-radius: 15px;"
+        v-for="(worker, i) in workerData.slice(31, 35, 33, 34, 32)"
+        :key="i"
+        style="width: 25rem; border-radius: 15px"
       >
         <img
           :src="`${worker.img}`"
@@ -35,19 +36,26 @@
             {{ worker["Service_1_price"] }}
             LE/meter
           </p>
-          <p class="card-text">Exp years:
+          <p class="card-text">
+            Exp years:
             {{ worker["Experience"] }}
           </p>
-          <star-rating active-color="#F97B22"  star-size=30 :rating="`${worker.Rate}`" style="justify-content: center;"></star-rating>
-          <router-link to="workerProfile">
+          <star-rating
+            active-color="#F97B22"
+            star-size="30"
+            :rating="`${worker.Rate}`"
+            style="justify-content: center"
+          ></star-rating>
+          <router-link :to="`./workerProfile/${worker.id}`">
             <a class="btn d-block m-auto mb-3 mt-3">See details</a></router-link
           >
         </div>
       </div>
       <div
         class="card mb-4 col-md-4 col-sm-6 col-6"
-        v-for="(worker, i) in workerData.slice(33,35,31,32,34)" :key="i"
-        style="width: 25rem; border-radius: 15px;"
+        v-for="(worker, i) in workerData.slice(33, 35, 31, 32, 34)"
+        :key="i"
+        style="width: 25rem; border-radius: 15px"
       >
         <img
           :src="`${worker.img}`"
@@ -63,19 +71,26 @@
             {{ worker["Service_1_price"] }}
             LE/meter
           </p>
-          <p class="card-text">Exp years:
+          <p class="card-text">
+            Exp years:
             {{ worker["Experience"] }}
           </p>
-          <star-rating active-color="#F97B22"  star-size=30 :rating="`${worker.Rate}`" style="justify-content: center;"></star-rating>
-          <router-link to="workerProfile">
+          <star-rating
+            active-color="#F97B22"
+            star-size="30"
+            :rating="`${worker.Rate}`"
+            style="justify-content: center"
+          ></star-rating>
+          <router-link :to="`./workerProfile/${worker.id}`">
             <a class="btn d-block m-auto mb-3 mt-3">See details</a></router-link
           >
         </div>
       </div>
       <div
         class="card mb-4 col-md-4 col-sm-6 col-6"
-        v-for="(worker, i) in workerData.slice(31,33,34,32,35)" :key="i"
-        style="width: 25rem; border-radius: 15px;"
+        v-for="(worker, i) in workerData.slice(31, 33, 34, 32, 35)"
+        :key="i"
+        style="width: 25rem; border-radius: 15px"
       >
         <img
           :src="`${worker.img}`"
@@ -91,19 +106,23 @@
             {{ worker["Service_1_price"] }}
             LE/meter
           </p>
-          <p class="card-text">Exp: 
-            {{ worker["Experience"] }} years
-          </p>
-          <star-rating active-color="#F97B22"  star-size=30 :rating="`${worker.Rate}`" style="justify-content: center;"></star-rating>
-          <router-link to="workerProfile">
+          <p class="card-text">Exp: {{ worker["Experience"] }} years</p>
+          <star-rating
+            active-color="#F97B22"
+            star-size="30"
+            :rating="`${worker.Rate}`"
+            style="justify-content: center"
+          ></star-rating>
+          <router-link :to="`./workerProfile/${worker.id}`">
             <a class="btn d-block m-auto mb-3 mt-3">See details</a></router-link
           >
         </div>
       </div>
       <div
         class="card mb-4 col-md-4 col-sm-6 col-6"
-        v-for="(worker, i) in workerData.slice(31,33,34,32,35)" :key="i"
-        style="width: 25rem; border-radius: 15px;"
+        v-for="(worker, i) in workerData.slice(31, 33, 34, 32, 35)"
+        :key="i"
+        style="width: 25rem; border-radius: 15px"
       >
         <img
           :src="`${worker.img}`"
@@ -119,11 +138,17 @@
             {{ worker["Service_1_price"] }}
             LE/meter
           </p>
-          <p class="card-text">Exp years:
+          <p class="card-text">
+            Exp years:
             {{ worker["Experience"] }}
           </p>
-          <star-rating active-color="#F97B22"  star-size=30 :rating="`${worker.Rate}`" style="justify-content: center;"></star-rating>
-          <router-link to="workerProfile">
+          <star-rating
+            active-color="#F97B22"
+            star-size="30"
+            :rating="`${worker.Rate}`"
+            style="justify-content: center"
+          ></star-rating>
+          <router-link :to="`./workerProfile/${worker.id}`">
             <a class="btn d-block m-auto mb-3 mt-3">See details</a></router-link
           >
         </div>
@@ -137,7 +162,7 @@
 import NavBarPages from "@/components/NavBarPages.vue";
 import FooterComponent from "@/components/footer.vue";
 import axios from "axios";
-import StarRating from "vue-star-rating"
+import StarRating from "vue-star-rating";
 export default {
   components: {
     NavBarPages,
@@ -150,7 +175,7 @@ export default {
       // pathImg: "../assets/subservices/",
       // imgArr:[],
       workerData: [],
-      workerNm:'',
+      workerNm: "",
     };
   },
   created() {
@@ -163,15 +188,15 @@ export default {
       })
       .catch((err) => console.log(err));
   },
-  computed:{
-            handleSearch(){
-                return this.orders.filter((elem) => {
-                       return (
-                         elem.Worker_FName.toLowerCase().includes(this.workerNm.toLowerCase()) 
-                                );
-                                                     });
-                           }
-                    } 
+  computed: {
+    handleSearch() {
+      return this.orders.filter((elem) => {
+        return elem.Worker_FName.toLowerCase().includes(
+          this.workerNm.toLowerCase()
+        );
+      });
+    },
+  },
 };
 </script>
 
@@ -231,7 +256,9 @@ input.search {
   padding: 15px;
   padding-top: 0px;
 }
-
+.row {
+  margin: 0px !important;
+}
 img {
   margin-top: 15px;
   clip-path: circle();

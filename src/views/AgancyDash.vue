@@ -56,8 +56,8 @@
             <h4>Total Orders</h4>
           </div>
           <div class="d-flex justify-content-between">
-            <h4>{{lastOrder}}</h4>
-            <div class="up d-flex justify-content-between p-2">
+            <h4>{{ ordersOfagency }}</h4>
+            <!-- <div class="up d-flex justify-content-between p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="13"
@@ -83,7 +83,7 @@
                 />
               </svg>
               <h6>15%</h6>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="box sectionOne m-0 col-md-4 col-12">
@@ -112,11 +112,11 @@
                 fill="#F97B22"
               />
             </svg>
-            <h4>New Workers</h4>
+            <h4>Total Workers</h4>
           </div>
           <div class="d-flex justify-content-between">
-            <h4>80</h4>
-            <div class="up d-flex justify-content-between p-2">
+            <h4>{{ workersOfagency }}</h4>
+            <!-- <div class="up d-flex justify-content-between p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="13"
@@ -142,7 +142,7 @@
                 />
               </svg>
               <h6>7%</h6>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="box sectionOne m-0 col-md-4 col-12">
@@ -185,11 +185,11 @@
                 stroke-linejoin="round"
               />
             </svg>
-            <h4>New Order</h4>
+            <h4>Services No.</h4>
           </div>
           <div class="d-flex justify-content-between">
-            <h4>102</h4>
-            <div class="up d-flex justify-content-between p-2">
+            <h4>{{ serviceNo }}</h4>
+            <!-- <div class="up d-flex justify-content-between p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="13"
@@ -215,7 +215,7 @@
                 />
               </svg>
               <h6>30%</h6>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -231,18 +231,21 @@
           <div class="p-2">
             <h4>Special Customer</h4>
           </div>
-          <div class="d-flex flex-row justify-content-between" v-for="(customer,i) in cx.slice(0,5)" :key="i" >
+          <div
+            class="d-flex flex-row justify-content-between"
+            v-for="(customer, i) in cx"
+            :key="i"
+          >
             <!-- <div>
               <img src="../assets/images/dashhome/1.jpg" alt="Cx" />
             </div> -->
             <div class="p-2">
-              <p>{{customer['First_name']}}  {{customer['Last_name']}}</p>
+              <p>{{ customer["First_name"] }} {{ customer["Last_name"] }}</p>
             </div>
             <div class="p-2">
               <p>1200$</p>
             </div>
           </div>
-         
         </div>
         <div class="box sectionThreeA m-0 col-md-4 col-sm-6 col-12">
           <div class="p-2">
@@ -259,125 +262,28 @@
           <div class="p-2">
             <h4>Recent Reviews</h4>
           </div>
-          <div class="d-flex flex-row my-3">
+          <div
+            class="d-flex flex-row my-3 align-items-center"
+            v-for="(review, i) in recentReview"
+            :key="i"
+          >
             <div>
-              <img src="../assets/images/dashhome/2.jpg" alt="Cx" />
+              <img
+                :src="`${review.picture}`"
+                alt="Cx"
+                class="object-fit-cover"
+              />
             </div>
             <div class="ms-4">
-              <h4>Suzy Nabil</h4>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="102"
-                height="18"
-                viewBox="0 0 102 18"
-                fill="none"
-              >
-                <path
-                  d="M8.84249 0L10.8278 6.11001H17.2522L12.0547 9.88621L14.04 15.9962L8.84249 12.22L3.64501 15.9962L5.63027 9.88621L0.432782 6.11001H6.85723L8.84249 0Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M29.8425 0L31.8278 6.11001H38.2522L33.0547 9.88621L35.04 15.9962L29.8425 12.22L24.645 15.9962L26.6303 9.88621L21.4328 6.11001H27.8572L29.8425 0Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M50.8444 0L52.8297 6.11001H59.2542L54.0567 9.88621L56.0419 15.9962L50.8444 12.22L45.647 15.9962L47.6322 9.88621L42.4347 6.11001H48.8592L50.8444 0Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M71.8444 0L73.8297 6.11001H80.2542L75.0567 9.88621L77.0419 15.9962L71.8444 12.22L66.647 15.9962L68.6322 9.88621L63.4347 6.11001H69.8592L71.8444 0Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M92.8464 0L94.8317 6.11001H101.256L96.0586 9.88621L98.0439 15.9962L92.8464 12.22L87.6489 15.9962L89.6342 9.88621L84.4367 6.11001H90.8611L92.8464 0Z"
-                  fill="#C3C3C3"
-                />
-              </svg>
-
+              <h4>{{ review["Name"] }}</h4>
+              <star-rating
+                active-color="#F97B22"
+                read-only
+                star-size="20"
+                :rating="`${review.Rate}`"
+              ></star-rating>
               <p>
-                I had high hopes for this service, and I wasn't disappointed.
-              </p>
-            </div>
-          </div>
-          <div class="d-flex flex-row">
-            <div>
-              <img src="../assets/images/dashhome/3.jpg" alt="Cx" />
-            </div>
-            <div class="ms-4">
-              <h4>Suzy Nabil</h4>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="102"
-                height="18"
-                viewBox="0 0 102 18"
-                fill="none"
-              >
-                <path
-                  d="M8.84249 0L10.8278 6.11001H17.2522L12.0547 9.88621L14.04 15.9962L8.84249 12.22L3.64501 15.9962L5.63027 9.88621L0.432782 6.11001H6.85723L8.84249 0Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M29.8425 0L31.8278 6.11001H38.2522L33.0547 9.88621L35.04 15.9962L29.8425 12.22L24.645 15.9962L26.6303 9.88621L21.4328 6.11001H27.8572L29.8425 0Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M50.8444 0L52.8297 6.11001H59.2542L54.0567 9.88621L56.0419 15.9962L50.8444 12.22L45.647 15.9962L47.6322 9.88621L42.4347 6.11001H48.8592L50.8444 0Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M71.8444 0L73.8297 6.11001H80.2542L75.0567 9.88621L77.0419 15.9962L71.8444 12.22L66.647 15.9962L68.6322 9.88621L63.4347 6.11001H69.8592L71.8444 0Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M92.8464 0L94.8317 6.11001H101.256L96.0586 9.88621L98.0439 15.9962L92.8464 12.22L87.6489 15.9962L89.6342 9.88621L84.4367 6.11001H90.8611L92.8464 0Z"
-                  fill="#C3C3C3"
-                />
-              </svg>
-
-              <p>
-                The quality of the service is exceptional.very quick
-                service.Love it!
-              </p>
-            </div>
-          </div>
-          <div class="d-flex flex-row">
-            <div>
-              <img src="../assets/images/dashhome/4.jpg" alt="Cx" />
-            </div>
-            <div class="ms-4">
-              <h4>Suzy Nabil</h4>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="102"
-                height="18"
-                viewBox="0 0 102 18"
-                fill="none"
-              >
-                <path
-                  d="M8.84249 0L10.8278 6.11001H17.2522L12.0547 9.88621L14.04 15.9962L8.84249 12.22L3.64501 15.9962L5.63027 9.88621L0.432782 6.11001H6.85723L8.84249 0Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M29.8425 0L31.8278 6.11001H38.2522L33.0547 9.88621L35.04 15.9962L29.8425 12.22L24.645 15.9962L26.6303 9.88621L21.4328 6.11001H27.8572L29.8425 0Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M50.8444 0L52.8297 6.11001H59.2542L54.0567 9.88621L56.0419 15.9962L50.8444 12.22L45.647 15.9962L47.6322 9.88621L42.4347 6.11001H48.8592L50.8444 0Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M71.8444 0L73.8297 6.11001H80.2542L75.0567 9.88621L77.0419 15.9962L71.8444 12.22L66.647 15.9962L68.6322 9.88621L63.4347 6.11001H69.8592L71.8444 0Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M92.8464 0L94.8317 6.11001H101.256L96.0586 9.88621L98.0439 15.9962L92.8464 12.22L87.6489 15.9962L89.6342 9.88621L84.4367 6.11001H90.8611L92.8464 0Z"
-                  fill="#C3C3C3"
-                />
-              </svg>
-
-              <p>
-                In my opinion, this service is good, I was impressed by the
-                attention to detail.
+                {{ review.Review }}
               </p>
             </div>
           </div>
@@ -390,84 +296,173 @@
 <script>
 import NavBarDash from "@/components/NavBarDash.vue";
 import Chart from "chart.js/auto";
-import axios from 'axios';
+import axios from "axios";
+import StarRating from "vue-star-rating";
 export default {
   name: "AgancyDash",
-  components: { NavBarDash },
-data() {
+  components: { NavBarDash, StarRating },
+  data() {
     return {
-       cx:[],
-       orders:[],
+      Delivered:[],
+      Pending:[],
+      Canceled:[],
+      NoDelivered:0,
+      serviceNo: 0,
+      services: [],
+      cx: [],
+      orders: [],
+      workers: [],
       //  lastOrder:0,
-       rev:[],
-       recentReview:"",
-       agency:"",
+      rev: [],
+      recentReview: [],
+      agency: "",
+      agencyID: "",
+      ordersOfagency: 0,
+      orderAgencyId: [],
+      workersOfagency: 0,
+      workerAgencyId: [],
       //  totalOrder:""
-       
-    }
+    };
   },
-  created(){
+  created() {
     this.getCx(),
-    // this.lastOrderID(),
-    this.getOrders(),
-    this.getRev() ,
-    this.recentRev(),
-     this.getAgFromLocal()
+      // this.lastOrderID(),
+      this.getOrders(),
+      this.getRev(),
+      // this.recentRev()
+      //  this.getAgFromLocal(),
+      // this.sumOfOrders(),
+      this.getAgency(),
+      this.getServicesNo(),
+      this.getWorker()
+  },
+  methods: {
+    getServicesNo() {
+      axios
+        .get("http://localhost:2000/service")
+        .then((res) => {
+          this.services = res.data;
+          this.serviceNo = this.services.length;
+          //  console.log(this.orders.length);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+    getCx() {
+      axios
+        .get("http://localhost:2000/cx")
+        .then((res) => {
+          this.cx = res.data.slice(0, 5);
+          // console.log(this.cx);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+    getAgency() {
+      this.agency = JSON.parse(localStorage.getItem("agInfo"));
+      this.agencyID = this.agency.id;
+      console.log(this.agencyID);
+      axios
+        .get(`http://localhost:2000/agency/${this.agencyID}`)
+        .then((res) => {
+          this.agency = res.data;
+          // console.log(this.agency);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+    getOrders() {
+      axios
+        .get("http://localhost:2000/order")
+        .then((res) => {
+          this.orders = res.data;
+          console.log(this.ordersOfagency);
+// Order_Status
+          for (let x = 0; x < this.orders.length; x++) {
+            if (this.agencyID == this.orders[x]["Agency_id"]) {
+              this.orderAgencyId.push(this.orders[x]["Agency_id"]);
+            }
+            if(this.orders[x]["Order_Status"] == "completed"){
+              this.Delivered.push("completed")
+            }
+          }
+          console.log(this.Delivered.length);
+          console.log(this.orderAgencyId);
+          
+          this.ordersOfagency = this.orderAgencyId.length;
+           this.NoDelivered = this.Delivered.length;
+          console.log(this.NoDelivered);
+          console.log(this.orders[0]["Agency_id"]);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+    getWorker() {
+      axios
+        .get("http://localhost:2000/worker")
+        .then((res) => {
+          this.workers = res.data;
+          console.log(this.workersOfagency);
+
+          for (let x = 0; x < this.workers.length; x++) {
+            if (this.agencyID == this.workers[x]["Agency_id"]) {
+              this.workerAgencyId.push(this.workers[x]["Agency_id"]);
+            }
+          }
+          console.log(this.workerAgencyId);
+          this.workersOfagency = this.workerAgencyId.length;
+
+          console.log(this.workers[0]["Agency_id"]);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+    getRev() {
+      axios
+        .get("http://localhost:2000/review")
+        .then((res) => {
+          this.rev = res.data.slice(-3);
+          this.recentReview = this.rev;
+          console.log(this.recentReview);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
 
   },
-  methods:{
-    getCx(){
-      axios.get("http://localhost:2000/cx")
-      .then((res)=> {this.cx = res.data})
-      .catch((err)=>{console.log(err)})
-    },
-    getOrders(){
-       axios.get("http://localhost:2000/order")
-      .then((res)=> {this.orders = res.data })
-      .catch((err)=>{console.log(err)})
-    },
-  //   lastOrderID() {
-  //   return this.lastOrder;
-  //   // console.log(this.lastOrder);
-  // },
-  getRev() {
-       axios.get("http://localhost:2000/review")
-      .then((res)=> {this.rev = res.data
-      this.recentReview=this.rev.slice(7)
-      })
-      .catch((err)=>{console.log(err)})
-  },
-  recentRev(){
-      console.log(this.recentReview);
-      return this.recentReview;
-  },
-  getAgFromLocal(){
-    this.agency = JSON.parse(localStorage.getItem("agInfo"))
-    // console.log(this.agency["id"]);
-  }
-  },
   mounted() {
+    
+    console.log(this.NoDelivered);
     const ctx = document.getElementById("myChart");
     const ctx2 = document.getElementById("myChart2");
     new Chart(ctx, {
       type: "line",
       data: {
         labels: [
-          "4 Oct.",
-          "5 Oct.",
-          "6 Oct.",
-          "7 Oct.",
-          "8 Oct.",
-          "9 Oct.",
-          "10 Oct.",
-          "11 Oct.",
-          "12 Oct.",
+          "Jun.",
+          "Feb.",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "Aug.",
+          "Sep.",
+          "Oct.",
+          "Nov.",
+          "Dec.",
         ],
 
         datasets: [
           {
             label: "Recruitment Report",
-            data: [8, 14, 12, 15, 10, 12, 9, 11, 13],
+            data: [8, 14, 12, 15, 10, 12, 9, 11, 13, 9.12, 10, 13, 10],
             borderWidth: 3,
             borderColor: "#F97B22",
             fill: true,
@@ -508,7 +503,7 @@ data() {
       datasets: [
         {
           label: "My First Dataset",
-          data: [50, 100, 300],
+          data: [50, 100, this.NoDelivered],
           backgroundColor: ["#193655", "#EBEBD3", "#F97B22"],
           hoverOffset: 4,
         },
@@ -565,77 +560,74 @@ data() {
 <style lang="scss" scoped>
 @import "../scss/global/colors";
 @import "../scss/global/variables";
-
-.bg{
+img {
+  clip-path: circle();
+  width: 60%;
+}
+.bg {
   background-color: $backgroundColor;
   padding-bottom: 20px;
 }
-.container{
-    h1{
-      font-size: $paragraph;
-      font-weight: $bold;
-      color: $blueColor;
-    }
-    h5{
-      font-size: $small;
-      color: $blueColor;
-      font-weight: $regular;
-    }
-    @media(min-width: 767px) {
-         h1{
-        font-size: $title;
-      }
-      h5{
-        font-size: $paragraph;
-      }
-       }
-
-    }
-    .up{
-      width: 60px;
-      height: 30px;
-      background-color: $backgroundColor;
-
-    }
-
-
-.box {
-@include box;
-
-    padding: 15px;
-
-    margin: 10px;
-    &.sectionOne{
-       width: 350px;
-       height: 120px;
-    }
-
-    &.sectionTwoA,&.sectionThreeB{
-      width: 730px;
-       height: 400px;
-
-    }
-    &.sectionTwoB,&.sectionThreeA{
-      width: 350px;
-       height: 400px;
-
-    }
-   &.sectionThreeB{
-   @media(min-width: 375px) {
-         p{
-        font-size: $small;
-      }
-     
-       }
-
-    }
-}
-  h4 {
-    font-weight: $bold;
-  }
-  p {
+.container {
+  h1 {
     font-size: $paragraph;
     font-weight: $bold;
+    color: $blueColor;
+  }
+  h5 {
+    font-size: $small;
+    color: $blueColor;
+    font-weight: $regular;
+  }
+  @media (min-width: 767px) {
+    h1 {
+      font-size: $title;
+    }
+    h5 {
+      font-size: $paragraph;
+    }
+  }
+}
+.up {
+  width: 60px;
+  height: 30px;
+  background-color: $backgroundColor;
+}
+
+.box {
+  @include box;
+
+  padding: 15px;
+
+  margin: 10px;
+  &.sectionOne {
+    width: 350px;
+    height: 120px;
   }
 
+  &.sectionTwoA,
+  &.sectionThreeB {
+    width: 730px;
+    height: 400px;
+  }
+  &.sectionTwoB,
+  &.sectionThreeA {
+    width: 350px;
+    height: 400px;
+  }
+  &.sectionThreeB {
+    @media (min-width: 375px) {
+      p {
+        font-size: $small;
+      }
+    }
+  }
+}
+h4 {
+  font-weight: $bold;
+}
+p {
+  font-size: $paragraph;
+  font-weight: $bold;
+}
 </style>

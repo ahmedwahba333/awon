@@ -509,7 +509,7 @@ import { required, numeric , minLength} from "@vuelidate/validators";
                   const dateTo = new Date(this.newOrderDet.multDateTo);
                   const dateFrom = new Date(this.newOrderDet.multDateFrom);
                   this.dateDiff =dateTo -dateFrom;
-                  this.noOfDays= Math.floor(this.dateDiff / (1000 * 60 * 60 * 24));
+                  this.noOfDays = Math.floor(this.dateDiff / (1000 * 60 * 60 * 24));
 
                   const res = (parseInt(this.checkInput[0]) + parseInt(this.checkInput[1]) + parseInt(this.checkInput[2])) ||
                     (parseInt(this.checkInput[0]) + parseInt(this.checkInput[1])) || (parseInt(this.checkInput1)*this.noOfPieces + parseInt(this.checkInput[0])) ||
@@ -546,21 +546,16 @@ import { required, numeric , minLength} from "@vuelidate/validators";
                                  //Set Local Storage
                      const objectString = JSON.stringify(this.newOrderDet);
                       localStorage.setItem("newOrderDet", objectString);
+  
+                         } ,
 
-             
-                                  //Check Validation
-                                this.v$.$validate();
-                              if (!this.v$.$error) {
-                                  console.log('Payment completed successfully');
-                                  this.$router.push("/payment")
-                               
-                              } else {
-                                  console.log('payement failed');     
-                                 
-                              }
-                         } ,     
-            },
-      }
+        },
+
+
+    
+  
+}
+         
 
 </script>
 
@@ -688,6 +683,3 @@ li{
     }
 
 </style>
-
-
-
