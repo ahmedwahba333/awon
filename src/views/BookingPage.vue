@@ -225,7 +225,7 @@
               <label for="inputEmail4">First Name</label>
               <input type="text" class="form-control" id="inputEmail4" v-model="firstName" v-on:input="v$.firstName.$touch()">
               <template v-if="v$.firstName.$error" >
-             <span class="invalid-feedback d-block"> {{ v$.firstName.$errors[0].$message}}</span>
+             <span class="error-feedback"> {{ v$.firstName.$errors[0].$message}}</span>
             </template>
             </div>
             <div class="form-group col-md-6">
