@@ -76,7 +76,7 @@
           </div>
           <div class="col-sm-5">
             <div> {{ wk.Service_1_price }} LE </div>
-            <div> {{ wk.Service_2_price }} LE </div>
+            <div v-if="wk.Service_3_price"> {{ wk.Service_2_price }} LE </div>
             <div v-if="wk.Service_3_price"> {{ wk.Service_3_price }} LE </div>
             <div v-if="wk.Service_4_price"> {{ wk.Service_4_price }} LE </div>
           </div>
@@ -88,7 +88,7 @@
           <div class="col col-lg-6 col-md-6 col-sm-12 col-12" v-for="(index,i) in rev.slice(0,4)" :key="i" >
             <div class="content row align-items-start" >
               <div class="col-sm-7 col-7 d-flex align-items-center">
-                <div><img :src="`${index.picture}`" alt="Cx" /></div>
+                <div><img :src="`${index.picture}`" class="rev-mg" alt="Cx" /></div>
               <div class="cx name ms-2"> {{ index.Name }} </div>
               </div>
               <div class="cx rate col-lg-5 col-md-5 col-5">
@@ -237,6 +237,10 @@ export default {
   margin: 2%;
 }
 
+.rev-img {
+  clip-path: circle();
+  width: 100px;
+}
 .badge-icon {
   display: inline-block;
   vertical-align: middle;
