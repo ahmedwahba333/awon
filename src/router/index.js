@@ -39,7 +39,7 @@ import CXprofileView from "../views/CXprofileView.vue";
 import SAAgencyProfile from "../views/SAAgencyProfile.vue";
 import AdminAgencyProfile from "../views/AdminAgencyProfile.vue";
 import ServicesidView from "../views/ServicesidView.vue";
-
+import AddWorkerAgency from "../views/AddWorkerAgency.vue";
 // >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
 
 import ServiceHistoryAgency from "../views/ServiceHistoryAgency.vue";
@@ -313,6 +313,11 @@ const routes = [
     path: "/SAAllWorker",
     name: "SAAllWorker",
     component: SAAllWorker,
+  },
+  {
+    path: "/AddWorkerAgency",
+    name: "AddWorkerAgency",
+    component: AddWorkerAgency,
   },
 ];
 
