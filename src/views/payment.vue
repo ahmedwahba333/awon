@@ -112,7 +112,7 @@ export default {
             expiry: "",
             cvv: "",
             newOrder: [],
-            radioIsActive: false,
+            // radioIsActive: false,
         }
     },
     validations() {
@@ -133,21 +133,21 @@ export default {
     },
 
     methods: {
-        completePayment() {
-            this.v$.$validate();
-            if (!this.v$.$error) {
-                console.log('Payment completed successfully');
-                console.log(radioIsActive);
-            } else {
-                console.log('payement failed');
-            }
-        },
-        stopProcess() {
-            if (!this.radioIsActive) {
-                console.log('Radio button is not active');
-                return;
-            }
-        }
+        // completePayment() {
+        //     this.v$.$validate();
+        //     if (!this.v$.$error) {
+        //         console.log('Payment completed successfully');
+        //         console.log(radioIsActive);
+        //     } else {
+        //         console.log('payement failed');
+        //     }
+        // },
+        // stopProcess() {
+        //     if (!this.radioIsActive) {
+        //         console.log('Radio button is not active');
+        //         return;
+        //     }
+        // }
     }
 }
 
