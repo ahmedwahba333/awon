@@ -130,15 +130,15 @@
             {{ worker["First_name"] }} {{ worker["Last_name"] }}
           </h5>
           <p class="card-text">
-            {{ worker["Service_1"] }}:
+            {{ worker["Service_1"] }}
             {{ worker["Service_1_price"] }}
           </p>
           <p class="card-text">
-            {{ worker["Service_2"] }}:
+            {{ worker["Service_2"] }}
             {{ worker["Service_2_price"] }}
           </p>
           <p class="card-text">
-            {{ worker["Service_3"] }}:
+            {{ worker["Service_3"] }}
             {{ worker["Service_3_price"] }}
           </p>
           <p class="card-text">
@@ -148,7 +148,7 @@
           <p class="card-text">Exp years:
             {{ worker["Experience"] }}
           </p>
-          <star-rating active-color="#F97B22"  star-size=30 :rating="`${worker.Rate}`"></star-rating>
+          <star-rating active-color="#F97B22"  star-size=30 :rating="`${worker.Rate}`" style="justify-content: center;"></star-rating>
           <router-link to="workerProfile">
             <a class="btn d-block m-auto mb-3 mt-3">See details</a></router-link
           >
