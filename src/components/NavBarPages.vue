@@ -1,22 +1,22 @@
 <template>
   <div class="header" id="header">
     <div class="container">
-      <router-link to="#" class="logo"><a>Awon</a></router-link>
+      <router-link to="/" class="logo"><a>Awon</a></router-link>
       <ul class="mainNav">
         <li>
           <router-link to="/"><a>Home</a></router-link>
         </li>
         <li>
-          <router-link to="ServicesView"><a>Services</a></router-link>
+          <router-link to="/ServicesView"><a>Services</a></router-link>
           <div class="mega-menu">
             <ul class="links">
               <ul>
                 <span>House Keeping</span>
                 <li>
-                  <router-link to="CleaningView"><a>Cleaning</a></router-link>
+                  <router-link to="/CleaningView"><a>Cleaning</a></router-link>
                 </li>
                 <li>
-                  <router-link to="GardeningView"><a>Gardening</a></router-link>
+                  <router-link to="/GardeningView"><a>Gardening</a></router-link>
                 </li>
               </ul>
               <ul>
@@ -37,7 +37,7 @@
                   <router-link to="/FoodcateringView"><a>Food Catering</a></router-link>
                 </li>
                 <li>
-                  <router-link to="ChefsView"><a>Chefs</a></router-link>
+                  <router-link to="/ChefsView"><a>Chefs</a></router-link>
                 </li>
               </ul>
               <ul>
@@ -65,14 +65,14 @@
           </div>
         </li>
         <li>
-          <router-link to="allworkerfromcx"><a>Workers</a></router-link>
+          <router-link to="/allworkerfromcx"><a>Workers</a></router-link>
         </li>
         <li>
-          <router-link to="aboutus"><a>About Us</a></router-link>
+          <router-link to="/aboutus"><a>About Us</a></router-link>
         </li>
-        <li>
-          <router-link to="/"><a>Contact Us</a></router-link>
-        </li>
+        <!-- <li>
+          <router-link to="/#contactUsId">Contact Us</router-link>
+        </li> -->
 
         <li>
           <!-- <div class="image"> -->

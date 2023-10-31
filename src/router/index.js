@@ -316,6 +316,9 @@ const router = createRouter({
   routes,
 });
 
+router.afterEach(() => {
+  window.scrollTo(0, 0);
+});
 router.beforeEach((to) => {
   // token
   const userData = JSON.parse(localStorage.getItem("cxInfo"));
