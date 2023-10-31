@@ -34,7 +34,7 @@
       </div>
       <!-- Search Filter -->
       <div class="searchCard pt-3">
-        <div class="row d-flex ">
+        <div class="row d-flex flex wrap">
           <p class="subtitle mx-4 col-9">Account</p>
           <p class="subtitle mx-4 col-2">
             <router-link to="#">
@@ -58,23 +58,23 @@
         <div class="row">
           <div class="col-lg-3 col-md-5 col-sm-12 pb-4">
             <img
-              :src="`${Agencies.Logo}`"
+              :src="`${agencyInfo.Logo}`"
               class="card-img-top object-fit-cover Clip-path:circle()"
               :alt="`agencyimg${i}`"
             />
           </div>
           <div class="col-lg-4 col-md-3 col-sm-6">
             <p class="searchKey">Name</p>
-            <p class="searchKey">{{ Agencies.Agency_Name }}</p>
+            <p class="searchKey">{{ agencyInfo.Agency_Name }}</p>
             <p class="searchKey">Email</p>
-            <p class="servent">{{ Agencies.Agency_Email }}</p>
+            <p class="servent">{{ agencyInfo.Email }}</p>
           </div>
           <div class="col-lg-4 col-md-3 col-sm-6">
             <p class="searchKey">Phone</p>
-            <p class="servent">{{ Agencies.Agency_Phone_no }}</p>
+            <p class="servent">{{ agencyInfo.Owner_Phone_no }}</p>
             <p class="searchKey">Location</p>
             <p class="servent">
-              {{ Agencies.Agency_Address }}
+              {{ agencyInfo.Agency_Address }}
             </p>
           </div>
         </div>
@@ -236,6 +236,69 @@
           </div>
         </div>
       </div>
+      <div
+        class="modal fade"
+        id="exampleModalToggle"
+        aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 fw-bold" id="exampleModalToggleLabel">
+                Edit Worker
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="row mb-3">
+                <div class="col-4">Agency Name</div>
+                <div class="col-8">
+                  <input
+                    type="text"
+                    placeholder=""
+                    v-model="agencyInfo.Agency_Name"
+                  />
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">Email</div>
+                <div class="col-8">
+                  <input
+                    type="email"
+                    placeholder=""
+                    v-model="agencyInfo.Email"
+                  />
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">Phone</div>
+                <div class="col-8">
+                  <input type="text" v-model="agencyInfo.Owner_Phone_no" />
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">adress</div>
+                <div class="col-8">
+                  <input type="text" v-model="agencyInfo.Agency_Address" />
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn editBtn" @click="EditData">Edit</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -251,12 +314,35 @@ export default {
   data() {
     return {
       id: " ",
-      Agencies: [],
+      // Agencies: [],
       orders: [],
       // orderID: "",
       // cxID: "",
       // orderDate: "",
       // workerNm: "",
+      agencyInfo: {
+        id: "",
+        Owner_First_name: "",
+        Owner_last_name: "",
+        Email: "",
+        Gender: "",
+        Owner_Phone_no: "",
+        Owner_DOB: "",
+        Owner_front_nid: "",
+        Owner_back_nid: "",
+        trade_register_card: "",
+        rating: "",
+        Logo: "",
+        Agency_Name: "",
+        Agency_Email: "",
+        Agency_Address: "",
+        Agency_PostCode: "",
+        Agency_City: "",
+        BackNaAgency_Governoratetional_ID: "",
+        Agency_Phone_no: "",
+        Agency_Phone_no2: "",
+        owner_Password: "",
+      },
     };
   },
   created() {
@@ -279,22 +365,55 @@ export default {
       axios
         .get(`http://localhost:2000/agency/${this.id}`)
         .then((res) => {
-          this.Agencies = res.data;
+          this.agencyInfo = res.data;
+          this.agencyInfo.id = res.data.id;
+          this.agencyInfo.Owner_First_name = res.data.Owner_First_name;
+          this.agencyInfo.Owner_last_name = res.data.Owner_last_name;
+          this.agencyInfo.Email = res.data.Email;
+          this.agencyInfo.Gender = res.data.Gender;
+          this.agencyInfo.Owner_Phone_no = res.data.Owner_Phone_no;
+          this.agencyInfo.Owner_DOB = res.data.Owner_DOB;
+          this.agencyInfo.Owner_front_nid = res.data.Owner_front_nid;
+          this.agencyInfo.Owner_back_nid = res.data.Owner_back_nid;
+          this.agencyInfo.trade_register_card = res.data.trade_register_card;
+          this.agencyInfo.rating = res.data.rating;
+          this.agencyInfo.Logo = res.data.Logo;
+          this.agencyInfo.Agency_Name = res.data.Agency_Name;
+          this.agencyInfo.Agency_Email = res.data.Agency_Email;
+          this.agencyInfo.Agency_Address = res.data.Agency_Address;
+          this.agencyInfo.Agency_PostCode = res.data.Agency_PostCode;
+          this.agencyInfo.Agency_City = res.data.Agency_City;
+          this.agencyInfo.BackNaAgency_Governoratetional_ID = res.data.BackNaAgency_Governoratetional_ID;
+          this.agencyInfo.Agency_Phone_no = res.data.Agency_Phone_no;
+          this.agencyInfo.Agency_Phone_no2 = res.data.Agency_Phone_no2;
+          this.agencyInfo.owner_Password = res.data.owner_Password;
           console.log(res.data);
         })
         .catch((err) => {
           console.log(err);
         });
     },
-    deleteCat(id) {
+
+    EditData() {
       axios
-        .delete(`http://localhost:2000/agency/${id}`)
-        .then((res) => console.log(res))
-        .catch((err) => {
-          console.log(err);
-        });
+        .put(`http://localhost:2000/agency/${this.id}`, this.agencyInfo)
+        .then((res) => {
+          console.log(res);
+          this.agencyInfo = {
+            // First_name: "",
+            // Last_name: "",
+            // Phone: "",
+            // Address: "",
+            // Area: "",
+            // Categories: "",
+            // email: "",
+          };
+        })
+        .catch((err) => console.log(err))
+        .then(this.$router.push(`/SAAgencyProfile/${this.id}`));
       this.getAgency();
       this.getAllOrders();
+      location.reload()
     },
   },
 };

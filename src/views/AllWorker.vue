@@ -622,17 +622,7 @@ export default {
 <style lang="scss" scoped>
 @import "../scss/global/colors";
 @import "../scss/global/variables";
-.breadcrumb-item {
-  font-size: $paragraph !important;
-  color: $blueColor !important;
-  font-weight: bold !important;
-}
-.breadCrumb {
-  margin-left: 1px;
-}
-.breadcrumb-item {
-  background-color: transparent;
-}
+
 .bg {
   background-color: $backgroundColor;
 }
@@ -643,12 +633,10 @@ export default {
 }
 .box {
   @include box;
-  margin-bottom: 0;
-  padding: 15px;
+  margin: 20px;
+  padding: 20px;
 }
-ol{
-  list-style: none;
-}
+
 .add-icon {
   display: flex;
   justify-content: end;
