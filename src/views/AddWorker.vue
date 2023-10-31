@@ -8,48 +8,28 @@
           <div class="row mb-4">
             <div class="col-lg-6 col-md-6 col-sm-12">
               <label>First name</label>
-              <input
-                type="text"
-                class="w-100 rounded-5 p-2"
-                placeholder="First name"
-                aria-label="First name"
-                v-model="formValues.First_name"
-              />
+              <input type="text" class="w-100 rounded-5 p-2" placeholder="First name" aria-label="First name"
+                v-model="formValues.First_name" />
               <!-- <span class="error-feedback" v-if="v$.First_name.$error">{{v$.First_name.$errors[0].$message}}</span> -->
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
               <label for="">Last name</label>
-              <input
-                type="text"
-                class="w-100 rounded-5 p-2"
-                placeholder="Last name"
-                aria-label="Last name"
-                v-model="formValues.Last_name"
-              />
+              <input type="text" class="w-100 rounded-5 p-2" placeholder="Last name" aria-label="Last name"
+                v-model="formValues.Last_name" />
               <!-- <span class="error-feedback" v-if="v$.Last_name.$error">{{v$.Last_name.$errors[0].$message}}</span> -->
             </div>
           </div>
           <div class="row mb-4">
             <div class="col-lg-6 col-md-6 col-sm-12">
               <label>Address</label>
-              <input
-                type="text"
-                class="w-100 rounded-5 p-2"
-                placeholder="Address"
-                aria-label="Address"
-                v-model="formValues.Address"
-              />
+              <input type="text" class="w-100 rounded-5 p-2" placeholder="Address" aria-label="Address"
+                v-model="formValues.Address" />
               <!-- <span class="error-feedback" v-if="v$.Address.$error">{{ v$.Address.$errors[0].$message}}</span> -->
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
               <label for="">Phone</label>
-              <input
-                type="text"
-                class="w-100 rounded-5 p-2"
-                placeholder="start number with 20"
-                aria-label="Phone"
-                v-model="formValues.Phone"
-              />
+              <input type="text" class="w-100 rounded-5 p-2" placeholder="start number with 20" aria-label="Phone"
+                v-model="formValues.Phone" />
               <!-- <span class="error-feedback" v-if="v$.Phone.$error">{{ v$.Phone.$errors[0].$message}}</span> -->
             </div>
           </div>
@@ -57,12 +37,8 @@
             <div class="form-group col-lg-6 col-md-6 col-sm-12">
               <label for="">Gender</label>
               <div class="dropdown">
-                <button
-                  class="servicesDrop w-100 rounded-5 p-2 dropdown-toggle"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
+                <button class="servicesDrop w-100 rounded-5 p-2 dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
                   Select Gender
                 </button>
                 <ul class="dropdown-menu">
@@ -71,12 +47,8 @@
                       <div>
                         <div class="row">
                           <div class="col-8">
-                            <input
-                              type="radio"
-                              class="form-check-input"
-                              v-model="formValues.Gender"
-                              v-bind:value="singleGender.code"
-                            />
+                            <input type="radio" class="form-check-input" v-model="formValues.Gender"
+                              v-bind:value="singleGender.code" />
                             <label for="" class="form-check-label mt-1 ms-1">{{
                               singleGender.description
                             }}</label>
@@ -90,57 +62,32 @@
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
               <label for="">Years of exp.</label>
-              <input
-                type="text"
-                class="w-100 rounded-5 p-2"
-                placeholder="Years of exp."
-                aria-label="Years of exp."
-                v-model="formValues.Experience"
-              />
+              <input type="text" class="w-100 rounded-5 p-2" placeholder="Years of exp." aria-label="Years of exp."
+                v-model="formValues.Experience" />
             </div>
           </div>
           <div class="row mb-4">
             <div class="col-lg-6 col-md-6 col-sm-12">
               <label>Photo</label>
-              <input
-                type="text"
-                class="w-100 rounded-5 p-2"
-                placeholder="Photo"
-                aria-label="Photo"
-              />
+              <input type="text" class="w-100 rounded-5 p-2" placeholder="Photo" aria-label="Photo" />
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
               <label for="">Area</label>
-              <input
-                type="text"
-                class="w-100 rounded-5 p-2"
-                placeholder="Area"
-                aria-label="Area"
-                v-model="formValues.Area"
-              />
+              <input type="text" class="w-100 rounded-5 p-2" placeholder="Area" aria-label="Area"
+                v-model="formValues.Area" />
             </div>
           </div>
           <div class="row mb-4">
             <div class="col-lg-6 col-md-6 col-sm-12">
               <label>Front national ID card</label>
-              <input
-                type="text"
-                class="w-100 rounded-5 p-2"
-                placeholder="Front national ID card"
-                aria-label="Front national ID card"
-                v-model="formValues.FrontNational_ID"
-              />
+              <input type="text" class="w-100 rounded-5 p-2" placeholder="Front national ID card"
+                aria-label="Front national ID card" v-model="formValues.FrontNational_ID" />
               <!-- <span class="error-feedback" v-if="v$.FrontNational_ID.$error">{{v$.FrontNational_ID.$errors[0].$message}}</span> -->
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
               <label for="">Back national ID card</label>
-              <input
-                type="text"
-                class="w-100 rounded-5 p-2"
-                placeholder="Back national ID card"
-                aria-label="Back national ID card"
-                v-model="formValues.BackNational_ID"
-              />
+              <input type="text" class="w-100 rounded-5 p-2" placeholder="Back national ID card"
+                aria-label="Back national ID card" v-model="formValues.BackNational_ID" />
               <!-- <span class="error-feedback" v-if="v$.BackNational_ID.$error">{{v$.BackNational_ID.$errors[0].$message}}</span> -->
             </div>
           </div>
@@ -149,12 +96,8 @@
         <div class="row">
           <div class="form-group mb-4 col-lg-6 col-md-6 col-sm-12">
             <div class="dropdown">
-              <button
-                class="servicesDrop w-100 rounded-5 dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
+              <button class="servicesDrop w-100 rounded-5 dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false" data-bs-auto-close="outside">
                 Select Category
               </button>
               <ul class="dropdown-menu">
@@ -163,12 +106,9 @@
                     <div>
                       <div class="row">
                         <div class="col-8">
-                          <input
-                            type="checkbox"
-                            class="form-check-input"
-                            v-model="formValues.Categories"
-                          />
-                          <label for="" class="form-check-label mt-1 ms-1">{{
+                          <input type="checkbox" class="form-check-input"
+                            :value="`${category.Name}`" :id="`${category.id}`" :name="`${category.id}`" />
+                          <label :for="`${category.id}`" class="form-check-label mt-1 ms-1">{{
                             category["Name"]
                           }}</label>
                         </div>
@@ -181,12 +121,8 @@
           </div>
           <div class="form-group mb-4 col-lg-6 col-md-6 col-sm-12">
             <div class="dropdown">
-              <button
-                class="servicesDrop w-100 rounded-5 dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
+              <button class="servicesDrop w-100 rounded-5 dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 Select Services
               </button>
               <ul class="dropdown-menu">
@@ -195,18 +131,10 @@
                     <h5>{{ category["Name"] }}</h5>
                     <div class="d-flex align-items-center gap-3">
                       <div v-for="(service, id) in services" :key="id">
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                          v-if="category['id'] == service['Category_id']"
-                          v-model="formValues.Service_1"
-                        />
-                        <label
-                          for=""
-                          class="form-check-label mt-1 ms-1"
-                          v-if="category['id'] == service['Category_id']"
-                          >{{ service["Name"] }}</label
-                        >
+                        <input type="checkbox" class="form-check-input" v-if="category['id'] == service['Category_id']"
+                          v-model="formValues.Service_1" />
+                        <label for="" class="form-check-label mt-1 ms-1"
+                          v-if="category['id'] == service['Category_id']">{{ service["Name"] }}</label>
                       </div>
                     </div>
                   </div>
@@ -296,9 +224,9 @@ export default {
     this.getService();
   },
 
-// mounted(){
-//   this.addWorker();
-// },
+  // mounted(){
+  //   this.addWorker();
+  // },
   methods: {
     getCategory() {
       axios
@@ -354,16 +282,19 @@ form {
   label {
     color: $blueColor;
   }
+
   input {
     background-color: white;
     border: 0.8px solid black;
   }
 }
+
 button {
   @include button;
   margin: 0;
   padding: 0;
 }
+
 .headline {
   margin-top: 20px;
 }
@@ -382,6 +313,7 @@ button {
   width: fit-content;
   padding: 20px;
 }
+
 .error-feedback {
   color: red;
   font-size: $small;
