@@ -91,15 +91,15 @@
         <h2>Our Happy Customer</h2>
       </div>
       <div class="row justify-content-center gap-4">
-          <div class="box m-0 col-md-4 col-sm-6 col-12" v-for="(rev,i) in cxReview.slice(0,6)" :key="i" >
+          <div class="box m-0 col-md-4 col-sm-6 col-12" v-for="(rev,i) in cxReview.slice(9,15)" :key="i" >
             <div class="d-flex flex-row justify-content-between">
               <div class="p-2">
                 <h4>{{rev['Name']}}</h4>
-              <star-rating active-color="#F97B22"  star-size=30 :rating="`${rev.Rate}`"></star-rating>
+              <star-rating active-color="#F97B22" read-only  star-size=30 :rating="`${rev.Rate}`"></star-rating>
               </div>
-              <div>
+              <!-- <div>
                 <img :src="`${rev.picture}`" alt="Cx" />
-              </div>
+              </div> -->
             </div>
             <div>
               <p class="p-2">
