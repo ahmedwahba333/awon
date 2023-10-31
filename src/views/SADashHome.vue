@@ -22,7 +22,7 @@
                   <h4>Total Orders</h4>
                 </div>
                 <div class="d-flex justify-content-between">
-                   <h4>458</h4>
+                   <h4>{{lastOrder}}</h4>
                    <div class="up d-flex justify-content-between p-2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17" fill="none">
                         <path d="M11.5 6.57604L6.55436 1.63037L1.6087 6.57603" stroke="#F97B22" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -83,67 +83,17 @@
             <div class="p-2">
                 <h4>Special Customer</h4>
               </div>
-            <div class="d-flex flex-row justify-content-between">
+            <div class="d-flex flex-row justify-content-between"  v-for="(customer,i) in cx.slice(0,5)" :key="i">
               
-              <div>
-                <img  src="../assets/images/dashhome/1.jpg" alt="Cx" />
-              </div>
+      
               <div class="p-2">
-                <p>Ahmed Mostafa</p>
+                <p>{{customer['First_name']}}  {{customer['Last_name']}}</p>
               </div>
               <div class="p-2">
                 <p>1200$</p>
               </div>
             </div>
-           <div class="d-flex flex-row justify-content-between">
-              
-              <div>
-                <img  src="../assets/images/dashhome/2.jpg" alt="Cx" />
-              </div>
-              <div class="p-2">
-                <p>Ahmed Mostafa</p>
-              </div>
-              <div class="p-2">
-                <p>1200$</p>
-              </div>
-            </div>
-            <div class="d-flex flex-row justify-content-between">
-              
-              <div>
-                <img  src="../assets/images/dashhome/3.jpg" alt="Cx" />
-              </div>
-              <div class="p-2">
-                <p>Ahmed Mostafa</p>
-              </div>
-              <div class="p-2">
-                <p>1200$</p>
-              </div>
-            </div>
-            <div class="d-flex flex-row justify-content-between">
-              
-              <div>
-                <img  src="../assets/images/dashhome/4.jpg" alt="Cx" />
-              </div>
-              <div class="p-2">
-                <p>Ahmed Mostafa</p>
-              </div>
-              <div class="p-2">
-                <p>1200$</p>
-              </div>
-            </div>
-            <div class="d-flex flex-row justify-content-between">
-              
-              <div>
-                <img  src="../assets/images/dashhome/5.jpg" alt="Cx" />
-              </div>
-              <div class="p-2">
-                <p>Ahmed Mostafa</p>
-              </div>
-              <div class="p-2">
-                <p>1200$</p>
-              </div>
-            </div>
-          </div>
+        </div>
           <div class="box sectionThreeA m-0  col-md-4 col-sm-6 col-12 ">
             <div class="p-2">
                 <h4>Services Status</h4>
@@ -223,10 +173,57 @@
 <script>
 import NavBarSADash from "@/components/NavBarSADash.vue";
 import Chart from "chart.js/auto";
+import axios from 'axios';
 export default {
   name: "AgancyDash",
   components: { NavBarSADash },
-
+  data() {
+    return {
+       cx:[],
+       orders:[],
+       lastOrder:0,
+       rev:[],
+       recentReview:""
+       
+    }
+  },
+  created(){
+    this.getCx(),
+    this.lastOrderID(),
+    this.getOrders(),
+    this.getRev() ,
+    this.recentRev()
+  },
+  methods:{
+    getCx(){
+      axios.get("http://localhost:2000/cx")
+      .then((res)=> {this.cx = res.data})
+      .catch((err)=>{console.log(err)})
+    },
+    getOrders(){
+       axios.get("http://localhost:2000/order")
+      .then((res)=> {this.orders = res.data
+       this.lastOrder=this.orders.length
+      //  console.log(this.orders.length);
+      })
+      .catch((err)=>{console.log(err)})
+    },
+    lastOrderID() {
+    return this.lastOrder;
+    // console.log(this.lastOrder);
+  },
+  getRev() {
+       axios.get("http://localhost:2000/review")
+      .then((res)=> {this.rev = res.data
+      this.recentReview=this.rev.slice(7)
+      })
+      .catch((err)=>{console.log(err)})
+  },
+  recentRev(){
+      console.log(this.recentReview);
+      return this.recentReview;
+  }
+  },
     mounted() {
       
     const ctx = document.getElementById("myChart");

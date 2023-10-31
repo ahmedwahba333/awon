@@ -398,13 +398,21 @@ data() {
     return {
        cx:[],
        orders:[],
-       lastOrder:0
+      //  lastOrder:0,
+       rev:[],
+       recentReview:"",
+       agency:"",
+      //  totalOrder:""
        
     }
   },
   created(){
-    this.getCx();
-    this.lastOrderID();
+    this.getCx(),
+    // this.lastOrderID(),
+    this.getOrders(),
+    this.getRev() ,
+    this.recentRev(),
+     this.getAgFromLocal()
 
   },
   methods:{
@@ -415,12 +423,27 @@ data() {
     },
     getOrders(){
        axios.get("http://localhost:2000/order")
-      .then((res)=> {this.orders = res.data})
+      .then((res)=> {this.orders = res.data })
       .catch((err)=>{console.log(err)})
     },
-    lastOrderID() {
-    this.lastOrder = this.orders.pop();
-    console.log(this.lastOrder);
+  //   lastOrderID() {
+  //   return this.lastOrder;
+  //   // console.log(this.lastOrder);
+  // },
+  getRev() {
+       axios.get("http://localhost:2000/review")
+      .then((res)=> {this.rev = res.data
+      this.recentReview=this.rev.slice(7)
+      })
+      .catch((err)=>{console.log(err)})
+  },
+  recentRev(){
+      console.log(this.recentReview);
+      return this.recentReview;
+  },
+  getAgFromLocal(){
+    this.agency = JSON.parse(localStorage.getItem("agInfo"))
+    // console.log(this.agency["id"]);
   }
   },
   mounted() {
