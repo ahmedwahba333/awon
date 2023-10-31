@@ -377,7 +377,7 @@ import axios from 'axios';
               Flat_No:'',
               Building_No:'',
               Phone_Num1:'',
-              Phone_Num1_2:'',
+              Phone_Num2:'',
               Time_Slot:'',
               multDateFrom:'',
               multDateTo:'',

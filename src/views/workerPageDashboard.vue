@@ -143,6 +143,23 @@
                 </div>
             </div>
 
+<div class="row ">
+    <div class="row mt-3 fw-bold mx-5 title d-flex"> Worker Reviews</div>
+     <div class="row my-5 gap-3 justify-content-center">
+        <div class="col-12 col-lg-4 col-md-3 reviewBox" v-for="(review,id) in reviews" :key="id" v-show="review.Worker_id==worker.id">
+          <div class="mb-2 gap-2">
+            <div class="card-body mt-5 mx-3">
+              <h5 class="card-title CXName fw-bold">{{ review['Name'] }}</h5>
+              <div class="stars">
+                <star-rating read-only active-color="#F97B22" star-size=20 :rating="`${review.Rate}`"></star-rating>
+               </div>
+               <h5>{{ review['Review'] }}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
             <!-- Worker Reviews -->
             <!-- <div class="row reviewsCard">
@@ -281,13 +298,13 @@
 
 import NavBarDash from '../components/NavBarDash.vue';
 import axios from 'axios';
-// import StarRating from 'vue-star-rating';
+import StarRating from 'vue-star-rating';
 
 export default {
     name: 'WorkerPageDashboard',
     components: {
         NavBarDash,
-        // StarRating
+        StarRating
     },
 
     data() {
@@ -542,64 +559,56 @@ tbody {
     font-size: $paragraph !important;
 }
 
-
-.reviewsCard {
-    color: $blueColor !important;
-    @include Box;
-
-    :nth-child(1) {
-        font-size: $title;
-        font-weight: bold;
-    }
+.card-body{
+    border: none !important;
 }
 
-.reviewImg {
-    height: 80px;
-    width: 80px;
-}
+
+// .reviewsCard {
+//     color: $blueColor !important;
+//     @include Box;
+
+//     :nth-child(1) {
+//         font-size: $title;
+//         font-weight: bold;
+//     }
+// }
 
 .reviewBox {
+    height: 180px;
+    // width:340px;
+    color: $blueColor;
+    background-color: $whiteColor;
+    border-radius: $border-radius-big;
     font-size: $paragraph ;
-    font-weight: normal;
-    display: flex;
-    justify-content: center;
-    color: $blueColor !important;
+    box-shadow: 2px 4px 4px 2px rgba(117, 113, 113, 0.25);
 
-    svg,
-    .stars {
-        display: inline;
-    }
 
-    .review {
-        font-weight: normal;
-        font-size: $small;
-    }
 
     .CXName {
-        font-size: $small ;
+        font-size: $paragraph ;
     }
 }
 
-.carousel .carousel-indicators button {
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    background-color: $orangeColor;
-    position: relative;
-    bottom: -60px;
+// .carousel .carousel-indicators button {
+//     width: 20px;
+//     height: 20px;
+//     border-radius: 100%;
+//     background-color: $orangeColor;
+//     position: relative;
+//     bottom: -60px;
 
-}
+// }
 
 
 @media(min-width:991px) {
-    .innerReview {
-        margin-left: 30px;
-    }
-
     .price {
         margin-left: 500px;
     }
 
+    .reviewBox{
+        width:300px
+    }
 }
 
 @media (max-width: 990.999px) {
@@ -619,18 +628,13 @@ tbody {
 
     }
 
-    .innerReview {
-        margin-left: 40px;
-        margin-top: 20px;
-
-    }
-
-    .reviewBox {
-        margin-left: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+    // .reviewBox {
+    //     width: 100px;
+    //     // margin-left: 40px;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    // }
 
     .price {
         margin-left: 190px;
@@ -638,17 +642,17 @@ tbody {
 
 }
 
-@media (max-width: 767px)and (min-width: 576px) {
+@media (max-width: 767px)and (min-width: 587px) {
     .workerDet {
         margin-top: none !important;
         margin-left: none;
         margin-bottom: 15px;
 
-        .reviewBox {
-            margin-left: 30px;
-            display: flex;
-            justify-content: start;
-        }
+        // .reviewBox {
+        //     margin-left: 30px;
+        //     display: flex;
+        //     justify-content: start;
+        // }
 
         .firstRow {
             margin-left: 50px !important;
@@ -672,23 +676,19 @@ tbody {
     }
 }
 
-@media (max-width: 575.666px) {
-    .reviewBox {
-        display: flex;
-        justify-content: start;
-        margin-left: 30px;
-        // margin-top:20px ;
-        width: 335px;
+@media (max-width: 586.666px) {
+    // .reviewBox {
+    //     display: flex;
+    //     justify-content: start;
+    //     margin-left: 30px;
+    //     // margin-top:20px ;
+    //     // width: 335px;
 
-        img {
-            margin-left: 40px;
-        }
-    }
+    //     img {
+    //         margin-left: 40px;
+    //     }
+    // }
 
-    .reviewsCard {
-        margin: 0px 0px 2px 2px;
-
-    }
 
     .tableTitle {
         font-size: $small !important;
@@ -767,5 +767,10 @@ h1 {
 
 .editBtn {
     @include button;
+}
+
+.title{
+    font-size: $title;
+    width:300px
 }
 </style>
