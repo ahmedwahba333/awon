@@ -73,7 +73,7 @@
 
           <li>
             <div class="dropdown-item">
-              <h5>service</h5>
+              <h5>House maintenance</h5>
               <div class="d-flex align-items-center gap-3">
                 <div>
                   <input type="checkbox" class="form-check-input" />
@@ -91,6 +91,52 @@
                   <input type="checkbox" class="form-check-input" />
                   <label for="" class="form-check-label mt-1 ms-1"
                     >Moving Furniture</label
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+          <hr />
+          <li>
+            <div class="dropdown-item">
+              <h5>Food services</h5>
+              <div class="d-flex align-items-center gap-3">
+                <div>
+                  <input type="checkbox" class="form-check-input" />
+                  <label for="" class="form-check-label mt-1 ms-1"
+                    >Chefs</label
+                  >
+                </div>
+                <div>
+                  <input type="checkbox" class="form-check-input"  />
+                  <label for="" class="form-check-label mt-1 ms-1"
+                    >Food Catering</label
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+          <hr />
+          <li>
+            <div class="dropdown-item">
+              <h5>Caring services</h5>
+              <div class="d-flex align-items-center gap-3">
+                <div>
+                  <input type="checkbox" class="form-check-input" />
+                  <label for="" class="form-check-label mt-1 ms-1"
+                    >Babysitting</label
+                  >
+                </div>
+                <div>
+                  <input type="checkbox" class="form-check-input"  />
+                  <label for="" class="form-check-label mt-1 ms-1"
+                    >Elderly care</label
+                  >
+                </div>
+                <div>
+                  <input type="checkbox" class="form-check-input" />
+                  <label for="" class="form-check-label mt-1 ms-1"
+                    >Home Nursing</label
                   >
                 </div>
               </div>

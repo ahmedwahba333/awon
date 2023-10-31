@@ -203,10 +203,14 @@ export default {
         BackNational_ID: "",
         Gender: "",
         Categories: "",
-        Service_1: "",
-        Service_2: "",
-        Service_3: "",
-        Service_4: "",
+        Service_1: null,
+        Service_2: null,
+        Service_3: null,
+        Service_4: null,
+        Service_1_price: null,
+        Service_2_price: null,
+        Service_3_price: null,
+        Service_4_price: null,
         Area: "",
         Experience: "",
       },
@@ -265,6 +269,18 @@ export default {
         this.formValues.Service_2 = this.valuesOfService[1]
         this.formValues.Service_3 = this.valuesOfService[2]
         this.formValues.Service_4 = this.valuesOfService[3]
+        if(this.formValues.Service_1 !=null){
+          this.formValues.Service_1_price = Math.floor(Math.random()*250)
+        }
+        if(this.formValues.Service_2 !=null){
+          this.formValues.Service_2_price = Math.floor(Math.random()*250) 
+        }
+        if(this.formValues.Service_3 !=null){
+          this.formValues.Service_3_price = Math.floor(Math.random()*250) 
+        }
+        if(this.formValues.Service_4 !=null){
+          this.formValues.Service_4_price = Math.floor(Math.random()*250) 
+        }
       axios
         .post("http://localhost:2000/worker", this.formValues)
         

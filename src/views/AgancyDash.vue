@@ -115,7 +115,7 @@
             <h4>Total Workers</h4>
           </div>
           <div class="d-flex justify-content-between">
-            <h4>80</h4>
+            <h4>{{ workersOfagency }}</h4>
             <!-- <div class="up d-flex justify-content-between p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -185,10 +185,10 @@
                 stroke-linejoin="round"
               />
             </svg>
-            <h4>Total Order</h4>
+            <h4>Services No.</h4>
           </div>
           <div class="d-flex justify-content-between">
-            <h4>102</h4>
+            <h4>{{ serviceNo }}</h4>
             <!-- <div class="up d-flex justify-content-between p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -268,13 +268,22 @@
             :key="i"
           >
             <div>
-              <img :src="`${review.picture}`" alt="Cx" class="object-fit-cover" />
+              <img
+                :src="`${review.picture}`"
+                alt="Cx"
+                class="object-fit-cover"
+              />
             </div>
             <div class="ms-4">
-              <h4>{{review['Name']}}</h4>
-              <star-rating active-color="#F97B22" read-only  star-size=20 :rating="`${review.Rate}`"></star-rating>
+              <h4>{{ review["Name"] }}</h4>
+              <star-rating
+                active-color="#F97B22"
+                read-only
+                star-size="20"
+                :rating="`${review.Rate}`"
+              ></star-rating>
               <p>
-                {{review.Review}}
+                {{ review.Review }}
               </p>
             </div>
           </div>
@@ -288,14 +297,21 @@
 import NavBarDash from "@/components/NavBarDash.vue";
 import Chart from "chart.js/auto";
 import axios from "axios";
-import StarRating from 'vue-star-rating';
+import StarRating from "vue-star-rating";
 export default {
   name: "AgancyDash",
-  components: { NavBarDash,StarRating },
+  components: { NavBarDash, StarRating },
   data() {
     return {
+      Delivered:[],
+      Pending:[],
+      Canceled:[],
+      NoDelivered:0,
+      serviceNo: 0,
+      services: [],
       cx: [],
       orders: [],
+      workers: [],
       //  lastOrder:0,
       rev: [],
       recentReview: [],
@@ -303,6 +319,8 @@ export default {
       agencyID: "",
       ordersOfagency: 0,
       orderAgencyId: [],
+      workersOfagency: 0,
+      workerAgencyId: [],
       //  totalOrder:""
     };
   },
@@ -314,9 +332,23 @@ export default {
       // this.recentRev()
       //  this.getAgFromLocal(),
       // this.sumOfOrders(),
-      this.getAgency();
+      this.getAgency(),
+      this.getServicesNo(),
+      this.getWorker()
   },
   methods: {
+    getServicesNo() {
+      axios
+        .get("http://localhost:2000/service")
+        .then((res) => {
+          this.services = res.data;
+          this.serviceNo = this.services.length;
+          //  console.log(this.orders.length);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
     getCx() {
       axios
         .get("http://localhost:2000/cx")
@@ -348,16 +380,43 @@ export default {
         .then((res) => {
           this.orders = res.data;
           console.log(this.ordersOfagency);
-
+// Order_Status
           for (let x = 0; x < this.orders.length; x++) {
             if (this.agencyID == this.orders[x]["Agency_id"]) {
               this.orderAgencyId.push(this.orders[x]["Agency_id"]);
             }
+            if(this.orders[x]["Order_Status"] == "completed"){
+              this.Delivered.push("completed")
+            }
           }
+          console.log(this.Delivered.length);
           console.log(this.orderAgencyId);
+          
           this.ordersOfagency = this.orderAgencyId.length;
-
+           this.NoDelivered = this.Delivered.length;
+          console.log(this.NoDelivered);
           console.log(this.orders[0]["Agency_id"]);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+    getWorker() {
+      axios
+        .get("http://localhost:2000/worker")
+        .then((res) => {
+          this.workers = res.data;
+          console.log(this.workersOfagency);
+
+          for (let x = 0; x < this.workers.length; x++) {
+            if (this.agencyID == this.workers[x]["Agency_id"]) {
+              this.workerAgencyId.push(this.workers[x]["Agency_id"]);
+            }
+          }
+          console.log(this.workerAgencyId);
+          this.workersOfagency = this.workerAgencyId.length;
+
+          console.log(this.workers[0]["Agency_id"]);
         })
         .catch((err) => {
           console.log(err);
@@ -376,38 +435,10 @@ export default {
         });
     },
 
-    // sumOfOrders(){
-    //   for (let i = 0; i <=this.orders.length; i++) {
-    //     console.log(this.orders);
-    //     if (this.agencyID==this.orderAgencyId) {
-    //     this.ordersOfagency = this.ordersOfagency +1
-    //   }
-
-    //   }
-
-    // v-if="agencyID==order['Agency_id']"
-    // }
-    //   lastOrderID() {
-    //   return this.lastOrder;
-    //   // console.log(this.lastOrder);
-    // },
-    // getRev() {
-    //      axios.get("http://localhost:2000/review")
-    //     .then((res)=> {this.rev = res.data
-    //     this.recentReview=this.rev.slice(7)
-    //     })
-    //     .catch((err)=>{console.log(err)})
-    // },
-    // recentRev(){
-    //     console.log(this.recentReview);
-    //     return this.recentReview;
-    // },
-    // getAgFromLocal(){
-    //   this.agency = JSON.parse(localStorage.getItem("agInfo"))
-    //   // console.log(this.agency["id"]);
-    // }
   },
   mounted() {
+    
+    console.log(this.NoDelivered);
     const ctx = document.getElementById("myChart");
     const ctx2 = document.getElementById("myChart2");
     new Chart(ctx, {
@@ -418,7 +449,7 @@ export default {
           "Feb.",
           "March",
           "April",
-          "May.",
+          "May",
           "June",
           "July",
           "Aug.",
@@ -431,7 +462,7 @@ export default {
         datasets: [
           {
             label: "Recruitment Report",
-            data: [8, 14, 12, 15, 10, 12, 9, 11, 13,9.12,10,13,10],
+            data: [8, 14, 12, 15, 10, 12, 9, 11, 13, 9.12, 10, 13, 10],
             borderWidth: 3,
             borderColor: "#F97B22",
             fill: true,
@@ -472,7 +503,7 @@ export default {
       datasets: [
         {
           label: "My First Dataset",
-          data: [50, 100, 300],
+          data: [50, 100, this.NoDelivered],
           backgroundColor: ["#193655", "#EBEBD3", "#F97B22"],
           hoverOffset: 4,
         },
@@ -530,9 +561,9 @@ export default {
 @import "../scss/global/colors";
 @import "../scss/global/variables";
 img {
-      clip-path: circle();
-      width:60%;
-      }
+  clip-path: circle();
+  width: 60%;
+}
 .bg {
   background-color: $backgroundColor;
   padding-bottom: 20px;
