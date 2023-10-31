@@ -225,7 +225,7 @@
               <label for="inputEmail4">First Name</label>
               <input type="text" class="form-control" id="inputEmail4" v-model="firstName" v-on:input="v$.firstName.$touch()">
               <template v-if="v$.firstName.$error" >
-             <span class="invalid-feedback d-block"> {{ v$.firstName.$errors[0].$message}}</span>
+             <span class="error-feedback"> {{ v$.firstName.$errors[0].$message}}</span>
             </template>
             </div>
             <div class="form-group col-md-6">
@@ -509,7 +509,7 @@ import { required, numeric , minLength} from "@vuelidate/validators";
                   const dateTo = new Date(this.newOrderDet.multDateTo);
                   const dateFrom = new Date(this.newOrderDet.multDateFrom);
                   this.dateDiff =dateTo -dateFrom;
-                  this.noOfDays = Math.floor(this.dateDiff / (1000 * 60 * 60 * 24));
+                  this.noOfDays= Math.floor(this.dateDiff / (1000 * 60 * 60 * 24));
 
                   const res = (parseInt(this.checkInput[0]) + parseInt(this.checkInput[1]) + parseInt(this.checkInput[2])) ||
                     (parseInt(this.checkInput[0]) + parseInt(this.checkInput[1])) || (parseInt(this.checkInput1)*this.noOfPieces + parseInt(this.checkInput[0])) ||
@@ -546,16 +546,21 @@ import { required, numeric , minLength} from "@vuelidate/validators";
                                  //Set Local Storage
                      const objectString = JSON.stringify(this.newOrderDet);
                       localStorage.setItem("newOrderDet", objectString);
-  
-                         } ,
 
-        },
-
-
-    
-  
-}
-         
+             
+                                  //Check Validation
+                                this.v$.$validate();
+                              if (!this.v$.$error) {
+                                  console.log('Payment completed successfully');
+                                  this.$router.push("/payment")
+                               
+                              } else {
+                                  console.log('payement failed');     
+                                 
+                              }
+                         } ,     
+            },
+      }
 
 </script>
 
@@ -683,3 +688,6 @@ li{
     }
 
 </style>
+
+
+
