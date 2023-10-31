@@ -14,6 +14,7 @@ import dashReviews from "../views/dashReviews.vue";
 import aboutus from "../views/About.vue";
 import allAgencies from "../views/allAgencySDash.vue";
 import Allworker from "../views/AllWorker.vue";
+import SAAllWorker from "../views/SAAllWorker.vue";
 
 import CleaningView from "../views/CleaningView.vue";
 import GardeningView from "../views/GardeningView.vue";
@@ -66,7 +67,6 @@ const routes = [
     // name: "home",
     // component: HomeView,
   },
-
   // start of auth
   // user auth
   {
@@ -309,6 +309,11 @@ const routes = [
     name: "ServicesidView",
     component: ServicesidView,
   },
+  {
+    path: "/SAAllWorker",
+    name: "SAAllWorker",
+    component: SAAllWorker,
+  },
 ];
 
 const router = createRouter({
@@ -353,6 +358,7 @@ router.beforeEach((to) => {
       to.name == "AddServiceSA" ||
       to.name == "AddWorker" ||
       to.name == "AdminAgencyProfile" ||
+      to.name == "SAAllWorker" ||
       to.name == "SAAgencyProfile"
     ) {
       return "/cpanel-login";
@@ -386,6 +392,7 @@ router.beforeEach((to) => {
       to.name == "AddServiceSA" ||
       to.name == "AddWorker" ||
       to.name == "AdminAgencyProfile" ||
+      to.name == "SAAllWorker" ||
       to.name == "SAAgencyProfile"
     ) {
       return "/";
@@ -418,6 +425,7 @@ router.beforeEach((to) => {
       to.name == "AddServiceSA" ||
       to.name == "AddWorker" ||
       to.name == "AdminAgencyProfile" ||
+      to.name == "SAAllWorker" ||
       to.name == "SAAgencyProfile"
     ) {
       return "/agancydash";

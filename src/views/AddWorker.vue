@@ -37,7 +37,7 @@
             <div class="form-group col-lg-6 col-md-6 col-sm-12">
               <label for="">Gender</label>
               <div class="dropdown">
-                <button class="servicesDrop w-100 rounded-5 p-2 dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                <button class="servicesDrop w-100 rounded-5 p-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                   aria-expanded="false">
                   Select Gender
                 </button>
@@ -48,8 +48,8 @@
                         <div class="row">
                           <div class="col-8">
                             <input type="radio" class="form-check-input" v-model="formValues.Gender"
-                              v-bind:value="singleGender.code" />
-                            <label for="" class="form-check-label mt-1 ms-1">{{
+                              v-bind:value="singleGender.code" :id="singleGender.code" />
+                            <label :for="singleGender.code" class="form-check-label mt-1 ms-1">{{
                               singleGender.description
                             }}</label>
                           </div>
