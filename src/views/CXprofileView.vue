@@ -21,9 +21,9 @@
           </svg>
         </div>
         <p class="subtitle mx-4">Account</p>
-        <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="col-lg-3 col-md-3 col-sm-6"> 
           <p class="searchKey mx-4">Name</p>
-          <p class="servent mx-4">Amr Mohamed Sayed</p>
+          <p class="servent mx-4">{{ cx["First_name"] }}</p>
           <p class="searchKey mx-4">Email</p>
           <p class="servent mx-4">a******76@gmail.com</p>
           <p class="searchKey mx-4">Phone</p>
@@ -78,10 +78,26 @@
 
 <script>
 import NavBarPages from "@/components/NavBarPages.vue";
+import axios from "axios";
 export default {
   components: {
     NavBarPages,
   },
+
+  data() {
+    return {
+      cx: [],
+    };
+  },
+
+  created() {
+    axios
+      .get("http://localhost:2000/cx")
+      .then((res) => {
+        this.cx = res.data;
+      })
+      .catch((err) => console.log(err));
+},
 };
 </script>
 

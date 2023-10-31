@@ -290,7 +290,7 @@ const routes = [
     component: DriverView,
   },
   {
-    path: "/CXprofileView",
+    path: "/CXprofileView/:id",
     name: "CXprofileView",
     component: CXprofileView,
   },
