@@ -465,7 +465,7 @@ import axios from 'axios';
                   const dateTo = new Date(this.newOrderDet.multDateTo);
                   const dateFrom = new Date(this.newOrderDet.multDateFrom);
                   this.dateDiff =dateTo -dateFrom;
-                  this.noOfDays= Math.floor(this.dateDiff / (1000 * 60 * 60 * 24));
+                  this.noOfDays = Math.floor(this.dateDiff / (1000 * 60 * 60 * 24));
 
                   const res = (parseInt(this.checkInput[0]) + parseInt(this.checkInput[1]) + parseInt(this.checkInput[2])) ||
                     (parseInt(this.checkInput[0]) + parseInt(this.checkInput[1])) || (parseInt(this.checkInput1)*this.noOfPieces + parseInt(this.checkInput[0])) ||
@@ -487,7 +487,7 @@ import axios from 'axios';
                                  //Set Local Storage
                      const objectString = JSON.stringify(this.newOrderDet);
                       localStorage.setItem("newOrderDet", objectString);
-  
+                    this.$router.push("/payment")
                          } ,
 
         },

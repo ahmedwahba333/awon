@@ -5789,7 +5789,7 @@
       "id": 10,
       "Name": "Duff",
       "Rate": 4,
-      "Review": "I’ve been using Aown services for the past few months. It’s excellent!",
+      "Review": "Excellent service!",
       "Gender": "male",
       "picture": "https://randomuser.me/api/portraits/men/66.jpg",
       "Worker_id": 19
@@ -5798,7 +5798,7 @@
       "id": 11,
       "Name": "Augustine",
       "Rate": 4,
-      "Review": "heard about Aown from a friend and gave them a try. very professional indeed.",
+      "Review": "Fantastic support!",
       "Gender": "male",
       "picture": "https://randomuser.me/api/portraits/men/62.jpg",
       "Worker_id": 10
@@ -5807,7 +5807,7 @@
       "id": 12,
       "Name": "Ashlie",
       "Rate": 4,
-      "Review": "I tried the services while travelling and I loved coming back to a clean house.",
+      "Review": "Fantastic service!",
       "Gender": "female",
       "picture": "https://randomuser.me/api/portraits/women/51.jpg",
       "Worker_id": 12
@@ -5816,7 +5816,7 @@
       "id": 13,
       "Name": "Howey",
       "Rate": 5,
-      "Review": "Best cleaning services that I’ve tried in while.",
+      "Review": "Excellent service!",
       "Gender": "male",
       "picture": "https://randomuser.me/api/portraits/men/97.jpg"
     },
@@ -5824,7 +5824,7 @@
       "id": 14,
       "Name": "Mireielle",
       "Rate": 4,
-      "Review": "I always count on Aown in babysitting my kids. I don’t have to worry when I’m at work.",
+      "Review": "Highly recommended!",
       "Gender": "female",
       "picture": "https://randomuser.me/api/portraits/women/67.jpg",
       "Worker_id": 9
@@ -5833,7 +5833,7 @@
       "id": 15,
       "Name": "Christoforo",
       "Rate": 5,
-      "Review": "very quick service.Love it!",
+      "Review": "Excellent service!",
       "Gender": "male",
       "picture": "https://randomuser.me/api/portraits/men/70.jpg",
       "Worker_id": 4

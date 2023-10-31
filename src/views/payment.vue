@@ -95,6 +95,8 @@
     import FooterComponent from "@/components/footer.vue";
     import useVuelidate from "@vuelidate/core";
     import { required, minLength, numeric, maxLength } from "@vuelidate/validators";
+    import axios from 'axios';
+
     
 export default {
     name: "paymentDetails",
@@ -128,24 +130,24 @@ export default {
     mounted() {
     this.v$.$validate();
     const NewOrderArray = localStorage.getItem('newOrderDet');
-
+        // this.getNewOrder()
+    if (NewOrderArray) {
+    this.newOrder = JSON.parse(NewOrderArray);
+    }
     },
 
     methods: {
         completePayment() {
             this.v$.$validate();
             if (!this.v$.$error) {
+                axios.post("http://localhost:2000/order",this.newOrder);
                 console.log('Payment completed successfully');
                 // console.log(radioIsActive);
             } else {
                 console.log('payement failed');
             }
         },
-        getNewOrder() {
-            if (NewOrderArray) {
-            this.newOrder = JSON.parse(NewOrderArray);
-    }
-        }
+
     }
 }
 
