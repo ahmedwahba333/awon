@@ -194,8 +194,6 @@ export default {
       .get("http://localhost:2000/worker")
       .then((res) => {
         this.workerData = res.data;
-        // console.log(res.data);
-        // this.pathImg = "../assets/subservices/" + res.data['img'];
       })
       .catch((err) => console.log(err));
   },
@@ -262,6 +260,9 @@ input.search {
   padding: 20px;
 }
 
+.row {
+  margin: 0px !important;
+}
 .accordion {
   margin: auto;
   // width: 50%;

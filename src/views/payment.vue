@@ -6,46 +6,35 @@
             <div class="box col col-lg-7 col-md-12 col-sm-12 col-12">
                 <p class="title py-3">Payment Details</p>
                 <div class="row gx-8">
-                    <div class="col-12">
-                            <!-- <div class="d-flex flex-column">
+                    <div class="col-12 d-flex flex-column">
                             <p class="text">Person Name</p>
-                            <input class="form-control" type="text" placeholder="Card Holder Name"  v-model="fullName">
-                            <span class="error-feedback" v-if="v$.fullName.error"> {{ v$.fullName.$errors[0].$message }}</span>
-                        </div> -->
+                            <input class="form-control" type="text" placeholder="Card Holder Name"  v-model="name" v-on:input="v$.name.$touch()">
+                            <template><span class="error-feedback" v-if="v$.name.$error">{{ v$.name.$errors[0].$message}}</span></template>
+                            <!-- <template><span v-else-if="v$.name.$anyDirty"> </span></template> -->
                     </div>
-                    <div class="col-12">
-                        <div class="d-flex flex-column">
+                    <div class="col-12 d-flex flex-column">
                             <p class="text">Card Number</p>
                             <input class="form-control" type="text" placeholder="1234 5678 435678"  v-model="cardNumber">
-                            <span class="error-feedback" v-if="v$.cardNumber.$error"> {{ v$.cardNumber.$errors[0].$message }}</span>
-                        </div>
+                            <span class="error-feedback" v-if="v$.cardNumber.$error">{{ v$.cardNumber.$errors[0].$message}}</span>
+                            <span v-else-if="v$.cardNumber.$anyDirty"></span>
                     </div>
-                    <div class="col-6">
-                        <div class="d-flex flex-column">
+                    <div class="col-6 d-flex flex-column">
                             <p class="text">Expiry</p>
                             <input class="form-control" type="text" placeholder="MM/YYYY"  v-model="expiry">
-                            <span class="error-feedback" v-if="v$.expiry.$error"> {{ v$.expiry.$errors[0].$message }}</span>
-                        </div>
+                            <span class="error-feedback" v-if="v$.expiry.$error">{{ v$.expiry.$errors[0].$message}}</span>
                     </div>
-                    <div class="col-6">
-                        <div class="d-flex flex-column">
+                    <div class="col-6 d-flex flex-column">
                             <p class="text">CVV/CVC</p>
                             <input class="form-control" type="password" placeholder="***" v-model="cvv">
-                            <span class="error-feedback" v-if="v$.cvv.$error"> {{ v$.cvv.$errors[0].$message }}</span>
-                        </div>
+                            <span class="error-feedback" v-if="v$.cvv.$error">{{ v$.cvv.$errors[0].$message}}</span>
                     </div>
                     <div class="col-12">
-                            <input type="radio" value="terms" required v-model="terms">  accept terms and conditions
-                            <div class="error-feedback" v-if="v$.terms.$error"> {{ v$.terms.$errors[0].$message }}</div>
+                            <input type="radio" value="terms" required v-model="terms">  accept terms and conditions<br>
+                            <span class="error-feedback" v-if="v$.terms.$error">{{ v$.terms.$errors[0].$message}}</span>
                     </div>
                     <div class="col-12">
                         <div class="btn ">
-                            <div @click="completePayment()" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><router-link to="#" class="pay" > Pay</router-link></div>
-                        </div>
-                        <div class="back-btn d-flex align-items-start">
-                            <div class="back"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#193655" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/></svg></div>
-                            <div class="back"> back</div>
+                            <div @click="completePayment()" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><router-link to="#" class="pay"> Pay </router-link></div>
                         </div>
                     </div>
                 </div>
@@ -55,11 +44,10 @@
                         <div class="title">Overview</div>
                         <div class="sub-title"> Address</div>
                         <div class="info">{{ newOrder.Order_Address }},{{ newOrder.Governorate }},{{ newOrder.City }}  </div>
-                        <div class="info">Living room + kitchen </div>
                         <div class="sub-title"> Order Date</div>
                         <div class="info"> {{ newOrder.multDateFrom }} - {{ newOrder.multDateTo }} </div>
                         <div class="sub-title"> Ordar Total </div>
-                        <div class="info">{{ newOrder.Order_Price }}</div>
+                        <div class="info">{{ newOrder.Order_Price }} LE </div>
                         <!-- <div class="sub-title"> Order Description </div> -->
                     </div>
                 </div>
@@ -91,11 +79,13 @@
 </template>
 
 <script>
+    import axios from 'axios';
     import NavBarPages from "@/components/NavBarPages.vue";
     import FooterComponent from "@/components/footer.vue";
-    import useVuelidate from "@vuelidate/core";
-    import { required, minLength, numeric, maxLength } from "@vuelidate/validators";
-    import axios from 'axios';
+    import useValidate from "@vuelidate/core";
+    import { required, minLength, maxLength, numeric } from '@vuelidate/validators'
+
+
 
     
 export default {
@@ -106,8 +96,8 @@ export default {
     },
     data() {
         return {
-            v$: useVuelidate(),
-            fullName: "",
+            v$: useValidate(),
+            name: "",
             cardNumber: "",
             expiry: "",
             cvv: "",
@@ -117,13 +107,14 @@ export default {
             // radioIsActive: false,
         }
     },
+
     validations() {
         return {
-            fullName: { required },
-            cardNumber: { required, numeric, minLength: minLength(16), maxLength: maxLength(16) },
-            expiry: { required, minLength: minLength(7),maxLength: maxLength(7) },
-            cvv: { required, numeric, minLength: minLength(3),maxLength: maxLength(3) },
-            terms: { required }
+            name: { required },
+            cardNumber: { required, numeric, minLength: minLength(16), maxLength: maxLength(16)},
+            expiry: { required, numeric, minLength: minLength(4), maxLength: maxLength(4)},
+            cvv: { required, numeric, minLength: minLength(3), maxLength: maxLength(3)},
+            terms: { required },
         };
     },
 
@@ -144,6 +135,7 @@ export default {
                 console.log('Payment completed successfully');
                 // console.log(radioIsActive);
             } else {
+                localStorage.removeItem('newOrderDet')
                 console.log('payement failed');
             }
         },
@@ -160,6 +152,9 @@ export default {
     .bg {
     background-color: $backgroundColor;
     }
+    .text{
+        font-size: $paragraph
+    }
     .box {
     @include box;
     margin: 1%;
@@ -170,8 +165,11 @@ export default {
     }
     .sub-title{
         font-weight: bold;
+    font-size: $paragraph;
     }
-
+    .info{
+    font-size: $paragraph;
+    }
 
     .back-btn{
     &:hover {
@@ -183,10 +181,7 @@ export default {
         padding-left: 2%;
         
     }
-    .error-feedback{
-        color:red;
-        font-size: $small;
-    }
+
     .form-control{
         margin: 2px;
     }
@@ -195,6 +190,10 @@ export default {
     }
     .fa-arrow-right{
         color: $blueColor;
+    }
+    .error-feedback{
+        color: red;
+        font-size: $small;
     }
     .pay{
     text-decoration: none;
