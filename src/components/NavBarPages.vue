@@ -22,19 +22,19 @@
               <ul>
                 <span>Caring Services</span>
                 <li>
-                  <router-link to="#CareGiving"><a>Baby sitting</a></router-link>
+                  <router-link to="/BabysittingView"><a>Baby sitting</a></router-link>
                 </li>
                 <li>
-                  <router-link to="#CareGiving"><a>Elderly care</a></router-link>
+                  <router-link to="/ElderlycareView"><a>Elderly care</a></router-link>
                 </li>
                 <li>
-                  <router-link to="#CareGiving"><a>Home nursing</a></router-link>
+                  <router-link to="/HousenursingView"><a>Home nursing</a></router-link>
                 </li>
               </ul>
               <ul>
                 <span>Food Services</span>
                 <li>
-                  <router-link to="#FoodServices"><a>Food Catering</a></router-link>
+                  <router-link to="/FoodcateringView"><a>Food Catering</a></router-link>
                 </li>
                 <li>
                   <router-link to="ChefsView"><a>Chefs</a></router-link>
@@ -43,22 +43,22 @@
               <ul>
                 <span>House Maintenance</span>
                 <li>
-                  <router-link to="#HouseMaintenance"><a>Plumbing</a></router-link>
+                  <router-link to="/PlumbingView"><a>Plumbing</a></router-link>
                 </li>
                 <li>
-                  <router-link to="#HouseMaintenance"><a>Carpentry</a></router-link>
+                  <router-link to="/CarpentryView"><a>Carpentry</a></router-link>
                 </li>
                 <li>
-                  <router-link to="#HouseMaintenance"><a>Moving Furniture</a></router-link>
+                  <router-link to="/MovingfurnitureView"><a>Moving Furniture</a></router-link>
                 </li>
               </ul>
               <ul>
                 <span>Facilities</span>
                 <li>
-                  <router-link to="#Facilities"><a>House Guard</a></router-link>
+                  <router-link to="/HouseguardView"><a>House Guard</a></router-link>
                 </li>
                 <li>
-                  <router-link to="#Facilities"><a>Driver</a></router-link>
+                  <router-link to="/DriverView"><a>Driver</a></router-link>
                 </li>
               </ul>
             </ul>

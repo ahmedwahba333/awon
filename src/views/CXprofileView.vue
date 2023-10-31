@@ -48,8 +48,28 @@
       </div>
       <div class="row searchCard pt-4 pb-4 mt-5">
         <p class="subtitle mx-4">Upcoming Order</p>
-        <div class="order flex">
-          <p>omar Lorem ipsum dolor sit amet consectetur, adipisicing</p>
+        <div class="order d-flex">
+          <div class="col-lg-5 col-md-5 col-sm-12">
+          <img
+            src="../assets/images/profile.jpg"
+            class="card-img-top Clip-path:circle()"
+            alt=""
+          />
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <p class="searchKey">Ali Saber</p>
+          <p class="servent">Amr Mohamed Sayed</p>
+          <p class="searchKey">Email</p>
+          <p class="servent">a******76@gmail.com</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <p class="searchKey mx-4">Location</p>
+          <p class="servent mx-4">
+            3 street sayed algarhe haram al giza, Giza, GZ 12512 - Egypt
+          </p>
+          <p class="searchKey mx-4">Time Zone</p>
+          <p class="servent mx-4">UTC+03:00 cairo</p>
+        </div>
         </div>
       </div>
     </div>
@@ -149,7 +169,6 @@ img {
 .order {
   width: 90%;
   height: 250px;
-  background-color: $backgroundColor;
   justify-content: center;
   justify-items: center;
   margin: 0px auto;
