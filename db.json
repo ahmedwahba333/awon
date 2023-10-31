@@ -15,7 +15,7 @@
       "Service_3_price": 322,
       "Service_4_price": null,
       "Address": "PO Box 72442",
-      "..": 6,
+      "Experience": 6,
       "Rate": 3,
       "Reviews": "I’ve been using Aown services for the past few months. It’s excellent!",
       "Area": "Tangqian",
@@ -24,7 +24,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/98.jpg",
-      "Gender": "Female"
+      "Gender": "Female",
+      "Agency_id": 1
     },
     {
       "id": 2,
@@ -50,7 +51,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/5.jpg",
-      "Gender": "Male"
+      "Gender": "Male",
+      "Agency_id": 5
     },
     {
       "id": 3,
@@ -76,7 +78,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/1.jpg",
-      "Gender": "Female"
+      "Gender": "Female",
+      "Agency_id": 1
     },
     {
       "id": 4,
@@ -102,7 +105,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Amazing speed",
       "img": "https://randomuser.me/api/portraits/men/63.jpg",
-      "Gender": "Male"
+      "Gender": "Male",
+      "Agency_id": 5
     },
     {
       "First_name": "Denyy",
@@ -128,7 +132,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/53.jpg",
       "Gender": "Female",
-      "id": 5
+      "Agency_id": 1
     },
     {
       "First_name": "Noella1",
@@ -153,8 +157,7 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/90.jpg",
-      "Gender": "Female",
-      "id": 6
+      "Gender": "Female"
     },
     {
       "id": 7,
@@ -180,7 +183,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Amazing speed",
       "img": "https://randomuser.me/api/portraits/men/27.jpg",
-      "Gender": "Male"
+      "Gender": "Male",
+      "Agency_id": 5
     },
     {
       "id": 8,
@@ -206,7 +210,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/62.jpg",
-      "Gender": "Male"
+      "Gender": "Male",
+      "Agency_id": 5
     },
     {
       "id": 9,
@@ -232,7 +237,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/25.jpg",
-      "Gender": "Female"
+      "Gender": "Female",
+      "Agency_id": 1
     },
     {
       "id": 10,
@@ -258,7 +264,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Amazing speed",
       "img": "https://randomuser.me/api/portraits/women/79.jpg",
-      "Gender": "Female"
+      "Gender": "Female",
+      "Agency_id": 1
     },
     {
       "id": 11,
@@ -284,7 +291,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/7.jpg",
-      "Gender": "Male"
+      "Gender": "Male",
+      "Agency_id": 5
     },
     {
       "id": 12,
@@ -310,7 +318,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Amazing speed",
       "img": "https://randomuser.me/api/portraits/men/58.jpg",
-      "Gender": "Male"
+      "Gender": "Male",
+      "Agency_id": 5
     },
     {
       "First_name": "Silas",
@@ -335,8 +344,7 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/83.jpg",
-      "Gender": "Male",
-      "id": 13
+      "Gender": "Male"
     },
     {
       "id": 14,
@@ -362,7 +370,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/90.jpg",
-      "Gender": "Female"
+      "Gender": "Female",
+      "Agency_id": 1
     },
     {
       "id": 15,
@@ -388,7 +397,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/75.jpg",
-      "Gender": "Male"
+      "Gender": "Male",
+      "Agency_id": 5
     },
     {
       "id": 16,
@@ -414,7 +424,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/20.jpg",
-      "Gender": "Male"
+      "Gender": "Male",
+      "Agency_id": 5
     },
     {
       "id": 17,
@@ -440,7 +451,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/64.jpg",
-      "Gender": "Female"
+      "Gender": "Female",
+      "Agency_id": 1
     },
     {
       "id": 18,
@@ -466,7 +478,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/50.jpg",
-      "Gender": "Female"
+      "Gender": "Female",
+      "Agency_id": 1
     },
     {
       "id": 19,
@@ -492,7 +505,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/41.jpg",
-      "Gender": "Female"
+      "Gender": "Female",
+      "Agency_id": 1
     },
     {
       "id": 20,
@@ -518,7 +532,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/48.jpg",
-      "Gender": "Male"
+      "Gender": "Male",
+      "Agency_id": 5
     },
     {
       "id": 21,
@@ -544,7 +559,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/75.jpg",
-      "Gender": "Female"
+      "Gender": "Female",
+      "Agency_id": 1
     },
     {
       "id": 22,
@@ -570,7 +586,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/48.jpg",
-      "Gender": "Female"
+      "Gender": "Female",
+      "Agency_id": 1
     },
     {
       "id": 23,
@@ -596,7 +613,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/69.jpg",
-      "Gender": "Female"
+      "Gender": "Female",
+      "Agency_id": 1
     },
     {
       "id": 24,
@@ -622,7 +640,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/63.jpg",
-      "Gender": "Female"
+      "Gender": "Female",
+      "Agency_id": 1
     },
     {
       "id": 25,
@@ -648,7 +667,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/97.jpg",
-      "Gender": "Female"
+      "Gender": "Female",
+      "Agency_id": 1
     },
     {
       "id": 26,
@@ -674,7 +694,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/22.jpg",
-      "Gender": "Male"
+      "Gender": "Male",
+      "Agency_id": 5
     },
     {
       "id": 27,
@@ -700,7 +721,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/47.jpg",
-      "Gender": "Male"
+      "Gender": "Male",
+      "Agency_id": 5
     },
     {
       "id": 28,
@@ -726,7 +748,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/58.jpg",
-      "Gender": "Male"
+      "Gender": "Male",
+      "Agency_id": 5
     },
     {
       "id": 29,
@@ -752,7 +775,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/82.jpg",
-      "Gender": "Female"
+      "Gender": "Female",
+      "Agency_id": 1
     },
     {
       "id": 30,
@@ -778,7 +802,8 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/2.jpg",
-      "Gender": "Female"
+      "Gender": "Female",
+      "Agency_id": 1
     },
     {
       "id": 31,
@@ -797,6 +822,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/11.jpg",
       "Gender": "Male",
+      "Agency_id": 3,
       "Service_1": "Gardening",
       "Service_2": null,
       "Service_3": null,
@@ -823,6 +849,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/52.jpg",
       "Gender": "Female",
+      "Agency_id": 4,
       "Service_1": "Gardening",
       "Service_2": null,
       "Service_3": null,
@@ -849,6 +876,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/44.jpg",
       "Gender": "Male",
+      "Agency_id": 3,
       "Service_1": "Gardening",
       "Service_2": null,
       "Service_3": null,
@@ -875,6 +903,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/29.jpg",
       "Gender": "Female",
+      "Agency_id": 4,
       "Service_1": "Gardening",
       "Service_2": null,
       "Service_3": null,
@@ -901,6 +930,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/37.jpg",
       "Gender": "Female",
+      "Agency_id": 4,
       "Service_1": "Gardening",
       "Service_2": null,
       "Service_3": null,
@@ -927,6 +957,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/70.jpg",
       "Gender": "Male",
+      "Agency_id": 3,
       "Service_1": "Babysitting",
       "Service_2": null,
       "Service_3": null,
@@ -953,6 +984,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/9.jpg",
       "Gender": "Female",
+      "Agency_id": 4,
       "Service_1": "Babysitting",
       "Service_2": null,
       "Service_3": null,
@@ -979,6 +1011,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/15.jpg",
       "Gender": "Male",
+      "Agency_id": 3,
       "Service_1": "Babysitting",
       "Service_2": null,
       "Service_3": null,
@@ -1005,6 +1038,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/13.jpg",
       "Gender": "Female",
+      "Agency_id": 4,
       "Service_1": "Babysitting",
       "Service_2": null,
       "Service_3": null,
@@ -1031,6 +1065,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/2.jpg",
       "Gender": "Male",
+      "Agency_id": 3,
       "Service_1": "Babysitting",
       "Service_2": null,
       "Service_3": null,
@@ -1057,6 +1092,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/6.jpg",
       "Gender": "Female",
+      "Agency_id": 4,
       "Service_1": "Babysitting",
       "Service_2": null,
       "Service_3": null,
@@ -1083,6 +1119,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/14.jpg",
       "Gender": "Male",
+      "Agency_id": 3,
       "Service_1": "Babysitting",
       "Service_2": null,
       "Service_3": null,
@@ -1109,6 +1146,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/69.jpg",
       "Gender": "Female",
+      "Agency_id": 4,
       "Service_1": "Babysitting",
       "Service_2": null,
       "Service_3": null,
@@ -1135,6 +1173,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/70.jpg",
       "Gender": "Male",
+      "Agency_id": 3,
       "Service_1": "Babysitting",
       "Service_2": null,
       "Service_3": null,
@@ -1161,6 +1200,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/24.jpg",
       "Gender": "Female",
+      "Agency_id": 4,
       "Service_1": "Babysitting",
       "Service_2": null,
       "Service_3": null,
@@ -1187,6 +1227,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/37.jpg",
       "Gender": "Female",
+      "Agency_id": 4,
       "Service_1": "Elderly care",
       "Service_2": null,
       "Service_3": null,
@@ -1213,6 +1254,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/61.jpg",
       "Gender": "Male",
+      "Agency_id": 3,
       "Service_1": "Elderly care",
       "Service_2": null,
       "Service_3": null,
@@ -1239,6 +1281,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/34.jpg",
       "Gender": "Female",
+      "Agency_id": 4,
       "Service_1": "Elderly care",
       "Service_2": null,
       "Service_3": null,
@@ -1265,6 +1308,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/25.jpg",
       "Gender": "Female",
+      "Agency_id": 4,
       "Service_1": "Elderly care",
       "Service_2": null,
       "Service_3": null,
@@ -1291,6 +1335,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/21.jpg",
       "Gender": "Male",
+      "Agency_id": 3,
       "Service_1": "Elderly care",
       "Service_2": null,
       "Service_3": null,
@@ -1317,6 +1362,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/26.jpg",
       "Gender": "Female",
+      "Agency_id": 6,
       "Service_1": "Elderly care",
       "Service_2": null,
       "Service_3": null,
@@ -1343,6 +1389,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/7.jpg",
       "Gender": "Female",
+      "Agency_id": 6,
       "Service_1": "Elderly care",
       "Service_2": null,
       "Service_3": null,
@@ -1369,6 +1416,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/77.jpg",
       "Gender": "Female",
+      "Agency_id": 6,
       "Service_1": "Elderly care",
       "Service_2": null,
       "Service_3": null,
@@ -1395,6 +1443,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/16.jpg",
       "Gender": "Female",
+      "Agency_id": 6,
       "Service_1": "Elderly care",
       "Service_2": null,
       "Service_3": null,
@@ -1421,6 +1470,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/66.jpg",
       "Gender": "Male",
+      "Agency_id": 7,
       "Service_1": "Elderly care",
       "Service_2": null,
       "Service_3": null,
@@ -1448,6 +1498,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/4.jpg",
       "Gender": "Female",
+      "Agency_id": 6,
       "Service_1": "Home Nursing",
       "Service_2": null,
       "Service_3": null,
@@ -1474,6 +1525,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/74.jpg",
       "Gender": "Female",
+      "Agency_id": 6,
       "Service_1": "Home Nursing",
       "Service_2": null,
       "Service_3": null,
@@ -1500,6 +1552,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/50.jpg",
       "Gender": "Male",
+      "Agency_id": 7,
       "Service_1": "Home Nursing",
       "Service_2": null,
       "Service_3": null,
@@ -1526,6 +1579,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/95.jpg",
       "Gender": "Female",
+      "Agency_id": 6,
       "Service_1": "Home Nursing",
       "Service_2": null,
       "Service_3": null,
@@ -1552,6 +1606,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/11.jpg",
       "Gender": "Male",
+      "Agency_id": 7,
       "Service_1": "Home Nursing",
       "Service_2": null,
       "Service_3": null,
@@ -1578,6 +1633,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/75.jpg",
       "Gender": "Male",
+      "Agency_id": 7,
       "Service_1": "Home Nursing",
       "Service_2": null,
       "Service_3": null,
@@ -1604,6 +1660,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/11.jpg",
       "Gender": "Female",
+      "Agency_id": 6,
       "Service_1": "Home Nursing",
       "Service_2": null,
       "Service_3": null,
@@ -1630,6 +1687,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/29.jpg",
       "Gender": "Male",
+      "Agency_id": 7,
       "Service_1": "Home Nursing",
       "Service_2": null,
       "Service_3": null,
@@ -1761,6 +1819,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/66.jpg",
       "Gender": "Male",
+      "Agency_id": 7,
       "Service_1": "1:3 hours service",
       "Service_2": "3:6 hours service",
       "Service_3": null,
@@ -1787,6 +1846,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/5.jpg",
       "Gender": "Female",
+      "Agency_id": 8,
       "Service_1": "1:3 hours service",
       "Service_2": "3:6 hours service",
       "Service_3": null,
@@ -1813,6 +1873,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/65.jpg",
       "Gender": "Female",
+      "Agency_id": 8,
       "Service_1": "1:3 hours service",
       "Service_2": "3:6 hours service",
       "Service_3": null,
@@ -1839,6 +1900,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/81.jpg",
       "Gender": "Male",
+      "Agency_id": 9,
       "Service_1": "1:3 hours service",
       "Service_2": "3:6 hours service",
       "Service_3": null,
@@ -1865,6 +1927,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/46.jpg",
       "Gender": "Female",
+      "Agency_id": 8,
       "Service_1": "1:3 hours service",
       "Service_2": "3:6 hours service",
       "Service_3": null,
@@ -1891,6 +1954,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/51.jpg",
       "Gender": "Male",
+      "Agency_id": 9,
       "Service_1": "1:3 hours service",
       "Service_2": "3:6 hours service",
       "Service_3": null,
@@ -1917,6 +1981,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/45.jpg",
       "Gender": "Female",
+      "Agency_id": 8,
       "Service_1": "1:3 hours service",
       "Service_2": "3:6 hours service",
       "Service_3": null,
@@ -1943,6 +2008,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/66.jpg",
       "Gender": "Female",
+      "Agency_id": 8,
       "Service_1": "1:3 hours service",
       "Service_2": "3:6 hours service",
       "Service_3": null,
@@ -1969,6 +2035,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/31.jpg",
       "Gender": "Female",
+      "Agency_id": 8,
       "Service_1": "1:3 hours service",
       "Service_2": "3:6 hours service",
       "Service_3": null,
@@ -1995,6 +2062,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/96.jpg",
       "Gender": "Male",
+      "Agency_id": 9,
       "Service_1": "1:3 hours service",
       "Service_2": "3:6 hours service",
       "Service_3": null,
@@ -2021,6 +2089,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/26.jpg",
       "Gender": "Male",
+      "Agency_id": 9,
       "Service_1": "1:3 hours service",
       "Service_2": "3:6 hours service",
       "Service_3": null,
@@ -2047,6 +2116,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/61.jpg",
       "Gender": "Female",
+      "Agency_id": 8,
       "Service_1": "1:3 hours service",
       "Service_2": "3:6 hours service",
       "Service_3": null,
@@ -2073,6 +2143,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/92.jpg",
       "Gender": "Female",
+      "Agency_id": 10,
       "Service_1": "1:3 hours service",
       "Service_2": "3:6 hours service",
       "Service_3": null,
@@ -2098,6 +2169,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/76.jpg",
       "Gender": "Male",
+      "Agency_id": 11,
       "Service_1": "Plumbing",
       "Service_2": null,
       "Service_3": null,
@@ -2124,6 +2196,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/11.jpg",
       "Gender": "Male",
+      "Agency_id": 11,
       "Service_1": "Plumbing",
       "Service_2": null,
       "Service_3": null,
@@ -2150,6 +2223,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/83.jpg",
       "Gender": "Male",
+      "Agency_id": 11,
       "Service_1": "Plumbing",
       "Service_2": null,
       "Service_3": null,
@@ -2176,6 +2250,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/72.jpg",
       "Gender": "Male",
+      "Agency_id": 11,
       "Service_1": "Plumbing",
       "Service_2": null,
       "Service_3": null,
@@ -2202,6 +2277,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/95.jpg",
       "Gender": "Male",
+      "Agency_id": 11,
       "Service_1": "Plumbing",
       "Service_2": null,
       "Service_3": null,
@@ -2228,6 +2304,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/74.jpg",
       "Gender": "Male",
+      "Agency_id": 11,
       "Service_1": "Plumbing",
       "Service_2": null,
       "Service_3": null,
@@ -2254,6 +2331,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/49.jpg",
       "Gender": "Female",
+      "Agency_id": 10,
       "Service_1": "Plumbing",
       "Service_2": null,
       "Service_3": null,
@@ -2280,6 +2358,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/24.jpg",
       "Gender": "Male",
+      "Agency_id": 11,
       "Service_1": "Plumbing",
       "Service_2": null,
       "Service_3": null,
@@ -2306,6 +2385,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/53.jpg",
       "Gender": "Male",
+      "Agency_id": 11,
       "Service_1": "Plumbing",
       "Service_2": null,
       "Service_3": null,
@@ -2332,6 +2412,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/19.jpg",
       "Gender": "Male",
+      "Agency_id": 11,
       "Service_1": "Plumbing",
       "Service_2": null,
       "Service_3": null,
@@ -2358,6 +2439,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/22.jpg",
       "Gender": "Male",
+      "Agency_id": 11,
       "Service_1": "Carpentry",
       "Service_2": null,
       "Service_3": null,
@@ -2384,6 +2466,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/67.jpg",
       "Gender": "Male",
+      "Agency_id": 11,
       "Service_1": "Carpentry",
       "Service_2": null,
       "Service_3": null,
@@ -2410,6 +2493,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/74.jpg",
       "Gender": "Male",
+      "Agency_id": 11,
       "Service_1": "Carpentry",
       "Service_2": null,
       "Service_3": null,
@@ -2436,6 +2520,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/35.jpg",
       "Gender": "Female",
+      "Agency_id": 10,
       "Service_1": "Carpentry",
       "Service_2": null,
       "Service_3": null,
@@ -2462,6 +2547,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/54.jpg",
       "Gender": "Female",
+      "Agency_id": 12,
       "Service_1": "Carpentry",
       "Service_2": null,
       "Service_3": null,
@@ -2488,6 +2574,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/84.jpg",
       "Gender": "Male",
+      "Agency_id": 13,
       "Service_1": "Carpentry",
       "Service_2": null,
       "Service_3": null,
@@ -2514,6 +2601,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/44.jpg",
       "Gender": "Female",
+      "Agency_id": 12,
       "Service_1": "Carpentry",
       "Service_2": null,
       "Service_3": null,
@@ -2540,6 +2628,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/54.jpg",
       "Gender": "Female",
+      "Agency_id": 12,
       "Service_1": "Carpentry",
       "Service_2": null,
       "Service_3": null,
@@ -2566,6 +2655,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/7.jpg",
       "Gender": "Female",
+      "Agency_id": 12,
       "Service_1": "Carpentry",
       "Service_2": null,
       "Service_3": null,
@@ -2592,6 +2682,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/37.jpg",
       "Gender": "Male",
+      "Agency_id": 13,
       "Service_1": "Carpentry",
       "Service_2": null,
       "Service_3": null,
@@ -2618,6 +2709,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/49.jpg",
       "Gender": "Male",
+      "Agency_id": 13,
       "Service_1": "Moving Furniture",
       "Service_2": null,
       "Service_3": null,
@@ -2644,6 +2736,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/9.jpg",
       "Gender": "Male",
+      "Agency_id": 13,
       "Service_1": "Moving Furniture",
       "Service_2": null,
       "Service_3": null,
@@ -2670,6 +2763,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/92.jpg",
       "Gender": "Female",
+      "Agency_id": 12,
       "Service_1": "Moving Furniture",
       "Service_2": null,
       "Service_3": null,
@@ -2696,6 +2790,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/88.jpg",
       "Gender": "Female",
+      "Agency_id": 12,
       "Service_1": "Moving Furniture",
       "Service_2": null,
       "Service_3": null,
@@ -2722,6 +2817,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/45.jpg",
       "Gender": "Female",
+      "Agency_id": 12,
       "Service_1": "Moving Furniture",
       "Service_2": null,
       "Service_3": null,
@@ -2748,6 +2844,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/28.jpg",
       "Gender": "Male",
+      "Agency_id": 13,
       "Service_1": "Moving Furniture",
       "Service_2": null,
       "Service_3": null,
@@ -2774,6 +2871,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/66.jpg",
       "Gender": "Female",
+      "Agency_id": 12,
       "Service_1": "Moving Furniture",
       "Service_2": null,
       "Service_3": null,
@@ -2800,6 +2898,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/34.jpg",
       "Gender": "Female",
+      "Agency_id": 12,
       "Service_1": "Moving Furniture",
       "Service_2": null,
       "Service_3": null,
@@ -2826,6 +2925,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/90.jpg",
       "Gender": "Male",
+      "Agency_id": 13,
       "Service_1": "Moving Furniture",
       "Service_2": null,
       "Service_3": null,
@@ -2852,6 +2952,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/55.jpg",
       "Gender": "Male",
+      "Agency_id": 13,
       "Service_1": "Moving Furniture",
       "Service_2": null,
       "Service_3": null,
@@ -2878,6 +2979,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/79.jpg",
       "Gender": "Male",
+      "Agency_id": 13,
       "Service_1": "House Guard",
       "Service_2": null,
       "Service_3": null,
@@ -2904,6 +3006,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/36.jpg",
       "Gender": "Female",
+      "Agency_id": 12,
       "Service_1": "House Guard",
       "Service_2": null,
       "Service_3": null,
@@ -2930,6 +3033,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/40.jpg",
       "Gender": "Female",
+      "Agency_id": 14,
       "Service_1": "House Guard",
       "Service_2": null,
       "Service_3": null,
@@ -2956,6 +3060,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/20.jpg",
       "Gender": "Female",
+      "Agency_id": 14,
       "Service_1": "House Guard",
       "Service_2": null,
       "Service_3": null,
@@ -2982,6 +3087,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/18.jpg",
       "Gender": "Male",
+      "Agency_id": 15,
       "Service_1": "House Guard",
       "Service_2": null,
       "Service_3": null,
@@ -3008,6 +3114,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/58.jpg",
       "Gender": "Female",
+      "Agency_id": 14,
       "Service_1": "House Guard",
       "Service_2": null,
       "Service_3": null,
@@ -3034,6 +3141,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/40.jpg",
       "Gender": "Male",
+      "Agency_id": 15,
       "Service_1": "House Guard",
       "Service_2": null,
       "Service_3": null,
@@ -3060,6 +3168,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/27.jpg",
       "Gender": "Male",
+      "Agency_id": 15,
       "Service_1": "House Guard",
       "Service_2": null,
       "Service_3": null,
@@ -3086,6 +3195,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/54.jpg",
       "Gender": "Female",
+      "Agency_id": 14,
       "Service_1": "House Guard",
       "Service_2": null,
       "Service_3": null,
@@ -3112,6 +3222,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/4.jpg",
       "Gender": "Female",
+      "Agency_id": 14,
       "Service_1": "House Guard",
       "Service_2": null,
       "Service_3": null,
@@ -3137,6 +3248,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/men/31.jpg",
       "Gender": "Male",
+      "Agency_id": 15,
       "Service_1": "Driver",
       "Service_2": null,
       "Service_3": null,
@@ -3163,6 +3275,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/47.jpg",
       "Gender": "Female",
+      "Agency_id": 14,
       "Service_1": "Driver",
       "Service_2": null,
       "Service_3": null,
@@ -3189,6 +3302,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/46.jpg",
       "Gender": "Female",
+      "Agency_id": 14,
       "Service_1": "Driver",
       "Service_2": null,
       "Service_3": null,
@@ -3215,6 +3329,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/89.jpg",
       "Gender": "Female",
+      "Agency_id": 14,
       "Service_1": "Driver",
       "Service_2": null,
       "Service_3": null,
@@ -3241,6 +3356,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/67.jpg",
       "Gender": "Male",
+      "Agency_id": 15,
       "Service_1": "Driver",
       "Service_2": null,
       "Service_3": null,
@@ -3267,6 +3383,7 @@
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/women/40.jpg",
       "Gender": "Female",
+      "Agency_id": 14,
       "Service_1": "Driver",
       "Service_2": null,
       "Service_3": null,
@@ -3293,6 +3410,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/20.jpg",
       "Gender": "Female",
+      "Agency_id": 14,
       "Service_1": "Driver",
       "Service_2": null,
       "Service_3": null,
@@ -3319,6 +3437,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/30.jpg",
       "Gender": "Female",
+      "Agency_id": 14,
       "Service_1": "Driver",
       "Service_2": null,
       "Service_3": null,
@@ -3345,6 +3464,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/23.jpg",
       "Gender": "Female",
+      "Agency_id": 14,
       "Service_1": "Driver",
       "Service_2": null,
       "Service_3": null,
@@ -3371,6 +3491,7 @@
       "Badge": "Excellent service",
       "img": "https://randomuser.me/api/portraits/women/16.jpg",
       "Gender": "Female",
+      "Agency_id": 14,
       "Service_1": "Driver",
       "Service_2": null,
       "Service_3": null,
@@ -5588,8 +5709,8 @@
   "category": [
     {
       "id": 1,
-      "Name": "House keeping",
-      "Details": "Your home is your sanctuary, a place where you can relax and recharge. it can be tough to find the time to keep your home as clean and tidy as you'd like with busy schedules. That's where house keeping services come in, so you can focus on what's important to you.",
+      "Name": "Housekeeping",
+      "Details": "Your home is your sanctuary, a place where you can relax and recharge. it can be tough to find the time to keep your home as clean and tidy as you'd like with busy schedules. That's where housekeeping services come in, so you can focus on what's important to you.",
       "img": "https://i.postimg.cc/CKssHd5L/cleaning.jpg"
     },
     {
@@ -5621,15 +5742,15 @@
     {
       "Category_id": 1,
       "id": 1,
-      "Name": "Cleaning",
-      "Details": "cleaning your furniture pieces like: chairs. sofas, curtains and carpets.\nVacuum the pieces thoroughly and wash them.\nremove cushion and outer covers, and vacuum them separately.\nSpot clean any stains.\niron pieces if needed",
+      "Name": "Cleaning ",
+      "Details": "cleaning your furniture pieces like: chairs. sofas, curtains and carpets.\nVacuum the pieces thoroughly and wash them.\nremove cushion and outer covers, and vacuum them separately.\nSpot clean any stains.\niron pieces if needed ",
       "img": "https://i.postimg.cc/hjHcRHDm/cleaning.jpg"
     },
     {
       "Category_id": 1,
       "id": 2,
-      "Name": "Gardening",
-      "Details": "Monitoring the health of all plants and greenscapes, watering and feeding plants, trimming trees and shrubs, fertilizing and mowing lawns, Weeding gardens and keeping green spaces and walkways clear of debris and litter.",
+      "Name": "Gardening ",
+      "Details": "Monitoring the health of all plants and greenscapes, watering and feeding plants, trimming trees and shrubs, fertilizing and mowing lawns, Weeding gardens and keeping green spaces and walkways clear of debris and litter. ",
       "img": "https://i.postimg.cc/XY7MmVfh/gardening.jpg"
     },
     {
@@ -5642,14 +5763,14 @@
     {
       "Category_id": 2,
       "id": 4,
-      "Name": "Elderly care",
-      "Details": "Old age is a sensitive phase; elderly people need care and comfort to lead a healthy life without worries and anxiety. We intend to help older people live as comfortably and independently as possible.     ",
+      "Name": "Elderly care ",
+      "Details": "Old age is a sensitive phase; elderly people need care and comfort to lead a healthy life without worries and anxiety. We intend to help older people live as comfortably and independently as possible.      ",
       "img": "https://i.postimg.cc/N0kHMk9L/elderly-care.jpg"
     },
     {
       "Category_id": 2,
       "id": 5,
-      "Name": "Home Nursing",
+      "Name": "Home Nursing ",
       "Details": "We allows a person with special needs to stay in their home. It might be for people who are getting older. It could also be for people who are chronically ill, recovering from surgery, or have a disability.",
       "img": "https://i.postimg.cc/qqhq8sRs/house-nursing.jpg"
     },
@@ -5692,14 +5813,14 @@
       "Category_id": 5,
       "id": 11,
       "Name": "House Guard",
-      "Details": "We responsible for protecting you from any kind of robbery or assault on your house",
+      "Details": "We responsible for protecting you from any kind of robbery or assault on your house ",
       "img": "https://i.postimg.cc/TwLNS3Zq/House-guard.jpg"
     },
     {
       "Category_id": 3,
       "id": 12,
       "Name": "Chefs",
-      "Details": "Studying recipes, setting up menus and preparing high-quality dishes. Personal chef are responsible for preparing specialized meals for you.",
+      "Details": "Studying recipes, setting up menus and preparing high-quality dishes. Personal chef are responsible for preparing specialized meals for you. ",
       "img": "https://i.postimg.cc/gcgWgfKN/chefs.jpg"
     }
   ],
@@ -5789,7 +5910,7 @@
       "id": 10,
       "Name": "Duff",
       "Rate": 4,
-      "Review": "I’ve been using Aown services for the past few months. It’s excellent!",
+      "Review": "Excellent service!",
       "Gender": "male",
       "picture": "https://randomuser.me/api/portraits/men/66.jpg",
       "Worker_id": 19
@@ -5798,7 +5919,7 @@
       "id": 11,
       "Name": "Augustine",
       "Rate": 4,
-      "Review": "heard about Aown from a friend and gave them a try. very professional indeed.",
+      "Review": "Fantastic support!",
       "Gender": "male",
       "picture": "https://randomuser.me/api/portraits/men/62.jpg",
       "Worker_id": 10
@@ -5807,7 +5928,7 @@
       "id": 12,
       "Name": "Ashlie",
       "Rate": 4,
-      "Review": "I tried the services while travelling and I loved coming back to a clean house.",
+      "Review": "Fantastic service!",
       "Gender": "female",
       "picture": "https://randomuser.me/api/portraits/women/51.jpg",
       "Worker_id": 12
@@ -5816,7 +5937,7 @@
       "id": 13,
       "Name": "Howey",
       "Rate": 5,
-      "Review": "Best cleaning services that I’ve tried in while.",
+      "Review": "Excellent service!",
       "Gender": "male",
       "picture": "https://randomuser.me/api/portraits/men/97.jpg"
     },
@@ -5824,7 +5945,7 @@
       "id": 14,
       "Name": "Mireielle",
       "Rate": 4,
-      "Review": "I always count on Aown in babysitting my kids. I don’t have to worry when I’m at work.",
+      "Review": "Highly recommended!",
       "Gender": "female",
       "picture": "https://randomuser.me/api/portraits/women/67.jpg",
       "Worker_id": 9
@@ -5833,7 +5954,7 @@
       "id": 15,
       "Name": "Christoforo",
       "Rate": 5,
-      "Review": "very quick service.Love it!",
+      "Review": "Excellent service!",
       "Gender": "male",
       "picture": "https://randomuser.me/api/portraits/men/70.jpg",
       "Worker_id": 4
