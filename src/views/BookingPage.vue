@@ -432,6 +432,7 @@ import axios from 'axios';
                 },
 
               getCx(){
+                           //get ID From Local Storage
                 this.cxInfo = JSON.parse(localStorage.getItem('cxInfo'));
                           this.cxId=this.cxInfo.id
                 axios.get(`http://localhost:2000/cx/${this.cxId}`)
@@ -483,7 +484,7 @@ import axios from 'axios';
                     else if(this.selectedDays==='singleDay'){
                             this.newOrderDet.Order_Price=res
                     }
-
+                                 //Set Local Storage
                      const objectString = JSON.stringify(this.newOrderDet);
                       localStorage.setItem("newOrderDet", objectString);
   
