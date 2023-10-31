@@ -43,15 +43,15 @@
         <div class="title">Worker Availability</div>
         <div class="subtitle"> {{ wk.Categories }} </div>
         <div class="row">
-          <div class="col-sm-7">
+          <div class="wk-info col-sm-7">
             <div> {{ wk.Service_1 }} </div>
             <div> {{ wk.Service_2 }} </div>
             <div> {{ wk.Service_3 }} </div>
             <div> {{ wk.Service_4 }} </div>
           </div>
-          <div class="col-sm-5">
+          <div class="wk-info col-sm-5">
             <div> {{ wk.Service_1_price }} LE </div>
-            <div> {{ wk.Service_2_price }} LE </div>
+            <div v-if="wk.Service_3_price"> {{ wk.Service_2_price }} LE </div>
             <div v-if="wk.Service_3_price"> {{ wk.Service_3_price }} LE </div>
             <div v-if="wk.Service_4_price"> {{ wk.Service_4_price }} LE </div>
           </div>
@@ -202,6 +202,10 @@ export default {
 
 .wk-box {
   padding: 20px;
+  font-size: $paragraph;
+}
+.wk-info{
+  font-size: $paragraph;
 }
 
 .content {
@@ -214,6 +218,10 @@ export default {
   margin: 2%;
 }
 
+.rev-img {
+  clip-path: circle();
+  width: 100px;
+}
 .badge-icon {
   display: inline-block;
   vertical-align: middle;
