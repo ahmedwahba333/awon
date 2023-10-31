@@ -68,13 +68,13 @@
         <div class="title">Worker Availability</div>
         <div class="subtitle"> {{ wk.Categories }} </div>
         <div class="row">
-          <div class="col-sm-7">
+          <div class="wk-info col-sm-7">
             <div> {{ wk.Service_1 }} </div>
             <div> {{ wk.Service_2 }} </div>
             <div> {{ wk.Service_3 }} </div>
             <div> {{ wk.Service_4 }} </div>
           </div>
-          <div class="col-sm-5">
+          <div class="wk-info col-sm-5">
             <div> {{ wk.Service_1_price }} LE </div>
             <div v-if="wk.Service_3_price"> {{ wk.Service_2_price }} LE </div>
             <div v-if="wk.Service_3_price"> {{ wk.Service_3_price }} LE </div>
@@ -88,8 +88,8 @@
           <div class="col col-lg-6 col-md-6 col-sm-12 col-12" v-for="(index,i) in rev.slice(0,4)" :key="i" >
             <div class="content row align-items-start" >
               <div class="col-sm-7 col-7 d-flex align-items-center">
-                <div><img :src="`${index.picture}`" class="rev-mg" alt="Cx" /></div>
-              <div class="cx name ms-2"> {{ index.Name }} </div>
+                <div><img :src="`${index.picture}`" alt="Cx" /></div>
+              <div class="wk-info ms-2"> {{ index.Name }} </div>
               </div>
               <div class="cx rate col-lg-5 col-md-5 col-5">
                 <div class="rating">
@@ -227,6 +227,10 @@ export default {
 }
 .wk-box{
   padding: 20px;
+  font-size: $paragraph;
+}
+.wk-info{
+  font-size: $paragraph;
 }
 .content {
   margin: 1%;
