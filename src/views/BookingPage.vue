@@ -110,20 +110,20 @@
       <div class="dropdown-item" v-show="workers.Categories=='Food services'">
         <h5>{{ workers.Categories }}</h5>
           <div class="row mt-1">
-          <div class="col-7">
+          <div class="col-md-7 col-sm-12">
             <input type="checkbox" class="form-check-input" :value="workers.Service_1_price" v-model="checkInput4">
             <label class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
           </div>
-          <div class="col-5">
+          <div class="col-md-5 col-sm-12">
             <label class="ms-4">Price: {{ workers.Service_1_price }}</label>
           </div>
         </div>
         <div class="row">
-          <div class="col-7">
+          <div class="col-md-7 col-sm-12">
             <input type="checkbox" class="form-check-input" :value="workers.Service_2_price" v-model="checkInput5">
             <label class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_2 }}</label>
           </div>
-          <div class="col-5">
+          <div class="col-5 col-sm-12">
             <label class="ms-4">Price: {{ workers.Service_2_price }}</label>
           </div>
         </div>
@@ -134,11 +134,11 @@
       <div class="dropdown-item" v-show="workers.Categories=='House maintenance'">
         <h5>{{ workers.Categories }}</h5>
         <div class="row mt-1" v-show="workers.Service_1=='Plumbing' || 'Carpentry' || 'Moving Furniture'">
-          <div class="col-6">
+          <div class="col-md-6 col-sm-12">
             <input type="checkbox" class="form-check-input" :value="workers.Service_1_price" v-model="checkInput">
             <label class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
           </div>
-          <div class="col-6">
+          <div class="col-md-6 col-sm-12">
             <label class="ms-4">{{ workers.Service_1_price }}LE per preview</label>
           </div>
         </div>
@@ -149,14 +149,14 @@
       <div class="dropdown-item" v-show="workers.Categories=='Facilities'">
         <h5>{{ workers.Categories }}</h5>
         <div class="row mt-1" v-show="workers.Service_1=='House Guard' || 'Driver'">
-          <div class="col-3">
+          <div class="col-md-3 col-sm-12">
             <input type="checkbox" class="form-check-input" :value="workers.Service_1_price" v-model="checkInput3">
             <label class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
           </div>
-          <div class="col-4">
-            <label class="ms-4">{{ workers.Service_1_price }}LE per hour</label>
+          <div class="col-md-4 col-sm-12">
+            <label class="ms-md-4">{{ workers.Service_1_price }}LE per hour</label>
           </div>
-          <div class=" col-5">
+          <div class=" col-md-5 col-sm-12">
              <label> no of hours</label>
              <input type="text" class="no ms-2" v-model="noOfhours">
            </div>
@@ -223,11 +223,13 @@
           <div class="form-row row">
             <div class="form-group col-md-6">
               <label for="inputEmail4">First Name</label>
-              <input type="text" class="form-control" id="inputEmail4" v-model="newOrderDet.Customer_FName" >
+              <input type="text" class="form-control" id="inputEmail4" v-model="firstName" >
+              <span class="error-feedback" v-if="v$.firstName.$error"> {{ v$.firstName.$errors[0].$message }}</span>
             </div>
             <div class="form-group col-md-6">
               <label for="inputPassword4">Last Name</label>
-              <input type="text" class="form-control" id="inputPassword4" v-model="newOrderDet.Customer_LName">
+              <input type="text" class="form-control" id="inputPassword4" v-model="lastName">
+              <span class="error-feedback" v-if="v$.lastName.$error"> {{ v$.lastName.$errors[0].$message }}</span>
             </div>
           </div>
          
@@ -244,15 +246,17 @@
          
           <div class="form-group">
             <label for="FrontID">Front National ID</label>
-            <input type="text" class="form-control" id="FrontID" v-model="newOrderDet.FrontNational_id">
+            <input type="text" class="form-control" id="FrontID" v-model="frontID">
+            <span class="error-feedback" v-if="v$.frontID.$error"> {{ v$.frontID.$errors[0].$message }}</span>
           </div>
           <div class="form-group">
             <label for="BackID">Back National ID</label>
-            <input type="text" class="form-control" id="BackID" v-model="newOrderDet.BackNational_id">
+            <input type="text" class="form-control" id="BackID" v-model="backID">
+            <span class="error-feedback" v-if="v$.backID.$error"> {{ v$.backID.$errors[0].$message }}</span>
           </div>
           <div class="form-group">
             <label for="inputGovernate">Governorate</label>
-            <select name="governorate" class="form-control" id="inputGovernate" v-model="newOrderDet.Governorate">
+            <select name="governorate" class="form-control" id="inputGovernate" v-model="gov">
                   <option value="select">Select</option>
                   <option value="Alexandria">Alexandria</option>
                   <option value="Aswan">Aswan</option>
@@ -281,43 +285,52 @@
                   <option value="South Sinai">South Sinai</option>
                   <option value="Suez">Suez</option>
               </select>
+              <span class="error-feedback" v-if="v$.gov.$error"> {{ v$.gov.$errors[0].$message }}</span>
           </div>
           <div class="form-group">
             <label for="inputCity">City</label>
-            <input type="text" class="form-control" id="inputCity" v-model="newOrderDet.City">
+            <input type="text" class="form-control" id="inputCity" v-model="city">
+            <span class="error-feedback" v-if="v$.city.$error"> {{ v$.city.$errors[0].$message }}</span>
           </div>
           <div class="form-group">
             <label for="inputCity">Address</label>
-            <input type="text" class="form-control" id="inputAdress" v-model="newOrderDet.Order_Address">
+            <input type="text" class="form-control" id="inputAdress" v-model="address">
+            <span class="error-feedback" v-if="v$.address.$error"> {{ v$.address.$errors[0].$message }}</span>
           </div>
           <div class="form-row row">
             <div class="form-group col-md-4">
               <label for="inputBuilding">Building no.</label>
-              <input type="text" class="form-control" id="inputBuilding" v-model="newOrderDet.Building_No">
+              <input type="text" class="form-control" id="inputBuilding" v-model="building">
+              <span class="error-feedback" v-if="v$.building.$error"> {{ v$.building.$errors[0].$message }}</span> 
             </div>
             <div class="form-group col-md-4">
               <label for="inputFloor">Floor no.</label>
-              <input type="text" class="form-control" id="inputFloor" v-model="newOrderDet.Floor_No">
+              <input type="text" class="form-control" id="inputFloor" v-model="floor">
+              <span class="error-feedback" v-if="v$.floor.$error"> {{ v$.floor.$errors[0].$message }}</span>
+              
             </div>
             <div class="form-group col-md-4">
               <label for="inputFlat">Flat no.</label>
-              <input type="text" class="form-control" id="inputFlat" v-model="newOrderDet.Flat_No">
+              <input type="text" class="form-control" id="inputFlat" v-model="flat">
+              <span class="error-feedback" v-if="v$.flat.$error"> {{ v$.flat.$errors[0].$message }}</span>
             </div>
             </div>
             <div class="form-row row">
             <div class="form-group col-md-6">
               <label for="inputMobile1">Mobile 1</label>
-              <input type="text" class="form-control" id="inputMobile1" v-model="newOrderDet.Phone_Num1">
+              <input type="text" class="form-control" id="inputMobile1" v-model="mobile_1">
+              <span class="error-feedback" v-if="v$.mobile_1.$error"> {{ v$.mobile_1.$errors[0].$message }}</span>
             </div>
             <div class="form-group col-md-6">
               <label for="inputMobile2">Mobile 2</label>
-              <input type="text" class="form-control" id="inputMobile2" v-model="newOrderDet.Phone_Num2">
+              <input type="text" class="form-control" id="inputMobile2" v-model="mobile_2">
+              <span class="error-feedback" v-if="v$.mobile_2.$error"> {{ v$.mobile_2.$errors[0].$message }}</span>
             </div>
           </div>
       </form>
       <div class="row d-flex justify-content-center mt-2">
             <!-- <router-link class="btn next" :to="'/payment'" > Next</router-link> -->
-            <button @click="calcTotalPrice">next </button>
+            <button @click="calcTotalPrice" class="next">next </button>
           </div>
       </div>
 
@@ -327,17 +340,12 @@
 </template>
 
 
-  
-
-
-
-
 <script>
 import NavBarPages from '@/components/NavBarPages.vue';
 import FooterComponent from '../components/footer.vue';
 import axios from 'axios';
-// import { localStorage } from 'window';
-
+import useVuelidate from "@vuelidate/core";
+import { required, numeric , minLength} from "@vuelidate/validators";
 
   export default {
   name: 'BookingPage',
@@ -354,6 +362,8 @@ import axios from 'axios';
       cxInfo:'',
       cxId: '',
 
+      v$: useVuelidate(),
+
       dateDiff:'',
       noOfDays:'',
       checkInput:[] ,
@@ -367,6 +377,20 @@ import axios from 'axios';
       noOfPieces:'',
       noOfMeters:'',
       noOfhours:'',
+
+      firstName:'',
+      lastName:'',
+      backID:'',
+      frontID:'',
+      city:'',
+      address:'',
+      building:'',
+      floor:'',
+      flat:'',
+      mobile_1:'',
+      mobile_2:'',
+      gov:'',
+
 
       newOrderDet:{
               Customer_FName:'',
@@ -389,6 +413,27 @@ import axios from 'axios';
           
         }
       },
+
+      validations() {
+        return {
+                    firstName  : { required },
+                    lastName  : { required },
+                    backID : { required },
+                    frontID  : { required },
+                    city : { required },
+                    address  : { required },
+                    building  : { required },
+                    floor  : { required , numeric },
+                    flat  : { required , numeric  },
+                    mobile_1:{ required , numeric, minLength: minLength(11) },
+                    mobile_2:{ required , numeric , minLength: minLength(11) },
+                    gov:{required}
+        };
+    },
+    
+    mounted() {
+    this.v$.$validate();
+    },
 
   watch: {
     selectedLoc(value) {
@@ -414,16 +459,18 @@ import axios from 'axios';
       }
     },
 
+  
+
 },
 
   created(){
      this.getAllWorkers();
      this.getCx();
      this.getOrder();
-    //  this.getcxId()
            },    
 
    methods:{
+            
               getAllWorkers(){
                 this.id = this.$route.params.id
                 axios.get(`http://localhost:2000/worker/${this.id}`)
@@ -447,18 +494,18 @@ import axios from 'axios';
                 },
 
                 getnewOrderDet(){
-                this.newOrderDet.Customer_FName=this.cx.First_name
-                this.newOrderDet.Customer_LName=this.cx.Last_name
-                this.newOrderDet.FrontNational_id=this.cx.FrontNational_id
-                this.newOrderDet.BackNational_id=this.cx.BackNational_id
-                this.newOrderDet.Governorate=this.cx.Governorate
-                this.newOrderDet.Order_Address=this.cx.Address
-                this.newOrderDet.City=this.cx.City
-                this.newOrderDet.Building_No=this.cx.Building_no
-                this.newOrderDet.Flat_No=this.cx.Flat_no
-                this.newOrderDet.Floor_No=this.cx.Floor_no
-                this.newOrderDet.Phone_Num1=this.cx.Phone_no
-                this.newOrderDet.Phone_Num2=this.cx.Phone_no_2
+              this.firstName=this.cx.First_name
+                this.lastName=this.cx.Last_name
+                this.frontID=this.cx.FrontNational_id
+                this.backID=this.cx.BackNational_id
+                this.gov=this.cx.Governorate
+                this.address=this.cx.Address
+                this.city=this.cx.City
+                this.building=this.cx.Building_no
+                this.flat=this.cx.Flat_no
+                this.floor=this.cx.Floor_no
+                this.mobile_1=this.cx.Phone_no
+                this.mobile_2=this.cx.Phone_no_2
                 },
 
                 calcTotalPrice(){
@@ -484,18 +531,47 @@ import axios from 'axios';
                     else if(this.selectedDays==='singleDay'){
                             this.newOrderDet.Order_Price=res
                     }
+
+                    this.newOrderDet.Customer_FName = this.firstName
+                    this.newOrderDet.Customer_LName = this.lastName
+                    this.newOrderDet.FrontNational_id = this.frontID
+                    this.newOrderDet.BackNational_id= this.backID
+                    this.newOrderDet.City = this.city
+                    this.newOrderDet.Order_Address = this.address
+                    this.newOrderDet.Building_No = this.building
+                    this.newOrderDet.Flat_No = this.flat
+                    this.newOrderDet.Floor_No = this.floor
+                    this.newOrderDet.Phone_Num1= this.mobile_1
+                    this.newOrderDet.Phone_Num2= this.mobile_2
+                    this.newOrderDet.Governorate=this.gov
+
+                   
                                  //Set Local Storage
                      const objectString = JSON.stringify(this.newOrderDet);
                       localStorage.setItem("newOrderDet", objectString);
+
+             
+                                  //Check Validation
+                                this.v$.$validate();
+                              if (!this.v$.$error) {
+                                  console.log('Payment completed successfully');
+                               
+                              } else {
+                                  console.log('payement failed');
+                              }
   
+                              
+                             
+                            
                          } ,
 
-        },
+                      
+            },
 
-
-    
+        
+      }
   
-}
+  
          
 
 </script>
@@ -569,8 +645,7 @@ margin-top: 30px;
 .dateLable{
   font-size:18px !important;
 }
-
-button{
+.next{
 @include button ;
 width: 150px;
 }
@@ -616,6 +691,11 @@ li{
 .no{
   width:50px
 }
+
+.error-feedback{
+        color:red;
+        font-size: $small;
+    }
 
 </style>
 
