@@ -3,13 +3,14 @@
     <NavBarPages/>
     <div class="container">
       <div class="d-flex justify-content-start">
-      <div class="top d-flex justify-content-around align-items-center">
-        <div class="">
-          <div class="img">{{wk.img}}</div>
+      <div class="top d-flex flex-wrap justify-content-around align-items-center">
+        <div class="img mx-5">
+          <img :src="`${wk.img}`"/>
+          <!-- <img src="https://play-lh.googleusercontent.com/aFWiT2lTa9CYBpyPjfgfNHd0r5puwKRGj2rHpdPTNrz2N9LXgN_MbLjePd1OTc0E8Rl1=w240-h480-rw" alt=""> -->
         </div>
         <div class="">
           <div class="w-name"> {{wk.First_name}} {{wk.Last_name}} </div>
-          <router-link :to="`./booking`"><div class="btn m-0 mt-2">Book now</div></router-link>
+          <router-link :to="`./booking/${wk.id}`"><div class="btn m-0 mt-2">Book now</div></router-link>
         </div>
       </div>
     </div>
@@ -167,7 +168,8 @@ export default {
   methods: {
     getWkById(){
       this.id = this.$route.params.id
-      axios.get(`http://localhost:2000/worker/77`)
+      axios.get(`http://localhost:2000/worker/20`)
+      // axios.get(`http://localhost:2000/worker/${id}`)
         .then(res =>this.wk = res.data)
         .catch(err=>console.log(err))
     },
