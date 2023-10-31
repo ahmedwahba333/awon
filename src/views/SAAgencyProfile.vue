@@ -33,28 +33,46 @@
         </ol>
       </div>
       <!-- Search Filter -->
-      <div class="row searchCard pt-3 pb-3">
-        <p class="subtitle mx-4">Account</p>
-        <div class="col-lg-5 col-md-5 col-sm-12">
-          <img
-            :src="`${Agencies.Logo}`"
-            class="card-img-top object-fit-cover Clip-path:circle()"
-            :alt="`agencyimg${i}`"
-          />
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6">
-          <p class="searchKey">Name</p>
-          <p class="servent">{{ Agencies.Agency_Name }}</p>
-          <p class="searchKey">Email</p>
-          <p class="servent">{{ Agencies.Agency_Email }}</p>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6">
-          <p class="searchKey">Phone</p>
-          <p class="servent">{{ Agencies.Agency_Phone_no }}</p>
-          <p class="searchKey">Location</p>
-          <p class="servent">
-            {{ Agencies.Agency_Address }}
+      <div class="searchCard pt-3 ">
+        <div class="row d-flex flex wrap">
+          <p class="subtitle mx-4 col-9">Account</p>
+          <p class="subtitle mx-4 col-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="currentColor"
+              class="bi bi-gear-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"
+              />
+            </svg>
           </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-5 col-sm-12 pb-4">
+            <img
+              :src="`${Agencies.Logo}`"
+              class="card-img-top object-fit-cover Clip-path:circle()"
+              :alt="`agencyimg${i}`"
+            />
+          </div>
+          <div class="col-lg-4 col-md-3 col-sm-6">
+            <p class="searchKey">Name</p>
+            <p class="searchKey">{{ Agencies.Agency_Name }}</p>
+            <p class="searchKey">Email</p>
+            <p class="servent">{{ Agencies.Agency_Email }}</p>
+          </div>
+          <div class="col-lg-4 col-md-3 col-sm-6">
+            <p class="searchKey">Phone</p>
+            <p class="servent">{{ Agencies.Agency_Phone_no }}</p>
+            <p class="searchKey">Location</p>
+            <p class="servent">
+              {{ Agencies.Agency_Address }}
+            </p>
+          </div>
         </div>
       </div>
       <!-- Services Table -->
@@ -77,20 +95,18 @@
             </thead>
             <tbody>
               <tr v-for="(order, id) in orders" :key="id">
-                
-                  <td>{{ order.id }}</td>
-                  <td>{{ order.Order_Details }}</td>
-                  <td>{{ order.Order_Date }}</td>
-                  <td>{{ order.Customer_id }}</td>
-                  <td>{{ order.Customer_FName }} {{ order.Customer_LName }}</td>
-                  <td>{{ order.Worker_FName }} {{ order.Worker_LName }}</td>
-                
+                <td>{{ order.id }}</td>
+                <td>{{ order.Order_Details }}</td>
+                <td>{{ order.Order_Date }}</td>
+                <td>{{ order.Customer_id }}</td>
+                <td>{{ order.Customer_FName }} {{ order.Customer_LName }}</td>
+                <td>{{ order.Worker_FName }} {{ order.Worker_LName }}</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
-      <p class="subtitle mt-4">Agency Worker</p>
+      <p class="subtitle mt-4">Top Worker</p>
       <div class="row justify-content-center gap-5">
         <div class="card mb-4" style="width: 18rem">
           <img
@@ -305,7 +321,12 @@ p {
 .breadCrumb {
   margin-left: 1px;
 }
-
+svg{
+  color: $orangeColor;
+  &:hover{
+    color: $blueColor
+  }
+}
 .breadcrumb-item {
   font-size: $paragraph !important;
   color: $blueColor !important;
