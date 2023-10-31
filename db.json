@@ -5796,14 +5796,14 @@
     {
       "Category_id": 1,
       "id": 1,
-      "Name": "Cleaning ",
+      "Name": "Cleaning",
       "Details": "cleaning your furniture pieces like: chairs. sofas, curtains and carpets.\nVacuum the pieces thoroughly and wash them.\nremove cushion and outer covers, and vacuum them separately.\nSpot clean any stains.\niron pieces if needed ",
       "img": "https://i.postimg.cc/hjHcRHDm/cleaning.jpg"
     },
     {
       "Category_id": 1,
       "id": 2,
-      "Name": "Gardening ",
+      "Name": "Gardening",
       "Details": "Monitoring the health of all plants and greenscapes, watering and feeding plants, trimming trees and shrubs, fertilizing and mowing lawns, Weeding gardens and keeping green spaces and walkways clear of debris and litter. ",
       "img": "https://i.postimg.cc/XY7MmVfh/gardening.jpg"
     },

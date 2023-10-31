@@ -747,8 +747,6 @@ export default {
   },
   data() {
     return {
-      // pathImg: "../assets/subservices/",
-      // imgArr:[],
       workerData: [],
       service: [],
     };
@@ -758,8 +756,6 @@ export default {
       .get("http://localhost:2000/worker")
       .then((res) => {
         this.workerData = res.data;
-        // console.log(res.data);
-        // this.pathImg = "../assets/subservices/" + res.data['img'];
       })
       .catch((err) => console.log(err));
     axios
