@@ -83,7 +83,7 @@
             </div>
           </div>
           <div class="icons col-lg-3">
-            <router-link to="WorkerProfile">
+            <router-link :to="`WorkerProfile/${worker.id}`">
               <span class="view">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -602,8 +602,7 @@ export default {
         .get("http://localhost:2000/worker")
         .then((res) => {
           this.workerData = res.data;
-          // console.log(res.data);
-          // this.pathImg = "../assets/subservices/" + res.data['img'];
+          
         })
         .catch((err) => console.log(err));
     },
@@ -630,6 +629,9 @@ export default {
   font-weight: bold;
   font-size: $subTitle;
   color: $blueColor;
+}
+svg{
+  list-style-type: none;
 }
 .box {
   @include box;
