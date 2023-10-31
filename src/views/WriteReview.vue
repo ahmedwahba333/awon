@@ -49,7 +49,7 @@
               <div class="comment-btns mt-2">
                 <div class="row justify-content-end">
                   <div class="col-12 col-xl-3 col-md-7 col-sm-10">
-                    <button class="btn" @click="addReview(worker.id)">Add</button>
+                    <button class="btn" @click="addReview">Add</button>
                   </div>
 
                   <div class="col-12 col-xl-3 col-md-7 col-sm-10">
@@ -85,23 +85,33 @@ data() {
       Rate: 0,
       RateService: 0,
       Review:"",
-      Name:""
-    
+      Name:"",
+      Gender:"",
+      Picture:"",
+      Worker_id:""
     },
+
+ 
 }
   },
   created(){
     this.getWorkerByID();
     this.setRatingWorker();
-  this.setRatingService();
+    this.setRatingService();
   },
   methods: {
 
     getWorkerByID(){
       this.id = this.$route.params.id;
       axios.get(`http://localhost:2000/worker/${this.id}`)
-      .then((res)=> {this.worker = res.data})
+      .then((res)=> {this.worker = res.data
+      this.values.Name = this.worker.First_name + " " + this.worker.Last_name 
+      this.values.Gender = this.worker.Gender
+      this.values.Picture = this.worker.img
+
+      })
       .catch((err)=>{console.log(err)})
+
     },
     setRatingWorker(Rate){
       this.rating= Rate;
@@ -112,11 +122,21 @@ data() {
       // console.log(Rate_service);
     },
     addReview() {
+        let values = {
+        Rate : this.values.Rate , 
+        RateService : this.values.RateService  , 
+        Review : this.values.RateService,
+        Name : this.values.Name,
+        Gender : this.values.Gender,
+        Picture : this.values.Picture,
+        Worker_id : this.id ,
+        } 
       axios
-        .post("http://localhost:2000/review", this.values)
+        .post(`http://localhost:2000/review`, values)
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
-      this.$router.push("/review");
+         this.$router.push("/review");
+        //  console.log(this.Name);
     },
 
   },

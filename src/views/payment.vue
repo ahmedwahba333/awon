@@ -7,16 +7,11 @@
                 <p class="title py-3">Payment Details</p>
                 <div class="row gx-8">
                     <div class="col-12">
-                        <!-- <div class="d-flex flex-column">
-                            <p class="text">Person Name yo</p>
-                            <input class="form-control" type="text" placeholder="Name" v-model="fullName">
-                            <span class="error-feedback" v-if="v$.fullName.$error"> {{ v$.fullName.$errors[0].$message }}</span>
-                        </div> -->
-                            <div class="d-flex flex-column">
+                            <!-- <div class="d-flex flex-column">
                             <p class="text">Person Name</p>
                             <input class="form-control" type="text" placeholder="Card Holder Name"  v-model="fullName">
                             <span class="error-feedback" v-if="v$.fullName.error"> {{ v$.fullName.$errors[0].$message }}</span>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="col-12">
                         <div class="d-flex flex-column">
@@ -41,13 +36,13 @@
                     </div>
                     <div class="col-12">
                         <div class="">
-                        <div class=""> <label class="radio"> <input type="radio" value="terms">
+                        <div class=""> <label class="radio" > <input type="radio" value="terms" >
                         accept terms and conditions</label> </div>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="btn ">
-                            <div @click="completePayment()" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><router-link to="#" class="pay" > Pay</router-link></div>
+                            <div @click="completePayment()" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" :disabled="!radioIsActive"><router-link to="#" class="pay" > Pay</router-link></div>
                         </div>
                         <div class="back-btn d-flex align-items-start">
                             <div class="back"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#193655" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
@@ -60,22 +55,17 @@
                 <div class="col col-lg-4 col-md-12 col-sm-12 col-12">
                     <div class="box">
                         <div class="title">Overview</div>
-                        <div class="sub-title"> Order Address</div>
-                        <div class="info">127 Salim St., Helmeya, Cairo </div>
-                        <div class="sub-title"> Worker Name</div>
-                        <div class="info">127 Salim St., Helmeya, Cairo </div>
-                        <div class="sub-title"> Order Description </div>
+                        <div class="sub-title"> Address</div>
+                        <div class="info">{{ newOrder.Order_Address }},{{ newOrder.Governorate }},{{ newOrder.City }}  </div>
                         <div class="info">Living room + kitchen </div>
                         <div class="sub-title"> Order Date</div>
-                        <div class="info"> 1/1/2024 </div>
-                        <div class="sub-title"> Total </div>
-                        <div class="info">450 LE</div>
+                        <div class="info"> {{ newOrder.multDateFrom }} - {{ newOrder.multDateTo }} </div>
+                        <div class="sub-title"> Ordar Total </div>
+                        <div class="info">{{ newOrder.Order_Price }}</div>
+                        <!-- <div class="sub-title"> Order Description </div> -->
                     </div>
                 </div>
             </div>
-            <!-- <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1"> -->
-
-
     <div class="modal-dialog modal-dialog-centered">
 <div id="exampleModalToggle" class="modal fade" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
 	<div class="modal-dialog modal-confirm">
@@ -100,7 +90,7 @@
 </div>
         </div>
         <FooterComponent/>
-</template> -->
+</template>
 
 <script>
     import NavBarPages from "@/components/NavBarPages.vue";
@@ -121,6 +111,8 @@ export default {
             cardNumber: "",
             expiry: "",
             cvv: "",
+            newOrder: [],
+            // radioIsActive: false,
         }
     },
     validations() {
@@ -134,23 +126,28 @@ export default {
 
     mounted() {
     this.v$.$validate();
-
-    if (!this.v$.$error) {
-                console.log('Payment completed successfully');
-    } else {
-                console.log('payement failed');
+    const NewOrderArray = localStorage.getItem('newOrderDet');
+    if (NewOrderArray) {
+      this.newOrder = JSON.parse(NewOrderArray);
     }
     },
 
     methods: {
-        completePayment() {
-            this.v$.$validate();
-            if (!this.v$.$error) {
-                console.log('Payment completed successfully');
-            } else {
-                console.log('payement failed');
-            }
-        }
+        // completePayment() {
+        //     this.v$.$validate();
+        //     if (!this.v$.$error) {
+        //         console.log('Payment completed successfully');
+        //         console.log(radioIsActive);
+        //     } else {
+        //         console.log('payement failed');
+        //     }
+        // },
+        // stopProcess() {
+        //     if (!this.radioIsActive) {
+        //         console.log('Radio button is not active');
+        //         return;
+        //     }
+        // }
     }
 }
 
@@ -174,14 +171,7 @@ export default {
     .sub-title{
         font-weight: bold;
     }
-    .btn {
-    @include button;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 
-    }
 
     .back-btn{
     &:hover {
@@ -284,14 +274,30 @@ export default {
         line-height: normal;
         border: none;
     }
+    .modal-footer {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: space-evenly;
+    padding: calc(var(--bs-modal-padding) - var(--bs-modal-footer-gap) * .5);
+    background-color: var(--bs-modal-footer-bg);
+    border-top: var(--bs-modal-footer-border-width) solid var(--bs-modal-footer-border-color);
+    border-bottom-right-radius: var(--bs-modal-inner-border-radius);
+    border-bottom-left-radius: var(--bs-modal-inner-border-radius);
+    align-content: flex-end;
+    flex-direction: row-reverse;}
+
 	.modal-confirm .btn:hover, .modal-confirm .btn:focus {
 		background: $orangeColor;
 		outline: none;
 	}
-	.trigger-btn {
-		display: inline-block;
-		margin: 100px auto;
-	}
+    .btn {
+    @include button;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 
-
+    }
 </style>
