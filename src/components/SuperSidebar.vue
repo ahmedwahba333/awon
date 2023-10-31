@@ -116,7 +116,7 @@
               />
             </svg><span class="fs-7 ms-3 d-none d-sm-inline">Add Agency</span>
             </router-link>
-            <router-link to="Agencies" class="nav-link">
+            <router-link to="/allAgencies" class="nav-link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"

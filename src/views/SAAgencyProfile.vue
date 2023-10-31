@@ -33,36 +33,49 @@
         </ol>
       </div>
       <!-- Search Filter -->
-      <div class="row searchCard pt-3 pb-3">
-        <p class="subtitle mx-4">Account</p>
-        <div class="col-lg-5 col-md-5 col-sm-12">
-          <img
-            src="../assets/images/about-us.jpg"
-            class="card-img-top Clip-path:circle()"
-            alt=""
-          />
-        </div>
-
-        <div class="col-lg-3 col-md-3 col-sm-6">
-          <p class="searchKey">Name</p>
-          <p class="servent">Home care</p>
-          <p class="searchKey">Email&Phone</p>
-          <p class="servent">a******76@gmail.com</p>
-          <p class="servent">+20 1121998968</p>
-        </div>
-
-        <div class="col-lg-3 col-md-3 col-sm-6">
-          <p class="searchKey">Location</p>
-          <p class="servent">
-            3 street sayed algarhe haram al giza, Giza, GZ 12512 - Egypt
+      <div class="searchCard pt-3 ">
+        <div class="row d-flex flex wrap">
+          <p class="subtitle mx-4 col-9">Account</p>
+          <p class="subtitle mx-4 col-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="currentColor"
+              class="bi bi-gear-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"
+              />
+            </svg>
           </p>
-          <p class="searchKey">Time Zone</p>
-          <p class="servent">UTC+03:00 cairo</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-5 col-sm-12 pb-4">
+            <img
+              :src="`${Agencies.Logo}`"
+              class="card-img-top object-fit-cover Clip-path:circle()"
+              :alt="`agencyimg${i}`"
+            />
+          </div>
+          <div class="col-lg-4 col-md-3 col-sm-6">
+            <p class="searchKey">Name</p>
+            <p class="searchKey">{{ Agencies.Agency_Name }}</p>
+            <p class="searchKey">Email</p>
+            <p class="servent">{{ Agencies.Agency_Email }}</p>
+          </div>
+          <div class="col-lg-4 col-md-3 col-sm-6">
+            <p class="searchKey">Phone</p>
+            <p class="servent">{{ Agencies.Agency_Phone_no }}</p>
+            <p class="searchKey">Location</p>
+            <p class="servent">
+              {{ Agencies.Agency_Address }}
+            </p>
+          </div>
         </div>
       </div>
-
       <!-- Services Table -->
-
       <div class="row grid servicesTable mt-4 text-center" id="table-wrapper">
         <div class="col-12 mt-3 overflow-auto" id="table-scroll">
           <table
@@ -81,163 +94,204 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>#128</td>
-                <td>2 Bedrooms</td>
-                <td>12/7/2023</td>
-                <td>#127566</td>
-                <td>Mark Lee</td>
-                <td>Mohsen</td>
-              </tr>
-              <tr v-for="n in 12" :key="n">
-                <td>#127</td>
-                <td>2 Bedrooms</td>
-                <td>12/7/2023</td>
-                <td>#127566</td>
-                <td>Mark Lee</td>
-                <td>Mohsen</td>
+              <tr v-for="(order, id) in orders" :key="id">
+                <td>{{ order.id }}</td>
+                <td>{{ order.Order_Details }}</td>
+                <td>{{ order.Order_Date }}</td>
+                <td>{{ order.Customer_id }}</td>
+                <td>{{ order.Customer_FName }} {{ order.Customer_LName }}</td>
+                <td>{{ order.Worker_FName }} {{ order.Worker_LName }}</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
-
-        <p class="subtitle mt-4">Agency Worker</p>
-        <div class="row justify-content-center my-5 gap-5">
-          <div class="card " style="width: 18rem">
-            <img
-              src="../assets/subservices/gardener1.jpg"
-              class="card-img-top Clip-path:circle()"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Mohamed Tarek</h5>
-              <p class="card-text">16 St. Emad Eldein - Down Town - Cairo</p>
-              <svg
-                class="d-block m-auto"
-                xmlns="http://www.w3.org/2000/svg"
-                width="125"
-                height="22"
-                viewBox="0 0 125 22"
-                fill="none"
-              >
-                <path
-                  d="M10.8425 0.0842438L13.2768 7.57622L21.1543 7.57622L14.7813 12.2065L17.2155 19.6985L10.8425 15.0682L4.46943 19.6985L6.90373 12.2065L0.530669 7.57622L8.4082 7.57622L10.8425 0.0842438Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M36.5935 0.0842438L39.0278 7.57622L46.9053 7.57622L40.5322 12.2065L42.9665 19.6985L36.5935 15.0682L30.2204 19.6985L32.6547 12.2065L26.2816 7.57622L34.1592 7.57622L36.5935 0.0842438Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M62.3444 0.0842438L64.7787 7.57622L72.6563 7.57622L66.2832 12.2065L68.7175 19.6985L62.3444 15.0682L55.9714 19.6985L58.4057 12.2065L52.0326 7.57622L59.9102 7.57622L62.3444 0.0842438Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M88.0954 0.0842438L90.5297 7.57622L98.4072 7.57622L92.0342 12.2065L94.4685 19.6985L88.0954 15.0682L81.7224 19.6985L84.1567 12.2065L77.7836 7.57622L85.6611 7.57622L88.0954 0.0842438Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M113.846 0.0842438L116.281 7.57622L124.158 7.57622L117.785 12.2065L120.219 19.6985L113.846 15.0682L107.473 19.6985L109.908 12.2065L103.535 7.57622L111.412 7.57622L113.846 0.0842438Z"
-                  fill="#F97B22"
-                />
-              </svg>
-              <a href="#" class="btn d-block m-auto mb-3 mt-3">Book Now</a>
-            </div>
+      <p class="subtitle mt-4">Top Worker</p>
+      <div class="row justify-content-center gap-5">
+        <div class="card mb-4" style="width: 18rem">
+          <img
+            src="../assets/subservices/gardener3.jpg"
+            class="card-img-top Clip-path:circle()"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Salma Osama</h5>
+            <p class="card-text">16 St. Emad Eldein - Down Town - Cairo</p>
+            <svg
+              class="d-block m-auto"
+              xmlns="http://www.w3.org/2000/svg"
+              width="125"
+              height="22"
+              viewBox="0 0 125 22"
+              fill="none"
+            >
+              <path
+                d="M10.8425 0.0842438L13.2768 7.57622L21.1543 7.57622L14.7813 12.2065L17.2155 19.6985L10.8425 15.0682L4.46943 19.6985L6.90373 12.2065L0.530669 7.57622L8.4082 7.57622L10.8425 0.0842438Z"
+                fill="#F97B22"
+              />
+              <path
+                d="M36.5935 0.0842438L39.0278 7.57622L46.9053 7.57622L40.5322 12.2065L42.9665 19.6985L36.5935 15.0682L30.2204 19.6985L32.6547 12.2065L26.2816 7.57622L34.1592 7.57622L36.5935 0.0842438Z"
+                fill="#F97B22"
+              />
+              <path
+                d="M62.3444 0.0842438L64.7787 7.57622L72.6563 7.57622L66.2832 12.2065L68.7175 19.6985L62.3444 15.0682L55.9714 19.6985L58.4057 12.2065L52.0326 7.57622L59.9102 7.57622L62.3444 0.0842438Z"
+                fill="#F97B22"
+              />
+              <path
+                d="M88.0954 0.0842438L90.5297 7.57622L98.4072 7.57622L92.0342 12.2065L94.4685 19.6985L88.0954 15.0682L81.7224 19.6985L84.1567 12.2065L77.7836 7.57622L85.6611 7.57622L88.0954 0.0842438Z"
+                fill="#F97B22"
+              />
+              <path
+                d="M113.846 0.0842438L116.281 7.57622L124.158 7.57622L117.785 12.2065L120.219 19.6985L113.846 15.0682L107.473 19.6985L109.908 12.2065L103.535 7.57622L111.412 7.57622L113.846 0.0842438Z"
+                fill="#C3C3C3"
+              />
+            </svg>
+            <a href="#" class="btn d-block m-auto mb-3 mt-3">Book Now</a>
           </div>
-          <div class="card mb-4" style="width: 18rem">
-            <img
-              src="../assets/subservices/gardener3.jpg"
-              class="card-img-top Clip-path:circle()"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Salma Osama</h5>
-              <p class="card-text">16 St. Emad Eldein - Down Town - Cairo</p>
-              <svg
-                class="d-block m-auto"
-                xmlns="http://www.w3.org/2000/svg"
-                width="125"
-                height="22"
-                viewBox="0 0 125 22"
-                fill="none"
-              >
-                <path
-                  d="M10.8425 0.0842438L13.2768 7.57622L21.1543 7.57622L14.7813 12.2065L17.2155 19.6985L10.8425 15.0682L4.46943 19.6985L6.90373 12.2065L0.530669 7.57622L8.4082 7.57622L10.8425 0.0842438Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M36.5935 0.0842438L39.0278 7.57622L46.9053 7.57622L40.5322 12.2065L42.9665 19.6985L36.5935 15.0682L30.2204 19.6985L32.6547 12.2065L26.2816 7.57622L34.1592 7.57622L36.5935 0.0842438Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M62.3444 0.0842438L64.7787 7.57622L72.6563 7.57622L66.2832 12.2065L68.7175 19.6985L62.3444 15.0682L55.9714 19.6985L58.4057 12.2065L52.0326 7.57622L59.9102 7.57622L62.3444 0.0842438Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M88.0954 0.0842438L90.5297 7.57622L98.4072 7.57622L92.0342 12.2065L94.4685 19.6985L88.0954 15.0682L81.7224 19.6985L84.1567 12.2065L77.7836 7.57622L85.6611 7.57622L88.0954 0.0842438Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M113.846 0.0842438L116.281 7.57622L124.158 7.57622L117.785 12.2065L120.219 19.6985L113.846 15.0682L107.473 19.6985L109.908 12.2065L103.535 7.57622L111.412 7.57622L113.846 0.0842438Z"
-                  fill="#C3C3C3"
-                />
-              </svg>
-              <a href="#" class="btn d-block m-auto mb-3 mt-3">Book Now</a>
-            </div>
+        </div>
+        <div class="card mb-4" style="width: 18rem">
+          <img
+            src="../assets/subservices/gardener3.jpg"
+            class="card-img-top Clip-path:circle()"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Salma Osama</h5>
+            <p class="card-text">16 St. Emad Eldein - Down Town - Cairo</p>
+            <svg
+              class="d-block m-auto"
+              xmlns="http://www.w3.org/2000/svg"
+              width="125"
+              height="22"
+              viewBox="0 0 125 22"
+              fill="none"
+            >
+              <path
+                d="M10.8425 0.0842438L13.2768 7.57622L21.1543 7.57622L14.7813 12.2065L17.2155 19.6985L10.8425 15.0682L4.46943 19.6985L6.90373 12.2065L0.530669 7.57622L8.4082 7.57622L10.8425 0.0842438Z"
+                fill="#F97B22"
+              />
+              <path
+                d="M36.5935 0.0842438L39.0278 7.57622L46.9053 7.57622L40.5322 12.2065L42.9665 19.6985L36.5935 15.0682L30.2204 19.6985L32.6547 12.2065L26.2816 7.57622L34.1592 7.57622L36.5935 0.0842438Z"
+                fill="#F97B22"
+              />
+              <path
+                d="M62.3444 0.0842438L64.7787 7.57622L72.6563 7.57622L66.2832 12.2065L68.7175 19.6985L62.3444 15.0682L55.9714 19.6985L58.4057 12.2065L52.0326 7.57622L59.9102 7.57622L62.3444 0.0842438Z"
+                fill="#F97B22"
+              />
+              <path
+                d="M88.0954 0.0842438L90.5297 7.57622L98.4072 7.57622L92.0342 12.2065L94.4685 19.6985L88.0954 15.0682L81.7224 19.6985L84.1567 12.2065L77.7836 7.57622L85.6611 7.57622L88.0954 0.0842438Z"
+                fill="#F97B22"
+              />
+              <path
+                d="M113.846 0.0842438L116.281 7.57622L124.158 7.57622L117.785 12.2065L120.219 19.6985L113.846 15.0682L107.473 19.6985L109.908 12.2065L103.535 7.57622L111.412 7.57622L113.846 0.0842438Z"
+                fill="#C3C3C3"
+              />
+            </svg>
+            <a href="#" class="btn d-block m-auto mb-3 mt-3">Book Now</a>
           </div>
-          <div class="card mb-4" style="width: 18rem">
-            <img
-              src="../assets/subservices/gardener2.jpg"
-              class="card-img-top Clip-path:circle()"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Omar Tarek</h5>
-              <p class="card-text">16 St. Emad Eldein - Down Town - Cairo</p>
-              <svg
-                class="d-block m-auto"
-                xmlns="http://www.w3.org/2000/svg"
-                width="125"
-                height="22"
-                viewBox="0 0 125 22"
-                fill="none"
-              >
-                <path
-                  d="M10.8425 0.0842438L13.2768 7.57622L21.1543 7.57622L14.7813 12.2065L17.2155 19.6985L10.8425 15.0682L4.46943 19.6985L6.90373 12.2065L0.530669 7.57622L8.4082 7.57622L10.8425 0.0842438Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M36.5935 0.0842438L39.0278 7.57622L46.9053 7.57622L40.5322 12.2065L42.9665 19.6985L36.5935 15.0682L30.2204 19.6985L32.6547 12.2065L26.2816 7.57622L34.1592 7.57622L36.5935 0.0842438Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M62.3444 0.0842438L64.7787 7.57622L72.6563 7.57622L66.2832 12.2065L68.7175 19.6985L62.3444 15.0682L55.9714 19.6985L58.4057 12.2065L52.0326 7.57622L59.9102 7.57622L62.3444 0.0842438Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M88.0954 0.0842438L90.5297 7.57622L98.4072 7.57622L92.0342 12.2065L94.4685 19.6985L88.0954 15.0682L81.7224 19.6985L84.1567 12.2065L77.7836 7.57622L85.6611 7.57622L88.0954 0.0842438Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M113.846 0.0842438L116.281 7.57622L124.158 7.57622L117.785 12.2065L120.219 19.6985L113.846 15.0682L107.473 19.6985L109.908 12.2065L103.535 7.57622L111.412 7.57622L113.846 0.0842438Z"
-                  fill="#F97B22"
-                />
-              </svg>
-              <a href="#" class="btn d-block m-auto mb-3 mt-3">Book Now</a>
-            </div>
+        </div>
+        <div class="card mb-4" style="width: 18rem">
+          <img
+            src="../assets/subservices/gardener2.jpg"
+            class="card-img-top Clip-path:circle()"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Omar Tarek</h5>
+            <p class="card-text">16 St. Emad Eldein - Down Town - Cairo</p>
+            <svg
+              class="d-block m-auto"
+              xmlns="http://www.w3.org/2000/svg"
+              width="125"
+              height="22"
+              viewBox="0 0 125 22"
+              fill="none"
+            >
+              <path
+                d="M10.8425 0.0842438L13.2768 7.57622L21.1543 7.57622L14.7813 12.2065L17.2155 19.6985L10.8425 15.0682L4.46943 19.6985L6.90373 12.2065L0.530669 7.57622L8.4082 7.57622L10.8425 0.0842438Z"
+                fill="#F97B22"
+              />
+              <path
+                d="M36.5935 0.0842438L39.0278 7.57622L46.9053 7.57622L40.5322 12.2065L42.9665 19.6985L36.5935 15.0682L30.2204 19.6985L32.6547 12.2065L26.2816 7.57622L34.1592 7.57622L36.5935 0.0842438Z"
+                fill="#F97B22"
+              />
+              <path
+                d="M62.3444 0.0842438L64.7787 7.57622L72.6563 7.57622L66.2832 12.2065L68.7175 19.6985L62.3444 15.0682L55.9714 19.6985L58.4057 12.2065L52.0326 7.57622L59.9102 7.57622L62.3444 0.0842438Z"
+                fill="#F97B22"
+              />
+              <path
+                d="M88.0954 0.0842438L90.5297 7.57622L98.4072 7.57622L92.0342 12.2065L94.4685 19.6985L88.0954 15.0682L81.7224 19.6985L84.1567 12.2065L77.7836 7.57622L85.6611 7.57622L88.0954 0.0842438Z"
+                fill="#F97B22"
+              />
+              <path
+                d="M113.846 0.0842438L116.281 7.57622L124.158 7.57622L117.785 12.2065L120.219 19.6985L113.846 15.0682L107.473 19.6985L109.908 12.2065L103.535 7.57622L111.412 7.57622L113.846 0.0842438Z"
+                fill="#F97B22"
+              />
+            </svg>
+            <a href="#" class="btn d-block m-auto mb-3 mt-3">Book Now</a>
           </div>
         </div>
       </div>
+    </div>
   </div>
 </template>
 
 <script>
-import NavBarSADashVue from '@/components/NavBarSADash.vue';
+import axios from "axios";
+import NavBarSADashVue from "@/components/NavBarSADash.vue";
 export default {
   name: "SAAgencyProfile",
   components: {
     NavBarSADashVue,
+  },
+  data() {
+    return {
+      id: " ",
+      Agencies: [],
+      orders: [],
+      // orderID: "",
+      // cxID: "",
+      // orderDate: "",
+      // workerNm: "",
+    };
+  },
+  created() {
+    this.getAgency();
+    this.getAllOrders();
+  },
+  methods: {
+    getAllOrders() {
+      axios
+        .get("http://localhost:2000/order")
+        .then((res) => {
+          this.orders = res.data;
+          console.log(res.data);
+        })
+        .catch((err) => console.log(err));
+    },
+    getAgency() {
+      this.id = this.$route.params.id;
+      console.log(this.id);
+      axios
+        .get(`http://localhost:2000/agency/${this.id}`)
+        .then((res) => {
+          this.Agencies = res.data;
+          console.log(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+    deleteCat(id) {
+      axios
+        .delete(`http://localhost:2000/agency/${id}`)
+        .then((res) => console.log(res))
+        .catch((err) => {
+          console.log(err);
+        });
+      this.getAgency();
+      this.getAllOrders();
+    },
   },
 };
 </script>
@@ -267,7 +321,12 @@ p {
 .breadCrumb {
   margin-left: 1px;
 }
-
+svg{
+  color: $orangeColor;
+  &:hover{
+    color: $blueColor
+  }
+}
 .breadcrumb-item {
   font-size: $paragraph !important;
   color: $blueColor !important;
