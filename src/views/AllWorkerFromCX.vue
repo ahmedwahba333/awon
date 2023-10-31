@@ -34,7 +34,7 @@
               <h5>House Keeping</h5>
               <div class="d-flex align-items-center gap-3">
                 <div>
-                  <input type="checkbox" class="form-check-input" />
+                  <input type="checkbox" class="form-check-input" :value="Cleaning" v-model="Cleaning"/>
                   <label for="" class="form-check-label mt-1 ms-1"
                     >Cleaning</label
                   >
@@ -82,7 +82,7 @@
                   >
                 </div>
                 <div>
-                  <input type="checkbox" class="form-check-input" />
+                  <input type="checkbox" class="form-check-input"  />
                   <label for="" class="form-check-label mt-1 ms-1"
                     >Carpentry</label
                   >
@@ -288,7 +288,8 @@ export default {
     return {
       workerData: [],
       input:"",
-      id:""
+      id:"",
+      Cleaning:""
     };
   },
   created(){
