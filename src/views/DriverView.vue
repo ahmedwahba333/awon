@@ -1,5 +1,5 @@
 <template>
-  <div class="bg container-fluid">
+  <div class="bg">
     <NavBarPages />
     <div class="bar d-flex justify-content-end">
       <form class="search">
@@ -18,8 +18,9 @@
     <div class="row justify-content-center gap-4">
       <div
         class="card mb-4 col-md-4 col-sm-6 col-6"
-        v-for="(worker, i) in workerData.slice(121,130)" :key="i"
-        style="width: 25rem; border-radius: 15px;"
+        v-for="(worker, i) in workerData.slice(121, 130)"
+        :key="i"
+        style="width: 25rem; border-radius: 15px"
       >
         <img
           :src="`${worker.img}`"
@@ -35,11 +36,14 @@
             {{ worker["Service_1_price"] }}
             LE/hour
           </p>
-          <p class="card-text">Exp: 
-            {{ worker["Experience"] }} years
-          </p>
-          <star-rating active-color="#F97B22"  star-size=30 :rating="`${worker.Rate}`" style="justify-content: center;"></star-rating>
-          <router-link to="workerProfile">
+          <p class="card-text">Exp: {{ worker["Experience"] }} years</p>
+          <star-rating
+            active-color="#F97B22"
+            star-size="30"
+            :rating="`${worker.Rate}`"
+            style="justify-content: center"
+          ></star-rating>
+          <router-link :to="`./workerProfile/${worker.id}`">
             <a class="btn d-block m-auto mb-3 mt-3">See details</a></router-link
           >
         </div>
@@ -53,7 +57,7 @@
 import NavBarPages from "@/components/NavBarPages.vue";
 import FooterComponent from "@/components/footer.vue";
 import axios from "axios";
-import StarRating from "vue-star-rating"
+import StarRating from "vue-star-rating";
 export default {
   components: {
     NavBarPages,
@@ -110,8 +114,12 @@ input.search {
     outline: none;
   }
 }
+
+.row {
+  margin: 0px !important;
+}
 .child {
-  margin-left: 123px;
+  margin-left: 135px;
   margin-top: 25px;
   margin-bottom: 50px;
   padding: 15px;

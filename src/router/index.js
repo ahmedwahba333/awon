@@ -124,7 +124,7 @@ const routes = [
   // end of auth
 
   {
-    path: "/workerProfile",
+    path: "/workerProfile/:id",
     name: "WorkerProfile",
     component: WorkerProfile,
   },
@@ -286,7 +286,7 @@ const routes = [
   },
   {
     path: "/DriverView",
-    name: "HouseguardView",
+    name: "DriverView",
     component: DriverView,
   },
   {
