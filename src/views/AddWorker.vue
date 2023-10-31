@@ -107,8 +107,8 @@
                       <div class="row">
                         <div class="col-8">
                           <input type="checkbox" class="form-check-input"
-                            :value="`${category.Name}`" :id="`${category.id}`" :name="`${category.id}`" />
-                          <label :for="`${category.id}`" class="form-check-label mt-1 ms-1">{{
+                            v-model="valuesOfCategory" :value="`${category.Name}`" :id="`category${category.id}`" :name="`category${category.id}`" />
+                          <label :for="`category${category.id}`" class="form-check-label mt-1 ms-1">{{
                             category["Name"]
                           }}</label>
                         </div>
@@ -122,7 +122,7 @@
           <div class="form-group mb-4 col-lg-6 col-md-6 col-sm-12">
             <div class="dropdown">
               <button class="servicesDrop w-100 rounded-5 dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
+                aria-expanded="false" data-bs-auto-close="outside">
                 Select Services
               </button>
               <ul class="dropdown-menu">
@@ -132,8 +132,8 @@
                     <div class="d-flex align-items-center gap-3">
                       <div v-for="(service, id) in services" :key="id">
                         <input type="checkbox" class="form-check-input" v-if="category['id'] == service['Category_id']"
-                          v-model="formValues.Service_1" />
-                        <label for="" class="form-check-label mt-1 ms-1"
+                       v-model="valuesOfService" :value="`${service.Name}`" :id="`service${service.id}`" :name="`service${service.id}`"/>
+                        <label :for="`service${service.id}`" class="form-check-label mt-1 ms-1"
                           v-if="category['id'] == service['Category_id']">{{ service["Name"] }}</label>
                       </div>
                     </div>
@@ -170,9 +170,12 @@ export default {
   components: { FooterComponent, NavBarSADash },
   data() {
     return {
+      valuesOfCategory:[],
+      valuesOfService:[],
       categories: [],
       services: [],
       // gender: "M",
+
       genders: [
         {
           code: "Female",
@@ -201,9 +204,9 @@ export default {
         Gender: "",
         Categories: "",
         Service_1: "",
-        // Service_2: "",
-        // Service_3: "",
-        // Service_4: "",
+        Service_2: "",
+        Service_3: "",
+        Service_4: "",
         Area: "",
         Experience: "",
       },
@@ -228,6 +231,7 @@ export default {
   //   this.addWorker();
   // },
   methods: {
+  
     getCategory() {
       axios
         .get("http://localhost:2000/category")
@@ -256,12 +260,19 @@ export default {
       } else {
         console.log("Form validate failed");
       }
-
+        this.formValues.Categories = this.valuesOfCategory[0]
+        this.formValues.Service_1 = this.valuesOfService[0]
+        this.formValues.Service_2 = this.valuesOfService[1]
+        this.formValues.Service_3 = this.valuesOfService[2]
+        this.formValues.Service_4 = this.valuesOfService[3]
       axios
         .post("http://localhost:2000/worker", this.formValues)
+        
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
-      this.$router.push("/worker");
+        this.$router.push("/SADashHome");
+
+      // console.log(this.valuesOfCategory);
     },
   },
 };

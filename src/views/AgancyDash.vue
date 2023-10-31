@@ -57,7 +57,7 @@
           </div>
           <div class="d-flex justify-content-between">
             <h4>{{ ordersOfagency }}</h4>
-            <div class="up d-flex justify-content-between p-2">
+            <!-- <div class="up d-flex justify-content-between p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="13"
@@ -83,7 +83,7 @@
                 />
               </svg>
               <h6>15%</h6>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="box sectionOne m-0 col-md-4 col-12">
@@ -112,11 +112,11 @@
                 fill="#F97B22"
               />
             </svg>
-            <h4>New Workers</h4>
+            <h4>Total Workers</h4>
           </div>
           <div class="d-flex justify-content-between">
             <h4>80</h4>
-            <div class="up d-flex justify-content-between p-2">
+            <!-- <div class="up d-flex justify-content-between p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="13"
@@ -142,7 +142,7 @@
                 />
               </svg>
               <h6>7%</h6>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="box sectionOne m-0 col-md-4 col-12">
@@ -185,11 +185,11 @@
                 stroke-linejoin="round"
               />
             </svg>
-            <h4>New Order</h4>
+            <h4>Total Order</h4>
           </div>
           <div class="d-flex justify-content-between">
             <h4>102</h4>
-            <div class="up d-flex justify-content-between p-2">
+            <!-- <div class="up d-flex justify-content-between p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="13"
@@ -215,7 +215,7 @@
                 />
               </svg>
               <h6>30%</h6>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -263,46 +263,18 @@
             <h4>Recent Reviews</h4>
           </div>
           <div
-            class="d-flex flex-row my-3"
+            class="d-flex flex-row my-3 align-items-center"
             v-for="(review, i) in recentReview"
             :key="i"
           >
             <div>
-              <img :src="`${review.picture}`" alt="Cx" />
+              <img :src="`${review.picture}`" alt="Cx" class="object-fit-cover" />
             </div>
             <div class="ms-4">
-              <h4>Suzy Nabil</h4>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="102"
-                height="18"
-                viewBox="0 0 102 18"
-                fill="none"
-              >
-                <path
-                  d="M8.84249 0L10.8278 6.11001H17.2522L12.0547 9.88621L14.04 15.9962L8.84249 12.22L3.64501 15.9962L5.63027 9.88621L0.432782 6.11001H6.85723L8.84249 0Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M29.8425 0L31.8278 6.11001H38.2522L33.0547 9.88621L35.04 15.9962L29.8425 12.22L24.645 15.9962L26.6303 9.88621L21.4328 6.11001H27.8572L29.8425 0Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M50.8444 0L52.8297 6.11001H59.2542L54.0567 9.88621L56.0419 15.9962L50.8444 12.22L45.647 15.9962L47.6322 9.88621L42.4347 6.11001H48.8592L50.8444 0Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M71.8444 0L73.8297 6.11001H80.2542L75.0567 9.88621L77.0419 15.9962L71.8444 12.22L66.647 15.9962L68.6322 9.88621L63.4347 6.11001H69.8592L71.8444 0Z"
-                  fill="#F97B22"
-                />
-                <path
-                  d="M92.8464 0L94.8317 6.11001H101.256L96.0586 9.88621L98.0439 15.9962L92.8464 12.22L87.6489 15.9962L89.6342 9.88621L84.4367 6.11001H90.8611L92.8464 0Z"
-                  fill="#C3C3C3"
-                />
-              </svg>
-
+              <h4>{{review['Name']}}</h4>
+              <star-rating active-color="#F97B22" read-only  star-size=20 :rating="`${review.Rate}`"></star-rating>
               <p>
-                I had high hopes for this service, and I wasn't disappointed.
+                {{review.Review}}
               </p>
             </div>
           </div>
@@ -316,9 +288,10 @@
 import NavBarDash from "@/components/NavBarDash.vue";
 import Chart from "chart.js/auto";
 import axios from "axios";
+import StarRating from 'vue-star-rating';
 export default {
   name: "AgancyDash",
-  components: { NavBarDash },
+  components: { NavBarDash,StarRating },
   data() {
     return {
       cx: [],
@@ -441,21 +414,24 @@ export default {
       type: "line",
       data: {
         labels: [
-          "4 Oct.",
-          "5 Oct.",
-          "6 Oct.",
-          "7 Oct.",
-          "8 Oct.",
-          "9 Oct.",
-          "10 Oct.",
-          "11 Oct.",
-          "12 Oct.",
+          "Jun.",
+          "Feb.",
+          "March",
+          "April",
+          "May.",
+          "June",
+          "July",
+          "Aug.",
+          "Sep.",
+          "Oct.",
+          "Nov.",
+          "Dec.",
         ],
 
         datasets: [
           {
             label: "Recruitment Report",
-            data: [8, 14, 12, 15, 10, 12, 9, 11, 13],
+            data: [8, 14, 12, 15, 10, 12, 9, 11, 13,9.12,10,13,10],
             borderWidth: 3,
             borderColor: "#F97B22",
             fill: true,
@@ -553,7 +529,10 @@ export default {
 <style lang="scss" scoped>
 @import "../scss/global/colors";
 @import "../scss/global/variables";
-
+img {
+      clip-path: circle();
+      width:60%;
+      }
 .bg {
   background-color: $backgroundColor;
   padding-bottom: 20px;
