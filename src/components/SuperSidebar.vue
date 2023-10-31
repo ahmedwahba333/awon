@@ -43,7 +43,7 @@
       <div class="offcanvas-body">
         <ul class="nav nav-pills flex-column mt-4">
           <li class="nav-item py-2 py-sm-0">
-            <router-link to="SADashHome" class="nav-link">
+            <router-link to="/SADashHome" class="nav-link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -59,7 +59,7 @@
             </router-link>
           </li>
           <li class="nav-item py-2 py-sm-0">
-            <router-link to="#" class="nav-link">
+            <router-link to="SAAllWorker" class="nav-link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -116,7 +116,7 @@
               />
             </svg><span class="fs-7 ms-3 d-none d-sm-inline">Add Agency</span>
             </router-link>
-            <router-link to="Agencies" class="nav-link">
+            <router-link to="/allAgencies" class="nav-link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"

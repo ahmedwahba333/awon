@@ -4,39 +4,42 @@
     <div class="container">
       <div class="bread row col col-sm-12 col-12">
         <ol class="breadcrumb">
-          <div class="col-10 d-inline-flex">
-            <li class="breadcrumb-item active mt-2">Dashboard</li>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 320 512"
-              fill="#F97B22"
-              class="m-2"
-            >
-              <path
-                d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
-              />
-            </svg>
-            <li class="breadcrumb-item active mt-2" aria-current="page">
-              Workers
-            </li>
-          </div>
+          <li class="breadcrumb-item active me-2">Dashboard</li>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="1em"
+            viewBox="0 0 320 512"
+            fill="#F97B22"
+            class="mt-2 me-2"
+          >
+            <path
+              d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+            />
+          </svg>
+          <li class="breadcrumb-item active" aria-current="page">
+            All Agencies
+          </li>
+          
+        </ol>
+        <ol class="d-flex justify-content-end">
           <li class="justify-content-end">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100"
-              height="100"
-              fill="currentColor"
-              class="bi bi-person-add"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
-              />
-              <path
-                d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"
-              />
-            </svg>
+            <router-link to="AddWorker">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100"
+                height="100"
+                fill="currentColor"
+                class="bi bi-person-add"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
+                />
+                <path
+                  d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"
+                />
+              </svg>
+            </router-link>
           </li>
         </ol>
       </div>
@@ -65,34 +68,38 @@
           </svg>
         </div>
       </div>
-      <div class="box">
+      <div class="box" v-for="(worker, i) in workerData.slice(17, 26)" :key="i">
         <div class="row align-items-center">
           <div class="cx-icon col-lg-2 col-md-2 col-sm-2 col-2">
             <img
-              src="../assets/images/1.jpg"
-              class="card-img-top Clip-path:circle()"
-              alt=""
+              :src="`${worker.img}`"
+              class="card-img-top object-fit-cover"
+              :alt="`workerimg${i}`"
             />
           </div>
           <div class="col-lg-7">
-            <div class="ag-name col-lg-12">Fathy Ahmed - Cooking - Mansoura</div>
+            <div class="ag-name col-lg-12">
+              {{ worker["First_name"] }} {{ worker["Last_name"] }}
+            </div>
           </div>
           <div class="icons col-lg-3">
-            <router-link to="workerprofileDash"><span class="view">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="currentColor"
-                class="bi bi-eye-fill"
-                viewBox="0 0 16 16"
-              >
-                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                <path
-                  d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"
-                />
-              </svg>
-            </span> </router-link>
+            <router-link to="WorkerProfile">
+              <span class="view">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="bi bi-eye-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                  <path
+                    d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"
+                  />
+                </svg>
+              </span>
+            </router-link>
             <span class="edit">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +118,7 @@
                 />
               </svg>
             </span>
-            <span class="delete">
+            <span class="delete" @click="deleteCat(agency.id)">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -128,7 +135,7 @@
           </div>
         </div>
       </div>
-      <div class="box">
+      <!-- <div class="box">
         <div class="row align-items-center">
           <div class="cx-icon col-lg-2 col-md-2 col-sm-2 col-2">
             <img
@@ -568,18 +575,47 @@
             </span>
           </div>
         </div>
-      </div>
-
+      </div> -->
     </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 import NavBarDash from "@/components/NavBarDash.vue";
 export default {
   name: "AllWorker",
   components: {
     NavBarDash,
+  },
+  data() {
+    return {
+      workerData: [],
+    };
+  },
+  created() {
+    this.getWorker();
+  },
+  methods: {
+    getWorker() {
+      axios
+        .get("http://localhost:2000/worker")
+        .then((res) => {
+          this.workerData = res.data;
+          // console.log(res.data);
+          // this.pathImg = "../assets/subservices/" + res.data['img'];
+        })
+        .catch((err) => console.log(err));
+    },
+    deleteCat(id) {
+      axios
+        .delete(`http://localhost:2000/worker/${id}`)
+        .then((res) => console.log(res))
+        .catch((err) => {
+          console.log(err);
+        });
+      this.getWorker();
+    },
   },
 };
 </script>
