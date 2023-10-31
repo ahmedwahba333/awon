@@ -39,7 +39,7 @@
           <input type="checkbox" class="form-check-input" :value="workers.Service_2_price" v-model="checkInput">
           <label for="" class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_2 }}</label>
            </div>
-           <div class="ol-md-4 col-sm-12">
+           <div class="col-md-4 col-sm-12">
           <label class="">Price: {{workers.Service_2_price }}LE</label>
            </div>
           </div>
@@ -49,7 +49,7 @@
           <input type="checkbox" class="form-check-input" :value="workers.Service_3_price || workers.Service_1_price" v-model="checkInput">
           <label for="" class="form-check-label mt-1 ms-1 fw-bold" >{{ workers.Service_3 || workers.Service_1 }}</label>
             </div>
-           <div class="ol-md-4 col-sm-12">
+           <div class="col-md-4 col-sm-12">
           <label> Price: {{workers.Service_3_price || workers.Service_1_price}}LE</label>
            </div>
           </div>
@@ -219,17 +219,19 @@
 
 <!-- Personal Info -->
 <div class=" personalInfo">
-          <form>
+          <form @submit="prevent">
           <div class="form-row row">
             <div class="form-group col-md-6">
               <label for="inputEmail4">First Name</label>
-              <input type="text" class="form-control" id="inputEmail4" v-model="firstName" >
-              <span class="error-feedback" v-if="v$.firstName.$error"> {{ v$.firstName.$errors[0].$message }}</span>
+              <input type="text" class="form-control" id="inputEmail4" v-model="firstName" v-on:input="v$.firstName.$touch()">
+              <template v-if="v$.firstName.$error" >
+             <span class="invalid-feedback d-block"> {{ v$.firstName.$errors[0].$message}}</span>
+            </template>
             </div>
             <div class="form-group col-md-6">
               <label for="inputPassword4">Last Name</label>
               <input type="text" class="form-control" id="inputPassword4" v-model="lastName">
-              <span class="error-feedback" v-if="v$.lastName.$error"> {{ v$.lastName.$errors[0].$message }}</span>
+              <span class="error-feedback" is-invalid v-if="v$.lastName.$error"> {{ v$.lastName.$errors[0].$message }}</span>
             </div>
           </div>
          
@@ -441,26 +443,21 @@ import { required, numeric , minLength} from "@vuelidate/validators";
         this.getnewOrderDet();
       }
       else if (value==='anotherPlace') {
-      this.newOrderDet={
-              Customer_FName:'',
-              Customer_LName:'',
-              FrontNational_id:'',
-              BackNational_id:'',
-              Governorate:'',
-              City:'',
-              Order_Address:'',
-              Floor_No:'',
-              Flat_No:'',
-              Building_No:'',
-              Phone_Num1:'',
-              Phone_Num2:'',
-              
-         }
+        this.firstName='',
+        this.lastName='',
+        this.address='',
+        this.city=''
+        this.gov=''
+        this.building=''
+        this.floor=''
+        this.flat=''
+        this.mobile_1=''
+        this.mobile_2=''
+        this.backID=''
+        this.frontID=''
+
       }
     },
-
-  
-
 },
 
   created(){
@@ -555,24 +552,15 @@ import { required, numeric , minLength} from "@vuelidate/validators";
                                 this.v$.$validate();
                               if (!this.v$.$error) {
                                   console.log('Payment completed successfully');
+                                  this.$router.push("/payment")
                                
                               } else {
-                                  console.log('payement failed');
+                                  console.log('payement failed');     
+                                 
                               }
-  
-                              
-                             
-                            
-                         } ,
-
-                      
+                         } ,     
             },
-
-        
       }
-  
-  
-         
 
 </script>
 
@@ -604,11 +592,11 @@ input ,select{
   border-radius: 10px;
   border:none;
 
-  &:focus{
-      border:solid 1px $orangeColor;
-      outline: none;
-      box-shadow:1px 1px 3px $orangeColor;
-  }
+  // &:focus{
+  //     border:solid 1px $orangeColor;
+  //     outline: none;
+  //     box-shadow:1px 1px 3px $orangeColor;
+  // }
 }
 
 form{
@@ -693,8 +681,10 @@ li{
 }
 
 .error-feedback{
-        color:red;
+        color:$orangeColor;
         font-size: $small;
+        font-weight: lighter;
+  
     }
 
 </style>
