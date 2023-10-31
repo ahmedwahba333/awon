@@ -334,6 +334,7 @@ router.beforeEach((to) => {
       // customer
       to.name == "paymentDetails" ||
       to.name == "WriteReview" ||
+      to.name == "CXprofileView" ||
       to.name == "BookingPage"
     ) {
       return "/login";
@@ -402,6 +403,7 @@ router.beforeEach((to) => {
       to.name == "paymentDetails" ||
       to.name == "WriteReview" ||
       to.name == "BookingPage" ||
+      to.name == "CXprofileView" ||
       // suberadmin
       to.name == "allAgencies" ||
       to.name == "ServiceHistorySA" ||
@@ -438,6 +440,7 @@ router.beforeEach((to) => {
       // customer
       to.name == "paymentDetails" ||
       to.name == "WriteReview" ||
+      to.name == "CXprofileView" ||
       to.name == "BookingPage"
     ) {
       return "/SADashHome";
@@ -462,6 +465,7 @@ router.beforeEach((to) => {
       // customer
       to.name == "paymentDetails" ||
       to.name == "WriteReview" ||
+      to.name == "CXprofileView" ||
       to.name == "BookingPage"
     ) {
       return "/";

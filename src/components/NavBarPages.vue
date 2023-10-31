@@ -90,7 +90,7 @@
               <hr />
               <li>
                 <div class="dropdown-item">
-                  <router-link to="#showprofile"><a>My Profile</a></router-link>
+                  <router-link to="/CXprofileView"><a>My Profile</a></router-link>
                 </div>
               </li>
             </ul>
