@@ -25,31 +25,31 @@
         <div>
         <h5>{{workers.Categories}}</h5>
           <div class="row" v-show="workers.Service_1=='Full house (120m2 ~ 170m2)'">
-            <div class="col-8"> 
+            <div class="col-md-8 col-sm-12"> 
           <input type="checkbox" class="form-check-input" :value="workers.Service_1_price" v-model="checkInput">
           <label for="" class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
            </div>
-           <div class="col-4">
+           <div class="col-md-4 col-sm-12">
           <label class>Price: {{workers.Service_1_price }}LE </label>
            </div>
           </div>
     
         <div class="row" v-show="workers.Service_2=='Full house (170m2 ~ 240m2)'">
-            <div class="col-8"> 
+            <div class="col-md-8 col-sm-12"> 
           <input type="checkbox" class="form-check-input" :value="workers.Service_2_price" v-model="checkInput">
           <label for="" class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_2 }}</label>
            </div>
-           <div class="col-4">
+           <div class="ol-md-4 col-sm-12">
           <label class="">Price: {{workers.Service_2_price }}LE</label>
            </div>
           </div>
       
           <div class="row" v-show="workers.Service_3 || workers.Service_1 =='Deep clean(Kitchen&Bathroom)'">
-            <div class="col-8"> 
+            <div class="col-md-8 col-sm-12"> 
           <input type="checkbox" class="form-check-input" :value="workers.Service_3_price || workers.Service_1_price" v-model="checkInput">
           <label for="" class="form-check-label mt-1 ms-1 fw-bold" >{{ workers.Service_3 || workers.Service_1 }}</label>
             </div>
-           <div class="col-4">
+           <div class="ol-md-4 col-sm-12">
           <label> Price: {{workers.Service_3_price || workers.Service_1_price}}LE</label>
            </div>
           </div>
@@ -91,14 +91,14 @@
       <div class="dropdown-item" v-show="workers.Categories=='Caring services'">
         <h5>{{ workers.Categories }}</h5>
           <div class="row mt-1" v-show="workers.Service_1=='Babysitting' || 'Elderly care' || 'Home Nursing'">
-          <div class="col-4">
+          <div class="col-md-4 col-sm-12">
             <input type="checkbox" class="form-check-input" :value="workers.Service_1_price" v-model="checkInput3">
             <label class="form-check-label mt-1 ms-1 fw-bold">{{ workers.Service_1 }}</label>
           </div>
-          <div class="col-4">
-            <label class="ms-4">{{ workers.Service_1_price }}LE per hour</label>
+          <div class="col-md-4 col-sm-12">
+            <label class="ms-md-4">{{ workers.Service_1_price }}LE per hour</label>
           </div>
-          <div class=" col-4">
+          <div class=" col-md-4 col-sm-12 ">
              <label> no of hours</label>
              <input type="text" class="no ms-2" v-model="noOfhours">
            </div>
@@ -336,6 +336,7 @@
 import NavBarPages from '@/components/NavBarPages.vue';
 import FooterComponent from '../components/footer.vue';
 import axios from 'axios';
+// import { localStorage } from 'window';
 
 
   export default {
@@ -350,6 +351,8 @@ import axios from 'axios';
       workers:[],
       cx:[],
       order:[],
+      cxInfo:'',
+      cxId: '',
 
       dateDiff:'',
       noOfDays:'',
@@ -377,12 +380,13 @@ import axios from 'axios';
               Flat_No:'',
               Building_No:'',
               Phone_Num1:'',
-              Phone_Num1_2:'',
+              Phone_Num2:'',
               Time_Slot:'',
               multDateFrom:'',
               multDateTo:'',
               Order_Price:0,
-            },    
+            },  
+          
         }
       },
 
@@ -409,12 +413,14 @@ import axios from 'axios';
          }
       }
     },
+
 },
 
   created(){
      this.getAllWorkers();
      this.getCx();
      this.getOrder();
+    //  this.getcxId()
            },    
 
    methods:{
@@ -426,8 +432,10 @@ import axios from 'axios';
                 },
 
               getCx(){
-                this.id = this.$route.params.id
-                axios.get(`http://localhost:2000/cx/${this.id}`)
+                           //get ID From Local Storage
+                this.cxInfo = JSON.parse(localStorage.getItem('cxInfo'));
+                          this.cxId=this.cxInfo.id
+                axios.get(`http://localhost:2000/cx/${this.cxId}`)
                 .then(res=>this.cx=res.data)
                 .catch(err=>console.log(err))
                 },
@@ -476,10 +484,16 @@ import axios from 'axios';
                     else if(this.selectedDays==='singleDay'){
                             this.newOrderDet.Order_Price=res
                     }
+                                 //Set Local Storage
+                     const objectString = JSON.stringify(this.newOrderDet);
+                      localStorage.setItem("newOrderDet", objectString);
+  
+                         } ,
 
-                    console.log(this.newOrderDet)
-                      } 
         },
+
+
+    
   
 }
          

@@ -133,7 +133,7 @@
                 <div class="row justify-content-center gap-4"  >
                 <div
                   class="card mb-4 col-md-4 col-sm-6 col-6"
-                  v-for="worker in  handleSearch.slice(1,50)" :key="worker.id"
+                  v-for="worker in  handleSearch.slice(1,70)" :key="worker.id"
                   style="width: 25rem; border-radius: 15px;"
                 >
                   <img
@@ -166,7 +166,7 @@
                       {{ worker["Experience"] }}
                     </p>
                     <star-rating active-color="#F97B22" read-only  star-size=30 :rating="`${worker.Rate}`"></star-rating>
-                    <router-link to="workerProfile">
+                    <router-link :to="`workerProfile/${worker.id}`">
                       <a class="btn d-block m-auto mb-3 mt-3">See details</a></router-link
                     >
                   </div>
@@ -184,7 +184,7 @@
                 <div class="row justify-content-center gap-4">
                 <div
                   class="card mb-4 col-md-4 col-sm-6 col-6"
-                  v-for="worker in  handleSearch.slice(51,100)" :key="worker.id"
+                  v-for="worker in  handleSearch.slice(71)" :key="worker.id"
                   style="width: 25rem; border-radius: 15px;"
                 >
                   <img
@@ -217,7 +217,7 @@
                       {{ worker["Experience"] }}
                     </p>
                     <star-rating active-color="#F97B22" read-only star-size=30 :rating="`${worker.Rate}`"></star-rating>
-                    <router-link to="workerProfile">
+                    <router-link :to="`workerProfile/${worker.id}`">
                       <a class="btn d-block m-auto mb-3 mt-3">See details</a></router-link
                     >
                   </div>
