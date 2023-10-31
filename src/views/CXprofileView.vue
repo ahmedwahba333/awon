@@ -21,55 +21,106 @@
           </svg>
         </div>
         <p class="subtitle mx-4">Account</p>
-        <div class="col-lg-3 col-md-3 col-sm-6"> 
+        <div class="firstbox col-lg-6 col-md-6 col-sm-6">
           <p class="searchKey mx-4">Name</p>
-          <p class="servent mx-4">{{ cx["First_name"] }}</p>
+          <p class="servent mx-4">{{ Cx.First_name }} {{ Cx.Last_name }}</p>
           <p class="searchKey mx-4">Email</p>
-          <p class="servent mx-4">a******76@gmail.com</p>
-          <p class="searchKey mx-4">Phone</p>
-          <p class="servent mx-4">+20 1121998968</p>
-          <p class="searchKey mx-4">Payment method</p>
+          <p class="servent mx-4">{{ Cx["Email"] }}</p>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <p class="searchKey mx-4">Phone</p>
+          <p class="servent mx-4">{{ Cx["Phone_no"] }}</p>
           <p class="searchKey mx-4">Location</p>
           <p class="servent mx-4">
-            3 street sayed algarhe haram al giza, Giza, GZ 12512 - Egypt
+            {{ Cx["Address"] }}
+            {{ Cx.City }}
+            {{ Cx.Governorate }}
           </p>
-          <p class="searchKey mx-4">Time Zone</p>
-          <p class="servent mx-4">UTC+03:00 cairo</p>
         </div>
-        <div class="col-lg-5 col-md-5 col-sm-12">
+        <!-- <div class="col-lg-5 col-md-5 col-sm-12">
           <img
             src="../assets/images/profile.jpg"
             class="card-img-top Clip-path:circle()"
             alt=""
           />
-        </div>
+        </div> -->
       </div>
       <div class="row searchCard pt-4 pb-4 mt-5">
         <p class="subtitle mx-4">Upcoming Order</p>
-        <div class="order d-flex">
-          <div class="col-lg-5 col-md-5 col-sm-12">
-          <img
-            src="../assets/images/profile.jpg"
-            class="card-img-top Clip-path:circle()"
-            alt=""
-          />
+        <div class="order d-flex flex-wrap">
+          <template v-for="(ord, i) in order" :key="i">
+          <template v-if="order[i].Customer_id == Customer_id">
+            <template v-if="order[i].Order_Status == 'pending'">
+              <div class="col-lg-3 col-md-12 col-sm-12">
+                <img
+                  src="../assets/images/profile.jpg"
+                  class="card-img-top Clip-path:circle()"
+                  alt=""
+                />
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 ">
+                <p class="searchKey">
+                  {{order[i]["Worker_Name"]}}
+                </p>
+                <p class="searchKey">{{ order[i]["Order_Date"] }}</p>
+                <p class="searchKey">{{ order[i]["Order_Address"] }}</p>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4">
+                <p class="searchKey">{{ order[i]["Order_Details"] }}</p>
+                <p class="searchKey">{{ order[i]["Order_Price"] }}LE</p>
+                <p class="searchKey">{{ order[i]["Time_Slot"] }}LE</p>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4">
+                <router-link :to="`./workerProfile/${worker.id}`">
+                  <a class="btn d-block m-auto mb-3 mt-4">Edit</a></router-link
+                >
+                <router-link :to="`./workerProfile/${worker.id}`">
+                  <a class="btn d-block m-auto mb-3 mt-4"
+                    >Cancel</a
+                  ></router-link
+                >
+              </div>
+            </template>
+          </template>
+        </template>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-6">
-          <p class="searchKey">Ali Saber</p>
-          <p class="servent">Amr Mohamed Sayed</p>
-          <p class="searchKey">Email</p>
-          <p class="servent">a******76@gmail.com</p>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6">
-          <p class="searchKey mx-4">Location</p>
-          <p class="servent mx-4">
-            3 street sayed algarhe haram al giza, Giza, GZ 12512 - Egypt
-          </p>
-          <p class="searchKey mx-4">Time Zone</p>
-          <p class="servent mx-4">UTC+03:00 cairo</p>
-        </div>
+      </div>
+      <div class="row searchCard pt-4 pb-4 mt-5">
+        <p class="subtitle mx-4">Order</p>
+        <div class="order d-flex flex-wrap">
+          <div class="col-lg-3 col-md-4 col-sm-4 m-3">
+            <p class="searchKe mx-4">worker name</p>
+            <p class="searchKe mx-4">100</p>
+            <p class="searchKe mx-4">from 20/10/2023</p>
+            <p class="searchKe mx-4">to 23/10/2023</p>
+            <router-link :to="`./workerProfile/${worker.id}`">
+              <a class="btn d-block m-auto mb-3 mt-4"
+                >Write review</a
+              ></router-link
+            >
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-4 m-3">
+            <p class="searchKe mx-4">worker name</p>
+            <p class="searchKe mx-4">100</p>
+            <p class="searchKe mx-4">from 20/10/2023</p>
+            <p class="searchKe mx-4">to 23/10/2023</p>
+            <router-link :to="`./workerProfile/${worker.id}`">
+              <a class="btn d-block m-auto mb-3 mt-4"
+                >Write review</a
+              ></router-link
+            >
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-4 m-3">
+            <p class="searchKe mx-4">worker name</p>
+            <p class="searchKe mx-4">100</p>
+            <p class="searchKe mx-4">from 20/10/2023</p>
+            <p class="searchKe mx-4">to 23/10/2023</p>
+            <router-link :to="`./workerProfile/${worker.id}`">
+              <a class="btn d-block m-auto mb-3 mt-4"
+                >Write review</a
+              ></router-link
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -86,18 +137,50 @@ export default {
 
   data() {
     return {
-      cx: [],
+      Cx: "",
+      id: "",
+      worker: "",
+      order: "",
+      Customer_id: "",
     };
   },
 
   created() {
-    axios
-      .get("http://localhost:2000/cx")
-      .then((res) => {
-        this.cx = res.data;
-      })
-      .catch((err) => console.log(err));
-},
+    this.getCx(), this.getWorker(), this.getOrder();
+
+    const customer = JSON.parse(localStorage.getItem("cxInfo"));
+    this.Customer_id = customer["id"];
+    console.log(this.Customer_id);
+  },
+  methods: {
+    getCx() {
+      axios
+        .get(`http://localhost:2000/cx/${this.Customer_id}`)
+        .then((res) => {
+          this.Cx = res.data;
+          console.log(res.data);
+        })
+        .catch((err) => console.log(err));
+    },
+    getWorker() {
+      axios
+        .get("http://localhost:2000/worker")
+        .then((res) => {
+          this.worker = res.data;
+          console.log(res.data);
+        })
+        .catch((err) => console.log(err));
+    },
+    getOrder() {
+      axios
+        .get("http://localhost:2000/order")
+        .then((res) => {
+          this.order = res.data;
+          console.log(res.data);
+        })
+        .catch((err) => console.log(err));
+    },
+  },
 };
 </script>
 
@@ -109,16 +192,19 @@ export default {
 .bg {
   background-color: $backgroundColor;
 }
+
+// .firstbox {
+//   width: 50%;
+// }
 .setting {
   display: flex;
   justify-content: end;
-  
 }
 img {
-  margin-top: 15px;
+  // margin-top: 15px;
   // margin-left: 15px;
   clip-path: circle();
-  height: 200px;
+  height: 100px;
 }
 .cardStyle {
   background-color: white;
@@ -140,6 +226,12 @@ img {
   width: 500px;
 }
 
+.searchKe {
+  ont-size: $paragraph;
+  font-weight: $semiBold;
+  margin-left: auto;
+  text-align: center;
+}
 .searchKey {
   font-size: $paragraph;
   font-weight: $semiBold;
@@ -170,6 +262,8 @@ img {
     margin-right: 5px;
     display: flex;
     justify-content: center;
+    // width: auto;
+    // height: auto;
   }
 
   .search {
@@ -188,5 +282,9 @@ img {
   justify-content: center;
   justify-items: center;
   margin: 0px auto;
+}
+
+.btn {
+  @include button;
 }
 </style>
