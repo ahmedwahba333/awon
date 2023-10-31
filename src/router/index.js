@@ -37,6 +37,7 @@ import DriverView from "../views/DriverView.vue";
 import CXprofileView from "../views/CXprofileView.vue";
 import SAAgencyProfile from "../views/SAAgencyProfile.vue";
 import AdminAgencyProfile from "../views/AdminAgencyProfile.vue";
+import ServicesidView from "../views/ServicesidView.vue";
 
 // >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
 
@@ -123,7 +124,7 @@ const routes = [
   // end of auth
 
   {
-    path: "/workerProfile",
+    path: "/workerProfile/:id",
     name: "WorkerProfile",
     component: WorkerProfile,
   },
@@ -285,7 +286,7 @@ const routes = [
   },
   {
     path: "/DriverView",
-    name: "HouseguardView",
+    name: "DriverView",
     component: DriverView,
   },
   {
@@ -302,6 +303,11 @@ const routes = [
     path: "/AdminAgencyProfile",
     name: "AdminAgencyProfile",
     component: AdminAgencyProfile,
+  },
+  {
+    path: "/Services/:id",
+    name: "ServicesidView",
+    component: ServicesidView,
   },
 ];
 

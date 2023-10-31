@@ -112,6 +112,7 @@ export default {
             terms: "",
             newOrder: [],
             // radioIsActive: false,
+            // radioIsActive: false,
         }
     },
     validations() {
