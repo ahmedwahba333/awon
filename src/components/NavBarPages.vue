@@ -1,7 +1,9 @@
 <template>
   <div class="header" id="header">
     <div class="container">
-      <router-link to="/" class="logo">Awon</router-link>
+      <router-link to="/" class="logo">
+                <img src="../assets/aown-light-sm.png" alt="logo" class="sr">
+      </router-link>
       <ul class="mainNav">
         <li>
           <router-link to="/">Home</router-link>
@@ -204,16 +206,9 @@ ul {
     align-items: center;
   }
 
-  .image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      clip-path: circle();
-      height: 50px;
+    .logo img {
+      height: 90px;
     }
-  }
 
   .mainNav {
     display: flex;

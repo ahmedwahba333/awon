@@ -2,8 +2,9 @@
   <div class="header fixed-top" id="header">
     <div class="container">
       <SuperSidebar />
-      <router-link to="/SADashHome" class="logo">Awon</router-link>
-
+      <router-link to="/SADashHome" class="logo">
+                <img src="../assets/aown-light-sm.png" alt="logo" class="sr">
+      </router-link>
       <!-- <form class="search">
         <input class="search" type="search" />
       </form> -->
@@ -110,7 +111,6 @@ export default {
   }
 
   img {
-    clip-path: circle();
     height: 60px;
     display: flex;
     justify-content: center;

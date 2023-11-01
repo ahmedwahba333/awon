@@ -3,13 +3,13 @@
         <div class="d-flex justify-content-center align-items-center py-5">
             <div class="text-center">
                 <figure>
-                    <img class="logo-img" src="../../../../assets/images/logo.jpg" alt="">
+                    <!-- <img class="logo-img" src="../../../../assets/images/logo.jpg" alt=""> -->
                     <!-- https://drive.google.com/file/d/1elgLJgasuBtUMk56bf-tdRUR8K8JiW8Y/view?usp=sharing -->
                     <!-- <img :src="imgSrc" alt="Image description" v-if="imgSrc != ''"> -->
                     <!-- <router-link to="/" class="title-heading">Awon</router-link> -->
                 </figure>
                 <div class="myCon">
-                    <router-link to="/" class="title-heading">Awon</router-link>
+                    <router-link to="/" class="title-heading"><img class="logo-img" src="../../../../assets/aown-dark-sm.png" alt="logo"></router-link>
                     <p class="title-slogin">Awon, your help is everywhere</p>
                     <p class="btn-login-text py-2">login</p>
                     <div class="forget-pass my-2">
