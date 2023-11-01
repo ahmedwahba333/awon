@@ -20,6 +20,7 @@
                                     d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                             </svg>
                         </router-link>
+                        <span class="invalid-feedback d-block">{{ errAuth }}</span>
                     </div>
                 </div>
                 <form @submit="prevent">
@@ -40,7 +41,7 @@
                                     class="bi bi-check" viewBox="0 0 19 19">
                                     <path
                                         d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                                </svg> Right Email</span></template>
+                                </svg> Right Email Format</span></template>
                     </div>
                     <div class="d-flex flex-column text-start mb-2">
                         <label class="form-label label-text" for="password">Password</label>
@@ -115,6 +116,7 @@ export default {
             eyeSlashFlag: false,
             users: [],
             agencies: [],
+            errAuth: "",
         }
     },
     validations() {
@@ -126,16 +128,22 @@ export default {
         }
     },
     created() {
-        axios.get("http://localhost:2000/cx").then((res) => {
-            this.users = res.data;
-        }).then(
-            axios.get("http://localhost:2000/agency").then((res) => {
-                this.agencies = res.data;
-            })).catch((err) => {
-                console.log(err);
-            })
+        this.getUsers();
+        this.getAgencies();
     },
     methods: {
+        getUsers() {
+            axios.get("http://localhost:2000/cx")
+                .then((res) => { this.users = res.data })
+                .catch((err) => console.log(err))
+        },
+        getAgencies() {
+            axios.get("http://localhost:2000/agency").then((res) => {
+                this.agencies = res.data;
+            }).catch((err) => {
+                console.log(err);
+            })
+        },
         //     getImageIdFromGoogleDriveLink(link) {
         //         const linkParts = link.split("/");
         //         const imageId = linkParts[linkParts.length - 2];
@@ -145,17 +153,27 @@ export default {
         //         this.imgSrc = "https://drive.google.com/uc?export=view&id=" + this.getImageIdFromGoogleDriveLink(this.img);
         //     }
         checkUser() {
+            // console.log(this.users.length);
             for (let i = 0; i < this.users.length; i++) {
                 if (this.email == this.users[i]['Email'] && this.pass == this.users[i]['Password']) {
                     localStorage.setItem("cxInfo", JSON.stringify(this.users[i]))
                     this.$router.push('/');
                     break;
-                } else if (this.email == this.agencies[i]['Email'] && this.pass == this.agencies[i]['owner_Password']) {
+                } else {
+                    this.errAuth = "Wrong Email or Password";
+                }
+            }
+
+            for (let i = 0; i < this.agencies.length; i++) {
+                if (this.email == this.agencies[i]['Email'] && this.pass == this.agencies[i]['owner_Password']) {
                     localStorage.setItem("agInfo", JSON.stringify(this.agencies[i]))
                     this.$router.push('/agancydash');
                     break;
+                } else {
+                    this.errAuth = "Wrong Email or Password";
                 }
             }
+
         },
         submitData() {
             this.v$.$validate();
