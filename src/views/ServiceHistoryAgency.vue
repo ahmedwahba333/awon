@@ -29,12 +29,12 @@
                 <div class="col-lg-3 col-md-4 col-sm-5">
                     <p class="searchKey">Order ID</p>
                 </div>
-
-                <div class="col-md-7 col-sm-5">
-                    <input type="search" class="search form-control" v-model="orderID">
+    
+                <div class="col-md-7 col-sm-5"> 
+                    <input type="search" class="search form-control" v-model="orderID" placeholder="search via order">
                 </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-5">
+    
+                <!-- <div class="col-lg-3 col-md-4 col-sm-5">
                     <p class="searchKey">Customer ID</p>
                 </div>
 
@@ -56,7 +56,7 @@
 
                 <div class="col-md-7 col-sm-5">
                     <input type="search" class="search form-control" v-model="orderDate">
-                </div>
+                </div> -->
             </div>
 
             <!-- Services Table -->
@@ -140,20 +140,19 @@ export default {
         },
     },
 
-    computed: {
-        handleSearch() {
-            return this.orders.filter((elem) => {
-                return (
-                    elem.id.toString().toLowerCase().includes(this.orderID.toLowerCase()) &&
-                    elem.Customer_id.toString().toLowerCase().includes(this.cxID.toLowerCase()) &&
-                    elem.Worker_FName.toLowerCase().includes(this.workerNm.toLowerCase()) &&
-                    elem.Order_Date.toString().toLowerCase().includes(this.orderDate.toLowerCase())
-                );
-            });
-        }
+            computed:{
+                handleSearch() {
+      return this.orders.filter((elem) => {
+
+                  return( elem.id.toString().toLowerCase().includes(this.orderID.toLowerCase())
+
+                  )
+      }
+      )
     }
-}
-</script>
+                    } 
+        }
+    </script>
     
 <style lang="scss" scoped>
 @import '../scss/global/colors';

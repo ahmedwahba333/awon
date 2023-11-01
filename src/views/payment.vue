@@ -8,20 +8,16 @@
                     <div class="row gx-8">
                         <div class="col-12 d-flex flex-column">
                             <p class="text">Person Name</p>
-                            <input class="form-control" type="text" placeholder="Card Holder Name" v-model="name"
-                                v-on:input="v$.name.$touch()">
-                            <template><span class="error-feedback" v-if="v$.name.$error">{{
-                                v$.name.$errors[0].$message }}</span></template>
+                            <input class="form-control" type="text" placeholder="Card Holder Name"  v-model="name">
+                            <span class="error-feedback" v-if="v$.name.$error">{{ v$.name.$errors[0].$message}}</span>
                             <!-- <template><span v-else-if="v$.name.$anyDirty"> </span></template> -->
                         </div>
                         <div class="col-12 d-flex flex-column">
                             <p class="text">Card Number</p>
-                            <input class="form-control" type="text" placeholder="1234 5678 435678" v-model="cardNumber">
-                            <span class="error-feedback" v-if="v$.cardNumber.$error">{{
-                                v$.cardNumber.$errors[0].$message }}</span>
-                            <span v-else-if="v$.cardNumber.$anyDirty"></span>
-                        </div>
-                        <div class="col-6 d-flex flex-column">
+                            <input class="form-control" type="text" placeholder="1234 5678 435678"  v-model="cardNumber">
+                            <span class="error-feedback" v-if="v$.cardNumber.$error">{{ v$.cardNumber.$errors[0].$message}}</span>
+                    </div>
+                    <div class="col-6 d-flex flex-column">
                             <p class="text">Expiry</p>
                             <input class="form-control" type="text" placeholder="MM/YYYY" v-model="expiry">
                             <span class="error-feedback" v-if="v$.expiry.$error">{{ v$.expiry.$errors[0].$message }}</span>
@@ -29,21 +25,19 @@
                         <div class="col-6 d-flex flex-column">
                             <p class="text">CVV/CVC</p>
                             <input class="form-control" type="password" placeholder="***" v-model="cvv">
-                            <span class="error-feedback" v-if="v$.cvv.$error">{{ v$.cvv.$errors[0].$message }}</span>
-                        </div>
-                        <div class="col-12">
-                            <input type="radio" value="terms" required v-model="terms"> accept terms and conditions<br>
-                            <span class="error-feedback" v-if="v$.terms.$error">{{ v$.terms.$errors[0].$message }}</span>
-                        </div>
-                        <div class="col-12">
-                            <div class="btn ">
-                                <div @click="completePayment()" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
-                                    <router-link to="/#" class="pay"> Pay </router-link>
-                                </div>
-                            </div>
+                            <span class="error-feedback" v-if="v$.cvv.$error">{{ v$.cvv.$errors[0].$message}}</span>
+                    </div>
+                    <div class="col-12">
+                            <input type="radio" value="terms" required v-model="terms">  accept terms and conditions<br>
+                            <span class="error-feedback" v-if="v$.terms.$error">{{ v$.terms.$errors[0].$message}}</span>
+                    </div>
+                    <div class="col-12">
+                        <div class="btn ">
+                            <div @click="completePayment()" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" v-if="!this.v$.$error"><router-link to="#" class="pay"> Pay </router-link></div>
                         </div>
                     </div>
                 </div>
+            </div>
                 <div class="col col-lg-4 col-md-12 col-sm-12 col-12">
                     <div class="box">
                         <div class="title">Overview</div>
@@ -143,14 +137,37 @@ export default {
             if (!this.v$.$error) {
                 axios.post("http://localhost:2000/order", this.newOrder);
                 console.log('Payment completed successfully');
+                                // $('#exampleModalToggle').modal('hide');
+
                 // console.log(radioIsActive);
             } else {
                 localStorage.removeItem('newOrderDet')
-                console.log('payement failed');
+                console.log('payment failed');
+                                // $('#exampleModalToggle').modal('show')
+
             }
         },
+//     completePayment() {
+//   this.v$.$validate();
+//   if (this.v$.$error) {
+//     // Prevent the modal from showing up
+//     return;
+//   }
 
+//   // The form is valid, so complete the payment
+//   axios.post("http://localhost:2000/order", this.newOrder)
+//     .then(() => {
+//       $('#exampleModalToggle').modal('show');
+
+//     })
+//     .catch(() => {
+//               $('#exampleModalToggle').modal('hide');
+
+//     });
+// }
     }
+
+    
 }
 
 </script>
