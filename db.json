@@ -5653,15 +5653,12 @@
   ],
   "category": [
     {
-<<<<<<< HEAD
-=======
       "id": 1,
       "Name": "Housekeeping",
       "Details": "Your home is your sanctuary, a place where you can relax and recharge. it can be tough to find the time to keep your home as clean and tidy as you'd like with busy schedules. That's where housekeeping services come in, so you can focus on what's important to you.",
       "img": "https://i.postimg.cc/CKssHd5L/cleaning.jpg"
     },
     {
->>>>>>> 1ae5ad535efef1ab8c204b555c48ec7f7751b922
       "id": 2,
       "Name": "Caring services",
       "Details": "Our experienced and compassionate caregivers can provide your loved ones with the care and support they need, so you can have peace of mind. We offer a wide range of services, including elderly care, babysitting, and respite care.",
@@ -5770,6 +5767,13 @@
       "Name": "Chefs",
       "Details": "Studying recipes, setting up menus and preparing high-quality dishes. Personal chef are responsible for preparing specialized meals for you. ",
       "img": "https://i.postimg.cc/gcgWgfKN/chefs.jpg"
+    },
+    {
+      "Name": "dsadsa",
+      "Details": "sadadsadadfsdfasd",
+      "img": "https://i.postimg.cc/CKssHd5L/cleaning.jpg",
+      "undefined": "Housekeeping",
+      "id": 14
     }
   ],
   "review": [
