@@ -3,12 +3,7 @@
     <NavBarPages />
     <div class="bar d-flex justify-content-end">
       <form class="search">
-        <input
-          class="search"
-          type="search"
-          placeholder="Search"
-          v-model="input"
-        />
+        <input class="search" type="search" placeholder="Search" v-model="input" />
       </form>
     </div>
     <div class="d-flex col-lg-2">
@@ -58,9 +53,7 @@
           </section>
           <input type="radio" name="accordion" id="cb2" />
           <section class="box">
-            <label class="box-title" for="cb2"
-              >Deep clean ( Bathroom & Kitchen )</label
-            >
+            <label class="box-title" for="cb2">Deep clean ( Bathroom & Kitchen )</label>
             <label class="box-close" for="acc-close"></label>
             <div class="box-content d-flex flex-wrap">
               <div class="col-6">
@@ -118,17 +111,9 @@
       </div>
     </div>
     <div class="row justify-content-center gap-4">
-      <div
-        class="card mb-4 col-md-4 col-sm-6 col-6"
-        v-for="(worker, i) in workerData.slice(17, 26)"
-        :key="i"
-        style="width: 25rem; border-radius: 15px"
-      >
-        <img
-          :src="`${worker.img}`"
-          class="card-img-top object-fit-cover"
-          :alt="`workerimg${i}`"
-        />
+      <div class="card mb-4 col-md-4 col-sm-6 col-6" v-for="(worker, i) in workerData.slice(17, 26)" :key="i"
+        style="width: 25rem; border-radius: 15px">
+        <img :src="`${worker.img}`" class="card-img-top object-fit-cover" :alt="`workerimg${i}`" />
 
         <div class="card-body">
           <h5 class="card-title">
@@ -154,15 +139,10 @@
             Exp years:
             {{ worker["Experience"] }}
           </p>
-          <star-rating
-            active-color="#F97B22"
-            star-size="30"
-            :rating="`${worker.Rate}`"
-            style="justify-content: center"
-          ></star-rating>
-          <router-link :to="`./workerProfile/${worker.id}`">
-            <a class="btn d-block m-auto mb-3 mt-3">See details</a></router-link
-          >
+          <star-rating active-color="#F97B22" star-size="30" :rating="`${worker.Rate}`"
+            style="justify-content: center"></star-rating>
+          <router-link :to="`/./workerProfile/${worker.id}`">
+            <a class="btn d-block m-auto mb-3 mt-3">See details</a></router-link>
         </div>
       </div>
     </div>
@@ -233,6 +213,7 @@ export default {
   width: auto;
   height: 100px;
 }
+
 input.search {
   border: 2px solid $blueColor;
   border-radius: 28px;
@@ -240,9 +221,8 @@ input.search {
   padding: 9px 4px 9px 40px;
   // margin-left: 550px;
   margin-top: 40px;
-  background: $backgroundColor
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='orange' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
-    no-repeat 13px center;
+  background: $backgroundColor url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='orange' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+
   &:focus {
     border-color: $orangeColor;
     outline: none;
@@ -263,13 +243,16 @@ input.search {
 .row {
   margin: 0px !important;
 }
+
 .accordion {
   margin: auto;
   // width: 50%;
 }
+
 .accordion input {
   display: none;
 }
+
 .accordion {
   .box {
     position: relative;
@@ -284,12 +267,14 @@ input.search {
     margin: 20px;
     background: white;
     overflow: hidden;
+
     @media (max-width: 767px) {
       width: 350px;
       height: 55px;
     }
   }
 }
+
 .box-title {
   font-weight: $semiBold;
   font-size: $subTitle;
@@ -311,6 +296,7 @@ input.search {
     // font-size: 20px;
   }
 }
+
 .box-content {
   width: calc(100% - 40px);
   padding: 10px 5px;
@@ -318,10 +304,12 @@ input.search {
   font-weight: $regular;
   color: $blueColor;
   display: none;
+
   @media (min-width: 767px) {
     // font-size: 20px;
   }
 }
+
 .box-close {
   position: absolute;
   height: 64px;
@@ -331,17 +319,21 @@ input.search {
   cursor: pointer;
   display: none;
 }
-input:checked + .box {
+
+input:checked+.box {
   height: auto;
   margin-top: 20px;
 }
-input:checked + .box .box-title {
+
+input:checked+.box .box-title {
   border-bottom: 1px solid $blueColor;
 }
-input:checked + .box .box-content,
-input:checked + .box .box-close {
+
+input:checked+.box .box-content,
+input:checked+.box .box-close {
   display: inline-block;
 }
+
 form {
   .input {
     border: 3px solid $blueColor;
@@ -410,6 +402,7 @@ img {
 p {
   margin: 0px;
 }
+
 // .card{
 //   border-radius: 25px;
 // }

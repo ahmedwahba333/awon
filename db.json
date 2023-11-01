@@ -487,60 +487,6 @@
       "Agency_id": 1
     },
     {
-      "id": 19,
-      "First_name": "Aurlie",
-      "Last_name": "Mildenhall",
-      "email": "hmildenhalli@exblog.jp",
-      "Categories": "House Keeping",
-      "Service_1": "Full house (120m2 ~ 170m2)",
-      "Service_2": "Full house (170m2 ~ 240m2)",
-      "Service_3": "Deep clean(Kitchen&Bathroom)",
-      "Service_4": null,
-      "Service_1_price": 219,
-      "Service_2_price": 396,
-      "Service_3_price": 312,
-      "Service_4_price": null,
-      "Address": "11th Floor",
-      "Experience": 2,
-      "Rate": 4,
-      "Reviews": "Impressive service!",
-      "Area": "Novyy Starodub",
-      "Phone": 2001025246065,
-      "FrontNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
-      "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
-      "Badge": "Clean and tidy",
-      "img": "https://randomuser.me/api/portraits/women/41.jpg",
-      "Gender": "Female",
-      "Agency_id": 1
-    },
-    {
-      "id": 20,
-      "First_name": "Pattie",
-      "Last_name": "Kobes",
-      "email": "hkobesj@squarespace.com",
-      "Categories": "House Keeping",
-      "Service_1": "Full house (120m2 ~ 170m2)",
-      "Service_2": "Full house (170m2 ~ 240m2)",
-      "Service_3": "Deep clean(Kitchen&Bathroom)",
-      "Service_4": null,
-      "Service_1_price": 249,
-      "Service_2_price": 362,
-      "Service_3_price": 325,
-      "Service_4_price": null,
-      "Address": "Suite 41",
-      "Experience": 8,
-      "Rate": 4,
-      "Reviews": "Impressive service!",
-      "Area": "Trinidad",
-      "Phone": 2001123606759,
-      "FrontNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
-      "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
-      "Badge": "Excellent service",
-      "img": "https://randomuser.me/api/portraits/men/48.jpg",
-      "Gender": "Male",
-      "Agency_id": 5
-    },
-    {
       "id": 21,
       "First_name": "Alie",
       "Last_name": "Deacock",
@@ -726,33 +672,6 @@
       "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
       "Badge": "Clean and tidy",
       "img": "https://randomuser.me/api/portraits/men/47.jpg",
-      "Gender": "Male",
-      "Agency_id": 5
-    },
-    {
-      "id": 28,
-      "First_name": "Gamaliel",
-      "Last_name": "Cosgry",
-      "email": "fcosgry7@fema.gov",
-      "Categories": "House Keeping",
-      "Service_1": "Deep clean(Kitchen&Bathroom)",
-      "Service_2": "Furniture cleaning",
-      "Service_3": null,
-      "Service_4": null,
-      "Service_1_price": 303,
-      "Service_2_price": 30,
-      "Service_3_price": null,
-      "Service_4_price": null,
-      "Address": "Apt 1079",
-      "Experience": 1,
-      "Rate": 3,
-      "Reviews": "Impressive service!",
-      "Area": "Nghi Xuân",
-      "Phone": 2001186867007,
-      "FrontNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
-      "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
-      "Badge": "Clean and tidy",
-      "img": "https://randomuser.me/api/portraits/men/58.jpg",
       "Gender": "Male",
       "Agency_id": 5
     },
@@ -1243,33 +1162,6 @@
       "Service_4_price": null
     },
     {
-      "id": 47,
-      "First_name": "Kirk",
-      "Last_name": "Pach",
-      "Email": "epach1@flavors.me",
-      "Categories": "Caring services",
-      "Address": "Suite 35",
-      "Experience": 6,
-      "Rate": 4,
-      "Reviews": "Excellent experience!",
-      "Area": "Argithéa",
-      "Phone": 2001162160856,
-      "FrontNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
-      "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
-      "Badge": "Excellent service",
-      "img": "https://randomuser.me/api/portraits/men/61.jpg",
-      "Gender": "Male",
-      "Agency_id": 3,
-      "Service_1": "Elderly care",
-      "Service_2": null,
-      "Service_3": null,
-      "Service_4": null,
-      "Service_1_price": 125,
-      "Service_2_price": null,
-      "Service_3_price": null,
-      "Service_4_price": null
-    },
-    {
       "id": 48,
       "First_name": "Dani",
       "Last_name": "McCutheon",
@@ -1319,33 +1211,6 @@
       "Service_3": null,
       "Service_4": null,
       "Service_1_price": 113,
-      "Service_2_price": null,
-      "Service_3_price": null,
-      "Service_4_price": null
-    },
-    {
-      "id": 50,
-      "First_name": "Wayland",
-      "Last_name": "Badby",
-      "Email": "ebadby4@issuu.com",
-      "Categories": "Caring services",
-      "Address": "Apt 37",
-      "Experience": 2,
-      "Rate": 4,
-      "Reviews": "Great service!",
-      "Area": "Guisijan",
-      "Phone": 2001208189684,
-      "FrontNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
-      "BackNational_ID": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Egyption_ID.jpg",
-      "Badge": "Excellent service",
-      "img": "https://randomuser.me/api/portraits/men/21.jpg",
-      "Gender": "Male",
-      "Agency_id": 3,
-      "Service_1": "Elderly care",
-      "Service_2": null,
-      "Service_3": null,
-      "Service_4": null,
-      "Service_1_price": 134,
       "Service_2_price": null,
       "Service_3_price": null,
       "Service_4_price": null
@@ -3893,6 +3758,7 @@
     {
       "id": 1,
       "Governate": "Cairo",
+      "total_gain": 1600,
       "City": "Panagyurishte",
       "Order_Address": "50 Transport Place",
       "Building_No": 49,
@@ -3919,6 +3785,7 @@
     {
       "id": 2,
       "Governate": "Cairo",
+      "total_gain": 1500,
       "City": "Qingfeng",
       "Order_Address": "880 Shasta Court",
       "Building_No": 11,
@@ -3945,6 +3812,7 @@
     {
       "id": 3,
       "Governate": "Cairo",
+      "total_gain": 1210,
       "City": "Fómeque",
       "Order_Address": "359 Lien Trail",
       "Building_No": 16,
@@ -3971,6 +3839,7 @@
     {
       "id": 4,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Morondava",
       "Order_Address": "4 Dahle Street",
       "Building_No": 16,
@@ -3997,6 +3866,7 @@
     {
       "id": 5,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Siquanpu",
       "Order_Address": "1352 Hintze Trail",
       "Building_No": 35,
@@ -4023,6 +3893,7 @@
     {
       "id": 6,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Orocuina",
       "Order_Address": "71 Dwight Alley",
       "Building_No": 18,
@@ -4049,6 +3920,7 @@
     {
       "id": 7,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Tugu",
       "Order_Address": "692 Merchant Park",
       "Building_No": 40,
@@ -4153,6 +4025,7 @@
     {
       "id": 11,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Prestea",
       "Order_Address": "21 Lotheville Lane",
       "Building_No": 10,
@@ -4179,6 +4052,7 @@
     {
       "id": 12,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Sterling",
       "Order_Address": "82639 La Follette Lane",
       "Building_No": 27,
@@ -4205,6 +4079,7 @@
     {
       "id": 13,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Padangcermin",
       "Order_Address": "49 Sauthoff Center",
       "Building_No": 28,
@@ -4231,6 +4106,7 @@
     {
       "id": 14,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Cholpon-Ata",
       "Order_Address": "0 Esch Trail",
       "Building_No": 15,
@@ -4257,6 +4133,7 @@
     {
       "id": 15,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Kasiyan",
       "Order_Address": "474 Continental Alley",
       "Building_No": 15,
@@ -4309,6 +4186,7 @@
     {
       "id": 17,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Pavlogradka",
       "Order_Address": "1741 Elka Drive",
       "Building_No": 35,
@@ -4439,6 +4317,7 @@
     {
       "id": 22,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Chekhov",
       "Order_Address": "70 Basil Plaza",
       "Building_No": 32,
@@ -4543,6 +4422,7 @@
     {
       "id": 26,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Solosolo",
       "Order_Address": "16905 Bayside Road",
       "Building_No": 38,
@@ -4699,6 +4579,7 @@
     {
       "id": 32,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Olocuilta",
       "Order_Address": "0 Crowley Trail",
       "Building_No": 30,
@@ -4725,6 +4606,7 @@
     {
       "id": 33,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Megalochórion",
       "Order_Address": "8 Ryan Court",
       "Building_No": 4,
@@ -4803,6 +4685,7 @@
     {
       "id": 36,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Chenji",
       "Order_Address": "33263 Rowland Lane",
       "Building_No": 21,
@@ -4829,6 +4712,7 @@
     {
       "id": 37,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Benito Juarez",
       "Order_Address": "48 Rieder Pass",
       "Building_No": 26,
@@ -4907,6 +4791,7 @@
     {
       "id": 40,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Metu",
       "Order_Address": "1 Linden Junction",
       "Building_No": 24,
@@ -4933,6 +4818,7 @@
     {
       "id": 41,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Jejkowice",
       "Order_Address": "62200 Crest Line Plaza",
       "Building_No": 36,
@@ -5011,6 +4897,7 @@
     {
       "id": 44,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Sieniawa",
       "Order_Address": "8 Tony Hill",
       "Building_No": 3,
@@ -5089,6 +4976,7 @@
     {
       "id": 47,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Frampol",
       "Order_Address": "3297 Hooker Avenue",
       "Building_No": 21,
@@ -5141,6 +5029,7 @@
     {
       "id": 49,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Alupay",
       "Order_Address": "29117 Hallows Circle",
       "Building_No": 35,
@@ -5167,6 +5056,7 @@
     {
       "id": 50,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Yongqin",
       "Order_Address": "02889 Fuller Place",
       "Building_No": 15,
@@ -5193,6 +5083,7 @@
     {
       "id": 51,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Vårgårda",
       "Order_Address": "594 Meadow Valley Hill",
       "Building_No": 5,
@@ -5219,6 +5110,7 @@
     {
       "id": 52,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Bratsigovo",
       "Order_Address": "63207 Green Place",
       "Building_No": 40,
@@ -5245,6 +5137,7 @@
     {
       "id": 53,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Bojongsarung",
       "Order_Address": "52054 Bonner Crossing",
       "Building_No": 44,
@@ -5297,6 +5190,7 @@
     {
       "id": 55,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Mačkovec",
       "Order_Address": "12489 Shelley Drive",
       "Building_No": 10,
@@ -5375,6 +5269,7 @@
     {
       "id": 58,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Lacombe",
       "Order_Address": "12374 Hauk Court",
       "Building_No": 2,
@@ -5427,6 +5322,7 @@
     {
       "id": 60,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Alpiarça",
       "Order_Address": "3717 Schlimgen Avenue",
       "Building_No": 50,
@@ -5505,6 +5401,7 @@
     {
       "id": 63,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Almirante Tamandaré",
       "Order_Address": "86 Westend Junction",
       "Building_No": 30,
@@ -5557,6 +5454,7 @@
     {
       "id": 65,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "La Cruz",
       "Order_Address": "6 Forest Dale Terrace",
       "Building_No": 33,
@@ -5583,6 +5481,7 @@
     {
       "id": 66,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Gubkinskiy",
       "Order_Address": "89606 Morningstar Trail",
       "Building_No": 20,
@@ -5609,6 +5508,7 @@
     {
       "id": 67,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Taposan",
       "Order_Address": "70653 Golf View Court",
       "Building_No": 2,
@@ -5661,6 +5561,7 @@
     {
       "id": 69,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Desnogorsk",
       "Order_Address": "4 Warner Way",
       "Building_No": 42,
@@ -5687,6 +5588,7 @@
     {
       "id": 70,
       "Governate": "Cairo",
+      "total_gain": 750,
       "City": "Vylkove",
       "Order_Address": "04184 Anhalt Way",
       "Building_No": 30,
@@ -5728,6 +5630,25 @@
       "multDateTo": "2023-10-18",
       "Order_Price": 617,
       "id": 71
+    },
+    {
+      "Customer_FName": "Wernher",
+      "Customer_LName": "Anlay",
+      "FrontNational_id": "https://id.nadra.gov.pk/wp-content/uploads/2023/09/NICOP-2.png",
+      "BackNational_id": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlGSAy9H4xvsdU501DmqFiYlrVc8YgZQ9bIQ&usqp=CAU",
+      "Governorate": "Alexandria",
+      "City": "Koronowo",
+      "Order_Address": "0 Spenser Circle",
+      "Floor_No": 13,
+      "Flat_No": 55,
+      "Building_No": 38,
+      "Phone_Num1": 2001063668457,
+      "Phone_Num2": 2001221364201,
+      "Time_Slot": "9:00 AM - 12:00 PM",
+      "multDateFrom": "",
+      "multDateTo": "2023-11-02",
+      "Order_Price": 1032,
+      "id": 72
     }
   ],
   "category": [
@@ -6211,6 +6132,29 @@
   ],
   "agency": [
     {
+      "id": 1,
+      "Owner_First_name": "Awon",
+      "Owner_last_name": "Awon",
+      "Email": "Awon@Awon.com",
+      "Gender": "Male",
+      "Owner_Phone_no": "2001116002726",
+      "Owner_DOB": "04/07/1998",
+      "Owner_front_nid": "https://id.nadra.gov.pk/wp-content/uploads/2023/09/NICOP-2.png",
+      "Owner_back_nid": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlGSAy9H4xvsdU501DmqFiYlrVc8YgZQ9bIQ&usqp=CAU",
+      "trade_register_card": "https://cdn-fhdpe.nitrocdn.com/BLYhuUokNZUPConOXRxXZciCtaTwvpft/assets/static/optimized/rev-3abaf38/wp-content/uploads/2021/01/BCL-BRN-763x1024.jpg",
+      "rating": 3,
+      "Logo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKYSURBVDjLnZPJT1NRFMb5G1wDHV5boNiqdHrvFYolCAtsGSSWKpMFKhYqlDI6oAEKaVJwCIgSphaKtLYWCgSNBgRjMNHoxsSFS3cmJmA0NMTw+R6JKKZl4eJL7sm953fOd3JPHIC4WMpcppG5SGnZc8ZjVVF6QLn975sDgfaZmvg71oRJZIRUYcuAnq/2KWroGfm3QwEn2YpLVPPvOD2oiqj9yq/mGznegl56mx6T7ZbY1M6YAM0CuZkxT0b2Wg6QW/SsApRXDsotR+d6E9Y/h9DuqoCuJq0lKoDxqU1/pITGR27mBU4h+GEcTz5OY+ClA5JbyahYzof/9TBO9B/FcWcqpA4xU3We3GJ87ntnfO5meinMvruNnqcmXA2XoDVcCc0wCYkzBaZpA7ILRJ/2O2B87jA+QT9UeDRe8svZYAG8b/txc6kc9mA+yqayYPQXwvdmBEOrA5B2p0BtFIYOWKCm5RukWwZyXIbA+0F0LpaiKaBHmVsLw4we99ccsM8a8GClF5JOMcQdou8prULrgRmQo7KI0VcE13MrGv06lE5kodhzGvdWu2GdKkTVWC4DcELcJkKyXbCb1EhAVM//M0DVUNqP2qAJd1baUDaZjTMTeXAttsPi0cM0mgvHvA0NkxYk2QRIrieOsDmEmXttH0DfVfSluSToWmpD8bgOroUOWNw6VI7koGfOBuq6EqLLTNU6ojrmP5D1HVsjmrkYezGIrlA9LjKgnrlGXJlpgbCOD0EtD0QNN8I3cZqjAlhJr4rXpB1iNLhrYffUQWoT7yUKzbxqJlHLq0jc5JYmgHMunogKYJVqF7mTrPyfgktMRTMX/CrOq1gLF3fYNrLiX+Bs8MoTwT2fQPwXgBXHGL+TaIjfinb3C7cscRMIcYL6AAAAAElFTkSuQmCC",
+      "Agency_Name": "Meevee",
+      "Agency_Email": "Awon@Awon.com",
+      "Agency_Address": "123 Awon Company",
+      "Agency_PostCode": "1234",
+      "Agency_City": "Cairo",
+      "Agency_Governorate": "Dokki",
+      "Agency_Phone_no": 2001116002721,
+      "Agency_Phone_no2": 2001116002722,
+      "owner_Password": 123456789
+    },
+    {
       "id": 3,
       "Owner_First_name": "Jecho",
       "Owner_last_name": "Dumsday",
@@ -6630,6 +6574,11 @@
       "email": "ahmed@gmail.com",
       "Password": "12345678",
       "id": 1
+    },
+    {
+      "email": "amr@gmail.com",
+      "Password": "123456789",
+      "id": 2
     }
   ],
   "comments": [

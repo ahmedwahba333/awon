@@ -14,6 +14,7 @@ import dashReviews from "../views/dashReviews.vue";
 import aboutus from "../views/About.vue";
 import allAgencies from "../views/allAgencySDash.vue";
 import Allworker from "../views/AllWorker.vue";
+import SAAllWorker from "../views/SAAllWorker.vue";
 
 import CleaningView from "../views/CleaningView.vue";
 import GardeningView from "../views/GardeningView.vue";
@@ -38,7 +39,7 @@ import CXprofileView from "../views/CXprofileView.vue";
 import SAAgencyProfile from "../views/SAAgencyProfile.vue";
 import AdminAgencyProfile from "../views/AdminAgencyProfile.vue";
 import ServicesidView from "../views/ServicesidView.vue";
-
+import AddWorkerAgency from "../views/AddWorkerAgency.vue";
 // >>>>>>> 7daaeeb6701d2e0c36ee0a5e20989dc98c5f82d5
 
 import ServiceHistoryAgency from "../views/ServiceHistoryAgency.vue";
@@ -66,7 +67,6 @@ const routes = [
     // name: "home",
     // component: HomeView,
   },
-
   // start of auth
   // user auth
   {
@@ -309,6 +309,16 @@ const routes = [
     name: "ServicesidView",
     component: ServicesidView,
   },
+  {
+    path: "/SAAllWorker",
+    name: "SAAllWorker",
+    component: SAAllWorker,
+  },
+  {
+    path: "/AddWorkerAgency",
+    name: "AddWorkerAgency",
+    component: AddWorkerAgency,
+  },
 ];
 
 const router = createRouter({
@@ -316,6 +326,9 @@ const router = createRouter({
   routes,
 });
 
+router.afterEach(() => {
+  window.scrollTo(0, 0);
+});
 router.beforeEach((to) => {
   // token
   const userData = JSON.parse(localStorage.getItem("cxInfo"));
@@ -331,9 +344,11 @@ router.beforeEach((to) => {
       to.name == "AgancyDash" ||
       to.name == "dashReviews" ||
       to.name == "AllWorker" ||
+      to.name == "AddWorkerAgency" ||
       // customer
       to.name == "paymentDetails" ||
       to.name == "WriteReview" ||
+      to.name == "CXprofileView" ||
       to.name == "BookingPage"
     ) {
       return "/login";
@@ -349,6 +364,7 @@ router.beforeEach((to) => {
       to.name == "AddServiceSA" ||
       to.name == "AddWorker" ||
       to.name == "AdminAgencyProfile" ||
+      to.name == "SAAllWorker" ||
       to.name == "SAAgencyProfile"
     ) {
       return "/cpanel-login";
@@ -371,6 +387,7 @@ router.beforeEach((to) => {
       to.name == "AgancyDash" ||
       to.name == "dashReviews" ||
       to.name == "AllWorker" ||
+      to.name == "AddWorkerAgency" ||
       // suber admin
       to.name == "allAgencies" ||
       to.name == "ServiceHistorySA" ||
@@ -382,6 +399,7 @@ router.beforeEach((to) => {
       to.name == "AddServiceSA" ||
       to.name == "AddWorker" ||
       to.name == "AdminAgencyProfile" ||
+      to.name == "SAAllWorker" ||
       to.name == "SAAgencyProfile"
     ) {
       return "/";
@@ -402,6 +420,7 @@ router.beforeEach((to) => {
       to.name == "paymentDetails" ||
       to.name == "WriteReview" ||
       to.name == "BookingPage" ||
+      to.name == "CXprofileView" ||
       // suberadmin
       to.name == "allAgencies" ||
       to.name == "ServiceHistorySA" ||
@@ -413,6 +432,7 @@ router.beforeEach((to) => {
       to.name == "AddServiceSA" ||
       to.name == "AddWorker" ||
       to.name == "AdminAgencyProfile" ||
+      to.name == "SAAllWorker" ||
       to.name == "SAAgencyProfile"
     ) {
       return "/agancydash";
@@ -435,9 +455,11 @@ router.beforeEach((to) => {
       to.name == "AgancyDash" ||
       to.name == "dashReviews" ||
       to.name == "AllWorker" ||
+      to.name == "AddWorkerAgency" ||
       // customer
       to.name == "paymentDetails" ||
       to.name == "WriteReview" ||
+      to.name == "CXprofileView" ||
       to.name == "BookingPage"
     ) {
       return "/SADashHome";
@@ -462,6 +484,7 @@ router.beforeEach((to) => {
       // customer
       to.name == "paymentDetails" ||
       to.name == "WriteReview" ||
+      to.name == "CXprofileView" ||
       to.name == "BookingPage"
     ) {
       return "/";
@@ -489,6 +512,7 @@ router.beforeEach((to) => {
       to.name == "AgancyDash" ||
       to.name == "dashReviews" ||
       to.name == "allAgencies" ||
+      to.name == "AddWorkerAgency" ||
       to.name == "AllWorker"
     ) {
       return "/";

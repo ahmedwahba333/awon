@@ -1,12 +1,12 @@
 <template>
-  <div class="header" id="header">
+  <div class="header fixed-top" id="header">
     <div class="container">
       <SuperSidebar />
-      <router-link to="#" class="logo"><a>Awon</a></router-link>
+      <router-link to="/SADashHome" class="logo">Awon</router-link>
 
-      <form class="search">
+      <!-- <form class="search">
         <input class="search" type="search" />
-      </form>
+      </form> -->
       <!-- <img src="../assets/images/2.jpg" alt="Cx" /> -->
       <template v-if="suber_admin != null">
         <button class="loginDrop dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -21,10 +21,11 @@
         </ul>
       </template>
       <template v-else-if="suber_admin == null">
-        <router-link class="login" to="cpanel-login">Log In</router-link>
+        <router-link class="login" to="/cpanel-login">Log In</router-link>
       </template>
     </div>
   </div>
+  <div class="marginDiv"> </div>
 </template>
 
 <script>
@@ -56,6 +57,18 @@ export default {
 <style lang="scss" scoped>
 @import "../scss/global/colors";
 
+@media screen and (min-width: 770px) {
+  .marginDiv {
+    margin-bottom: 70px;
+  }
+}
+
+@media screen and (max-width:769px) {
+  .marginDiv {
+    margin-bottom: 90px;
+  }
+}
+
 .loginDrop {
   background-color: $blueColor;
   color: $whiteColor;
@@ -75,7 +88,7 @@ export default {
 
 .header {
   background-color: $blueColor;
-  position: relative;
+  // position: relative;
 
   .container {
     display: flex;
@@ -155,4 +168,5 @@ a {
 //       height: 50px;
 //     }
 //   }
-//   }</style>
+//   }
+</style>
