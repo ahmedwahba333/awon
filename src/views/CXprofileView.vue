@@ -59,9 +59,9 @@
                   <p class="searchKey">{{ order[i]["Time_Slot"] }}LE</p>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-4">
-                  <router-link :to="`/workerProfile / ${worker.id} `">
+                  <router-link :to="`/workerProfile/${worker.id}`">
                     <a class="btn d-block m-auto mb-3 mt-4">Edit</a></router-link>
-                  <router-link :to="`/workerProfile / ${worker.id} `">
+                  <router-link :to="`/workerProfile/${worker.id}`">
                     <a class="btn d-block m-auto mb-3 mt-4">Cancel</a></router-link>
                 </div>
               </template>
@@ -77,7 +77,7 @@
             <p class="searchKe mx-4">100</p>
             <p class="searchKe mx-4">from 20/10/2023</p>
             <p class="searchKe mx-4">to 23/10/2023</p>
-            <router-link :to="`/workerProfile / ${worker.id} `">
+            <router-link :to="`/workerProfile/${worker.id}`">
               <a class="btn d-block m-auto mb-3 mt-4">Write review</a></router-link>
           </div>
           <div class="col-lg-3 col-md-4 col-sm-4 m-3">
@@ -85,7 +85,7 @@
             <p class="searchKe mx-4">100</p>
             <p class="searchKe mx-4">from 20/10/2023</p>
             <p class="searchKe mx-4">to 23/10/2023</p>
-            <router-link :to="`/workerProfile / ${worker.id} `">
+            <router-link :to="`/workerProfile/${worker.id}`">
               <a class="btn d-block m-auto mb-3 mt-4">Write review</a></router-link>
           </div>
           <div class="col-lg-3 col-md-4 col-sm-4 m-3">
@@ -93,7 +93,7 @@
             <p class="searchKe mx-4">100</p>
             <p class="searchKe mx-4">from 20/10/2023</p>
             <p class="searchKe mx-4">to 23/10/2023</p>
-            <router-link :to="`/workerProfile / ${worker.id} `">
+            <router-link :to="`/workerProfile/${worker.id}`">
               <a class="btn d-block m-auto mb-3 mt-4">Write review</a></router-link>
           </div>
         </div>

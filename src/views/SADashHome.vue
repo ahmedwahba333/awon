@@ -96,14 +96,14 @@
           <div class="p-2">
             <h4>Special Customer</h4>
           </div>
-          <div class="d-flex flex-row justify-content-between" v-for="(customer, i) in cx.slice(0, 5)" :key="i">
+          <div class="d-flex flex-row justify-content-between" v-for="(ord, i) in orders.slice(0, 5)" :key="i">
 
 
             <div class="p-2">
-              <p>{{ customer['First_name'] }} {{ customer['Last_name'] }}</p>
+              <p>{{ ord["Customer_FName"] }} {{ ord["Customer_LName"] }}</p>
             </div>
             <div class="p-2">
-              <p>1200$</p>
+              <p>{{ ord.total_gain }}$</p>
             </div>
           </div>
         </div>

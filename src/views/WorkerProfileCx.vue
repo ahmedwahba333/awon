@@ -10,7 +10,7 @@
           </div>
           <div class="">
             <div class="w-name"> {{ wk.First_name }} {{ wk.Last_name }} </div>
-            <router-link :to="`/booking / ${wk.id} `">
+            <router-link :to="`/booking/${wk.id}`">
               <div class="btn m-0 mt-2">Book now</div>
             </router-link>
           </div>

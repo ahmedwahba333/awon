@@ -59,7 +59,7 @@
             </div>
           </div>
           <div class="icons col-lg-3">
-            <router-link :to="`/WorkerProfile/${worker.id} `" class="me-4">
+            <router-link :to="`/WorkerProfile/${worker.id}`" class="me-4">
               <span class="view">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-fill"
                   viewBox="0 0 16 16">

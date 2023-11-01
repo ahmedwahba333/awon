@@ -153,7 +153,7 @@
                       {{ worker["Experience"] }}
                     </p>
                     <star-rating active-color="#F97B22" read-only star-size=30 :rating="`${worker.Rate}`"></star-rating>
-                    <router-link :to="`/workerProfile/${ worker.id } `" class="btn d-block m-auto mb-3 mt-3">
+                    <router-link :to="`/workerProfile/${worker.id}`" class="btn d-block m-auto mb-3 mt-3">
                       See details</router-link>
                   </div>
                 </div>
@@ -191,7 +191,7 @@
                       {{ worker["Experience"] }}
                     </p>
                     <star-rating active-color="#F97B22" read-only star-size=30 :rating="`${worker.Rate}`"></star-rating>
-                    <router-link :to="`/workerProfile/${ worker.id }`">
+                    <router-link :to="`/workerProfile/${worker.id}`">
                       <a class="btn d-block m-auto mb-3 mt-3">See details</a></router-link>
                   </div>
                 </div>

@@ -29,7 +29,7 @@
           <p class="card-text">Exp: {{ worker["Experience"] }} years</p>
           <star-rating active-color="#F97B22" star-size="30" :rating="`${worker.Rate}`"
             style="justify-content: center"></star-rating>
-          <router-link :to="`/workerProfile / ${worker.id} `">
+          <router-link :to="`/workerProfile/${worker.id}`">
             <a class="btn d-block m-auto mb-3 mt-3">See details</a></router-link>
         </div>
       </div>
