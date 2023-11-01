@@ -36,7 +36,7 @@
             </router-link>
           </li>
           <li class="nav-item py-2 py-sm-0">
-            <router-link to="/ServiceHistoryAgency" class="nav-link">
+            <router-link :to="`/ServiceHistoryAgency/${id}`" class="nav-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                 class="bi bi-clock-history" viewBox="0 0 16 16">
                 <path
@@ -75,7 +75,15 @@
 
 <script>
 export default {
-  name: "SideBarPage"
+  name: "SideBarPage",
+  data() {
+    return {
+      id: "",
+    }
+  },
+  mounted() {
+    this.id = JSON.parse(localStorage.getItem("agInfo"))["id"]
+  }
 };
 </script>
 

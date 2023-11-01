@@ -23,13 +23,13 @@
         <div class="row d-flex flex wrap">
           <p class="subtitle mx-4 col-9">Account</p>
           <p class="subtitle mx-4 col-2">
-            <router-link to="/#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill"
-                viewBox="0 0 16 16" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
-                <path
-                  d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
-              </svg>
-            </router-link>
+            <!-- <router-link to="/#"> -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill"
+              viewBox="0 0 16 16" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
+              <path
+                d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+            </svg>
+            <!-- </router-link> -->
           </p>
         </div>
         <div class="row">
@@ -59,7 +59,7 @@
           <table class="table mb-2" style="color: $blueColor; --bs-table-color: $blueColor" id="">
             <thead>
               <tr>
-                <th scope="col">Order ID</th>
+                <th scope="col">Order NO.</th>
                 <th scope="col">Order Details</th>
                 <th scope="col">Order Date</th>
                 <th scope="col">Customer ID</th>
@@ -69,7 +69,7 @@
             </thead>
             <tbody>
               <tr v-for="(order, id) in orders" :key="id">
-                <td>{{ order.id }}</td>
+                <td>{{ id + 1 }}</td>
                 <td>{{ order.Order_Details }}</td>
                 <td>{{ order.Order_Date }}</td>
                 <td>{{ order.Customer_id }}</td>
@@ -80,9 +80,10 @@
           </table>
         </div>
       </div>
-      <p class="subtitle mt-4">Top Worker</p>
+      <p class="subtitle mt-4">Workers</p>
       <div class="row justify-content-center gap-5">
-        <div class="card mb-4" style="width: 18rem">
+        <div class="col-12 my-3 overflow-auto" id="table-scroll">
+          <!-- <div class="card mb-4" style="width: 18rem">
           <img src="../assets/subservices/gardener3.jpg" class="card-img-top Clip-path:circle()" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Salma Osama</h5>
@@ -159,6 +160,29 @@
             </svg>
             <a href="#" class="btn d-block m-auto mb-3 mt-3">Book Now</a>
           </div>
+        </div> -->
+          <table class="table mb-2 align-middle" style="color: $blueColor; --bs-table-color: $blueColor" id="">
+            <thead>
+              <tr>
+                <th scope="col">Worker NO.</th>
+                <th scope="col">Worker Name</th>
+                <th scope="col">Worker Email</th>
+                <th scope="col">Worker Phone</th>
+                <th scope="col">Worker Area</th>
+                <th scope="col">Worker Image</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(worker, id) in workers" :key="id">
+                <td>{{ id + 1 }}</td>
+                <td>{{ worker.First_name }} {{ worker.Last_name }}</td>
+                <td>{{ worker.email }}</td>
+                <td>{{ worker.Phone }}</td>
+                <td>{{ worker.Area }}</td>
+                <td><img :src="`${worker.img}`" alt="" width="100" height="100"></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
       <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
@@ -201,7 +225,7 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button class="btn editBtn" @click="EditData">Edit</button>
+              <button class="btn editBtn" data-bs-dismiss="modal" @click="EditData">Edit</button>
             </div>
           </div>
         </div>
@@ -223,6 +247,8 @@ export default {
       id: " ",
       // Agencies: [],
       orders: [],
+      // order: [],
+      workers: [],
       // orderID: "",
       // cxID: "",
       // orderDate: "",
@@ -255,20 +281,39 @@ export default {
   created() {
     this.getAgency();
     this.getAllOrders();
+    this.getAllWorkers();
   },
   methods: {
     getAllOrders() {
       axios
         .get("http://localhost:2000/order")
         .then((res) => {
-          this.orders = res.data;
-          console.log(res.data);
+          // this.orders = res.data;
+          this.orders = [];
+          for (let x = 0; x < res.data.length; x++) {
+            if (this.$route.params.id == res.data[x]["Agency_id"]) {
+              this.orders.push(res.data[x]);
+            }
+          }
+        })
+        .catch((err) => console.log(err));
+    },
+    getAllWorkers() {
+      axios
+        .get("http://localhost:2000/worker")
+        .then((res) => {
+          // this.worker = res.data;
+          this.workers = [];
+          for (let x = 0; x < res.data.length; x++) {
+            if (this.$route.params.id == res.data[x]["Agency_id"]) {
+              this.workers.push(res.data[x]);
+            }
+          }
         })
         .catch((err) => console.log(err));
     },
     getAgency() {
       this.id = this.$route.params.id;
-      console.log(this.id);
       axios
         .get(`http://localhost:2000/agency/${this.id}`)
         .then((res) => {
@@ -294,7 +339,6 @@ export default {
           this.agencyInfo.Agency_Phone_no = res.data.Agency_Phone_no;
           this.agencyInfo.Agency_Phone_no2 = res.data.Agency_Phone_no2;
           this.agencyInfo.owner_Password = res.data.owner_Password;
-          console.log(res.data);
         })
         .catch((err) => {
           console.log(err);
@@ -304,23 +348,16 @@ export default {
     EditData() {
       axios
         .put(`http://localhost:2000/agency/${this.id}`, this.agencyInfo)
-        .then((res) => {
-          console.log(res);
-          this.agencyInfo = {
-            // First_name: "",
-            // Last_name: "",
-            // Phone: "",
-            // Address: "",
-            // Area: "",
-            // Categories: "",
-            // email: "",
-          };
+        .then(() => {
+          this.getAgency();
+          this.getAllOrders();
+          this.getAllWorkers();
         })
         .catch((err) => console.log(err))
         .then(this.$router.push(`/SAAgencyProfile/${this.id}`));
       this.getAgency();
       this.getAllOrders();
-      location.reload()
+      // location.reload()
     },
   },
 };

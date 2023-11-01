@@ -2,11 +2,12 @@
   <div class="header fixed-top" id="header">
     <div class="container">
       <SuperSidebar />
-      <router-link to="/SADashHome" class="logo">Awon</router-link>
-
-      <form class="search">
+      <router-link to="/SADashHome" class="logo">
+                <img src="../assets/aown-light-sm.png" alt="logo" class="sr">
+      </router-link>
+      <!-- <form class="search">
         <input class="search" type="search" />
-      </form>
+      </form> -->
       <!-- <img src="../assets/images/2.jpg" alt="Cx" /> -->
       <template v-if="suber_admin != null">
         <button class="loginDrop dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -110,7 +111,6 @@ export default {
   }
 
   img {
-    clip-path: circle();
     height: 60px;
     display: flex;
     justify-content: center;
