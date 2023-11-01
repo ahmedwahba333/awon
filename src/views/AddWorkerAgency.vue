@@ -237,7 +237,6 @@ export default {
   //   this.addWorker();
   // },
   methods: {
-
     getCategory() {
       axios
         .get("http://localhost:2000/category")

@@ -45,9 +45,9 @@
                 <button class="btn" @click="deleteCat(service.id)">
                   Remove service
                 </button>
-                <routre-link to="/#">
+                <!-- <routre-link to="/#">
                   <button class="btn"  @click="EditData">Edit Service</button>
-                </routre-link>
+                </routre-link> -->
               </div>
               <div
                 class="modal fade"

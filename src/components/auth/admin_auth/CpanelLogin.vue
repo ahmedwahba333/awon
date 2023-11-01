@@ -2,9 +2,10 @@
     <div class="login-main">
         <div class="d-flex justify-content-center align-items-center py-5">
             <div class="text-center">
-                <figure>
-                </figure>
+                <!-- <figure>
+                </figure> -->
                 <div class="myCon">
+                    <!-- <router-link to="/" class="title-heading"><img class="logo-img" src="../../../assets/aown-dark-sm.png" alt="logo"></router-link> -->
                     <router-link to="/" class="title-heading"><img class="logo-img" src="../../../assets/aown-dark-sm.png" alt="logo"></router-link>
                     <p class="title-slogin">Awon, your help is everywhere</p>
                     <p class="btn-login-text py-2">Cpanel Login</p>

@@ -6,9 +6,9 @@
         <img src="../assets/aown-light-sm.png" alt="logo" class="sr">
       </router-link>
 
-      <form class="search">
+      <!-- <form class="search">
         <input class="search" type="search" />
-      </form>
+      </form> -->
       <!-- <img src="../assets/images/2.jpg" alt="Cx" /> -->
       <template v-if="agency != null">
         <button class="loginDrop dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
