@@ -1,78 +1,78 @@
 <template>
   <div class="header" id="header">
     <div class="container">
-      <router-link to="#" class="logo"><a>Awon</a></router-link>
+      <router-link to="/" class="logo">Awon</router-link>
       <ul class="mainNav">
         <li>
-          <router-link to="/"><a>Home</a></router-link>
+          <router-link to="/">Home</router-link>
         </li>
         <li>
-          <router-link to="ServicesView"><a>Services</a></router-link>
+          <router-link to="/ServicesView">Services</router-link>
           <div class="mega-menu">
             <ul class="links">
               <ul>
                 <span>House Keeping</span>
                 <li>
-                  <router-link to="CleaningView"><a>Cleaning</a></router-link>
+                  <router-link to="/CleaningView">Cleaning</router-link>
                 </li>
                 <li>
-                  <router-link to="GardeningView"><a>Gardening</a></router-link>
+                  <router-link to="/GardeningView">Gardening</router-link>
                 </li>
               </ul>
               <ul>
                 <span>Caring Services</span>
                 <li>
-                  <router-link to="#CareGiving"><a>Baby sitting</a></router-link>
+                  <router-link to="/BabysittingView">Baby sitting</router-link>
                 </li>
                 <li>
-                  <router-link to="#CareGiving"><a>Elderly care</a></router-link>
+                  <router-link to="/ElderlycareView">Elderly care</router-link>
                 </li>
                 <li>
-                  <router-link to="#CareGiving"><a>Home nursing</a></router-link>
+                  <router-link to="/HousenursingView">Home nursing</router-link>
                 </li>
               </ul>
               <ul>
                 <span>Food Services</span>
                 <li>
-                  <router-link to="#FoodServices"><a>Food Catering</a></router-link>
+                  <router-link to="/FoodcateringView">Food Catering</router-link>
                 </li>
                 <li>
-                  <router-link to="ChefsView"><a>Chefs</a></router-link>
+                  <router-link to="/ChefsView">Chefs</router-link>
                 </li>
               </ul>
               <ul>
                 <span>House Maintenance</span>
                 <li>
-                  <router-link to="#HouseMaintenance"><a>Plumbing</a></router-link>
+                  <router-link to="/PlumbingView">Plumbing</router-link>
                 </li>
                 <li>
-                  <router-link to="#HouseMaintenance"><a>Carpentry</a></router-link>
+                  <router-link to="/CarpentryView">Carpentry</router-link>
                 </li>
                 <li>
-                  <router-link to="#HouseMaintenance"><a>Moving Furniture</a></router-link>
+                  <router-link to="/MovingfurnitureView">Moving Furniture</router-link>
                 </li>
               </ul>
               <ul>
                 <span>Facilities</span>
                 <li>
-                  <router-link to="#Facilities"><a>House Guard</a></router-link>
+                  <router-link to="/HouseguardView">House Guard</router-link>
                 </li>
                 <li>
-                  <router-link to="#Facilities"><a>Driver</a></router-link>
+                  <router-link to="/DriverView">Driver</router-link>
                 </li>
               </ul>
             </ul>
           </div>
         </li>
         <li>
-          <router-link to="allworkerfromcx"><a>Workers</a></router-link>
+          <router-link to="/allworkerfromcx">Workers</router-link>
         </li>
         <li>
-          <router-link to="aboutus"><a>About Us</a></router-link>
+          <router-link to="/aboutus">About Us</router-link>
         </li>
-        <li>
-          <router-link to="/"><a>Contact Us</a></router-link>
-        </li>
+        <!-- <li>
+          <router-link to="/#contactUsId">Contact Us</router-link>
+        </li> -->
 
         <li>
           <!-- <div class="image"> -->
@@ -84,13 +84,13 @@
             <ul class="dropdown-menu">
               <li>
                 <div class="dropdown-item">
-                  <router-link to="login" @click="logout"><a>Log Out</a></router-link>
+                  <router-link to="/login" @click="logout">Log Out</router-link>
                 </div>
               </li>
               <hr />
               <li>
                 <div class="dropdown-item">
-                  <router-link to="#showprofile"><a>My Profile</a></router-link>
+                  <router-link to="/CXprofileView">My Profile</router-link>
                 </div>
               </li>
             </ul>
@@ -102,19 +102,19 @@
             <ul class="dropdown-menu">
               <li>
                 <div class="dropdown-item">
-                  <router-link to="login" @click="logout"><a>Log Out</a></router-link>
+                  <router-link to="/login" @click="logout">Log Out</router-link>
                 </div>
               </li>
               <hr />
               <li>
                 <div class="dropdown-item">
-                  <router-link to="/agancydash"><a>Dashboard</a></router-link>
+                  <router-link to="/agancydash">Dashboard</router-link>
                 </div>
               </li>
             </ul>
           </template>
           <template v-else-if="user == null && agency == null">
-            <router-link to="login">Log In</router-link>
+            <router-link to="/login">Log In</router-link>
           </template>
           <!-- </div> -->
         </li>

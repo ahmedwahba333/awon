@@ -98,7 +98,7 @@
                             </div>
 
                             <div class="row mb-4 d-flex text-end">
-                                <router-link to="#">
+                                <router-link to="/#">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-gear-fill" viewBox="0 0 16 16" data-bs-target="#exampleModalToggle"
                                         data-bs-toggle="modal">
@@ -143,104 +143,24 @@
                 </div>
             </div>
 
-<div class="row ">
-    <div class="row mt-3 fw-bold mx-5 title d-flex"> Worker Reviews</div>
-     <div class="row my-5 gap-3 justify-content-center">
-        <div class="col-12 col-lg-4 col-md-3 reviewBox" v-for="(review,id) in reviews" :key="id" v-show="review.Worker_id==worker.id">
-          <div class="mb-2 gap-2">
-            <div class="card-body mt-5 mx-3">
-              <h5 class="card-title CXName fw-bold">{{ review['Name'] }}</h5>
-              <div class="stars">
-                <star-rating read-only active-color="#F97B22" star-size=20 :rating="`${review.Rate}`"></star-rating>
-               </div>
-               <h5>{{ review['Review'] }}</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-            <!-- Worker Reviews -->
-            <!-- <div class="row reviewsCard">
-                <div class="col-lg-12 col-md-12 col-sm-8 pt-3 mb-3">
-                    <p class="mx-sm-5 reviewTit">Worker Reviews</p>
-                </div>
-
-                <div class="col-12">
-                    <div id="carouselExampleDark" class="carousel carousel-dark slide"> -->
-                        <!-- <div class="carousel-indicators ">
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                                aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                        </div> -->
-
-
-<!--                       
-                        <div class="carousel-inner mb-5 row">
-                            <template v-for="(review, i) in reviews" :key="i">
-                                <template v-if="reviews[i].Worker_id == worker.id">
-                            <div class="carousel-item active" data-bs-interval="10000">
-                                        <div class="row reviewBox">
-                                         
-                                            
-                                            <div class="col-lg-6 col-md-7 col-sm-7 innerReview mb-3">
-
-                                                <div class="CXName">{{ review['Name'] }}</div>
-                                                <div class="stars">
-                                                    <star-rating read-only active-color="#F97B22" star-size=20
-                                                        :rating="`${review.Rate}`"></star-rating>
-                                                </div>
-                                                <div class="review">{{ review['Review'] }}</div>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                    </template>
-                                    </template>
-                            <template v-for="(review, i) in reviews.slice(1,reviews.length-1)" :key="i">
-                                <template v-if="reviews[i].Worker_id == worker.id">
-                                    <div class="carousel-item" data-bs-interval="10000">
-                                        <div class="row reviewBox">
-                                            <div class="col-1">
-                                                <img :src="`${review.picture}`" class="reviewImg rounded-circle">
-                                            </div>
-                                            <div class="col-lg-6 col-md-7 col-sm-7 innerReview mb-3">
-
-                                                <div class="CXName">{{ review['Name'] }}</div>
-                                                <div class="stars">
-                                                    <star-rating read-only active-color="#F97B22" star-size=20
-                                                        :rating="`${review.Rate}`"></star-rating>
-                                                </div>
-                                                <div class="review">{{ review['Review'] }}</div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </template>
-                            </template>
+            <div class="row ">
+                <div class="row mt-3 fw-bold mx-5 title d-flex"> Worker Reviews</div>
+                <div class="row my-5 gap-3 justify-content-center">
+                    <div class="col-12 col-lg-4 col-md-3 reviewBox" v-for="(review, id) in reviews" :key="id"
+                        v-show="review.Worker_id == worker.id">
+                        <div class="mb-2 gap-2">
+                            <div class="card-body mt-5 mx-3">
+                                <h5 class="card-title CXName fw-bold">{{ review['Name'] }}</h5>
+                                <div class="stars">
+                                    <star-rating read-only active-color="#F97B22" star-size=20
+                                        :rating="`${review.Rate}`"></star-rating>
+                                </div>
+                                <h5>{{ review['Review'] }}</h5>
+                            </div>
                         </div>
-
-                      
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                            data-bs-slide="prev">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <path d="M31.0292 7.02944L14.0586 24L31.0292 40.9706" stroke="#F97B22" stroke-width="10" />
-                            </svg>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                            data-bs-slide="next">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <path d="M16.9708 7.02944L33.9414 24L16.9708 40.9706" stroke="#F97B22" stroke-width="10" />
-                            </svg>
-                        </button>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
             <!-- Edit popup -->
             <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
@@ -254,13 +174,13 @@
                         <div class="modal-body">
                             <div class="row mb-3">
                                 <div class="col-4">First Name</div>
-                                <div class="col-8"><input type="text" placeholder="Ahmed A" v-model="workerInfo.First_name">
+                                <div class="col-8"><input type="text" v-model="workerInfo.First_name">
                                 </div>
                             </div>
 
                             <div class="row mb-3">
                                 <div class="col-4">Last Name</div>
-                                <div class="col-8"><input type="text" placeholder="Ahmed A" v-model="workerInfo.Last_name">
+                                <div class="col-8"><input type="text" v-model="workerInfo.Last_name">
                                 </div>
                             </div>
 
@@ -285,7 +205,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button class="btn editBtn" @click="EditData">Edit</button>
+                            <button class="btn editBtn" @click="EditData" data-bs-dismiss="modal">Edit</button>
                         </div>
                     </div>
                 </div>
@@ -444,30 +364,9 @@ export default {
                     }
                 })
                 .catch(err => console.log(err))
-                .then(this.$router.push("/worker"))
-
-
+                .then(this.$router.push(`/workerpageDash/${this.id}`))
+            location.reload();
         },
-
-
-
-
-        // cal() {
-        //     for (var i in this.orders) {
-        //         if (this.orders.Worker_id == this.worker.id) {
-        //             this.totalIncome = this.orders[i].Order_Price
-        //             console.log(this.orders.Order_Price)
-        //             console.log('jj')
-
-        //         }
-
-        //     }
-
-        // }
-
-
-
-
     }
 }
 </script>
@@ -559,24 +458,13 @@ tbody {
     font-size: $paragraph !important;
 }
 
-.card-body{
+.card-body {
     border: none !important;
 }
 
 
-// .reviewsCard {
-//     color: $blueColor !important;
-//     @include Box;
-
-//     :nth-child(1) {
-//         font-size: $title;
-//         font-weight: bold;
-//     }
-// }
-
 .reviewBox {
     height: 180px;
-    // width:340px;
     color: $blueColor;
     background-color: $whiteColor;
     border-radius: $border-radius-big;
@@ -590,24 +478,13 @@ tbody {
     }
 }
 
-// .carousel .carousel-indicators button {
-//     width: 20px;
-//     height: 20px;
-//     border-radius: 100%;
-//     background-color: $orangeColor;
-//     position: relative;
-//     bottom: -60px;
-
-// }
-
-
 @media(min-width:991px) {
     .price {
         margin-left: 500px;
     }
 
-    .reviewBox{
-        width:300px
+    .reviewBox {
+        width: 300px
     }
 }
 
@@ -628,31 +505,17 @@ tbody {
 
     }
 
-    // .reviewBox {
-    //     width: 100px;
-    //     // margin-left: 40px;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    // }
-
     .price {
         margin-left: 190px;
     }
 
 }
 
-@media (max-width: 767px)and (min-width: 587px) {
+@media (max-width: 767px)and (min-width: 576px) {
     .workerDet {
         margin-top: none !important;
         margin-left: none;
         margin-bottom: 15px;
-
-        // .reviewBox {
-        //     margin-left: 30px;
-        //     display: flex;
-        //     justify-content: start;
-        // }
 
         .firstRow {
             margin-left: 50px !important;
@@ -676,19 +539,11 @@ tbody {
     }
 }
 
-@media (max-width: 586.666px) {
-    // .reviewBox {
-    //     display: flex;
-    //     justify-content: start;
-    //     margin-left: 30px;
-    //     // margin-top:20px ;
-    //     // width: 335px;
+@media (max-width: 575.666px) {
+    .modal {
+        width: 500px !important;
 
-    //     img {
-    //         margin-left: 40px;
-    //     }
-    // }
-
+    }
 
     .tableTitle {
         font-size: $small !important;
@@ -738,15 +593,6 @@ tbody {
     }
 }
 
-.active {
-    background-color: white;
-}
-
-.model {
-    height: fit-content;
-    width: 2000px !important;
-}
-
 .modal-content {
     background-color: $backgroundColor ;
     font-size: $paragraph !important;
@@ -769,8 +615,8 @@ h1 {
     @include button;
 }
 
-.title{
+.title {
     font-size: $title;
-    width:300px
+    width: 300px
 }
 </style>

@@ -6,28 +6,14 @@
       <div class="row pt-3 breadCrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item me-2">Dashboard</li>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="1em"
-            viewBox="0 0 320 512"
-            fill="#F97B22"
-            class="mt-2 me-2"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" fill="#F97B22" class="mt-2 me-2">
             <path
-              d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
-            />
+              d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
           </svg>
           <li class="breadcrumb-item" aria-current="page">Agencies</li>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="1em"
-            viewBox="0 0 320 512"
-            fill="#F97B22"
-            class="mt-2 me-2"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" fill="#F97B22" class="mt-2 me-2">
             <path
-              d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
-            />
+              d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
           </svg>
           <li class="breadcrumb-item" aria-current="page">Agency Profile</li>
         </ol>
@@ -37,31 +23,19 @@
         <div class="row d-flex flex wrap">
           <p class="subtitle mx-4 col-9">Account</p>
           <p class="subtitle mx-4 col-2">
-            <router-link to="#">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-gear-fill"
-                viewBox="0 0 16 16"
-                data-bs-target="#exampleModalToggle"
-                data-bs-toggle="modal"
-              >
-                <path
-                  d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"
-                />
-              </svg>
-            </router-link>
+            <!-- <router-link to="/#"> -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill"
+              viewBox="0 0 16 16" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
+              <path
+                d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+            </svg>
+            <!-- </router-link> -->
           </p>
         </div>
         <div class="row">
           <div class="col-lg-3 col-md-5 col-sm-12 pb-4">
-            <img
-              :src="`${agencyInfo.Logo}`"
-              class="card-img-top object-fit-cover Clip-path:circle()"
-              :alt="`agencyimg${i}`"
-            />
+            <img :src="`${agencyInfo.Logo}`" class="card-img-top object-fit-cover Clip-path:circle()"
+              :alt="`agencyimg${i}`" />
           </div>
           <div class="col-lg-4 col-md-3 col-sm-6">
             <p class="searchKey">Name</p>
@@ -82,14 +56,10 @@
       <!-- Services Table -->
       <div class="row grid servicesTable mt-4 text-center" id="table-wrapper">
         <div class="col-12 mt-3 overflow-auto" id="table-scroll">
-          <table
-            class="table mb-2"
-            style="color: $blueColor; --bs-table-color: $blueColor"
-            id=""
-          >
+          <table class="table mb-2" style="color: $blueColor; --bs-table-color: $blueColor" id="">
             <thead>
               <tr>
-                <th scope="col">Order ID</th>
+                <th scope="col">Order NO.</th>
                 <th scope="col">Order Details</th>
                 <th scope="col">Order Date</th>
                 <th scope="col">Customer ID</th>
@@ -99,7 +69,7 @@
             </thead>
             <tbody>
               <tr v-for="(order, id) in orders" :key="id">
-                <td>{{ order.id }}</td>
+                <td>{{ id + 1 }}</td>
                 <td>{{ order.Order_Details }}</td>
                 <td>{{ order.Order_Date }}</td>
                 <td>{{ order.Customer_id }}</td>
@@ -110,172 +80,133 @@
           </table>
         </div>
       </div>
-      <p class="subtitle mt-4">Top Worker</p>
+      <p class="subtitle mt-4">Workers</p>
       <div class="row justify-content-center gap-5">
-        <div class="card mb-4" style="width: 18rem">
-          <img
-            src="../assets/subservices/gardener3.jpg"
-            class="card-img-top Clip-path:circle()"
-            alt="..."
-          />
+        <div class="col-12 my-3 overflow-auto" id="table-scroll">
+          <!-- <div class="card mb-4" style="width: 18rem">
+          <img src="../assets/subservices/gardener3.jpg" class="card-img-top Clip-path:circle()" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Salma Osama</h5>
             <p class="card-text">16 St. Emad Eldein - Down Town - Cairo</p>
-            <svg
-              class="d-block m-auto"
-              xmlns="http://www.w3.org/2000/svg"
-              width="125"
-              height="22"
-              viewBox="0 0 125 22"
-              fill="none"
-            >
+            <svg class="d-block m-auto" xmlns="http://www.w3.org/2000/svg" width="125" height="22" viewBox="0 0 125 22"
+              fill="none">
               <path
                 d="M10.8425 0.0842438L13.2768 7.57622L21.1543 7.57622L14.7813 12.2065L17.2155 19.6985L10.8425 15.0682L4.46943 19.6985L6.90373 12.2065L0.530669 7.57622L8.4082 7.57622L10.8425 0.0842438Z"
-                fill="#F97B22"
-              />
+                fill="#F97B22" />
               <path
                 d="M36.5935 0.0842438L39.0278 7.57622L46.9053 7.57622L40.5322 12.2065L42.9665 19.6985L36.5935 15.0682L30.2204 19.6985L32.6547 12.2065L26.2816 7.57622L34.1592 7.57622L36.5935 0.0842438Z"
-                fill="#F97B22"
-              />
+                fill="#F97B22" />
               <path
                 d="M62.3444 0.0842438L64.7787 7.57622L72.6563 7.57622L66.2832 12.2065L68.7175 19.6985L62.3444 15.0682L55.9714 19.6985L58.4057 12.2065L52.0326 7.57622L59.9102 7.57622L62.3444 0.0842438Z"
-                fill="#F97B22"
-              />
+                fill="#F97B22" />
               <path
                 d="M88.0954 0.0842438L90.5297 7.57622L98.4072 7.57622L92.0342 12.2065L94.4685 19.6985L88.0954 15.0682L81.7224 19.6985L84.1567 12.2065L77.7836 7.57622L85.6611 7.57622L88.0954 0.0842438Z"
-                fill="#F97B22"
-              />
+                fill="#F97B22" />
               <path
                 d="M113.846 0.0842438L116.281 7.57622L124.158 7.57622L117.785 12.2065L120.219 19.6985L113.846 15.0682L107.473 19.6985L109.908 12.2065L103.535 7.57622L111.412 7.57622L113.846 0.0842438Z"
-                fill="#C3C3C3"
-              />
+                fill="#C3C3C3" />
             </svg>
             <a href="#" class="btn d-block m-auto mb-3 mt-3">Book Now</a>
           </div>
         </div>
         <div class="card mb-4" style="width: 18rem">
-          <img
-            src="../assets/subservices/gardener3.jpg"
-            class="card-img-top Clip-path:circle()"
-            alt="..."
-          />
+          <img src="../assets/subservices/gardener3.jpg" class="card-img-top Clip-path:circle()" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Salma Osama</h5>
             <p class="card-text">16 St. Emad Eldein - Down Town - Cairo</p>
-            <svg
-              class="d-block m-auto"
-              xmlns="http://www.w3.org/2000/svg"
-              width="125"
-              height="22"
-              viewBox="0 0 125 22"
-              fill="none"
-            >
+            <svg class="d-block m-auto" xmlns="http://www.w3.org/2000/svg" width="125" height="22" viewBox="0 0 125 22"
+              fill="none">
               <path
                 d="M10.8425 0.0842438L13.2768 7.57622L21.1543 7.57622L14.7813 12.2065L17.2155 19.6985L10.8425 15.0682L4.46943 19.6985L6.90373 12.2065L0.530669 7.57622L8.4082 7.57622L10.8425 0.0842438Z"
-                fill="#F97B22"
-              />
+                fill="#F97B22" />
               <path
                 d="M36.5935 0.0842438L39.0278 7.57622L46.9053 7.57622L40.5322 12.2065L42.9665 19.6985L36.5935 15.0682L30.2204 19.6985L32.6547 12.2065L26.2816 7.57622L34.1592 7.57622L36.5935 0.0842438Z"
-                fill="#F97B22"
-              />
+                fill="#F97B22" />
               <path
                 d="M62.3444 0.0842438L64.7787 7.57622L72.6563 7.57622L66.2832 12.2065L68.7175 19.6985L62.3444 15.0682L55.9714 19.6985L58.4057 12.2065L52.0326 7.57622L59.9102 7.57622L62.3444 0.0842438Z"
-                fill="#F97B22"
-              />
+                fill="#F97B22" />
               <path
                 d="M88.0954 0.0842438L90.5297 7.57622L98.4072 7.57622L92.0342 12.2065L94.4685 19.6985L88.0954 15.0682L81.7224 19.6985L84.1567 12.2065L77.7836 7.57622L85.6611 7.57622L88.0954 0.0842438Z"
-                fill="#F97B22"
-              />
+                fill="#F97B22" />
               <path
                 d="M113.846 0.0842438L116.281 7.57622L124.158 7.57622L117.785 12.2065L120.219 19.6985L113.846 15.0682L107.473 19.6985L109.908 12.2065L103.535 7.57622L111.412 7.57622L113.846 0.0842438Z"
-                fill="#C3C3C3"
-              />
+                fill="#C3C3C3" />
             </svg>
             <a href="#" class="btn d-block m-auto mb-3 mt-3">Book Now</a>
           </div>
         </div>
         <div class="card mb-4" style="width: 18rem">
-          <img
-            src="../assets/subservices/gardener2.jpg"
-            class="card-img-top Clip-path:circle()"
-            alt="..."
-          />
+          <img src="../assets/subservices/gardener2.jpg" class="card-img-top Clip-path:circle()" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Omar Tarek</h5>
             <p class="card-text">16 St. Emad Eldein - Down Town - Cairo</p>
-            <svg
-              class="d-block m-auto"
-              xmlns="http://www.w3.org/2000/svg"
-              width="125"
-              height="22"
-              viewBox="0 0 125 22"
-              fill="none"
-            >
+            <svg class="d-block m-auto" xmlns="http://www.w3.org/2000/svg" width="125" height="22" viewBox="0 0 125 22"
+              fill="none">
               <path
                 d="M10.8425 0.0842438L13.2768 7.57622L21.1543 7.57622L14.7813 12.2065L17.2155 19.6985L10.8425 15.0682L4.46943 19.6985L6.90373 12.2065L0.530669 7.57622L8.4082 7.57622L10.8425 0.0842438Z"
-                fill="#F97B22"
-              />
+                fill="#F97B22" />
               <path
                 d="M36.5935 0.0842438L39.0278 7.57622L46.9053 7.57622L40.5322 12.2065L42.9665 19.6985L36.5935 15.0682L30.2204 19.6985L32.6547 12.2065L26.2816 7.57622L34.1592 7.57622L36.5935 0.0842438Z"
-                fill="#F97B22"
-              />
+                fill="#F97B22" />
               <path
                 d="M62.3444 0.0842438L64.7787 7.57622L72.6563 7.57622L66.2832 12.2065L68.7175 19.6985L62.3444 15.0682L55.9714 19.6985L58.4057 12.2065L52.0326 7.57622L59.9102 7.57622L62.3444 0.0842438Z"
-                fill="#F97B22"
-              />
+                fill="#F97B22" />
               <path
                 d="M88.0954 0.0842438L90.5297 7.57622L98.4072 7.57622L92.0342 12.2065L94.4685 19.6985L88.0954 15.0682L81.7224 19.6985L84.1567 12.2065L77.7836 7.57622L85.6611 7.57622L88.0954 0.0842438Z"
-                fill="#F97B22"
-              />
+                fill="#F97B22" />
               <path
                 d="M113.846 0.0842438L116.281 7.57622L124.158 7.57622L117.785 12.2065L120.219 19.6985L113.846 15.0682L107.473 19.6985L109.908 12.2065L103.535 7.57622L111.412 7.57622L113.846 0.0842438Z"
-                fill="#F97B22"
-              />
+                fill="#F97B22" />
             </svg>
             <a href="#" class="btn d-block m-auto mb-3 mt-3">Book Now</a>
           </div>
+        </div> -->
+          <table class="table mb-2 align-middle" style="color: $blueColor; --bs-table-color: $blueColor" id="">
+            <thead>
+              <tr>
+                <th scope="col">Worker NO.</th>
+                <th scope="col">Worker Name</th>
+                <th scope="col">Worker Email</th>
+                <th scope="col">Worker Phone</th>
+                <th scope="col">Worker Area</th>
+                <th scope="col">Worker Image</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(worker, id) in workers" :key="id">
+                <td>{{ id + 1 }}</td>
+                <td>{{ worker.First_name }} {{ worker.Last_name }}</td>
+                <td>{{ worker.email }}</td>
+                <td>{{ worker.Phone }}</td>
+                <td>{{ worker.Area }}</td>
+                <td><img :src="`${worker.img}`" alt="" width="100" height="100"></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      <div
-        class="modal fade"
-        id="exampleModalToggle"
-        aria-hidden="true"
-        aria-labelledby="exampleModalToggleLabel"
-        tabindex="-1"
-      >
+      <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5 fw-bold" id="exampleModalToggleLabel">
                 Edit Worker
               </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <div class="row mb-3">
                 <div class="col-4">Agency Name</div>
                 <div class="col-8">
-                  <input
-                    type="text"
-                    placeholder=""
-                    v-model="agencyInfo.Agency_Name"
-                  />
+                  <input type="text" placeholder="" v-model="agencyInfo.Agency_Name" />
                 </div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">Email</div>
                 <div class="col-8">
-                  <input
-                    type="email"
-                    placeholder=""
-                    v-model="agencyInfo.Email"
-                  />
+                  <input type="email" placeholder="" v-model="agencyInfo.Email" />
                 </div>
               </div>
 
@@ -294,7 +225,7 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button class="btn editBtn" @click="EditData">Edit</button>
+              <button class="btn editBtn" data-bs-dismiss="modal" @click="EditData">Edit</button>
             </div>
           </div>
         </div>
@@ -316,6 +247,8 @@ export default {
       id: " ",
       // Agencies: [],
       orders: [],
+      // order: [],
+      workers: [],
       // orderID: "",
       // cxID: "",
       // orderDate: "",
@@ -348,20 +281,39 @@ export default {
   created() {
     this.getAgency();
     this.getAllOrders();
+    this.getAllWorkers();
   },
   methods: {
     getAllOrders() {
       axios
         .get("http://localhost:2000/order")
         .then((res) => {
-          this.orders = res.data;
-          console.log(res.data);
+          // this.orders = res.data;
+          this.orders = [];
+          for (let x = 0; x < res.data.length; x++) {
+            if (this.$route.params.id == res.data[x]["Agency_id"]) {
+              this.orders.push(res.data[x]);
+            }
+          }
+        })
+        .catch((err) => console.log(err));
+    },
+    getAllWorkers() {
+      axios
+        .get("http://localhost:2000/worker")
+        .then((res) => {
+          // this.worker = res.data;
+          this.workers = [];
+          for (let x = 0; x < res.data.length; x++) {
+            if (this.$route.params.id == res.data[x]["Agency_id"]) {
+              this.workers.push(res.data[x]);
+            }
+          }
         })
         .catch((err) => console.log(err));
     },
     getAgency() {
       this.id = this.$route.params.id;
-      console.log(this.id);
       axios
         .get(`http://localhost:2000/agency/${this.id}`)
         .then((res) => {
@@ -387,7 +339,6 @@ export default {
           this.agencyInfo.Agency_Phone_no = res.data.Agency_Phone_no;
           this.agencyInfo.Agency_Phone_no2 = res.data.Agency_Phone_no2;
           this.agencyInfo.owner_Password = res.data.owner_Password;
-          console.log(res.data);
         })
         .catch((err) => {
           console.log(err);
@@ -397,23 +348,16 @@ export default {
     EditData() {
       axios
         .put(`http://localhost:2000/agency/${this.id}`, this.agencyInfo)
-        .then((res) => {
-          console.log(res);
-          this.agencyInfo = {
-            // First_name: "",
-            // Last_name: "",
-            // Phone: "",
-            // Address: "",
-            // Area: "",
-            // Categories: "",
-            // email: "",
-          };
+        .then(() => {
+          this.getAgency();
+          this.getAllOrders();
+          this.getAllWorkers();
         })
         .catch((err) => console.log(err))
         .then(this.$router.push(`/SAAgencyProfile/${this.id}`));
       this.getAgency();
       this.getAllOrders();
-      location.reload()
+      // location.reload()
     },
   },
 };
@@ -428,6 +372,7 @@ export default {
   font-size: $paragraph;
   color: $blueColor;
 }
+
 img {
   margin-top: 15px;
   clip-path: circle();
@@ -437,6 +382,7 @@ img {
 .btn {
   @include button;
 }
+
 p {
   color: $blueColor;
 }
@@ -444,12 +390,15 @@ p {
 .breadCrumb {
   margin-left: 1px;
 }
+
 svg {
   color: $orangeColor;
+
   &:hover {
     color: $blueColor;
   }
 }
+
 .breadcrumb-item {
   font-size: $paragraph !important;
   color: $blueColor !important;
@@ -543,14 +492,17 @@ input.search {
 thead tr tbody {
   display: block;
 }
+
 #table-wrapper {
   display: block;
 }
+
 #table-scroll {
   height: 350px;
   overflow: auto;
   margin-top: 20px;
 }
+
 #table-wrapper table {
   width: 100%;
 }
@@ -589,6 +541,7 @@ thead {
 tbody {
   font-size: $paragraph;
 }
+
 // img {
 //   width: 200px;
 //   height: 200px;

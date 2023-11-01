@@ -1,6 +1,6 @@
 <template>
   <div class="bg">
-    <NavBarSADash />
+    <NavBarDash />
     <div class="container">
       <form @submit.prevent="addWorker()">
         <h2 class="headline">Add Worker</h2>
@@ -161,14 +161,14 @@
 </template>
 
 <script>
-import NavBarSADash from "@/components/NavBarSADash.vue";
+import NavBarDash from "@/components/NavBarDash.vue";
 import FooterComponent from "@/components/footer.vue";
 import axios from "axios";
 import useVuelidate from "@vuelidate/core";
 import { required, minLength, numeric } from "@vuelidate/validators";
 export default {
   name: "WriteReview",
-  components: { FooterComponent, NavBarSADash },
+  components: { FooterComponent, NavBarDash },
   data() {
     return {
       valuesOfCategory: [],
@@ -200,9 +200,9 @@ export default {
         Last_name: "",
         Phone: "",
         Address: "",
+        Agency_id: "",
         FrontNational_ID: "",
         BackNational_ID: "",
-        Agency_id: 1,
         Gender: "",
         Categories: "",
         Service_1: null,
@@ -283,12 +283,14 @@ export default {
       if (this.formValues.Service_4 != null) {
         this.formValues.Service_4_price = Math.floor(Math.random() * 250)
       }
+      this.formValues.Agency_id = JSON.parse(localStorage.getItem("agInfo"))["id"];
+      // console.log(JSON.parse(localStorage.getItem("agInfo")));
       axios
         .post("http://localhost:2000/worker", this.formValues)
 
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
-      this.$router.push("/SADashHome");
+      this.$router.push("/agancydash");
 
       // console.log(this.valuesOfCategory);
     },

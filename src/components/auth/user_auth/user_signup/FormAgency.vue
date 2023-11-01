@@ -11,8 +11,8 @@
             </div>
             <div class="col-sm-6 col-6 text-start">
                 <label class="form-label label-text fs-media-6" for="Agency_Email">Email</label>
-                <input class="form-control" type="text" v-model="agencyData.Agency_Email" name="Agency_Email" id="Agency_Email"
-                    placeholder="example@example.com">
+                <input class="form-control" type="text" v-model="agencyData.Agency_Email" name="Agency_Email"
+                    id="Agency_Email" placeholder="example@example.com">
             </div>
             <div class="col-sm-6 col-6 text-start">
                 <label class="form-label label-text fs-media-6" for="Agency_Phone_no">Phone Number 1</label>
@@ -31,7 +31,8 @@
             </div>
             <div class="col-md-6 col-sm-12 col-12 text-start">
                 <label class="form-label label-text fs-media-6" for="Agency_Governorate">Governorate</label>
-                <select v-model="agencyData.Agency_Governorate" name="Agency_Governorate" id="Agency_Governorate" class="form-select">
+                <select v-model="agencyData.Agency_Governorate" name="Agency_Governorate" id="Agency_Governorate"
+                    class="form-select">
                     <option value="" selected disabled>Select</option>
                     <option value="Alexandria">Alexandria</option>
                     <option value="Aswan">Aswan</option>
@@ -68,8 +69,8 @@
             </div>
             <div class="col-md-6 col-sm-12 col-12 text-start">
                 <label class="form-label label-text fs-media-6" for="Agency_Address">Address</label>
-                <input class="form-control" type="text" v-model="agencyData.Agency_Address" name="Agency_Address" id="Agency_Address"
-                    placeholder="156st elmesaha">
+                <input class="form-control" type="text" v-model="agencyData.Agency_Address" name="Agency_Address"
+                    id="Agency_Address" placeholder="156st elmesaha">
             </div>
             <div class="col-md-6 col-sm-12 col-12 text-start" title="path of image on drive">
                 <label for="trade_register_card" class="form-label label-text fs-media-6">commercial card ID</label>
@@ -103,8 +104,8 @@
             </div>
             <div class="col-sm-6 col-6 text-start">
                 <label class="form-label label-text fs-media-6" for="Owner_Phone_no">Phone Number</label>
-                <input class="form-control" type="text" v-model="agencyData.Owner_Phone_no" name="Owner_Phone_no" id="Owner_Phone_no"
-                    placeholder="2001116002720">
+                <input class="form-control" type="text" v-model="agencyData.Owner_Phone_no" name="Owner_Phone_no"
+                    id="Owner_Phone_no" placeholder="2001116002720">
             </div>
 
             <div class="col-sm-6 col-6 text-start">
@@ -120,8 +121,8 @@
                 <div class="d-flex flex-column text-start">
                     <label class="form-label label-text fs-media-6" for="owner_Password">Password</label>
                     <div class="d-flex align-items-center">
-                        <input class="form-control myInput" :type="inputType" v-model="agencyData.owner_Password" name="owner_Password"
-                            id="owner_Password" placeholder="#########">
+                        <input class="form-control myInput" :type="inputType" v-model="agencyData.owner_Password"
+                            name="owner_Password" id="owner_Password" placeholder="#########">
                         <svg @click="triggerEye()" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
                             fill="currentColor" class="bi bi-eye eye-icon ms-2" viewBox="0 0 16 16" v-if="eyeFlag">
                             <path
@@ -293,7 +294,7 @@
                         </div>
                     </div>
                     <div>
-                        <router-link to="login"><button type="submit" @click="submitData"
+                        <router-link to="/login"><button type="submit" @click="submitData"
                                 class="signup-btn">Signup</button></router-link>
                     </div>
                 </div>

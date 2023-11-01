@@ -110,7 +110,7 @@
       </div>
 
 <!-- Contact Us -->
-      <div class="row text-center my-5" id>
+      <div class="row text-center my-5" id="contactUsId">
         <h2>Contact us</h2>
       </div>
       <div class="d-flex justify-content-center">

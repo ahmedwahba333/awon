@@ -10,7 +10,7 @@
                     <p class="title-slogin">Awon, your help is everywhere</p>
                     <p class="btn-login-text py-2">Reset Password</p>
                     <div class="forget-pass my-2">
-                        <router-link to="login">Login
+                        <router-link to="/login">Login
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-arrow-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -26,7 +26,7 @@
                     </div>
                 </form>
                 <div>
-                   <router-link to="reset-password-confirm"><button class="btn-login">Send Code</button></router-link>
+                    <router-link to="/reset-password-confirm"><button class="btn-login">Send Code</button></router-link>
                 </div>
             </div>
         </div>

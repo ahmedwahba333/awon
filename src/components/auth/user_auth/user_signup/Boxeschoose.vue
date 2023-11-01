@@ -4,7 +4,7 @@
         <button :class="{ active: isActiveAgency }" class="btn-choosen" @click="triggerAgency">Agency</button>
     </div>
     <div class="forget-pass my-2">
-        <router-link to="login">have an account..?
+        <router-link to="/login">have an account..?
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
                 viewBox="0 0 16 16">
                 <path fill-rule="evenodd"

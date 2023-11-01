@@ -13,7 +13,7 @@
         <div class="d-flex flex-wrap">
           <template v-for="(service, id) in service" :key="id">
             <template v-if="service.Category_id == categ.id">
-              <router-link :to="`service/${service.id}`">
+              <router-link :to="`/Services/${service.id}`">
                 <div class="card me-5 my-2" style="width: 382px">
                   <img :src="`${service.img}`" class="card-img-top object-fit-cover" alt="..." />
                   <div class="card-body">
