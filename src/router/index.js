@@ -344,6 +344,7 @@ router.beforeEach((to) => {
       to.name == "AgancyDash" ||
       to.name == "dashReviews" ||
       to.name == "AllWorker" ||
+      to.name == "AddWorkerAgency" ||
       // customer
       to.name == "paymentDetails" ||
       to.name == "WriteReview" ||
@@ -386,6 +387,7 @@ router.beforeEach((to) => {
       to.name == "AgancyDash" ||
       to.name == "dashReviews" ||
       to.name == "AllWorker" ||
+      to.name == "AddWorkerAgency" ||
       // suber admin
       to.name == "allAgencies" ||
       to.name == "ServiceHistorySA" ||
@@ -453,6 +455,7 @@ router.beforeEach((to) => {
       to.name == "AgancyDash" ||
       to.name == "dashReviews" ||
       to.name == "AllWorker" ||
+      to.name == "AddWorkerAgency" ||
       // customer
       to.name == "paymentDetails" ||
       to.name == "WriteReview" ||
@@ -509,6 +512,7 @@ router.beforeEach((to) => {
       to.name == "AgancyDash" ||
       to.name == "dashReviews" ||
       to.name == "allAgencies" ||
+      to.name == "AddWorkerAgency" ||
       to.name == "AllWorker"
     ) {
       return "/";

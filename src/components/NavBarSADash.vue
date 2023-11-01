@@ -21,7 +21,7 @@
         </ul>
       </template>
       <template v-else-if="suber_admin == null">
-        <router-link class="login" to="cpanel-login">Log In</router-link>
+        <router-link class="login" to="/cpanel-login">Log In</router-link>
       </template>
     </div>
   </div>

@@ -13,7 +13,7 @@
                     <p class="title-slogin">Awon, your help is everywhere</p>
                     <p class="btn-login-text py-2">login</p>
                     <div class="forget-pass my-2">
-                        <router-link to="signup">don’t have an account..?
+                        <router-link to="/signup">don’t have an account..?
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-arrow-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -65,13 +65,13 @@
                                     d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z" />
                             </svg>
                         </div>
-                        <!-- <span class="invalid-feedback d-block" v-if="v$.pass.$error"><svg xmlns="http://www.w3.org/2000/svg"
+                        <span class="invalid-feedback d-block" v-if="v$.pass.$error"><svg xmlns="http://www.w3.org/2000/svg"
                                 width="13" height="13" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 19 19">
                                 <path
                                     d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
                             </svg> {{ v$.pass.$errors[0].$message
                             }}</span>
-                        <span class="valid-feedback d-block" v-else-if="v$.pass.$anyDirty"><svg
+                        <!-- <span class="valid-feedback d-block" v-else-if="v$.pass.$anyDirty"><svg
                                 xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
                                 class="bi bi-check" viewBox="0 0 19 19">
                                 <path
@@ -81,7 +81,7 @@
                 </form>
                 <div>
                     <div class="forget-pass my-2">
-                        <router-link to="reset-password">forget your password
+                        <router-link to="/reset-password">forget your password
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-arrow-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -122,7 +122,7 @@ export default {
             email: {
                 required: helpers.withMessage("Email is Required", required), email: helpers.withMessage("Wrong Email", email)
             },
-            pass: { required: helpers.withMessage("Password is Required", required), minLength: helpers.withMessage("Weak Password", minLength(8)) }
+            pass: { required: helpers.withMessage("Password is Required", required), minLength: helpers.withMessage("Wrong Password", minLength(8)) }
         }
     },
     created() {

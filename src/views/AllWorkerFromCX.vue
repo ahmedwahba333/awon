@@ -115,9 +115,9 @@
       <div class="col-12 col-md-12 col-sm-8 pt-3 mb-3">
         <div id="carouselExampleDark" class="carousel carousel-dark slide">
           <div class="carousel-indicators carasou">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="/0" class="active"
               aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="/1"
               aria-label="Slide 2"></button>
           </div>
 
@@ -153,7 +153,7 @@
                       {{ worker["Experience"] }}
                     </p>
                     <star-rating active-color="#F97B22" read-only star-size=30 :rating="`${worker.Rate}`"></star-rating>
-                    <router-link :to="`workerProfile/${worker.id}`" class="btn d-block m-auto mb-3 mt-3">
+                    <router-link :to="`/workerProfile/${ worker.id } `" class="btn d-block m-auto mb-3 mt-3">
                       See details</router-link>
                   </div>
                 </div>
@@ -191,7 +191,7 @@
                       {{ worker["Experience"] }}
                     </p>
                     <star-rating active-color="#F97B22" read-only star-size=30 :rating="`${worker.Rate}`"></star-rating>
-                    <router-link :to="`workerProfile/${worker.id}`">
+                    <router-link :to="`/workerProfile/${ worker.id }`">
                       <a class="btn d-block m-auto mb-3 mt-3">See details</a></router-link>
                   </div>
                 </div>

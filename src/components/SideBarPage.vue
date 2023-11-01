@@ -18,7 +18,7 @@
       <div class="offcanvas-body">
         <ul class="nav nav-pills flex-column mt-4">
           <li class="nav-item py-2 py-sm-0">
-            <router-link to="agancydash" class="nav-link">
+            <router-link to="/agancydash" class="nav-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-house"
                 viewBox="0 0 16 16">
                 <path
@@ -27,7 +27,7 @@
             </router-link>
           </li>
           <li class="nav-item py-2 py-sm-0">
-            <router-link to="AllWorker" class="nav-link">
+            <router-link to="/AllWorker" class="nav-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-people-fill"
                 viewBox="0 0 16 16">
                 <path
@@ -36,7 +36,7 @@
             </router-link>
           </li>
           <li class="nav-item py-2 py-sm-0">
-            <router-link to="ServiceHistoryAgency" class="nav-link">
+            <router-link to="/ServiceHistoryAgency" class="nav-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                 class="bi bi-clock-history" viewBox="0 0 16 16">
                 <path
@@ -48,7 +48,7 @@
             </router-link>
           </li>
           <li class="nav-item py-2 py-sm-0">
-            <router-link to="dashReviews" class="nav-link">
+            <router-link to="/dashReviews" class="nav-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-stars"
                 viewBox="0 0 16 16">
                 <path
@@ -59,7 +59,7 @@
         </ul>
       </div>
       <div class="p-4">
-        <router-link to="#">
+        <router-link to="/#">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box-arrow-left"
             viewBox="0 0 16 16">
             <path fill-rule="evenodd"
