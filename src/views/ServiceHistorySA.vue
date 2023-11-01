@@ -29,7 +29,7 @@
             </div>
 
             <div class="col-md-7 col-sm-5"> 
-                <input type="search" class="search form-control" v-model="orderID">
+                <input type="search" class="search form-control" v-model="orderID" placeholder="search via order">
             </div>
 <!-- 
             <div class="col-lg-3 col-md-4 col-sm-5">
