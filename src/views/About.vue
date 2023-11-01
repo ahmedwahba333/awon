@@ -13,7 +13,7 @@
 				We can clean your house, take care of your children and more. Our concern is your comfort and satisfaction.
 				Sign up and enjoy our services now.
 				</div>
-				<div class="btn">Discover</div>
+				<router-link to="/ServicesView" class="logo"><div class="btn">Discover</div></router-link>
 			</div>				
 		</div>
 			<div class="row">
