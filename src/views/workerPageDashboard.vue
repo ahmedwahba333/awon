@@ -98,7 +98,7 @@
                             </div>
 
                             <div class="row mb-4 d-flex text-end">
-                                <router-link to="#">
+                                <router-link to="/#">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-gear-fill" viewBox="0 0 16 16" data-bs-target="#exampleModalToggle"
                                         data-bs-toggle="modal">
@@ -143,22 +143,24 @@
                 </div>
             </div>
 
-<div class="row ">
-    <div class="row mt-3 fw-bold mx-5 title d-flex"> Worker Reviews</div>
-     <div class="row my-5 gap-3 justify-content-center">
-        <div class="col-12 col-lg-4 col-md-3 reviewBox" v-for="(review,id) in reviews" :key="id" v-show="review.Worker_id==worker.id">
-          <div class="mb-2 gap-2">
-            <div class="card-body mt-5 mx-3">
-              <h5 class="card-title CXName fw-bold">{{ review['Name'] }}</h5>
-              <div class="stars">
-                <star-rating read-only active-color="#F97B22" star-size=20 :rating="`${review.Rate}`"></star-rating>
-               </div>
-               <h5>{{ review['Review'] }}</h5>
+            <div class="row ">
+                <div class="row mt-3 fw-bold mx-5 title d-flex"> Worker Reviews</div>
+                <div class="row my-5 gap-3 justify-content-center">
+                    <div class="col-12 col-lg-4 col-md-3 reviewBox" v-for="(review, id) in reviews" :key="id"
+                        v-show="review.Worker_id == worker.id">
+                        <div class="mb-2 gap-2">
+                            <div class="card-body mt-5 mx-3">
+                                <h5 class="card-title CXName fw-bold">{{ review['Name'] }}</h5>
+                                <div class="stars">
+                                    <star-rating read-only active-color="#F97B22" star-size=20
+                                        :rating="`${review.Rate}`"></star-rating>
+                                </div>
+                                <h5>{{ review['Review'] }}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
             <!-- Edit popup -->
             <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
@@ -172,13 +174,13 @@
                         <div class="modal-body">
                             <div class="row mb-3">
                                 <div class="col-4">First Name</div>
-                                <div class="col-8"><input type="text"  v-model="workerInfo.First_name">
+                                <div class="col-8"><input type="text" v-model="workerInfo.First_name">
                                 </div>
                             </div>
 
                             <div class="row mb-3">
                                 <div class="col-4">Last Name</div>
-                                <div class="col-8"><input type="text"  v-model="workerInfo.Last_name">
+                                <div class="col-8"><input type="text" v-model="workerInfo.Last_name">
                                 </div>
                             </div>
 
@@ -363,7 +365,7 @@ export default {
                 })
                 .catch(err => console.log(err))
                 .then(this.$router.push(`/workerpageDash/${this.id}`))
-                location.reload();
+            location.reload();
         },
     }
 }
@@ -456,7 +458,7 @@ tbody {
     font-size: $paragraph !important;
 }
 
-.card-body{
+.card-body {
     border: none !important;
 }
 
@@ -481,8 +483,8 @@ tbody {
         margin-left: 500px;
     }
 
-    .reviewBox{
-        width:300px
+    .reviewBox {
+        width: 300px
     }
 }
 
@@ -538,10 +540,10 @@ tbody {
 }
 
 @media (max-width: 575.666px) {
-      .modal{
-            width:500px !important;
+    .modal {
+        width: 500px !important;
 
-            }
+    }
 
     .tableTitle {
         font-size: $small !important;
@@ -613,8 +615,8 @@ h1 {
     @include button;
 }
 
-.title{
+.title {
     font-size: $title;
-    width:300px
+    width: 300px
 }
 </style>

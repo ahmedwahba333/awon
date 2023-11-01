@@ -1,6 +1,6 @@
 <template>
   <div class="bg">
-    <NavBarSADash />
+    <NavBarDash />
     <div class="container">
       <form @submit.prevent="addWorker()">
         <h2 class="headline">Add Worker</h2>
@@ -37,8 +37,8 @@
             <div class="form-group col-lg-6 col-md-6 col-sm-12">
               <label for="">Gender</label>
               <div class="dropdown">
-                <button class="servicesDrop w-100 rounded-5 p-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                  aria-expanded="false">
+                <button class="servicesDrop w-100 rounded-5 p-2 dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside" aria-expanded="false">
                   Select Gender
                 </button>
                 <ul class="dropdown-menu">
@@ -106,8 +106,8 @@
                     <div>
                       <div class="row">
                         <div class="col-8">
-                          <input type="checkbox" class="form-check-input"
-                            v-model="valuesOfCategory" :value="`${category.Name}`" :id="`category${category.id}`" :name="`category${category.id}`" />
+                          <input type="checkbox" class="form-check-input" v-model="valuesOfCategory"
+                            :value="`${category.Name}`" :id="`category${category.id}`" :name="`category${category.id}`" />
                           <label :for="`category${category.id}`" class="form-check-label mt-1 ms-1">{{
                             category["Name"]
                           }}</label>
@@ -132,7 +132,8 @@
                     <div class="d-flex align-items-center gap-3">
                       <div v-for="(service, id) in services" :key="id">
                         <input type="checkbox" class="form-check-input" v-if="category['id'] == service['Category_id']"
-                       v-model="valuesOfService" :value="`${service.Name}`" :id="`service${service.id}`" :name="`service${service.id}`"/>
+                          v-model="valuesOfService" :value="`${service.Name}`" :id="`service${service.id}`"
+                          :name="`service${service.id}`" />
                         <label :for="`service${service.id}`" class="form-check-label mt-1 ms-1"
                           v-if="category['id'] == service['Category_id']">{{ service["Name"] }}</label>
                       </div>
@@ -160,18 +161,18 @@
 </template>
 
 <script>
-import NavBarSADash from "@/components/NavBarSADash.vue";
+import NavBarDash from "@/components/NavBarDash.vue";
 import FooterComponent from "@/components/footer.vue";
 import axios from "axios";
 import useVuelidate from "@vuelidate/core";
 import { required, minLength, numeric } from "@vuelidate/validators";
 export default {
   name: "WriteReview",
-  components: { FooterComponent, NavBarSADash },
+  components: { FooterComponent, NavBarDash },
   data() {
     return {
-      valuesOfCategory:[],
-      valuesOfService:[],
+      valuesOfCategory: [],
+      valuesOfService: [],
       categories: [],
       services: [],
       // gender: "M",
@@ -199,6 +200,7 @@ export default {
         Last_name: "",
         Phone: "",
         Address: "",
+        Agency_id: "",
         FrontNational_ID: "",
         BackNational_ID: "",
         Gender: "",
@@ -235,7 +237,7 @@ export default {
   //   this.addWorker();
   // },
   methods: {
-  
+
     getCategory() {
       axios
         .get("http://localhost:2000/category")
@@ -264,29 +266,31 @@ export default {
       } else {
         console.log("Form validate failed");
       }
-        this.formValues.Categories = this.valuesOfCategory[0]
-        this.formValues.Service_1 = this.valuesOfService[0]
-        this.formValues.Service_2 = this.valuesOfService[1]
-        this.formValues.Service_3 = this.valuesOfService[2]
-        this.formValues.Service_4 = this.valuesOfService[3]
-        if(this.formValues.Service_1 !=null){
-          this.formValues.Service_1_price = Math.floor(Math.random()*250)
-        }
-        if(this.formValues.Service_2 !=null){
-          this.formValues.Service_2_price = Math.floor(Math.random()*250) 
-        }
-        if(this.formValues.Service_3 !=null){
-          this.formValues.Service_3_price = Math.floor(Math.random()*250) 
-        }
-        if(this.formValues.Service_4 !=null){
-          this.formValues.Service_4_price = Math.floor(Math.random()*250) 
-        }
+      this.formValues.Categories = this.valuesOfCategory[0]
+      this.formValues.Service_1 = this.valuesOfService[0]
+      this.formValues.Service_2 = this.valuesOfService[1]
+      this.formValues.Service_3 = this.valuesOfService[2]
+      this.formValues.Service_4 = this.valuesOfService[3]
+      if (this.formValues.Service_1 != null) {
+        this.formValues.Service_1_price = Math.floor(Math.random() * 250)
+      }
+      if (this.formValues.Service_2 != null) {
+        this.formValues.Service_2_price = Math.floor(Math.random() * 250)
+      }
+      if (this.formValues.Service_3 != null) {
+        this.formValues.Service_3_price = Math.floor(Math.random() * 250)
+      }
+      if (this.formValues.Service_4 != null) {
+        this.formValues.Service_4_price = Math.floor(Math.random() * 250)
+      }
+      this.formValues.Agency_id = JSON.parse(localStorage.getItem("agInfo"))["id"];
+      // console.log(JSON.parse(localStorage.getItem("agInfo")));
       axios
         .post("http://localhost:2000/worker", this.formValues)
-        
+
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
-        this.$router.push("/SADashHome");
+      this.$router.push("/agancydash");
 
       // console.log(this.valuesOfCategory);
     },

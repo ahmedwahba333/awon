@@ -13,7 +13,7 @@
                     <p class="title-slogin">Awon, your help is everywhere</p>
                     <p class="btn-login-text py-2">login</p>
                     <div class="forget-pass my-2">
-                        <router-link to="signup">don’t have an account..?
+                        <router-link to="/signup">don’t have an account..?
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-arrow-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -71,17 +71,17 @@
                                     d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
                             </svg> {{ v$.pass.$errors[0].$message
                             }}</span>
-                        <span class="valid-feedback d-block" v-else-if="v$.pass.$anyDirty"><svg
+                        <!-- <span class="valid-feedback d-block" v-else-if="v$.pass.$anyDirty"><svg
                                 xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
                                 class="bi bi-check" viewBox="0 0 19 19">
                                 <path
                                     d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                            </svg> Good Password</span>
+                            </svg> Good Password</span> -->
                     </div>
                 </form>
                 <div>
                     <div class="forget-pass my-2">
-                        <router-link to="reset-password">forget your password
+                        <router-link to="/reset-password">forget your password
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-arrow-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -122,7 +122,7 @@ export default {
             email: {
                 required: helpers.withMessage("Email is Required", required), email: helpers.withMessage("Wrong Email", email)
             },
-            pass: { required: helpers.withMessage("Password is Required", required), minLength: helpers.withMessage("Weak Password", minLength(8)) }
+            pass: { required: helpers.withMessage("Password is Required", required), minLength: helpers.withMessage("Wrong Password", minLength(8)) }
         }
     },
     created() {
